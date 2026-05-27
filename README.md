@@ -1,239 +1,243 @@
-# AI-prompts
-由于想要更高效率的完成一篇文章，所以提前汇总打基础，记录所有收集到的AI 角色指令和学术文章润色指令包括但不限于gpt、deepseek，理论上应该通用
-## 使用建议
+<div align="center">
+  <h1>🎓 AI-prompts-writing</h1>
+  <p><strong>专为学术小白与研究者打造的零门槛 AI 论文辅导提示词库</strong></p>
+  <img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square&color=blue" alt="GitHub Stars"/>
+  <img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square&color=blue" alt="GitHub Forks"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"/>
+</div>
 
-- **先行角色预设**：  
-  在使用润色、翻译或降重指令前，可以先让 GPT “进入角色”（如“学术专家”或“领域专家”）。
+---
 
-- **逐段处理 vs 一次性处理**：  
-  对于篇幅很长的论文，推荐分段处理，避免内容过载。
+## 📖 项目简介
 
-- **定制化需求**：  
-  可随时调整指令中的字数要求、风格（正式/简洁/口语）、是否输出修改表格等。
+由于想要更高效率地完成一篇学术文章，我整理并优化了所有收集到的 AI 角色指令和学术文章润色指令。
+本项目致力于提供一套**最严谨、最纯粹、完全零门槛**的学术提示词（Prompt）。包括但不限于 ChatGPT、Claude、Kimi、DeepSeek 等大语言模型，理论上完全通用。
 
-- **留意信息安全**：  
-  在对话前尽量去除个人敏感信息、尚未公开的数据或保密内容。
+**不需要懂代码，不需要安装任何复杂插件，只需复制粘贴，即可让 AI 成为你最严苛的学术导师。**
 
-# 文章状态与相应的预设/提示词
+---
 
-# 学术论文指令分阶段归纳（示例提示更完整）
+## 🌟 本项目的核心学术原则
 
-> **使用提示**  
-> 本文指令根据论文写作流程分为三个阶段：  
-> 1. **初期阶段（Pre-Writing）**：选题、构思、规划论文大纲等；  
-> 2. **撰写中期（Drafting）**：论文内容初稿撰写、内容扩展、逻辑梳理、局部润色等；  
-> 3. **定稿后期（Final Polishing & Submission）**：全文润色、语法检查、格式调整、参考文献校正、投稿封面信等。  
+市面上很多提示词生成的文本往往带有浓厚的“AI 味”，甚至存在严重的逻辑和数据造假。本项目的提示词已全面升级，严格遵循以下三大原则：
 
-使用时建议先给 GPT 设定好「学术专家」角色，然后在各阶段按照需要复制示例提示，**使用完后记得删除指令内容**。
+1. ✒️ **严谨的学术措辞**：拒绝任何双引号包裹的网络词汇和口语化表达，强制 AI 使用标准的学术书面语。
+2. ⚖️ **客观的学术表达**：严禁使用“最大”、“最完美”、“完全解决”等极端词汇，强制 AI 保持学术中立，客观评估局限性。
+3. 📊 **坚实的数据支撑**：在论文中涉及的任何百分比、数字、引文，提示词会强制约束 AI **必须基于提供的确切来源或推导过程**。无法核实的虚构数据将被直接拒绝输出，杜绝幻觉。
+
+---
+
+## 🚀 极简使用建议
+
+- **先行角色预设**：在使用任何指令前，先发送“初期阶段”中的**学术角色预设指令**，让大模型进入状态。
+- **逐段处理 vs 一次性处理**：对于篇幅很长的论文，推荐分段处理，避免内容过载和逻辑遗漏。
+- **留意信息安全**：在对话前尽量去除个人敏感信息、尚未公开的核心数据或保密内容。
+- **替换占位符**：使用时，请将提示词模板中的 `[括号内文本]` 替换为您自己的实际内容。
+
+---
+
+# 📚 学术论文指令分阶段归纳
+
+本文指令根据论文写作流程分为三个阶段：
+1. **初期阶段（Pre-Writing）**：角色预设、选题、构思、规划论文大纲等。
+2. **撰写中期（Drafting）**：初稿撰写、摘要提取、内容扩展、逻辑梳理、局部润色等。
+3. **定稿后期（Final Polishing & Submission）**：全文润色、语法检查、参考文献校正、投稿封面信（Cover Letter）及回复审稿人等。
 
 ---
 
 ## 一、初期阶段（Pre-Writing）
 
-### 目标
-- 明确研究方向与选题  
-- 构思论文整体结构和大纲  
-- 预设角色，为后续润色/翻译/降重奠定专业基础  
+### 1. 学术角色预设指令
 
-### 主要指令
+> **目的**：设定大模型为学术专家或论文导师，确立其严谨、客观的基调。
 
-#### 1. 学术角色预设指令
+#### 1.1 全能学术专家预设
+```text
+我需要你扮演一位学术领域的资深专家，拥有丰富的学术经验与专业知识。
+从现在开始，你的所有回复必须严格遵守以下原则：
+1. 语言必须是标准的学术书面语，绝不能使用口语化、网络流行语或带双引号的俗语。
+2. 表达必须客观、中立，绝不能使用“最大”、“最完美”、“彻底解决”等极端或绝对化词汇。
+3. 如果涉及到数据、文献和事实，你必须提供确切的来源依据；如果无法核实，请直接告诉我不知道，绝不允许凭空捏造数据或文献。
+如果你理解了，请回复“我已准备好以严谨的学术态度为您服务”。
+```
 
-##### **1.1 学术角色**
-> **目的**：设定 GPT 为学术专家或论文导师，以获得更专业、更准确的回复。  
-> **示例提示：**  
-> - **英文版：**  
->   > As a leader in the academic field, I possess extensive academic experience and professional knowledge across various domains. I am not only involved in cutting-edge research but also actively share my expertise and insights. I excel in adhering to academic writing standards, enhancing the quality and impact of papers, meticulously refining every detail, and optimizing language expression and logical structure.
-> - **中文版：**  
->   > 我作为学术领域的引领者，在各个领域拥有丰富的学术经验与专业知识，不仅参与前沿研究，还积极分享经验与见解。擅长学术写作规范，提升论文的品质与影响力，精细润色每个细节，优化语言表达与逻辑结构。
+#### 1.2 论文评审专家预设
+```text
+你现在扮演一个 [填入你的研究领域，如：自然语言处理] 领域的审稿专家。
+从专业的角度，你需要以极其挑剔的眼光审视我接下来发送的内容。指出逻辑漏洞、缺乏数据支撑的断言以及不符合学术规范的用语。请注意保持中立，客观评价。
+如果你理解了，请回复“我已准备好开始评审”。
+```
 
-##### **1.2 论文评审专家**
-> **目的**：扮演论文评审人，从专业角度指出论文不足并给出修改建议。  
-> **示例提示：**  
-> - **英文版：**  
->   > You are now acting as an expert in the field of [Put professional fields here…]. From a professional point of view, do you think there is any need to modify the above content? Be careful not to modify the whole text. You need to point out the places that need to be modified one by one, and give revision opinions and recommended revision content.
-> - **中文版：**  
->   > 你现在扮演一个[这里放你所研究的领域]领域的专家，从专业的角度，您认为上面这些内容是否有需要修改的地方？注意不要全文修改，请一一指出需要修改的地方，并且给出修改意见以及推荐的修改内容。
+### 2. 论文构思与大纲
 
----
+#### 2.1 提取学术标题
+```text
+我将提供一篇论文的摘要和关键词。你的任务是根据这些信息生成 3-5 个简洁明了、信息量充足的论文标题。
+要求：
+1. 避免使用“研究”、“调查”、“发展”、“观察”等冗余词汇。
+2. 标题必须聚焦于具体的变量和机制，拒绝假大空。
+3. 请检测摘要的语言并以相同的语言回复。
+摘要：“[在此粘贴摘要]”
+关键词：“[在此粘贴关键词]”
+```
 
-#### 2. 论文撰写指令（构思与大纲）
-
-##### **2.1 写论文标题**
-> **目的**：根据摘要和关键词生成简洁、明确、有信息量的标题。  
-> **示例提示：**  
-> - **英文版：**  
->   > I will provide you with the abstract and keywords of a scientific paper in any language, and you will detect the language and reply in the same language. Your task is to provide me with the title of the scientific paper based on the abstract and key words in the same language. The title should be concise, clear, and informative. Avoid using “a study of,” “investigation of,” “development of,” or “observations on.” Make sure the title can grip the audience immediately. My abstract is “XXX”, my key words are “XXX”.
-> - **中文版：**  
->   > 我将向你提供一篇论文的摘要和关键词，你需要检测其语言并以相同语言回复。你的任务是根据摘要和关键词来生成一个简洁明了、信息量足够的论文标题。请避免使用“研究”“调查”“发展”“观察”等冗余词，确保标题能立刻引起读者的兴趣。摘要为“XXX”，关键词为“XXX”。
-
-##### **2.2 论文大纲**
-> **目的**：为论文起草一个结构合理的详细大纲，包括引言、方法、结论等。  
-> **示例提示：**  
-> - **英文版：**  
->   > Act as an academic research expert. Draft a comprehensive research paper outline on [topic]. The outline should be well-structured, starting with a compelling introduction stating the problem or question, the relevance of the topic, and the objectives of the research. Include sections like Literature Review, Methodology, Results, and Conclusion.
-> - **中文版：**  
->   > 作为学术研究专家，请为[主题]的研究论文起草一个结构合理的详细大纲，包含引言、文献综述、研究方法、结果与讨论以及结论等主要部分。引言部分要突出问题背景、研究目的及意义。
+#### 2.2 逻辑严密的大纲生成
+```text
+我正在撰写一篇题目为《[你的论文题目]》的学术论文。请帮我生成一份逻辑严密的论文大纲。
+要求：
+1. 包含核心部分：引言、文献综述、研究方法、实验/数据分析、讨论与局限性、结论。
+2. 在“研究方法”部分，必须具体到使用何种数据类型和模型。
+3. 标题切忌使用空洞套话，必须具体到研究变量。
+4. 客观陈述研究意义，不要使用夸大性词汇。
+```
 
 ---
 
 ## 二、撰写中期（Drafting）
 
-### 目标
-- 撰写论文初稿，扩展和完善内容  
-- 梳理逻辑关系，确保论证清晰  
-- 进行初步的语言和格式润色  
+### 1. 内容撰写与扩充
 
-### 主要指令
+#### 2.3 凝练摘要 (Abstract)
+```text
+请根据以下论文正文，提取并撰写一份学术摘要。
+要求：
+1. 包含四要素：背景与目的、核心方法、关键结果（必须引用文中的确切数据，绝对不可虚构）、结论与意义。
+2. 语言紧凑，客观陈述，禁止使用任何主观赞美之词（如“取得了前所未有的惊人效果”）。
 
-#### 1. 内容撰写与扩充
+[在此粘贴论文正文]
+```
 
-##### **2.3 写摘要**
-> **目的**：撰写研究论文的摘要，概括研究目标、方法、主要发现及意义。  
-> **示例提示：**  
-> - **英文版：**  
->   > Act as an academic research expert. Draft an abstract for a research paper titled “[title]”. The abstract should succinctly summarize the main objectives, methodologies, key findings, and implications of the research.
-> - **中文版：**  
->   > 作为学术研究专家，请为题为“[论文题目]”的研究论文撰写一份简洁的摘要，包含研究目标、方法、主要发现和研究意义。
+#### 2.4 严谨的论文续写
+```text
+根据你所掌握的关于 [填入具体主题] 的知识，并在不引入虚假数据的前提下，继续撰写上面的内容，使其论点更加丰富。
+要求：
+1. 保持严谨的学术风格，剔除一切口语化表达。
+2. 续写部分必须探讨该论点的“局限性”，保持客观中立。
 
-##### **2.4 论文续写**
-> **目的**：在已有内容基础上进行润色与补充，丰富论文的细节与论证。  
-> **示例提示：**  
-> - **英文版：**  
->   > Based on the knowledge you have about [XXX], polish and continue writing the above content to make it richer and more complete. Keep the style consistent with academic writing standards.
-> - **中文版：**  
->   > 根据你所掌握的关于[XXX]的知识，润色并继续撰写上面的内容，使其更加丰富完整。请保持学术写作的风格一致。
+[在此粘贴已有内容]
+```
 
-##### **2.5 论文致谢**
-> **目的**：撰写论文致谢，对导师、合作者或资助机构表达感谢。  
-> **示例提示：**  
-> - **中文版：**  
->   > 我想请你帮我写一份关于我的论文的致谢。我的论文题目是“(题目)”，导师是“(导师)”，合作者是“(合作者)”。我想感谢以下的人/机构：……。请根据这些信息，写一份大约(字数)字的致谢，语气要礼貌并注意格式和标点。
+#### 2.5 论文致谢 (Acknowledgements)
+```text
+我想请你帮我写一份学术论文的致谢。
+我的论文题目是《[题目]》，导师是 [导师姓名]，合作者是 [合作者姓名]。我还想感谢 [机构/基金编号/其他人]。
+要求：语气诚恳、礼貌、克制，符合学术界规范的行文风格，大约 [填入字数] 字。
+```
 
----
+### 2. 学术润色与逻辑优化
 
-#### 2. 学术润色与逻辑优化
+#### 3.1 纯学术语言局部润色（⭐ 核心推荐）
+```text
+你现在是一位在权威学术期刊拥有多年经验的母语级审稿专家。请对以下学术论文段落进行深度润色。
+严格遵循以下准则：
+1. 消除口语化表达：将所有的非正式用语、网络词汇替换为专业的学术术语。
+2. 剔除绝对化词汇：删除所有缺乏数据支撑的极端词汇（如 always, largest, most, completely），替换为严谨的限制性表达（如 significantly, primarily, indicates that, tends to）。
+3. 句式重构：增加长难句的逻辑连词（如 furthermore, consequently），使语气更加客观。
+4. 数据真实性：保留原文中的所有百分比、数字和引文，绝对不允许更改数值或篡改引用。
+请使用 Markdown 表格列出所有修改之处及原因，并输出最终润色结果。
 
-##### **3.1 学术润色（局部段落）**
-> **目的**：对部分段落进行语法、逻辑和风格的改进。  
-> **示例提示：**  
-> - **英文版：**  
->   > Below is a paragraph from an academic paper. Polish the writing to meet academic style, improve spelling, grammar, clarity, concision, and overall readability. If necessary, rewrite entire sentences. Furthermore, list all modifications and explain the reasons in a Markdown table. Paragraph: XXX
-> - **中文版：**  
->   > 以下是一篇学术论文中的段落。请按照学术论文的写作要求进行润色，包括拼写、语法、逻辑等。如有必要可重写整句话，并使用 Markdown 表格列出所有修改之处和修改原因。段落内容：XXX
+待润色段落：
+[在此粘贴你的段落]
+```
 
-##### **3.2 逻辑论证辅助**
-> **目的**：分析现有内容的论证结构，提出进一步增强说服力的建议。  
-> **示例提示：**  
-> - **英文版：**  
->   > Please help me analyze and optimize the logical structure of the following argument to make it more convincing. Identify any potential gaps or inconsistencies, and suggest improvements.
-> - **中文版：**  
->   > 请帮我分析并优化下面这段论证的逻辑结构，使其更具说服力。指出可能存在的漏洞或不一致之处，并给出改进建议。
+#### 3.2 逻辑论证漏洞排查
+```text
+请作为一位严苛的学术打假人，帮我分析并优化下面这段论证的逻辑结构。
+要求：
+1. 寻找未被支撑的论断：指出文本中哪些句子是“主观断言”且缺乏数据或文献支撑的。
+2. 数据核查：指出文本中出现的数字，并评估其上下文逻辑是否合理。若违背常理请直接指出。
+3. 绝不捏造事实：你指出的漏洞必须基于逻辑推导。遇到不确定的数据领域，请建议“该数据需要人工复核”。
 
-##### **3.3 错误纠正 / 重新回答**
-> **目的**：当回答不理想或方向不对，可以通过补充信息来让 GPT 修正。  
-> **示例提示：**  
-> - **“错误纠正”示例**：  
->   > Note that it is not “XXX” but “YYY.” Please re-answer the previous question based on this new information.  
->   > （注意，不是“XXX”，而是“YYY”。请根据我的补充重新回答上个问题。）  
-> - **“重新回答”示例**：  
->   > Still the above question, I think your answer is not good enough. Please answer again, focusing on removing redundancy from this passage.  
->   > （还是上面的问题，我认为你回答得不够好。请再次回答，这次你需要重点去除冗余内容。）
+待分析段落：
+[在此粘贴论证段落]
+```
+
+#### 3.3 基于反馈的修正 (重新回答)
+```text
+注意，你刚才的回答中出现了不符合学术规范的用语 / 捏造了错误的数据 [具体指出错误点，如：不是XXX而是YYY]。
+请以严谨客观的态度，根据我的纠正重新生成回答，并重点消除冗余内容和夸大词汇。
+```
 
 ---
 
 ## 三、定稿后期（Final Polishing & Submission）
 
-### 目标
-- 对全文进行深入润色与排版  
-- 进行语法与拼写检查、参考文献规范检查  
-- 撰写投稿信、回复审稿意见
+### 1. 全文润色与语法校对
 
-### 主要指令
+#### 3.4 全文连贯性润色
+```text
+我正在准备提交论文，请整体润色以下全文段落，以提升学术严谨性。
+要求：
+1. 纠正所有语法错误，改进句子结构，增强段落间的过渡和连贯性。
+2. 再次排查并删除所有的绝对化极端词汇（如 completely, always）。
+3. 请按照段落列出修改的核心句子对照（原句 vs 修订句），最后给出润色后的完整文本。同时请指明修改了哪些段落，便于查阅。
 
-#### 1. 全文润色与语法校对
+待处理全文段落：
+[在此粘贴长段落]
+```
 
-##### **3.4 全文润色（整体版）**
-> **目的**：对整篇论文进行统一的语言、逻辑和风格润色。  
-> **示例提示：**  
-> - **英文版：**  
->   > I am preparing my manuscript for submission. Please refine the entire text for academic rigor, correct grammatical errors, improve sentence structure, and enhance clarity and coherence. For each paragraph, list all modified sentences in a Markdown table (original sentence, highlighted revision, explanation). Finally, rewrite the full corrected paragraph.
-> - **中文版：**  
->   > 我正在准备提交论文，请整体润色全文，以提升学术严谨性。纠正语法错误、改进句子结构，并增强清晰度和连贯性。请按照段落列出所有修改的句子（原句、修订部分、修改原因），最后给出润色后的完整段落。
+#### 3.5 纯语法与拼写检查（不改原意）
+```text
+请帮我确认下面这段文字的语法和拼写是否正确。**请不要进行润色，完全保留我的原意和学术用词**。
+如果没有错误，请回复“该段落语法无误”。
+如果有错误，请以双列 Markdown 表格列出错误句子和更正后的句子，并突出修改的关键词。
 
-##### **3.5 语法检查/查找语法错误**
-> **目的**：专门检查论文中的语法或拼写错误，并以 Markdown 表格列出。  
-> **示例提示：**  
-> - **英文版：**  
->   > Can you help me ensure that the grammar and spelling are correct in the following paragraph? Do not polish the text. If no mistake is found, tell me that this paragraph is good. If you find errors, list them in a two-column Markdown table with the original sentence in the first column and the corrected sentence in the second column. Highlight the key words you fixed.
-> - **中文版：**  
->   > 请帮我确认下面这段文字的语法和拼写是否正确，不要进行润色。如果没有错误，请告诉我这段话很好。如果有错误，请以双列 Markdown 表格列出错误句子和更正后的句子，并突出修改的关键词。
+[在此粘贴文本]
+```
 
-##### **3.6 润色定位**
-> **目的**：在给出修改后文本时，能定位到具体改动了哪些段落或句子，方便检查。  
-> **示例提示：**  
-> - **英文版：**  
->   > Note that in addition to giving the modified content, please also indicate which paragraphs and sentences were modified in the revised version.
-> - **中文版：**  
->   > 注意，除了给出最终修改的内容，请同时指明在修订版本中具体修改了哪些段落和句子，便于对比查阅。
+### 2. 参考文献与格式校正
 
----
+#### 4.1 检查参考文献格式
+```text
+请你担任研究论文的参考文献编辑。
+我将提供 [填入数量] 个参考文献模板作为标准格式指南。然后，我会提供我自己的参考文献列表。
+请检查我的文献在标点、间距、斜体等格式上是否符合模板。如有修改，请使用 Markdown 表格列出（原文、修正文本、修正原因），并在最后提供所有修正后的参考文献列表。
 
-#### 2. 参考文献与格式校正
+模板示例：
+[粘贴模板]
 
-##### **4.1 检查参考文献格式**
-> **目的**：对参考文献进行统一格式检查，确保符合模板或期刊要求。  
-> **示例提示：**  
-> - **英文版：**  
->   > I’d like you to serve as a reference editor for a research manuscript. I will supply you with five reference templates that you should use as guidelines. Then, I will provide additional references for you to examine formatting aspects (punctuation, spacing, etc.). Provide any necessary corrections or suggestions in a Markdown table (original text, fixed text, explanation), then list all fixed references.
-> - **中文版：**  
->   > 我将提供五个参考文献模板作为标准，然后给你额外的参考文献，请检查它们的标点、间距等格式是否符合模板。如有修改，请使用 Markdown 表格列出原文、修正文本和修正原因，并在最后提供所有修正后的参考文献列表。
+我的参考文献：
+[粘贴需要检查的文献]
+```
 
-##### **4.2 按 APA 格式校正参考文献**
-> **目的**：严格按照 APA 格式来对参考文献进行校对与修正。  
-> **示例提示：**  
-> - **英文版：**  
->   > Please correct the following reference format according to APA style, adjusting it to strictly comply with APA citation standards. Finally, display the references in a Markdown code block. Note that journal names should be in full and italicized.
-> - **中文版：**  
->   > 请先按照 APA 格式校正以下参考文献，并将最终格式以 Markdown 代码块的形式展示，注意期刊名称需使用全称并加斜体。
+#### 4.2 严格遵循 APA 格式校正
+```text
+请按照 APA 格式规范严格校正以下参考文献，包括标点符号、空格以及斜体的正确使用（如期刊名称需使用全称并加斜体）。
+请避免凭空补充你无法确认的期卷号数据，如果缺失信息，请标注提醒我。
+最后将最终格式以 Markdown 代码块的形式展示。
 
----
+[在此粘贴参考文献]
+```
 
-#### 3. 投稿审稿与封面信
+### 3. 投稿审稿与封面信
 
-##### **5.1 撰写 Cover Letter**
-> **目的**：撰写投稿时需要的封面信，简要介绍论文优势和新颖性。  
-> **示例提示：**  
-> - **英文版：**  
->   > I want you to act as an academic journal editor. I will provide you with the title and abstract of my manuscript. Please write a format cover letter for submitting the manuscript to the Nature journal. State that the manuscript is not considered for publication elsewhere, briefly introduce the merit of the manuscript, and provide a short summary pointing out the importance of the results. Title and abstract are as follows: …
-> - **中文版：**  
->   > 我希望你担任学术期刊编辑，我将给你论文的标题和摘要，请为我撰写一封提交到《Nature》期刊的 Cover Letter，需包含文章未在他处投稿的声明、文章的新颖性和摘要要点。
+#### 5.1 撰写投稿封面信 (Cover Letter)
+```text
+我希望你担任顶级学术期刊的主编。我将给你我论文的标题和摘要。
+请为我撰写一封提交到《[填入期刊名称，如 Nature/Science]》期刊的投稿封面信 (Cover Letter)。
+要求：
+1. 必须包含“文章未在他处投稿或发表”的学术声明。
+2. 客观、简要地介绍手稿的研究价值和新颖性，切忌使用“划时代”、“最伟大”等自夸性词汇，用数据和客观事实说话。
+3. 语言得体、专业。
 
-##### **5.2 解释审稿人反馈**
-> **目的**：在收到审稿人反馈后，对关键意见进行分析，并提供详细回复建议。  
-> **示例提示：**  
-> - **英文版：**  
->   > Act as an academic research expert. Carefully analyze and interpret the feedback provided by the reviewer on the submitted research paper. Identify key concerns, constructive suggestions, and areas of improvement. Then create a detailed response plan explaining how to address or rebut each point in the revised draft.
-> - **中文版：**  
->   > 作为学术研究专家，请仔细分析审稿人对我提交论文的反馈，找出主要关注点、建议和改进之处，并制定一份详细的回应方案，说明在修订稿中如何应对或反驳每一点意见。
+标题：[在此粘贴标题]
+摘要：[在此粘贴摘要]
+```
 
----
+#### 5.2 严密回复审稿人意见 (Response to Reviewers)
+```text
+作为学术研究专家，请仔细分析以下审稿人对我论文的反馈意见。
+请帮我制定一份详细、礼貌、客观的回应方案 (Response Letter)。
+要求：
+1. 逐条列出审稿人的关注点，并给出修改或反驳建议。
+2. 反驳时必须语气委婉、有理有据，并建议我应该补充哪些具体的数据或文献来支撑反驳。
+3. 避免过度承诺，保持学术客观。
 
-# 使用建议
-
-- **先行角色预设**  
-  在使用润色、翻译或降重指令前，请先让 GPT “进入角色”（如“学术专家”或“领域专家”），可得到更专业的回答。
-
-- **逐段处理 vs 一次性处理**  
-  对于篇幅较长的论文，建议分段处理；一次性输入过多内容可能导致回答不完整或质量下降。
-
-- **定制化需求**  
-  可灵活调整指令：包括回复字数限制、语言风格（正式/简洁/口语）或输出格式（是否使用 Markdown 表格对照等）。
-
-- **留意信息安全**  
-  在提交之前，请务必去除个人隐私、尚未公开的数据或保密信息。
+审稿人反馈：
+[在此粘贴反馈意见]
+```
 
 ---
 
-> 以上即为按照论文写作「初期、撰写中期、定稿后期」三阶段归纳的详细指令。  
-> **祝您的学术写作顺利！** 
+> 以上即为按照论文写作流程归纳并经过严谨学术标准升级的全部指令。
+> **如果本库的提示词帮助您写出了更严谨的论文，请点击右上角给个 Star ⭐️ 支持一下！祝您的学术写作顺利！**
