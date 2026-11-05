@@ -60,4 +60,4 @@
 
 ![本项目综合整理的研究与论文写作流程](../assets/research-writing-lifecycle.png)
 
-插图是基于上述映射生成的项目说明图，采用手绘科研插画表现，不含真实实验数据，也不代表出版方背书。原始生成说明见[绘图提示词](../assets/research-writing-lifecycle-prompt.md)。
+插图是基于上述映射生成的像素手稿风格项目说明图，不含真实实验数据，也不代表出版方背书。原始生成说明见[绘图提示词](../assets/research-writing-lifecycle-prompt.md)。
