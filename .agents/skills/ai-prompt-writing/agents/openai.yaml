@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI Prompt Writing"
+  short_description: "梳理论文主线、修改学术表达，并检查数字、引用和结论依据"
+  default_prompt: "请用 $ai-prompt-writing 修改这段论文文字，表达清楚自然，保留原有证据和结论范围。"
+policy:
+  allow_implicit_invocation: true
