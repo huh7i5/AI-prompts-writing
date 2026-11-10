@@ -38,7 +38,7 @@ The first draft was already cautious. The edits concern references within senten
 
 ![English translation of the editing example](../../assets/showcase-before-after-en.png)
 
-The English image and passages translate the recorded Chinese example. English drafting and revision performance have not been tested separately. The image-generation prompts are available in the [generation record](../../assets/showcase-before-after-prompt.md).
+The English image and passages translate the recorded Chinese example. Separate direct trials of selected English task prompts are recorded in the [English behavior report](../validation/runs/2026-11-10-en/README.md). This illustration remains a translation of the Chinese run. The image-generation prompts are available in the [generation record](../../assets/showcase-before-after-prompt.md).
 
 ## How this example was produced
 

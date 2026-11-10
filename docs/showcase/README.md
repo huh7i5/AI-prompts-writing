@@ -40,7 +40,7 @@
 
 ![中文短引言对照](../../assets/showcase-before-after.png)
 
-图中的两段文字对应上述快照。英文图和英文文字是这次中文记录的翻译，由本次助手整理，英文生成和改稿效果尚未单独测试。绘制说明见[生成提示词](../../assets/showcase-before-after-prompt.md)。
+图中的两段文字对应上述快照。英文图和英文文字是这次中文记录的翻译，由本次助手整理。部分英文任务已另做[直接行为试跑](../validation/runs/2026-11-10-en/README.md)，这张图仍是中文示例的翻译。绘制说明见[生成提示词](../../assets/showcase-before-after-prompt.md)。
 
 ## 演示的范围
 
