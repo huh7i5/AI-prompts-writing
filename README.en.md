@@ -2,7 +2,7 @@
 
 <h1>🎓 AI-prompts-writing</h1>
 
-<p><a href="README.md">简体中文</a> · <strong>English</strong></p>
+<p><a href="README.md">简体中文</a> · <strong>English</strong> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
 <p><strong>A ready-to-use academic writing prompt library for beginners and researchers</strong></p>
 
@@ -1272,6 +1272,7 @@ This library supports common research preparation, academic writing, and revisio
 - [Sources and task coverage (Chinese)](docs/coverage.md) maps workflow stages, supporting sources, tasks, and remaining boundaries.
 - [Evaluation methods and records (Chinese)](docs/validation/README.md) contains fixed inputs, criteria, raw outputs, and the distinction between static review and behavior trials.
 - [English behavior trials](docs/validation/runs/2026-11-10-en/README.md) records six fixed cases, one targeted retry, and a Chinese synchronization check, including the initial partial result.
+- [Language versions](docs/translations.md) lists the supported languages, synchronization policy, and translation-evaluation limits.
 - [Lifecycle illustration and generation prompt (Chinese)](assets/research-writing-lifecycle-prompt.md) records the figure's purpose and production.
 - [Checks drawn from editing experience (Chinese)](docs/editorial-lessons.md) covers headings, paragraph flow, readers' needs, measurement definitions, and related revisions.
 
@@ -1281,6 +1282,6 @@ Five of the 43 English task prompts have direct behavior trials in the default C
 
 The prompts will continue to change based on actual use, failure cases, and writing experience. Contributions may include general tasks, adaptations for different fields, failures, or better verification methods. Explain the setting, required inputs, and known limits.
 
-After changing a task, check the other README language version, `.agents/skills/ai-prompt-writing/SKILL.md`, fixed cases, and evaluation records. Changes to search, analysis, citation, submission, or proof-checking boundaries should trigger at least the relevant cases, retaining both old and new outputs.
+After changing a task, check the same task ID in [every language version](docs/translations.md), `.agents/skills/ai-prompt-writing/SKILL.md`, fixed cases, and evaluation records. Changes to search, analysis, citation, submission, or proof-checking boundaries should trigger at least the relevant cases, retaining both old and new outputs.
 
 The project stays text-first. It requires no code, is not tied to one model, and does not promise that a prompt alone guarantees a correct result.

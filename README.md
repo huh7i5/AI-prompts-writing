@@ -2,7 +2,7 @@
 
 <h1>🎓 AI-prompts-writing</h1>
 
-<p><strong>简体中文</strong> · <a href="README.en.md">English</a></p>
+<p><strong>简体中文</strong> · <a href="README.en.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
 <p><strong>专为学术小白与研究者打造的零门槛 AI 论文辅导提示词库</strong></p>
 
@@ -1263,6 +1263,7 @@ WorkBuddy 的对话安装目前面向技能市场，自定义技能包需要上�
 
 - [流程来源与任务覆盖](docs/coverage.md)：每个阶段参考了什么，已有入口在哪里，还有哪些边界。
 - [验证方法与实际记录](docs/validation/README.md)：固定输入、判定条件和原始输出，区分文字审查与行为试跑。
+- [多语言版本说明](docs/translations.md)：当前语言文件、同步方式和翻译验证边界。
 - [插图说明与生成提示词](assets/research-writing-lifecycle-prompt.md)：图示表达的范围与绘制方法。
 - [从改稿经验补入的检查项](docs/editorial-lessons.md)：标题、段落、读者视角、统计口径与关联修改的处理。
 
@@ -1270,6 +1271,6 @@ WorkBuddy 的对话安装目前面向技能市场，自定义技能包需要上�
 
 这里的提示词会根据实际使用、失败案例和新的写作经验继续修改。欢迎提交新的通用任务、不同学科的改写、失效案例和更好的核查方法，并说明适用场景、输入要求和已知边界。
 
-修改 README 中的任务后，要同步检查 `.agents/skills/ai-prompt-writing/SKILL.md`、固定案例和验证记录；涉及检索、分析、引用、投稿或校样边界的改动，至少重跑对应案例，并保留原输出与新输出。
+修改 README 中的任务后，要按相同编号同步检查[各语言版本](docs/translations.md)、`.agents/skills/ai-prompt-writing/SKILL.md`、固定案例和验证记录；涉及检索、分析、引用、投稿或校样边界的改动，至少重跑对应案例，并保留原输出与新输出。
 
 项目保持“文字优先”：不要求代码，不绑定某个模型，也不承诺一段提示词能保证结果正确。
