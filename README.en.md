@@ -12,88 +12,37 @@
 </p>
 
 <p>
-  <a href="#start">Copy and use</a> ·
-  <a href="#control">Writing preferences</a> ·
-  <a href="#catalog">Find your stage</a> ·
-  <a href="#skill">Install as a Skill</a> ·
-  <a href="#quality">Coverage and evaluation</a> ·
-  <a href="#showcase">Revision example</a>
+  <a href="#start">Start here</a> ·
+  <a href="#catalog">Choose a task</a> ·
+  <a href="#showcase">See an editing example</a>
 </p>
 
 </div>
 
-Prompts for finding a topic, organizing research materials, drafting, revising, submitting, and checking work after publication. Open a task, copy its prompt, and replace the placeholders with your own material.
-
-The aim is accurate, readable academic prose. Use technical concepts precisely, without piling up jargon, stretching sentences, or substituting metaphors for explanation.
-
-<a id="showcase"></a>
-
-## ✦ See how a passage changes
-
-A short introduction was generated in Chinese, then revised using this project's prompts and Skill. The English figure translates the recorded passages and identifies the edits and reasons.
-
-![A short introduction before and after revision, with specific edits](assets/showcase-before-after-en.png)
-
-[Read the full inputs, outputs, and change record](docs/showcase/README.en.md) · [查看中文示例](docs/showcase/README.md)
+These 43 ready-to-copy requests, called prompts, help you find a topic, search for sources, outline a paper, and improve a draft. Read and copy them on this page; no download or coding is needed.
 
 <a id="start"></a>
 
-## 📋 Copy and use
+## 📋 First time here? Follow these three steps
 
-Use these prompts in ChatGPT, Claude, DeepSeek, Kimi, Doubao, or other chat tools. No installation or code is required.
+Open a new conversation in an AI chat tool you already use, such as ChatGPT, Claude, or DeepSeek.
 
-1. In a new conversation, send the [writing preferences](#control), followed by a task prompt, to establish style and verification requirements.
-2. Use the [stage directory](#catalog) to find your task, then open and copy its prompt.
-3. Replace `{{double-brace placeholders}}` with your materials. Review the answer before adopting it.
+1. **Send the writing instructions first.** Open “Copy the writing instructions” below, copy the text inside the shaded box, and send it to the AI. Do this once per conversation.
+2. **Choose one task.** Find what you want to do in the [directory below](#catalog). Click the task title or the small triangle to open it, then copy its text into the chat box.
+3. **Add your information and send.** Replace each `{{…}}`, including the braces, with your information and include the materials to work on. Check the response against your originals before accepting the suggestions.
 
-You can begin by stating the field, paper type, research approach, and target readers. Supply only relevant details. Quantitative, qualitative, theoretical, and review research do not all need an experimental template.
+For example, change `Field: {{field}}` to `Field: education`. Write “not provided” for anything unknown and remove items that do not apply. Choose one task at a time.
 
-Write "not provided" for unknown information and remove fields that do not apply. You can start at any stage without sending the entire README. For long manuscripts, include the relevant passages, figures, tables, and terminology each time rather than assuming the model remembers the full paper.
-
-> Authors still need to verify numbers, references, and submission declarations. Prompts can help identify problems, but cannot guarantee error-free output.
-
-### A short route through your first paper
-
-Choose the point that fits your current materials.
-
-1. [Find a topic](#topic)
-2. [Find and read literature](#literature)
-3. [Plan the study and outline](#planning)
-4. [Draft from your materials](#drafting)
-5. [Check the manuscript](#audit)
-6. [Revise after feedback](#feedback)
-
-Use the research-record, figure, declaration, proof, and post-publication tasks when needed. You do not need to open everything at once.
-
-<details>
-<summary><strong>Bring a material card to each task</strong></summary>
-
-```text
-Field and paper type: {{for example, a history course paper, quantitative study, qualitative study, theoretical paper, or review}}
-Current stage: {{topic, literature, planning, records, drafting, editing, checking, submission, or feedback revision}}
-Research approach: {{quantitative, qualitative, theoretical, review, or other}}
-Readers, language, and length: {{requirements}}
-Materials and versions actually supplied: {{text, tables, sources, records, file names, or dates}}
-Central question or claim: {{question}}
-Confirmed facts: {{numbers, sources, methods, and completed changes}}
-Unverified or conflicting information: {{items}}
-Task for this session: {{specific request}}
-```
-
-This card indexes your materials. Include the relevant original text or records when checking numbers and central claims.
-
-</details>
-
-Before uploading reviewer comments, unpublished data, or personal information, check confidentiality requirements and de-identify material as needed.
+Check numbers and references yourself. Before uploading material, make sure you may share it and remove personal details that are not needed.
 
 <a id="control"></a>
 
-## ✍️ Establish the writing preferences first
+## ✍️ Tell the AI how you want the paper to read
 
-Send this once in the same conversation. Where a task specifies its output, follow that task rather than generating a full analysis table each time.
+Aim for clear, accurate writing with the technical terms you need. Send these instructions before a task prompt.
 
 <details>
-<summary><strong>Open and copy the writing preferences</strong></summary>
+<summary><strong>Copy the writing instructions (once per conversation)</strong></summary>
 
 ```text
 Help me write and revise academic papers.
@@ -124,7 +73,26 @@ By default, give revised text first, then a short explanation of important chang
 </details>
 
 <details>
-<summary><strong>Choose checks that fit the research approach</strong></summary>
+<summary><strong>Not sure what to give the AI? See what you can include</strong></summary>
+
+```text
+Field and paper type: {{for example, a history course paper, quantitative study, qualitative study, theoretical paper, or review}}
+Current stage: {{topic, literature, planning, records, drafting, editing, checking, submission, or feedback revision}}
+Research approach: {{quantitative, qualitative, theoretical, review, or other}}
+Readers, language, and length: {{requirements}}
+Materials and versions actually supplied: {{text, tables, sources, records, file names, or dates}}
+Central question or claim: {{question}}
+Confirmed facts: {{numbers, sources, methods, and completed changes}}
+Unverified or conflicting information: {{items}}
+Task for this session: {{specific request}}
+```
+
+This card indexes your materials. Include the relevant original text or records when checking numbers and central claims.
+
+</details>
+
+<details>
+<summary><strong>What to check for different kinds of research (optional)</strong></summary>
 
 - **Quantitative research** — design, measurement, comparison conditions, missing data and exclusions, analytical assumptions, uncertainty, and alternative explanations.
 - **Qualitative research** — sampling, sources, coding, interpretation, researcher positioning, counterexamples, and quotation locations.
@@ -137,39 +105,55 @@ Use only fields relevant to the approach. Statistical tests, randomized controls
 
 <a id="catalog"></a>
 
-## 🧭 Find prompts by stage
+## 🧭 Choose what you want to do now
 
-Choose from the materials you have. Feedback may send you back to literature, evidence, or structure before another check.
+Click the left column to reach the tasks. You can start anywhere.
 
-| Where you are | Start here | What to prepare |
-| --- | --- | --- |
-| No clear topic yet | [1. Find a topic](#topic) | Resources, directions, and a specific question |
-| An initial idea | [2. Find and read literature](#literature) | Search records, comparisons, and related work |
-| Some materials, ready to plan | [3. Plan and outline](#planning) | Approach, evidence, and a feasible design |
-| Research underway, with records or results | [4. Organize records and check analyses](#records) | Traceable materials, analyses, and figures |
-| Ready to turn materials into a paper | [5. Draft](#drafting) | Supported sections and claims |
-| A draft that needs work | [6. Revise the draft](#editing) | Structure, argument, language, and version notes |
-| A near-final manuscript | [7. Check the manuscript](#audit) | Facts, references, reporting, and consistency |
-| Choosing a journal or preparing submission | [8. Prepare submission](#submission) | Requirements, files, and confirmed declarations |
-| Feedback from a supervisor, peer, or reviewer | [9. Revise after feedback](#feedback) | Actual changes, a change record, and responses |
-| Accepted or published | [10. Proofs, archiving, and corrections](#publication) | Version checks, reuse information, and issue handling |
+| What I want to do | What the AI can help me produce |
+| --- | --- |
+| [Find something to write about](#topic) | Possible topics to compare and questions to investigate next |
+| [Find sources for an idea](#literature) | Search terms, source comparisons, and reading suggestions |
+| [Plan the research and organize the paper](#planning) | A research plan and paper outline |
+| [Organize notes, data, or figures](#records) | Organized records, checks, and figure descriptions |
+| [Turn my materials into a first draft](#drafting) | Draft sections based on the material I provide |
+| [Make a draft clearer and easier to read](#editing) | Revised text and an explanation of the main changes |
+| [Check my paper before handing it in](#audit) | Problems with their locations and suggested fixes |
+| [Submit to a journal](#submission) | A cover letter and a list of required materials |
+| [Revise after comments from a teacher or reviewer](#feedback) | Revision priorities, edited text, and replies to comments |
+| [Check work after acceptance or publication](#publication) | Checks of the typeset text, saved materials, and advice on errors |
 
-[View the lifecycle illustration in Chinese](assets/research-writing-lifecycle.png).
+<details>
+<summary>Want to see the full research and writing process?</summary>
 
-The stages can be revisited. The project assists with organizing questions, writing, revision, and checking. Researchers carry out the study, verify evidence, and make author decisions. Journals make publication decisions. Keep data, source, and version records from the start.
+![Research and writing stages, in Chinese](assets/research-writing-lifecycle.png)
 
-The workflow draws on research-support, data-management, open-research, and publishing resources, adapted to this project's purpose. [Sources and coverage (Chinese)](docs/coverage.md) · [Evaluation records (Chinese)](docs/validation/README.md).
+You can revisit stages or use them as needed. Authors carry out the research and make important judgments; journals make publication decisions. [Workflow sources (Chinese)](docs/coverage.md) · [Trial records (Chinese)](docs/validation/README.md)
+
+</details>
+
+<a id="showcase"></a>
+
+<details>
+<summary><strong>See how a passage changes after editing</strong></summary>
+
+A short introduction was generated in Chinese, then revised using this project's prompts and Skill. The English figure translates the recorded passages and identifies the edits and reasons.
+
+![A short introduction before and after revision, with specific edits](assets/showcase-before-after-en.png)
+
+[Read the full inputs, outputs, and change record](docs/showcase/README.en.md) · [查看中文示例](docs/showcase/README.md)
+
+</details>
 
 <a id="topic"></a>
 
-## 1. Find a topic
+## 1. Find something to write about
 
-Start from your interests and accessible materials, then narrow the direction into a question. Candidate topics still need literature review and research to establish their value.
+Share your subject, interests, and available resources to compare possible topics. You still need to read and judge whether a topic is worth studying.
 
 <a id="positioning"></a>
 
 <details>
-<summary><strong>1.1 Find a topic from your interests and resources</strong></summary>
+<summary><strong>1.1 Find a topic that fits your interests and resources</strong></summary>
 
 ```text
 I do not yet have a clear topic. Help me identify research questions worth investigating, based on my current circumstances.
@@ -189,7 +173,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>1.2 Turn a direction into a research question</strong></summary>
+<summary><strong>1.2 Turn a broad idea into a specific question</strong></summary>
 
 ```text
 Use the materials below to clarify the research question and potential contributions.
@@ -208,12 +192,12 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 
 <a id="literature"></a>
 
-## 2. Find and read the literature
+## 2. Find sources and read the literature
 
-Find relevant research and compare what it answers and leaves unresolved. Keep source and search-scope records. Distinguish conventional related work from a systematic review.
+Start with search terms, then compare the studies you read. Check references suggested by AI; a title is not a substitute for reading the source.
 
 <details>
-<summary><strong>2.1 Build a search plan and find relevant materials</strong></summary>
+<summary><strong>2.1 Find search terms and relevant sources</strong></summary>
 
 ```text
 I have an initial idea. Help me find relevant materials and assess how far existing research has addressed it.
@@ -240,7 +224,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>2.2 Compare the literature and refine your question</strong></summary>
+<summary><strong>2.2 Compare what you have read and decide what to study</strong></summary>
 
 ```text
 Organize the research in the materials I provide to help narrow my question.
@@ -258,7 +242,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>2.3 Turn literature comparisons into related work</strong></summary>
+<summary><strong>2.3 Write about what earlier studies have found</strong></summary>
 
 ```text
 Turn the existing literature comparisons and reading notes into related-work paragraphs.
@@ -279,12 +263,12 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 
 <a id="planning"></a>
 
-## 3. Plan the study and outline
+## 3. Plan the research and outline the paper
 
-Organize evidence, methods, and structure for your field and approach. Consider the journal or genre early, along with ethics, permissions, and research records. Separate completed work from plans.
+Work out the question, materials, and order of the paper. Describe research you have not done as a plan.
 
 <details>
-<summary><strong>3.1 Develop a feasible study plan</strong></summary>
+<summary><strong>3.1 Plan how to carry out the research</strong></summary>
 
 ```text
 Turn the research question below into an executable plan. Assess feasibility before drafting the paper.
@@ -307,7 +291,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>3.2 Create a paper outline</strong></summary>
+<summary><strong>3.2 Build a paper outline</strong></summary>
 
 ```text
 Create a paper outline from the available materials.
@@ -327,7 +311,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 <a id="evidence"></a>
 
 <details>
-<summary><strong>3.3 Check the role of each piece of evidence</strong></summary>
+<summary><strong>3.3 Check what your materials can show</strong></summary>
 
 ```text
 Check the role of these experiments, analyses, or arguments in the paper.
@@ -350,7 +334,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 <a id="story"></a>
 
 <details>
-<summary><strong>3.4 Clarify the main argument and contributions</strong></summary>
+<summary><strong>3.4 Clarify the paper's main point and contribution</strong></summary>
 
 ```text
 Use these materials to clarify the paper's main argument, research question, contributions, and evidence.
@@ -374,7 +358,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>3.5 Check permissions, records, and analysis arrangements before starting</strong></summary>
+<summary><strong>3.5 Check what you need before starting</strong></summary>
 
 ```text
 Identify the arrangements that need clarification before this study starts.
@@ -395,12 +379,12 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 
 <a id="records"></a>
 
-## 4. Conduct research, organize records, and check analyses
+## 4. Organize research notes and figures
 
-These tasks require actual research material. Prompts can organize records, assess whether analyses support claims, and help plan figures. Recommended collection, experiments, or analyses still need to be carried out.
+Start here when you have notes, data, or results. AI can help organize and check them; you still carry out the research.
 
 <details>
-<summary><strong>4.1 Organize research records and an evidence index</strong></summary>
+<summary><strong>4.1 Organize research notes and materials so you can find them again</strong></summary>
 
 ```text
 Organize existing research records into an index that supports writing and verification.
@@ -420,7 +404,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>4.2 Check whether analyses, interpretations, or derivations support a conclusion</strong></summary>
+<summary><strong>4.2 Check whether the analysis and conclusions make sense</strong></summary>
 
 ```text
 Assess which conclusions the available analyses or arguments support.
@@ -442,7 +426,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>4.3 Plan figures and tables and write captions</strong></summary>
+<summary><strong>4.3 Plan figures and tables and explain them clearly</strong></summary>
 
 ```text
 Plan figures and tables from existing results and write the corresponding titles, captions, or table notes.
@@ -463,12 +447,12 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 
 <a id="drafting"></a>
 
-## 5. Draft from the materials
+## 5. Write a first draft
 
-Begin with sections that have the strongest materials, then return to the abstract and title. Follow the structure your argument needs and mark missing evidence. Task [2.3](#literature) also supports writing related work.
+Choose the section you need and supply your materials. Leave missing results for later rather than having AI invent them.
 
 <details>
-<summary><strong>5.1 Draft a specified section from the outline</strong></summary>
+<summary><strong>5.1 Write one section from your outline</strong></summary>
 
 ```text
 I have materials and an outline. Help draft the specified part of the paper.
@@ -491,7 +475,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>5.2 Write the methods</strong></summary>
+<summary><strong>5.2 Write the methods: explain how the research was done</strong></summary>
 
 ```text
 Write a methods section from actual records so readers can understand how the research was conducted and assess how to reproduce it.
@@ -511,7 +495,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>5.3 Write the introduction</strong></summary>
+<summary><strong>5.3 Write the introduction: explain why the question matters</strong></summary>
 
 ```text
 Rewrite the introduction using the materials below. Help readers see early why the research matters, what remains unresolved, and what this paper does.
@@ -534,7 +518,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>5.4 Write a results paragraph</strong></summary>
+<summary><strong>5.4 Write the results: explain what you found</strong></summary>
 
 ```text
 Turn the results below into a paragraph for the paper.
@@ -555,7 +539,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>5.5 Write the discussion and limitations</strong></summary>
+<summary><strong>5.5 Write the discussion: explain results and limitations</strong></summary>
 
 ```text
 Write the discussion and limitations from these results.
@@ -575,7 +559,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>5.6 Write the conclusion</strong></summary>
+<summary><strong>5.6 Write the conclusion: sum up the paper</strong></summary>
 
 ```text
 Write a conclusion from these materials.
@@ -595,7 +579,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>5.7 Write the abstract</strong></summary>
+<summary><strong>5.7 Write the abstract: introduce the whole paper briefly</strong></summary>
 
 ```text
 Write an abstract from the materials below.
@@ -618,7 +602,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>5.8 Propose paper titles</strong></summary>
+<summary><strong>5.8 Suggest titles for the paper</strong></summary>
 
 ```text
 Propose 5 concise, accurate paper titles, each with a one-sentence reason.
@@ -637,12 +621,12 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 
 <a id="editing"></a>
 
-## 6. Revise the draft
+## 6. Improve a draft
 
-Resolve the main argument, structure, and reasoning before editing sentences, terms, and formatting. Keep sound wording. For section-by-section editing, record versions and outstanding updates.
+Use 6.1 when the paper is hard to follow. Use 6.2 when you want to make a passage easier to read.
 
 <details>
-<summary><strong>6.1 Revise structure and argument first</strong></summary>
+<summary><strong>6.1 Improve the paper's structure and line of reasoning</strong></summary>
 
 ```text
 I have a complete draft. Review its overall structure and argument before deciding how to revise it.
@@ -664,7 +648,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>6.2 Edit academic prose for accuracy and readability</strong></summary>
+<summary><strong>6.2 Make sentences accurate and easy to read</strong></summary>
 
 ```text
 Edit this academic passage for accuracy, readability, and coherence without changing the research meaning.
@@ -696,7 +680,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>6.3 Remove stock phrases and formulaic patterns</strong></summary>
+<summary><strong>6.3 Remove stock phrases and awkward wording</strong></summary>
 
 ```text
 Check this text for formulaic language and make it read like a real author's prose.
@@ -743,7 +727,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 Check empty self-deprecation and overstatement</strong></summary>
+<summary><strong>6.5 Check for exaggerated claims or unnecessary self-criticism</strong></summary>
 
 ```text
 Check this manuscript text and distinguish:
@@ -767,7 +751,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>6.6 Translate academic text while preserving meaning and evidence strength</strong></summary>
+<summary><strong>6.6 Translate the paper without changing its meaning</strong></summary>
 
 ```text
 Translate this academic text while preserving its meaning and strength of evidence.
@@ -786,7 +770,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>6.7 Prepare a handover note for section-by-section revision</strong></summary>
+<summary><strong>6.7 Record changes so you can continue editing later</strong></summary>
 
 ```text
 Prepare a concise work record for subsequent section-by-section revision.
@@ -843,12 +827,12 @@ If the actual method caches shared computation to reduce repeated work, say that
 
 <a id="audit"></a>
 
-## 7. Check the manuscript
+## 7. Check before submitting
 
-Verify facts and citations against sources, then review reasoning and reporting completeness. State the actual scope each time and return to affected sections to resolve issues. A complete checklist does not establish sound study design.
+Compare the text with your original materials, then revise any problems. Check the AI suggestions before accepting them.
 
 <details>
-<summary><strong>7.1 Check facts and arguments against source materials</strong></summary>
+<summary><strong>7.1 Check facts and conclusions against the original materials</strong></summary>
 
 ```text
 Check this manuscript passage against the supplied materials. Do not supply missing facts.
@@ -875,7 +859,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>7.2 Review the paper from a reader's or reviewer's perspective</strong></summary>
+<summary><strong>7.2 Find problems from a reader's or reviewer's perspective</strong></summary>
 
 ```text
 Check the substantive questions that readers and reviewers in this field are most likely to raise about this manuscript.
@@ -894,7 +878,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>7.3 Run a comprehensive pre-submission check</strong></summary>
+<summary><strong>7.3 Check the whole paper before submitting</strong></summary>
 
 ```text
 Audit this manuscript before submission. Report issues first without rewriting the whole paper.
@@ -925,7 +909,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>7.4 Verify source identity, metadata, and citation support</strong></summary>
+<summary><strong>7.4 Check whether references are real and used correctly</strong></summary>
 
 ```text
 Check each source's identity, metadata, and support for the specific claim citing it.
@@ -949,7 +933,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>7.5 Check completeness against applicable reporting guidelines</strong></summary>
+<summary><strong>7.5 Check for missing information against writing requirements</strong></summary>
 
 ```text
 Check whether this manuscript reports the information required by applicable guidance.
@@ -988,9 +972,9 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 
 <a id="submission"></a>
 
-## 8. Choose a journal and prepare submission
+## 8. Submit to a journal, if needed
 
-Consider journal or genre requirements during planning, then consult the current version before submitting. Organize files, formatting, and declarations from actual requirements. Authors confirm missing information.
+For coursework, follow your teacher’s requirements. Use these tasks when you plan to submit to a journal.
 
 <details>
 <summary><strong>8.1 Format the reference list</strong></summary>
@@ -1017,7 +1001,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>8.2 Write a cover letter</strong></summary>
+<summary><strong>8.2 Write a cover letter to the journal editor</strong></summary>
 
 ```text
 Write a cover letter to {{journal}} using these materials.
@@ -1035,7 +1019,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>8.3 Check journal fit and submission materials</strong></summary>
+<summary><strong>8.3 Check journal suitability and the required files</strong></summary>
 
 ```text
 Organize submission preparation against the target journal's current requirements. If a journal has not been selected, first assess the conditions for a suitable match.
@@ -1057,7 +1041,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>8.4 Prepare contribution and other declarations</strong></summary>
+<summary><strong>8.4 Describe authors' work and prepare submission statements</strong></summary>
 
 ```text
 Draft applicable declarations about author contributions, funding, competing interests, ethics, data or code availability, and AI use from confirmed facts.
@@ -1081,10 +1065,10 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 
 ## 9. Revise after feedback
 
-Turn supervisor, collaborator, and peer feedback into revision tasks. Prepare point-by-point responses when formal review requires them. Comments may require returning to literature, research, or analysis. For a new journal after rejection, use [8.3](#submission) to compare requirements.
+Supply the actual comments from your teacher, colleagues, or reviewers. Understand what needs changing before editing the text.
 
 <details>
-<summary><strong>9.1 Understand feedback and prioritize revisions</strong></summary>
+<summary><strong>9.1 Understand feedback and decide what to revise first</strong></summary>
 
 ```text
 Help me understand this feedback and organize a revision plan before rewriting the whole paper.
@@ -1104,7 +1088,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>9.2 Revise the manuscript and record actual changes</strong></summary>
+<summary><strong>9.2 Revise the text and record the changes</strong></summary>
 
 ```text
 Revise the manuscript in response to agreed feedback and keep a verifiable change record.
@@ -1126,7 +1110,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>9.3 Respond to reviewers from completed changes</strong></summary>
+<summary><strong>9.3 Reply to reviewers using the changes you actually made</strong></summary>
 
 ```text
 Help me respond to each reviewer comment.
@@ -1150,12 +1134,12 @@ Changes may affect the abstract, figures, tables, discussion, and conclusion tog
 
 <a id="publication"></a>
 
-## 10. Check proofs and handle work after publication
+## 10. After acceptance or publication, if needed
 
-Acceptance is followed by proof checking. Preserve traceable versions and archive according to permissions and journal requirements. When an error is found, establish its implications before communicating through the relevant process.
+Check the journal’s typeset version and save your research materials. If you find an error after publication, verify it and follow the journal’s process.
 
 <details>
-<summary><strong>10.1 Compare the accepted manuscript with the proofs</strong></summary>
+<summary><strong>10.1 Check the journal's typeset version against your manuscript</strong></summary>
 
 ```text
 Compare the accepted manuscript and proofs and organize changes requiring editorial confirmation.
@@ -1178,7 +1162,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>10.2 Prepare archiving and reuse documentation</strong></summary>
+<summary><strong>10.2 Save research materials and explain how to use them</strong></summary>
 
 ```text
 Organize the research materials for archiving and reuse.
@@ -1198,7 +1182,7 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 </details>
 
 <details>
-<summary><strong>10.3 Assess an error's implications and prepare correction correspondence</strong></summary>
+<summary><strong>10.3 Explain an error found after publication and draft a note to the editor</strong></summary>
 
 ```text
 A possible problem has been found after publication. Help organize its implications and communication.
@@ -1221,7 +1205,12 @@ Base facts only on supplied or actually verified materials. Do not fill missing 
 
 <a id="skill"></a>
 
-## 🛠️ Install as an Agent Skill (optional)
+## Use Codex or WorkBuddy often?
+
+You can install these writing instructions in your tool for future use.
+
+<details>
+<summary><strong>Show installation instructions (optional)</strong></summary>
 
 If you often edit papers in an Agent, install [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md). It packages these writing preferences and stage-specific tasks as standalone instructions. It does not require other skills or the full repository. You can skip this section when copying prompts directly.
 
@@ -1263,9 +1252,16 @@ Other tools that support `SKILL.md` may use their own import procedures. Otherwi
 
 Installation entry points were checked against official documentation, but installation and behavior have not been tested in every client. Confirm that your materials can be uploaded. A local Agent may still use a remote model. Check the target journal's AI-use and disclosure requirements before submission.
 
+</details>
+
 <a id="quality"></a>
 
-## Coverage and evaluation
+## Have these prompts been tried?
+
+There are trial records for selected Chinese and English tasks. The other languages have only had translation checks so far. Review AI responses before using them.
+
+<details>
+<summary>See trial records and sources</summary>
 
 This library supports common research preparation, academic writing, and revision tasks. Choose tasks for your field, approach, and journal. Task counts are not used to calculate a coverage percentage.
 
@@ -1278,10 +1274,17 @@ This library supports common research preparation, academic writing, and revisio
 
 Five of the 43 English task prompts have direct behavior trials in the default Codex session environment. The initial run produced five passes and one partial completion. A targeted retry addressed the omitted fact in that case. Other tasks, repeated sampling, cross-model comparisons, and full manuscripts still need testing.
 
-## Maintenance and feedback
+</details>
+
+<details>
+<summary>Found a problem or want to help improve this?</summary>
+
+Use the [feedback page](https://github.com/huh7i5/AI-prompts-writing/issues) to share the task number, what you supplied, and what was unhelpful in the response. Remove private information first.
 
 The prompts will continue to change based on actual use, failure cases, and writing experience. Contributions may include general tasks, adaptations for different fields, failures, or better verification methods. Explain the setting, required inputs, and known limits.
 
 After changing a task, check the same task ID in [every language version](docs/translations.md), `.agents/skills/ai-prompt-writing/SKILL.md`, fixed cases, and evaluation records. Changes to search, analysis, citation, submission, or proof-checking boundaries should trigger at least the relevant cases, retaining both old and new outputs.
 
 The project stays text-first. It requires no code, is not tied to one model, and does not promise that a prompt alone guarantees a correct result.
+
+</details>

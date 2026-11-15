@@ -28,6 +28,8 @@ A separate model reviewer read the French, German, Portuguese, Russian, and Japa
 
 ## Keeping versions aligned
 
+On 2026-11-15, the README introductions, navigation, task labels, and section summaries were revised for first-time readers. Each language now explains how to open, copy, fill in, and send a prompt, with one directory showing what each task can help produce. Detailed examples, installation instructions, and evaluation notes remain available in closed sections. The existing prompt and installation-example code blocks are preserved; this display update adds no new behavioral test results.
+
 When a task changes, compare its numbered block in every language. Preserve negation, uncertainty, units, study conditions, evidence limits, and the separation between completed work and planned work. Check that links, placeholders, command names, and code fences still work. Record behavioral testing separately from translation review, and retain earlier input and output snapshots.
 
 ## 语言版本说明
@@ -39,3 +41,5 @@ When a task changes, compare its numbered block in every language. Preserve nega
 本次审查核对了任务编号、占位符、链接、代码围栏、任务内数字及事实边界，并检查否定、条件、研究计划与已完成工作的区分。另一个模型代理复核了法、德、葡、俄、日语任务文本，并对西语作重点语义检查。已纠正准确率与精确率混用、限定语译法，以及“未告知便替换已发表结果”的条件遗漏；也澄清了结果出现前的计划与事后探索的区别。这些属于翻译审查，不能算作提示词行为测试。
 
 后续修改任务时，按编号同步所有语言，重点核对否定、条件、不确定性、数字与证据范围。安装命令、占位符、代码围栏和链接也要一起检查。翻译审查与行为测试分别记录，历史输入和输出继续保留。
+
+2026-11-15，首页介绍、导航、任务名称和阶段说明改为面向初次使用者的表达，补齐展开、复制、填写、发送的步骤。目录写清每类任务能帮助得到什么，详细例子、安装方法和验证说明放入折叠区。各语言原有的提示词和安装示例代码块保持原文，本次调整不增加行为测试结果。

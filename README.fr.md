@@ -12,88 +12,37 @@
 </p>
 
 <p>
-  <a href="#start">Copier et utiliser</a> ·
-  <a href="#control">Préférences de rédaction</a> ·
-  <a href="#catalog">Trouver votre étape</a> ·
-  <a href="#skill">Installer comme Skill</a> ·
-  <a href="#quality">Périmètre et évaluation</a> ·
-  <a href="#showcase">Exemple de révision</a>
+  <a href="#start">Commencer ici</a> ·
+  <a href="#catalog">Choisir une tâche</a> ·
+  <a href="#showcase">Voir un exemple de révision</a>
 </p>
 
 </div>
 
-Prompts pour trouver un sujet, organiser les documents de recherche, rédiger, réviser, soumettre un manuscrit et vérifier le travail après publication. Ouvrez une tâche, copiez son prompt et remplacez les champs à remplir par vos propres documents.
-
-L’objectif est une prose scientifique précise et lisible. Employez les concepts techniques avec précision, sans accumuler de jargon, allonger inutilement les phrases ni remplacer les explications par des métaphores.
-
-<a id="showcase"></a>
-
-## ✦ Voir comment un passage change
-
-Une courte introduction a été générée en chinois, puis révisée à l’aide des prompts et du Skill de ce projet. La figure en anglais traduit les passages conservés et indique les modifications et leurs raisons.
-
-![Une brève introduction avant et après la révision, avec des modifications spécifiques](assets/showcase-before-after-en.png)
-
-[Consulter les entrées, les sorties et le relevé complet des modifications](docs/showcase/README.en.md) · [Voir l’exemple en chinois](docs/showcase/README.md)
+Ces 43 demandes prêtes à copier, appelées prompts, vous aident à trouver un sujet, chercher des sources, organiser un article et améliorer un brouillon. Vous pouvez les lire et les copier sur cette page, sans rien télécharger ni savoir programmer.
 
 <a id="start"></a>
 
-## 📋 Copier et utiliser
+## 📋 Première visite ? Suivez ces trois étapes
 
-Utilisez ces prompts dans ChatGPT, Claude, DeepSeek, Kimi, Doubao ou d’autres outils de conversation. Aucune installation ni aucun code ne sont nécessaires.
+Ouvrez une nouvelle conversation dans l’outil d’IA que vous utilisez déjà, comme ChatGPT, Claude ou DeepSeek.
 
-1. Dans une nouvelle conversation, envoyez les [préférences de rédaction](#control), puis le prompt d'une tâche, afin de fixer les exigences de style et de vérification.
-2. Utilisez le [répertoire des étapes](#catalog) pour trouver votre tâche, puis ouvrez et copiez son prompt.
-3. Remplacez les `{{champs entre doubles accolades}}` par vos documents. Vérifiez la réponse avant de l'adopter.
+1. **Envoyez d’abord les consignes de rédaction.** Ouvrez « Copier les consignes de rédaction » ci-dessous, copiez le texte de l’encadré et envoyez-le à l’IA. Faites-le une fois par conversation.
+2. **Choisissez une tâche.** Repérez ce que vous voulez faire dans le [répertoire ci-dessous](#catalog). Cliquez sur le titre de la tâche ou sur le petit triangle pour l’ouvrir, puis copiez son texte dans la zone de message.
+3. **Ajoutez vos informations et envoyez le message.** Remplacez chaque `{{…}}`, accolades comprises, par vos informations et joignez les documents nécessaires. Comparez la réponse avec vos originaux avant d’accepter les changements.
 
-Vous pouvez commencer par préciser le domaine, le type d’article, l’approche de recherche et le public visé. Fournissez uniquement les détails pertinents. Les études quantitatives, qualitatives, théoriques et les revues de littérature ne nécessitent pas toutes un modèle expérimental.
+Par exemple, remplacez `Domaine : {{domaine}}` par `Domaine : sciences de l’éducation`. Écrivez « non fourni » si vous ne connaissez pas une information et supprimez les champs inutiles. Utilisez une tâche à la fois.
 
-Écrivez « non fourni » pour les informations inconnues et supprimez les champs qui ne s'appliquent pas. Vous pouvez commencer à n’importe quelle étape sans envoyer l’intégralité du README. Pour les manuscrits longs, incluez à chaque fois les passages, les figures, les tableaux et la terminologie pertinents plutôt que de supposer que le modèle se souvient de l'article complet.
-
-> Les auteurs doivent toujours vérifier les valeurs numériques, les références et les déclarations de soumission. Les prompts peuvent aider à repérer les problèmes, mais ne garantissent pas des réponses sans erreur.
-
-### Un bref parcours à travers votre premier article
-
-Choisissez le point de départ qui correspond à vos documents actuels.
-
-1. [Trouver un sujet](#topic)
-2. [Rechercher et lire la littérature](#literature)
-3. [Concevoir l’étude et son plan](#planning)
-4. [Rédiger à partir de vos documents](#drafting)
-5. [Vérifier le manuscrit](#audit)
-6. [Réviser après des commentaires](#feedback)
-
-Utilisez les tâches consacrées aux dossiers de recherche, aux figures, aux déclarations, aux épreuves et au suivi après publication selon vos besoins. Il n’est pas nécessaire de tout ouvrir à la fois.
-
-<details>
-<summary><strong>Joindre une fiche des documents à chaque tâche</strong></summary>
-
-```text
-Domaine et type d’article : {{par exemple, travail de cours en histoire, étude quantitative, étude qualitative, article théorique ou revue de littérature}}
-Stade actuel : {{sujet, littérature, conception, dossiers, rédaction, révision, vérification, soumission ou révision après commentaires}}
-Approche de recherche : {{quantitative, qualitative, théorique, revue de littérature ou autre}}
-Lecteurs, langue et longueur : {{exigences}}
-Documents et versions effectivement fournis : {{texte, tableaux, sources, dossiers, noms des fichiers ou dates}}
-Question ou affirmation centrale : {{question de recherche}}
-Faits confirmés : {{valeurs numériques, sources, méthodes et modifications effectuées}}
-Informations non vérifiées ou contradictoires : {{éléments}}
-Tâche pour cette session : {{demande précise}}
-```
-
-Cette fiche sert d’index. Joignez le texte ou les dossiers originaux pertinents pour vérifier les valeurs numériques et les affirmations centrales.
-
-</details>
-
-Avant de transmettre des commentaires d’évaluateurs, des données non publiées ou des informations personnelles, vérifiez les exigences de confidentialité et dépersonnalisez les documents si nécessaire.
+Vérifiez vous-même les chiffres et les références. Avant de transmettre des documents, assurez-vous de pouvoir les partager et retirez les données personnelles inutiles.
 
 <a id="control"></a>
 
-## ✍️ Établissez d'abord les préférences de rédaction
+## ✍️ Dites à l’IA comment vous souhaitez rédiger votre travail
 
-Envoyez ces préférences une fois dans la même conversation. Lorsqu’une tâche précise le résultat attendu, suivez ses consignes au lieu de produire systématiquement un tableau d’analyse complet.
+Visez un texte clair et précis, avec les termes techniques nécessaires. Envoyez ces consignes avant la demande correspondant à votre tâche.
 
 <details>
-<summary><strong>Ouvrir et copier les préférences de rédaction</strong></summary>
+<summary><strong>Copier les consignes de rédaction (une fois par conversation)</strong></summary>
 
 ```text
 Aidez-moi à rédiger et à réviser des articles scientifiques.
@@ -124,7 +73,26 @@ Par défaut, donnez d’abord le texte révisé, puis une brève explication des
 </details>
 
 <details>
-<summary><strong>Choisissez des contrôles qui correspondent à l'approche de recherche</strong></summary>
+<summary><strong>Vous ne savez pas quoi donner à l’IA ? Voici ce que vous pouvez inclure</strong></summary>
+
+```text
+Domaine et type d’article : {{par exemple, travail de cours en histoire, étude quantitative, étude qualitative, article théorique ou revue de littérature}}
+Stade actuel : {{sujet, littérature, conception, dossiers, rédaction, révision, vérification, soumission ou révision après commentaires}}
+Approche de recherche : {{quantitative, qualitative, théorique, revue de littérature ou autre}}
+Lecteurs, langue et longueur : {{exigences}}
+Documents et versions effectivement fournis : {{texte, tableaux, sources, dossiers, noms des fichiers ou dates}}
+Question ou affirmation centrale : {{question de recherche}}
+Faits confirmés : {{valeurs numériques, sources, méthodes et modifications effectuées}}
+Informations non vérifiées ou contradictoires : {{éléments}}
+Tâche pour cette session : {{demande précise}}
+```
+
+Cette fiche sert d’index. Joignez le texte ou les dossiers originaux pertinents pour vérifier les valeurs numériques et les affirmations centrales.
+
+</details>
+
+<details>
+<summary><strong>Que vérifier selon le type de recherche ? (facultatif)</strong></summary>
 
 - **Recherche quantitative** — conception, mesure, conditions de comparaison, données manquantes et exclusions, hypothèses analytiques, incertitude et explications alternatives.
 - **Recherche qualitative** — échantillonnage, sources, codage, interprétation, positionnement des chercheurs, contre-exemples et emplacements des citations.
@@ -137,39 +105,55 @@ Utilisez uniquement les champs pertinents pour l’approche. Les tests statistiq
 
 <a id="catalog"></a>
 
-## 🧭 Rechercher des prompts par étape
+## 🧭 Choisissez ce que vous voulez faire maintenant
 
-Choisissez parmi les documents dont vous disposez. Les commentaires peuvent vous renvoyer à la littérature, aux preuves ou à la structure avant une autre vérification.
+Cliquez dans la colonne de gauche pour accéder aux tâches. Vous pouvez commencer où vous le souhaitez.
 
-| Où êtes-vous | Commencez ici | Que préparer |
-| --- | --- | --- |
-| Pas encore de sujet clair | [1. Rechercher un sujet](#topic) | Ressources, directions et question spécifique |
-| Une première idée | [2. Trouver et lire de la littérature](#literature) | Rechercher des documents, des comparaisons et des travaux connexes |
-| Quelques documents, prêt à concevoir l’étude | [3. Concevoir l’étude et établir son plan](#planning) | Approche, éléments probants et dispositif réalisable |
-| Recherche en cours, avec des dossiers ou des résultats | [4. Organiser les dossiers et vérifier les analyses](#records) | Documents, analyses et figures traçables |
-| Prêt à transformer les documents en article | [5. Rédiger](#drafting) | Sections et affirmations étayées |
-| Un brouillon à améliorer | [6. Réviser le brouillon](#editing) | Structure, argumentation, langue et notes de version |
-| Un manuscrit presque définitif | [7. Vérifier le manuscrit](#audit) | Faits, références, compte rendu et cohérence |
-| Choisir une revue ou préparer une soumission | [8. Préparer la soumission](#submission) | Exigences, dossiers et déclarations confirmées |
-| Commentaires d'un superviseur, d'un pair ou d'un évaluateur | [9. Réviser après commentaires](#feedback) | Modifications réelles, enregistrement des modifications et réponses |
-| Accepté ou publié | [10. Épreuves, archivage et corrections](#publication) | Vérifications de versions, réutilisation des informations et gestion des problèmes |
+| Ce que je veux faire | Ce que l’IA peut m’aider à préparer |
+| --- | --- |
+| [Trouver un sujet sur lequel écrire](#topic) | Des sujets à comparer et des questions à approfondir |
+| [Trouver des sources pour une idée](#literature) | Des mots-clés, des comparaisons de sources et des suggestions de lecture |
+| [Préparer la recherche et organiser le travail](#planning) | Un programme de recherche et un plan de rédaction |
+| [Mettre de l’ordre dans mes notes, données ou figures](#records) | Des documents organisés, des vérifications et des descriptions de figures |
+| [Transformer mes documents en premier brouillon](#drafting) | Des sections rédigées à partir des documents que je fournis |
+| [Rendre mon brouillon plus facile à comprendre](#editing) | Un texte révisé et une explication des principaux changements |
+| [Vérifier mon travail avant de le rendre](#audit) | Des problèmes localisés et des corrections proposées |
+| [Envoyer mon article à une revue](#submission) | Une lettre d’accompagnement et la liste des documents nécessaires |
+| [Réviser après les remarques d’un enseignant ou d’un évaluateur](#feedback) | Des priorités de révision, un texte corrigé et des réponses aux remarques |
+| [Vérifier le travail après acceptation ou publication](#publication) | Une vérification des épreuves, des documents à conserver et des conseils en cas d’erreur |
 
-[Voir l'illustration du cycle de vie en chinois](assets/research-writing-lifecycle.png).
+<details>
+<summary>Voir l’ensemble des étapes de recherche et de rédaction</summary>
 
-Les étapes peuvent être revisitées. Le projet aide à organiser les questions, à rédiger, à réviser et à vérifier. Les chercheurs mènent l’étude, vérifient les preuves et prennent les décisions d’auteur. Les revues prennent les décisions de publication. Conservez les enregistrements de données, de sources et de versions depuis le début.
+![Étapes de recherche et de rédaction, en chinois](assets/research-writing-lifecycle.png)
 
-Le flux de travail s'appuie sur des ressources de soutien à la recherche, de gestion des données, de recherche ouverte et de publication, adaptées à l'objectif de ce projet. [Sources et couverture (chinois)](docs/coverage.md) · [Dossiers d'évaluation (chinois)](docs/validation/README.md).
+Revenez à chaque étape selon vos besoins. Les auteurs réalisent la recherche et prennent les décisions importantes ; les revues décident de la publication. [Sources du parcours (chinois)](docs/coverage.md) · [Relevés des essais (chinois)](docs/validation/README.md)
+
+</details>
+
+<a id="showcase"></a>
+
+<details>
+<summary><strong>Voir comment un passage change après révision</strong></summary>
+
+Une courte introduction a été générée en chinois, puis révisée à l’aide des prompts et du Skill de ce projet. La figure en anglais traduit les passages conservés et indique les modifications et leurs raisons.
+
+![Une brève introduction avant et après la révision, avec des modifications spécifiques](assets/showcase-before-after-en.png)
+
+[Consulter les documents, les réponses et le relevé des modifications (anglais)](docs/showcase/README.en.md) · [Voir l’exemple en chinois](docs/showcase/README.md)
+
+</details>
 
 <a id="topic"></a>
 
-## 1. Trouver un sujet
+## 1. Trouver un sujet sur lequel écrire
 
-Partez de vos intérêts et des documents accessibles, puis précisez cette orientation en une question. La valeur des sujets envisagés reste à établir par l’examen de la littérature et la recherche.
+Indiquez votre domaine, vos centres d’intérêt et les moyens dont vous disposez pour comparer des sujets possibles. Vous devrez encore lire et juger si ces sujets méritent une recherche.
 
 <a id="positioning"></a>
 
 <details>
-<summary><strong>1.1 Rechercher un sujet parmi vos intérêts et ressources</strong></summary>
+<summary><strong>1.1 Trouver un sujet adapté à vos intérêts et à vos moyens</strong></summary>
 
 ```text
 Je n’ai pas encore de sujet précis. Aidez-moi à trouver des questions de recherche qui méritent d’être étudiées, compte tenu de ma situation actuelle.
@@ -189,7 +173,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>1.2 Transformer une orientation en question de recherche</strong></summary>
+<summary><strong>1.2 Transformer une idée générale en question précise</strong></summary>
 
 ```text
 Utilisez le matériel ci-dessous pour clarifier la question de recherche et les contributions potentielles.
@@ -208,12 +192,12 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 
 <a id="literature"></a>
 
-## 2. Trouver et lire la littérature
+## 2. Trouver des sources et lire les études
 
-Recherchez les travaux pertinents et comparez les questions auxquelles ils répondent et celles qu’ils laissent ouvertes. Conservez les sources et le périmètre des recherches effectuées. Distinguez une présentation classique des travaux connexes d’une revue systématique.
+Commencez par les mots-clés, puis comparez les études que vous lisez. Vérifiez les références proposées par l’IA ; un titre ne remplace pas la lecture de la source.
 
 <details>
-<summary><strong>2.1 Préparer une recherche documentaire et trouver les documents pertinents</strong></summary>
+<summary><strong>2.1 Trouver des mots-clés et des sources utiles</strong></summary>
 
 ```text
 J'ai une première idée. Aidez-moi à trouver du matériel pertinent et à évaluer dans quelle mesure les recherches existantes y ont répondu.
@@ -240,7 +224,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>2.2 Comparer la littérature et préciser votre question</strong></summary>
+<summary><strong>2.2 Comparer vos lectures et décider quoi étudier</strong></summary>
 
 ```text
 Organisez la recherche dans les documents que je fournis pour aider à affiner ma question.
@@ -258,7 +242,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>2.3 Rédiger les travaux connexes à partir des comparaisons de la littérature</strong></summary>
+<summary><strong>2.3 Présenter ce que les études précédentes ont trouvé</strong></summary>
 
 ```text
 Transformez les comparaisons de la littérature et les notes de lecture existantes en paragraphes présentant les travaux connexes.
@@ -279,12 +263,12 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 
 <a id="planning"></a>
 
-## 3. Concevoir l’étude et établir son plan
+## 3. Préparer la recherche et construire le plan
 
-Organisez les éléments probants, les méthodes et la structure en fonction du domaine et de l’approche. Tenez compte dès le départ de la revue ou du genre, ainsi que de l’éthique, des autorisations et des dossiers de recherche. Distinguez les travaux achevés des projets.
+Précisez la question, les documents nécessaires et l’ordre des parties. Présentez comme des projets les recherches que vous n’avez pas encore réalisées.
 
 <details>
-<summary><strong>3.1 Élaborer un protocole de recherche réalisable</strong></summary>
+<summary><strong>3.1 Prévoir comment mener la recherche</strong></summary>
 
 ```text
 Transformez la question de recherche ci-dessous en un plan réalisable. Évaluez sa faisabilité avant de rédiger l’article.
@@ -307,7 +291,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>3.2 Établir le plan de l’article</strong></summary>
+<summary><strong>3.2 Choisir les parties du travail et leur ordre</strong></summary>
 
 ```text
 Établissez le plan de l’article à partir des documents disponibles.
@@ -327,7 +311,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 <a id="evidence"></a>
 
 <details>
-<summary><strong>3.3 Vérifier le rôle de chaque élément probant</strong></summary>
+<summary><strong>3.3 Vérifier ce que chaque donnée ou source permet d’affirmer</strong></summary>
 
 ```text
 Vérifiez le rôle de ces expériences, analyses ou arguments dans l’article.
@@ -350,7 +334,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 <a id="story"></a>
 
 <details>
-<summary><strong>3.4 Clarifier l’argument principal et les contributions</strong></summary>
+<summary><strong>3.4 Préciser l’idée principale et ce que le travail apporte</strong></summary>
 
 ```text
 Utilisez ces documents pour clarifier l’argument principal de l’article, la question de recherche, les contributions et les éléments probants.
@@ -374,7 +358,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>3.5 Vérifier les autorisations, les dossiers et le dispositif d’analyse avant de commencer</strong></summary>
+<summary><strong>3.5 Vérifier les autorisations et les choix de recherche avant de commencer</strong></summary>
 
 ```text
 Repérez les dispositions à clarifier avant le début de cette étude.
@@ -395,12 +379,12 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 
 <a id="records"></a>
 
-## 4. Mener la recherche, organiser les dossiers et vérifier les analyses
+## 4. Organiser les notes, les données et les figures
 
-Ces tâches nécessitent de véritables documents de recherche. Les prompts peuvent organiser les dossiers, évaluer si les analyses étayent les affirmations et aider à préparer les figures. Les collectes, expériences ou analyses recommandées restent à réaliser.
+Fournissez vos véritables notes et résultats pour les organiser et vérifier ce qu’ils permettent d’affirmer. Les nouvelles analyses ou expériences proposées restent à réaliser.
 
 <details>
-<summary><strong>4.1 Organiser les dossiers de recherche et un index des éléments probants</strong></summary>
+<summary><strong>4.1 Ranger les notes, les données et les sources pour les retrouver</strong></summary>
 
 ```text
 Organisez les dossiers de recherche existants dans un index facilitant la rédaction et la vérification.
@@ -420,7 +404,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>4.2 Vérifier si les analyses, interprétations ou dérivations soutiennent une conclusion</strong></summary>
+<summary><strong>4.2 Vérifier si l’analyse justifie la conclusion</strong></summary>
 
 ```text
 Évaluez les conclusions étayées par les analyses ou les arguments disponibles.
@@ -442,7 +426,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>4.3 Planifier les figures et les tableaux et écrire les légendes</strong></summary>
+<summary><strong>4.3 Choisir les figures et les tableaux et écrire leurs légendes</strong></summary>
 
 ```text
 Planifiez les figures et les tableaux à partir des résultats existants et rédigez les titres, légendes ou notes de tableau correspondants.
@@ -463,12 +447,12 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 
 <a id="drafting"></a>
 
-## 5. Rédiger à partir des documents
+## 5. Transformer vos documents en premier brouillon
 
-Commencez par les sections dont les documents sont les plus solides, puis revenez au résumé et au titre. Suivez la structure nécessaire à votre argumentation et signalez les éléments probants manquants. La tâche [2.3](#literature) sert également à rédiger les travaux connexes.
+Commencez par les parties pour lesquelles vous avez assez de documents. Rédigez ensuite le résumé et le titre. Pour présenter les études précédentes, utilisez la tâche [2.3](#literature).
 
 <details>
-<summary><strong>5.1 Rédiger une section spécifiée à partir du plan</strong></summary>
+<summary><strong>5.1 Rédiger une partie du travail à partir du plan</strong></summary>
 
 ```text
 J'ai du matériel et un plan. Aidez à rédiger la partie spécifiée du document.
@@ -491,7 +475,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>5.2 Écrire les méthodes</strong></summary>
+<summary><strong>5.2 Expliquer comment la recherche a été menée</strong></summary>
 
 ```text
 Rédigez une section sur les méthodes à partir de documents réels afin que les lecteurs puissent comprendre comment la recherche a été menée et évaluer comment la reproduire.
@@ -511,7 +495,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>5.3 Écrire l'introduction</strong></summary>
+<summary><strong>5.3 Présenter le sujet et la question dans l’introduction</strong></summary>
 
 ```text
 Rédigez de nouveau l’introduction à partir des documents ci-dessous. Aidez les lecteurs à comprendre dès le début l’intérêt de la recherche, les questions non résolues et ce que fait cet article.
@@ -534,7 +518,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>5.4 Écrire un paragraphe de résultats</strong></summary>
+<summary><strong>5.4 Décrire les résultats obtenus</strong></summary>
 
 ```text
 Transformez les résultats ci-dessous en paragraphe pour le document.
@@ -555,7 +539,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>5.5 Rédiger la discussion et les limites</strong></summary>
+<summary><strong>5.5 Expliquer ce que signifient les résultats et quelles sont leurs limites</strong></summary>
 
 ```text
 Écrivez la discussion et les limites de ces résultats.
@@ -575,7 +559,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>5.6 Écrire la conclusion</strong></summary>
+<summary><strong>5.6 Rédiger la conclusion</strong></summary>
 
 ```text
 Écrivez une conclusion à partir de ces documents.
@@ -595,7 +579,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>5.7 Rédiger le résumé</strong></summary>
+<summary><strong>5.7 Résumer le travail</strong></summary>
 
 ```text
 Rédigez un résumé à partir des documents ci-dessous.
@@ -618,7 +602,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>5.8 Proposer des titres d'articles</strong></summary>
+<summary><strong>5.8 Trouver un titre pour le travail</strong></summary>
 
 ```text
 Proposez 5 titres d'article concis et précis, chacun avec une raison en une phrase.
@@ -637,12 +621,12 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 
 <a id="editing"></a>
 
-## 6. Réviser le brouillon
+## 6. Rendre le brouillon plus facile à comprendre
 
-Réglez d’abord l’argument principal, la structure et le raisonnement, puis révisez les phrases, les termes et la mise en forme. Conservez les formulations justes. Pour une révision section par section, consignez les versions et les mises à jour restantes.
+Vérifiez d’abord l’ordre des idées et le raisonnement, puis les phrases. Si vous travaillez par parties, notez les changements pour pouvoir reprendre la révision plus tard.
 
 <details>
-<summary><strong>6.1 Réviser d'abord la structure et les arguments</strong></summary>
+<summary><strong>6.1 Améliorer l’ordre des idées et le raisonnement</strong></summary>
 
 ```text
 J'ai un brouillon complet. Passez en revue sa structure globale et son argumentation avant de décider comment le réviser.
@@ -664,7 +648,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>6.2 Modifier la prose scientifique pour plus d'exactitude et de lisibilité</strong></summary>
+<summary><strong>6.2 Rendre le texte plus clair et plus précis</strong></summary>
 
 ```text
 Modifiez ce passage académique pour en assurer l'exactitude, la lisibilité et la cohérence sans changer le sens de la recherche.
@@ -696,7 +680,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>6.3 Supprimer les formules creuses et les tournures stéréotypées</strong></summary>
+<summary><strong>6.3 Enlever les phrases creuses et les tournures répétitives</strong></summary>
 
 ```text
 Repérez les tournures stéréotypées dans ce texte et rendez sa prose naturelle, comme celle d’un auteur qui maîtrise son sujet.
@@ -725,7 +709,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>6.4 Vérifier uniquement la grammaire, l'orthographe et le formatage</strong></summary>
+<summary><strong>6.4 Vérifier uniquement la grammaire, l’orthographe et la mise en forme</strong></summary>
 
 ```text
 Vérifiez uniquement les erreurs de grammaire, d’orthographe, de ponctuation et de mise en forme, ainsi que les erreurs terminologiques manifestes. Ne révisez pas le style et ne changez pas le sens.
@@ -743,7 +727,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 Vérifier l’autodépréciation sans fondement et les exagérations</strong></summary>
+<summary><strong>6.5 Expliquer les apports sans les dévaloriser ni les exagérer</strong></summary>
 
 ```text
 Examinez ce passage du manuscrit et distinguez :
@@ -767,7 +751,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>6.6 Traduire des textes académiques tout en préservant le sens et la force des preuves</strong></summary>
+<summary><strong>6.6 Traduire le texte sans en changer le sens</strong></summary>
 
 ```text
 Traduisez ce texte académique en préservant son sens et sa force probante.
@@ -786,7 +770,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>6.7 Préparer une note de transfert pour la révision section par section</strong></summary>
+<summary><strong>6.7 Préparer une note pour reprendre la révision plus tard</strong></summary>
 
 ```text
 Préparez un dossier de travail concis pour une révision ultérieure section par section.
@@ -843,12 +827,12 @@ Si la méthode met effectivement en cache les calculs partagés pour éviter les
 
 <a id="audit"></a>
 
-## 7. Vérifier le manuscrit
+## 7. Vérifier le travail avant de le rendre
 
-Vérifiez les faits et les citations par rapport aux sources, puis examinez le raisonnement et l'exhaustivité du rapport. Indiquez la portée réelle à chaque fois et revenez aux sections concernées pour résoudre les problèmes. Une liste de contrôle complète ne permet pas d’établir une conception d’étude solide.
+Comparez les affirmations et les citations avec leurs sources, puis cherchez les contradictions et les informations manquantes. La vérification ne peut porter que sur les documents fournis.
 
 <details>
-<summary><strong>7.1 Vérifier les faits et les arguments par rapport aux documents sources</strong></summary>
+<summary><strong>7.1 Comparer les faits et les affirmations avec les sources</strong></summary>
 
 ```text
 Vérifiez ce passage manuscrit par rapport aux documents fournis. Ne fournissez pas de faits manquants.
@@ -875,7 +859,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>7.2 Réviser l'article du point de vue d'un lecteur ou d'un évaluateur</strong></summary>
+<summary><strong>7.2 Repérer ce qu’un lecteur ou un évaluateur pourrait contester</strong></summary>
 
 ```text
 Examinez les questions de fond que les lecteurs et les évaluateurs du domaine risquent le plus de soulever à propos de ce manuscrit.
@@ -894,7 +878,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>7.3 Exécuter une vérification complète avant la soumission</strong></summary>
+<summary><strong>7.3 Faire une vérification générale avant de rendre le travail</strong></summary>
 
 ```text
 Auditez ce manuscrit avant de le soumettre. Signalez d’abord les problèmes sans réécrire tout le document.
@@ -925,7 +909,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>7.4 Vérifier l’identité des sources, leurs métadonnées et leur appui aux affirmations citées</strong></summary>
+<summary><strong>7.4 Vérifier les références et ce qu’elles permettent d’affirmer</strong></summary>
 
 ```text
 Vérifiez l’identité de chaque source, ses métadonnées et l’appui qu’elle apporte à l’affirmation précise qui la cite.
@@ -949,7 +933,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>7.5 Vérifier l’exhaustivité selon les recommandations de compte rendu applicables</strong></summary>
+<summary><strong>7.5 Vérifier s’il manque des informations exigées pour ce type d’étude</strong></summary>
 
 ```text
 Vérifiez si ce manuscrit rapporte les informations requises par les directives applicables.
@@ -988,12 +972,12 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 
 <a id="submission"></a>
 
-## 8. Choisir une revue et préparer la soumission
+## 8. Envoyer l’article à une revue, si nécessaire
 
-Tenez compte des exigences de la revue ou du genre lors de la planification, puis consultez la version actuelle avant de la soumettre. Organisez les fichiers, le formatage et les déclarations à partir des exigences réelles. Les auteurs confirment les informations manquantes.
+Pour un travail de cours, suivez les consignes de votre enseignant. Utilisez ces tâches si vous souhaitez envoyer un article à une revue.
 
 <details>
-<summary><strong>8.1 Formater la liste de références</strong></summary>
+<summary><strong>8.1 Mettre en forme la liste des références</strong></summary>
 
 ```text
 Vérifiez ces références par rapport au style requis.
@@ -1017,7 +1001,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>8.2 Rédiger une lettre d’accompagnement</strong></summary>
+<summary><strong>8.2 Écrire une lettre à la rédaction de la revue</strong></summary>
 
 ```text
 Rédigez une lettre d’accompagnement pour {{revue}} à partir des documents suivants.
@@ -1035,7 +1019,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>8.3 Vérifier l’adéquation de la revue et les documents de soumission</strong></summary>
+<summary><strong>8.3 Vérifier si la revue convient et quels fichiers elle demande</strong></summary>
 
 ```text
 Préparez la soumission selon les exigences actuelles de la revue cible. Si aucune revue n’a été choisie, évaluez d’abord les conditions d’une bonne adéquation.
@@ -1057,7 +1041,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>8.4 Préparer les contributions et autres déclarations</strong></summary>
+<summary><strong>8.4 Décrire le travail des auteurs et préparer les déclarations pour la revue</strong></summary>
 
 ```text
 Rédigez des déclarations applicables sur les contributions des auteurs, le financement, les conflits d’intérêts, l'éthique, la disponibilité des données ou des code et l'utilisation de l'IA à partir de faits confirmés.
@@ -1079,12 +1063,12 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 
 <a id="feedback"></a>
 
-## 9. Réviser après commentaires
+## 9. Réviser après avoir reçu des commentaires
 
-Transformez les commentaires de la direction de recherche, des collaborateurs et des pairs en tâches de révision. Préparez des réponses point par point si l’évaluation formelle l’exige. Les commentaires peuvent nécessiter un retour à la littérature, à la recherche ou à l’analyse. Après un rejet, utilisez [8.3](#submission) pour comparer les exigences d’une nouvelle revue.
+Fournissez les commentaires réels de votre enseignant, de vos collègues ou des évaluateurs. Clarifiez ce qui doit changer avant de modifier le texte.
 
 <details>
-<summary><strong>9.1 Comprendre les commentaires et prioriser les révisions</strong></summary>
+<summary><strong>9.1 Comprendre les commentaires et choisir quoi réviser en premier</strong></summary>
 
 ```text
 Aidez-moi à comprendre ces commentaires et à organiser un plan de révision avant de réécrire l'intégralité du document.
@@ -1104,7 +1088,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>9.2 Réviser le manuscrit et enregistrer les modifications réelles</strong></summary>
+<summary><strong>9.2 Réviser le texte et noter les changements</strong></summary>
 
 ```text
 Révisez le manuscrit en réponse aux commentaires convenus et conservez un enregistrement des modifications vérifiable.
@@ -1126,7 +1110,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>9.3 Répondre aux évaluateurs à partir des modifications effectuées</strong></summary>
+<summary><strong>9.3 Répondre aux évaluateurs à partir des changements réellement effectués</strong></summary>
 
 ```text
 Aidez-moi à répondre à chaque commentaire d'un évaluateur.
@@ -1150,12 +1134,12 @@ Les modifications peuvent affecter ensemble le résumé, les figures, les tablea
 
 <a id="publication"></a>
 
-## 10. Vérifier les épreuves et gérer le travail après publication
+## 10. Après acceptation ou publication, si nécessaire
 
-L'acceptation est suivie d'une vérification des épreuves. Préservez les versions traçables et les archives conformément aux autorisations et aux exigences de la revue. Lorsqu'une erreur est détectée, établissez ses implications avant de communiquer via le processus concerné.
+Vérifiez la version mise en page par la revue et conservez vos documents de recherche. Si vous trouvez une erreur après publication, vérifiez-la et suivez la procédure de la revue.
 
 <details>
-<summary><strong>10.1 Comparez le manuscrit accepté avec les épreuves</strong></summary>
+<summary><strong>10.1 Comparer la version mise en page par la revue avec votre manuscrit</strong></summary>
 
 ```text
 Comparez le manuscrit accepté aux épreuves et répertoriez les changements qui nécessitent une confirmation éditoriale.
@@ -1178,7 +1162,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>10.2 Préparer la documentation d'archivage et de réutilisation</strong></summary>
+<summary><strong>10.2 Conserver les documents de recherche et expliquer comment les utiliser</strong></summary>
 
 ```text
 Organiser le matériel de recherche pour l'archivage et la réutilisation.
@@ -1198,7 +1182,7 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 </details>
 
 <details>
-<summary><strong>10.3 Évaluer les implications d'une erreur et préparer la correspondance de correction</strong></summary>
+<summary><strong>10.3 Expliquer une erreur publiée et préparer un message pour la revue</strong></summary>
 
 ```text
 Un problème possible a été découvert après publication. Aidez-moi à en préciser les implications et à préparer la communication.
@@ -1221,7 +1205,12 @@ Fondez les faits uniquement sur les documents fournis ou effectivement vérifié
 
 <a id="skill"></a>
 
-## 🛠️ Installer comme Agent Skill (facultatif)
+## Vous utilisez souvent Codex ou WorkBuddy ?
+
+Vous pouvez installer ces consignes de rédaction dans votre outil pour les réutiliser.
+
+<details>
+<summary><strong>Voir les instructions d’installation (facultatif)</strong></summary>
 
 Si vous modifiez souvent des articles dans un agent, installez [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md). Il regroupe ces préférences de rédaction et ces tâches spécifiques à l'étape sous forme d'instructions autonomes. Il ne nécessite pas d'autres compétences ni le référentiel complet. Vous pouvez ignorer cette section lors de la copie directe des prompts.
 
@@ -1263,9 +1252,16 @@ Les autres outils compatibles avec `SKILL.md` peuvent avoir leur propre procédu
 
 Les modes d’installation ont été confrontés à la documentation officielle, mais l’installation et le comportement n’ont pas été testés dans tous les clients. Vérifiez que vos documents peuvent être transmis. Un agent local peut tout de même utiliser un modèle distant. Consultez les exigences de la revue concernant l’usage de l’IA et sa déclaration avant la soumission.
 
+</details>
+
 <a id="quality"></a>
 
-## Couverture et évaluation
+## Ces demandes ont-elles été essayées ?
+
+Des essais sont disponibles pour certaines tâches en chinois et en anglais. Cette version n’a pas encore été testée en conversation avec une IA ni relue par des francophones natifs ou des spécialistes. Vérifiez les réponses de l’IA avant de les utiliser.
+
+<details>
+<summary>Voir les relevés des essais et les sources</summary>
 
 Cette traduction n’a pas encore été relue par des contributeurs francophones natifs ou des spécialistes du domaine. Les essais en anglais ne constituent pas une validation de la version française. Voir les [limites de l’évaluation des traductions](docs/translations.md).
 
@@ -1280,10 +1276,17 @@ Cette bibliothèque accompagne les tâches courantes de préparation de la reche
 
 Cinq des 43 prompts de tâches en anglais ont fait l’objet d’essais directs de comportement dans l’environnement de session Codex par défaut. La première exécution a donné cinq réussites et un résultat partiel. Un nouvel essai ciblé a corrigé l’omission factuelle de ce cas. Les autres tâches, les échantillonnages répétés, les comparaisons entre modèles et les manuscrits complets restent à tester. La version française n’a pas fait l’objet d’essais indépendants de comportement.
 
-## Maintenance et commentaires
+</details>
+
+<details>
+<summary>Un problème à signaler ou une amélioration à proposer ?</summary>
+
+Utilisez la [page de signalement](https://github.com/huh7i5/AI-prompts-writing/issues) pour indiquer le numéro de la tâche, les documents fournis et ce qui ne vous a pas aidé dans la réponse. Retirez d’abord les informations privées.
 
 Les prompts évolueront selon les usages réels, les échecs observés et l’expérience de rédaction. Les contributions peuvent proposer des tâches générales, des adaptations disciplinaires, des cas d’échec ou de meilleures méthodes de vérification. Précisez le contexte, les entrées nécessaires et les limites connues.
 
 Après avoir modifié une tâche, vérifiez le même numéro dans [chaque version linguistique](docs/translations.md), `.agents/skills/ai-prompt-writing/SKILL.md`, les cas prédéfinis et les relevés d’évaluation. Toute modification des limites de recherche documentaire, d’analyse, de citation, de soumission ou de vérification des épreuves doit entraîner au moins l’exécution des cas concernés, en conservant les anciens et les nouveaux résultats.
 
 Le projet reste centré sur le texte. Il ne nécessite aucun code, n’est lié à aucun modèle particulier et ne promet pas qu’un prompt suffise à garantir un résultat correct.
+
+</details>

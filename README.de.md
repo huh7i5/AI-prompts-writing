@@ -12,88 +12,37 @@
 </p>
 
 <p>
-  <a href="#start">Kopieren und verwenden</a> ·
-  <a href="#control">Schreibvorgaben</a> ·
-  <a href="#catalog">Die passende Phase finden</a> ·
-  <a href="#skill">Als Skill installieren</a> ·
-  <a href="#quality">Abdeckung und Bewertung</a> ·
-  <a href="#showcase">Überarbeitungsbeispiel</a>
+  <a href="#start">Hier anfangen</a> ·
+  <a href="#catalog">Eine Aufgabe auswählen</a> ·
+  <a href="#showcase">Ein Überarbeitungsbeispiel ansehen</a>
 </p>
 
 </div>
 
-Prompts für die Themenfindung, die Ordnung von Forschungsmaterialien, das Schreiben, Überarbeiten und Einreichen sowie für Prüfungen nach der Veröffentlichung. Öffnen Sie eine Aufgabe, kopieren Sie den Prompt und ersetzen Sie die Platzhalter durch Ihre eigenen Materialien.
-
-Ziel ist eine präzise, gut lesbare Wissenschaftssprache. Verwenden Sie Fachbegriffe genau, ohne Fachjargon anzuhäufen, Sätze unnötig zu verlängern oder Erklärungen durch Metaphern zu ersetzen.
-
-<a id="showcase"></a>
-
-## ✦ So verändert sich ein Textabschnitt
-
-Eine kurze Einleitung wurde auf Chinesisch generiert und anschließend mit den Prompts und dem Skill dieses Projekts überarbeitet. Die englische Abbildung übersetzt die dokumentierten Textfassungen und erläutert die Änderungen und ihre Gründe.
-
-![Eine kurze Einleitung vor und nach der Überarbeitung mit konkreten Änderungen](assets/showcase-before-after-en.png)
-
-[Vollständige Eingaben, Ausgaben und Änderungsprotokoll lesen](docs/showcase/README.en.md) · [Chinesisches Beispiel ansehen](docs/showcase/README.md)
+Diese 43 fertigen Anfragen an eine KI, auch Prompts genannt, helfen Ihnen bei der Themenwahl, der Literatursuche, der Gliederung und der Überarbeitung. Sie können die Texte direkt auf dieser Seite lesen und kopieren. Sie müssen nichts herunterladen und nicht programmieren können.
 
 <a id="start"></a>
 
-## 📋 Kopieren und verwenden
+## 📋 Zum ersten Mal hier? So geht es in drei Schritten
 
-Verwenden Sie diese Prompts in ChatGPT, Claude, DeepSeek, Kimi, Doubao oder anderen Chat-Werkzeugen. Installation und Programmierung sind nicht erforderlich.
+Öffnen Sie eine neue Unterhaltung in einem KI-Chat, den Sie bereits nutzen, zum Beispiel ChatGPT, Claude oder DeepSeek.
 
-1. Senden Sie in einer neuen Unterhaltung zuerst die [Schreibvorgaben](#control), danach einen Aufgaben-Prompt, um Stil- und Prüfanforderungen festzulegen.
-2. Finden Sie Ihre Aufgabe im [Phasenverzeichnis](#catalog), öffnen Sie sie und kopieren Sie den Prompt.
-3. Ersetzen Sie `{{Platzhalter in doppelten geschweiften Klammern}}` durch Ihre Materialien. Prüfen Sie die Antwort, bevor Sie sie übernehmen.
+1. **Zuerst die Schreibvorgaben senden.** Öffnen Sie unten „Schreibvorgaben kopieren“, kopieren Sie den Text im hinterlegten Kasten und senden Sie ihn an die KI. Das genügt einmal pro Unterhaltung.
+2. **Eine Aufgabe auswählen.** Suchen Sie im [Verzeichnis unten](#catalog), was Sie gerade tun möchten. Klicken Sie auf den Aufgabentitel oder das kleine Dreieck, um den Text zu öffnen. Kopieren Sie ihn in das Eingabefeld des Chats.
+3. **Eigene Angaben ergänzen und senden.** Ersetzen Sie jedes `{{…}}` samt Klammern durch Ihre Angaben und fügen Sie die benötigten Materialien hinzu. Vergleichen Sie die Antwort mit Ihren Originalen, bevor Sie Vorschläge übernehmen.
 
-Sie können zunächst Fachgebiet, Art der Arbeit, Forschungsansatz und Zielpublikum nennen. Geben Sie nur relevante Einzelheiten an. Quantitative, qualitative, theoretische und Übersichtsarbeiten benötigen nicht alle dieselbe experimentelle Vorlage.
+Ersetzen Sie zum Beispiel `Fachgebiet: {{Fachgebiet}}` durch `Fachgebiet: Erziehungswissenschaft`. Schreiben Sie bei Unbekanntem „nicht angegeben“ und entfernen Sie Felder, die nicht zutreffen. Bearbeiten Sie jeweils eine Aufgabe.
 
-Schreiben Sie bei unbekannten Informationen „nicht angegeben“ und entfernen Sie nicht zutreffende Felder. Sie können in jeder Phase beginnen, ohne die gesamte README zu senden. Fügen Sie bei langen Manuskripten jedes Mal die relevanten Textstellen, Abbildungen, Tabellen und Begriffe hinzu, statt vorauszusetzen, dass das Modell die ganze Arbeit im Gedächtnis hat.
-
-> Die Verfassenden müssen Zahlen, Quellen und Erklärungen zur Einreichung weiterhin selbst prüfen. Prompts können helfen, Probleme zu erkennen, garantieren aber keine fehlerfreien Ergebnisse.
-
-### Ein kurzer Weg durch die erste wissenschaftliche Arbeit
-
-Wählen Sie den Einstieg, der zu Ihren vorhandenen Materialien passt.
-
-1. [Ein Thema finden](#topic)
-2. [Literatur finden und lesen](#literature)
-3. [Studie und Gliederung planen](#planning)
-4. [Aus den Materialien einen Text schreiben](#drafting)
-5. [Das Manuskript prüfen](#audit)
-6. [Nach Rückmeldungen überarbeiten](#feedback)
-
-Nutzen Sie bei Bedarf die Aufgaben zu Forschungsaufzeichnungen, Abbildungen, Erklärungen, Korrekturfahnen und Arbeiten nach der Veröffentlichung. Sie müssen nicht alles auf einmal öffnen.
-
-<details>
-<summary><strong>Jeder Aufgabe eine Materialübersicht beifügen</strong></summary>
-
-```text
-Fachgebiet und Art der Arbeit: {{zum Beispiel eine Hausarbeit in Geschichte, quantitative oder qualitative Studie, theoretische Arbeit oder Übersichtsarbeit}}
-Aktuelle Phase: {{Thema, Literatur, Planung, Aufzeichnungen, Schreiben, Redaktion, Prüfung, Einreichung oder Überarbeitung nach Rückmeldungen}}
-Forschungsansatz: {{quantitativ, qualitativ, theoretisch, Übersichtsarbeit oder ein anderer Ansatz}}
-Zielpublikum, Sprache und Umfang: {{Anforderungen}}
-Tatsächlich bereitgestellte Materialien und Versionen: {{Texte, Tabellen, Quellen, Aufzeichnungen, Dateinamen oder Datumsangaben}}
-Zentrale Frage oder Aussage: {{Frage}}
-Bestätigte Fakten: {{Zahlen, Quellen, Methoden und abgeschlossene Änderungen}}
-Ungeprüfte oder widersprüchliche Informationen: {{Punkte}}
-Aufgabe für diese Sitzung: {{konkreter Auftrag}}
-```
-
-Diese Übersicht dient als Verzeichnis Ihrer Materialien. Fügen Sie zur Prüfung von Zahlen und zentralen Aussagen die entsprechenden Originaltexte oder Aufzeichnungen bei.
-
-</details>
-
-Prüfen Sie vor dem Hochladen von Gutachten, unveröffentlichten Daten oder personenbezogenen Informationen die Vertraulichkeitsanforderungen und entfernen Sie bei Bedarf identifizierende Angaben.
+Prüfen Sie Zahlen und Quellen selbst. Stellen Sie vor dem Hochladen sicher, dass Sie die Materialien teilen dürfen, und entfernen Sie nicht benötigte personenbezogene Angaben.
 
 <a id="control"></a>
 
-## ✍️ Zuerst die Schreibvorgaben festlegen
+## ✍️ Sagen Sie der KI, wie Ihre Arbeit geschrieben sein soll
 
-Senden Sie diese Vorgaben einmal innerhalb derselben Unterhaltung. Wenn eine Aufgabe ein Ausgabeformat vorgibt, folgen Sie diesem, statt jedes Mal eine vollständige Analysetabelle zu erstellen.
+Ziel ist ein klarer, genauer Text mit den nötigen Fachbegriffen. Senden Sie diese Vorgaben vor dem Aufgaben-Prompt.
 
 <details>
-<summary><strong>Schreibvorgaben öffnen und kopieren</strong></summary>
+<summary><strong>Schreibvorgaben kopieren (einmal pro Unterhaltung)</strong></summary>
 
 ```text
 Helfen Sie mir, wissenschaftliche Arbeiten zu schreiben und zu überarbeiten.
@@ -124,7 +73,26 @@ Geben Sie standardmäßig zuerst den überarbeiteten Text aus, danach eine kurze
 </details>
 
 <details>
-<summary><strong>Zum Forschungsansatz passende Prüfungen wählen</strong></summary>
+<summary><strong>Was soll ich der KI geben? Hier finden Sie eine Vorlage</strong></summary>
+
+```text
+Fachgebiet und Art der Arbeit: {{zum Beispiel eine Hausarbeit in Geschichte, quantitative oder qualitative Studie, theoretische Arbeit oder Übersichtsarbeit}}
+Aktuelle Phase: {{Thema, Literatur, Planung, Aufzeichnungen, Schreiben, Redaktion, Prüfung, Einreichung oder Überarbeitung nach Rückmeldungen}}
+Forschungsansatz: {{quantitativ, qualitativ, theoretisch, Übersichtsarbeit oder ein anderer Ansatz}}
+Zielpublikum, Sprache und Umfang: {{Anforderungen}}
+Tatsächlich bereitgestellte Materialien und Versionen: {{Texte, Tabellen, Quellen, Aufzeichnungen, Dateinamen oder Datumsangaben}}
+Zentrale Frage oder Aussage: {{Frage}}
+Bestätigte Fakten: {{Zahlen, Quellen, Methoden und abgeschlossene Änderungen}}
+Ungeprüfte oder widersprüchliche Informationen: {{Punkte}}
+Aufgabe für diese Sitzung: {{konkreter Auftrag}}
+```
+
+Diese Übersicht dient als Verzeichnis Ihrer Materialien. Fügen Sie zur Prüfung von Zahlen und zentralen Aussagen die entsprechenden Originaltexte oder Aufzeichnungen bei.
+
+</details>
+
+<details>
+<summary><strong>Was bei verschiedenen Forschungsansätzen zu prüfen ist (optional)</strong></summary>
 
 - **Quantitative Forschung** — Design, Messung, Vergleichsbedingungen, fehlende Daten und Ausschlüsse, analytische Annahmen, Unsicherheit und alternative Erklärungen.
 - **Qualitative Forschung** — Auswahl der Fälle oder Teilnehmenden, Quellen, Kodierung, Interpretation, Positionierung der Forschenden, Gegenbeispiele und Fundstellen von Zitaten.
@@ -137,39 +105,55 @@ Verwenden Sie nur zum Ansatz passende Felder. Statistische Tests, randomisierte 
 
 <a id="catalog"></a>
 
-## 🧭 Prompts nach Phase finden
+## 🧭 Was möchten Sie gerade tun?
 
-Wählen Sie anhand der vorhandenen Materialien. Rückmeldungen können vor einer weiteren Prüfung eine Rückkehr zur Literatur, zur Beleglage oder zur Struktur erfordern.
+Klicken Sie in der linken Spalte auf Ihr Anliegen, um zu den Aufgaben zu gelangen. Sie können überall einsteigen.
 
-| Ihre aktuelle Situation | Hier beginnen | Was Sie vorbereiten sollten |
-| --- | --- | --- |
-| Noch kein klares Thema | [1. Ein Thema finden](#topic) | Ressourcen, Richtungen und eine konkrete Frage |
-| Eine erste Idee | [2. Literatur finden und lesen](#literature) | Suchprotokolle, Vergleiche und verwandte Arbeiten |
-| Einige Materialien, bereit zur Planung | [3. Studie und Gliederung planen](#planning) | Ansatz, Belege und ein durchführbares Design |
-| Laufende Forschung mit Aufzeichnungen oder Ergebnissen | [4. Aufzeichnungen ordnen und Analysen prüfen](#records) | Nachverfolgbare Materialien, Analysen und Abbildungen |
-| Bereit, Materialien in eine Arbeit zu überführen | [5. Einen Entwurf schreiben](#drafting) | Belegte Abschnitte und Aussagen |
-| Ein überarbeitungsbedürftiger Entwurf | [6. Den Entwurf überarbeiten](#editing) | Struktur, Argumentation, Sprache und Versionsnotizen |
-| Ein nahezu fertiges Manuskript | [7. Das Manuskript prüfen](#audit) | Fakten, Quellen, Vollständigkeit der Berichterstattung und Konsistenz |
-| Zeitschriftenwahl oder Vorbereitung der Einreichung | [8. Die Einreichung vorbereiten](#submission) | Anforderungen, Dateien und bestätigte Erklärungen |
-| Rückmeldung von Betreuung, Kollegen oder Gutachtenden | [9. Nach Rückmeldungen überarbeiten](#feedback) | Tatsächliche Änderungen, Änderungsprotokoll und Antworten |
-| Angenommen oder veröffentlicht | [10. Korrekturfahnen, Archivierung und Berichtigungen](#publication) | Versionsprüfungen, Angaben zur Nachnutzung und Umgang mit Problemen |
+| Was ich tun möchte | Wobei die KI mir helfen kann |
+| --- | --- |
+| [Ein Thema finden](#topic) | Mögliche Themen zum Vergleichen und Fragen für die weitere Recherche |
+| [Quellen zu einer Idee finden](#literature) | Suchbegriffe, Literaturvergleiche und Hinweise zum Weiterlesen |
+| [Die Forschung und den Aufbau der Arbeit planen](#planning) | Einen Forschungsplan und eine Gliederung erstellen |
+| [Notizen, Daten oder Abbildungen ordnen](#records) | Aufzeichnungen ordnen, Prüfungen durchführen und Abbildungen beschreiben |
+| [Aus meinen Materialien einen ersten Entwurf schreiben](#drafting) | Textabschnitte auf Grundlage meiner Materialien entwerfen |
+| [Einen Entwurf verständlicher machen](#editing) | Den Text überarbeiten und die wichtigsten Änderungen erklären |
+| [Meine Arbeit vor der Abgabe prüfen](#audit) | Probleme mit Fundstellen und Vorschlägen zur Behebung finden |
+| [Bei einer Zeitschrift einreichen](#submission) | Ein Anschreiben und eine Liste der benötigten Unterlagen vorbereiten |
+| [Nach Rückmeldungen von Lehrenden oder Gutachtenden überarbeiten](#feedback) | Änderungen priorisieren, Text überarbeiten und Antworten formulieren |
+| [Nach Annahme oder Veröffentlichung prüfen](#publication) | Die gesetzte Fassung und gespeicherte Materialien prüfen sowie Fehler klären |
 
-[Die chinesische Abbildung zum Forschungs- und Schreibzyklus ansehen](assets/research-writing-lifecycle.png).
+<details>
+<summary>Den gesamten Forschungs- und Schreibablauf ansehen</summary>
 
-Die Phasen lassen sich erneut durchlaufen. Das Projekt unterstützt das Ordnen von Fragen, Schreiben, Überarbeiten und Prüfen. Forschende führen die Studie durch, überprüfen Belege und treffen die Entscheidungen der Verfassenden. Zeitschriften entscheiden über die Veröffentlichung. Führen Sie von Beginn an Aufzeichnungen zu Daten, Quellen und Versionen.
+![Phasen von Forschung und Schreiben, auf Chinesisch](assets/research-writing-lifecycle.png)
 
-Der Ablauf greift auf Ressourcen zu Forschungsunterstützung, Datenmanagement, offener Forschung und Publikation zurück, angepasst an den Zweck dieses Projekts. [Quellen und Abdeckung (Chinesisch)](docs/coverage.md) · [Bewertungsprotokolle (Chinesisch)](docs/validation/README.md).
+Sie können Phasen wiederholen oder bei Bedarf nutzen. Die Verfassenden führen die Forschung durch und treffen wichtige fachliche Entscheidungen; Zeitschriften entscheiden über die Veröffentlichung. [Quellen zum Ablauf (Chinesisch)](docs/coverage.md) · [Testprotokolle (Chinesisch)](docs/validation/README.md)
+
+</details>
+
+<a id="showcase"></a>
+
+<details>
+<summary><strong>Ansehen, wie sich ein Textabschnitt durch Überarbeitung verändert</strong></summary>
+
+Eine kurze Einleitung wurde auf Chinesisch generiert und anschließend mit den Prompts und dem Skill dieses Projekts überarbeitet. Die englische Abbildung übersetzt die dokumentierten Textfassungen und erläutert die Änderungen und ihre Gründe.
+
+![Eine kurze Einleitung vor und nach der Überarbeitung mit konkreten Änderungen](assets/showcase-before-after-en.png)
+
+[Vollständige Eingaben, Ausgaben und Änderungsprotokoll lesen (Englisch)](docs/showcase/README.en.md) · [Chinesisches Beispiel ansehen](docs/showcase/README.md)
+
+</details>
 
 <a id="topic"></a>
 
 ## 1. Ein Thema finden
 
-Beginnen Sie bei Ihren Interessen und zugänglichen Materialien und grenzen Sie eine Richtung zu einer Frage ein. Der Wert möglicher Themen muss noch durch Literaturarbeit und Forschung begründet werden.
+Nennen Sie Ihr Fach, Ihre Interessen und die verfügbaren Mittel, um mögliche Themen zu vergleichen. Ob ein Thema eine Untersuchung wert ist, müssen Sie durch Lesen und eigenes Abwägen klären.
 
 <a id="positioning"></a>
 
 <details>
-<summary><strong>1.1 Aus Interessen und Ressourcen ein Thema entwickeln</strong></summary>
+<summary><strong>1.1 Ein Thema finden, das zu meinen Interessen und Möglichkeiten passt</strong></summary>
 
 ```text
 Ich habe noch kein klares Thema. Helfen Sie mir, anhand meiner aktuellen Situation untersuchenswerte Forschungsfragen zu finden.
@@ -189,7 +173,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>1.2 Eine Richtung in eine Forschungsfrage überführen</strong></summary>
+<summary><strong>1.2 Aus einer groben Idee eine konkrete Frage machen</strong></summary>
 
 ```text
 Klären Sie mit den folgenden Materialien die Forschungsfrage und mögliche Beiträge.
@@ -208,12 +192,12 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 
 <a id="literature"></a>
 
-## 2. Literatur finden und lesen
+## 2. Quellen finden und Literatur lesen
 
-Finden Sie relevante Forschung und vergleichen Sie, welche Fragen sie beantwortet und offenlässt. Dokumentieren Sie Quellen und Suchumfang. Unterscheiden Sie einen üblichen Abschnitt zu verwandten Arbeiten von einer systematischen Übersichtsarbeit.
+Beginnen Sie mit Suchbegriffen und vergleichen Sie anschließend die gelesenen Studien. Prüfen Sie Quellen, die eine KI vorschlägt; ein Titel ersetzt nicht die Lektüre der Quelle.
 
 <details>
-<summary><strong>2.1 Einen Suchplan entwickeln und relevante Materialien finden</strong></summary>
+<summary><strong>2.1 Suchbegriffe und passende Quellen finden</strong></summary>
 
 ```text
 Ich habe eine erste Idee. Helfen Sie mir, relevante Materialien zu finden und zu beurteilen, wie weit die bestehende Forschung sie bereits behandelt hat.
@@ -240,7 +224,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>2.2 Literatur vergleichen und die Frage eingrenzen</strong></summary>
+<summary><strong>2.2 Gelesene Arbeiten vergleichen und die eigene Frage eingrenzen</strong></summary>
 
 ```text
 Ordnen Sie die Forschung aus meinen bereitgestellten Materialien, um meine Frage einzugrenzen.
@@ -258,7 +242,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>2.3 Aus Literaturvergleichen einen Abschnitt zu verwandten Arbeiten schreiben</strong></summary>
+<summary><strong>2.3 Beschreiben, was frühere Studien herausgefunden haben</strong></summary>
 
 ```text
 Überführen Sie vorhandene Literaturvergleiche und Lesenotizen in Absätze zu verwandten Arbeiten.
@@ -279,12 +263,12 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 
 <a id="planning"></a>
 
-## 3. Studie und Gliederung planen
+## 3. Die Forschung planen und die Arbeit gliedern
 
-Ordnen Sie Belege, Methoden und Struktur passend zu Fachgebiet und Ansatz. Berücksichtigen Sie Zeitschrift oder Textsorte frühzeitig, ebenso Ethik, Genehmigungen und Forschungsaufzeichnungen. Trennen Sie abgeschlossene Arbeit von Plänen.
+Klären Sie die Frage, die benötigten Materialien und den Aufbau der Arbeit. Beschreiben Sie noch nicht durchgeführte Forschung als Plan.
 
 <details>
-<summary><strong>3.1 Einen durchführbaren Studienplan entwickeln</strong></summary>
+<summary><strong>3.1 Planen, wie ich die Forschung durchführe</strong></summary>
 
 ```text
 Überführen Sie die folgende Forschungsfrage in einen umsetzbaren Plan. Prüfen Sie die Durchführbarkeit, bevor die Arbeit geschrieben wird.
@@ -307,7 +291,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>3.2 Eine Gliederung erstellen</strong></summary>
+<summary><strong>3.2 Eine Gliederung für die Arbeit erstellen</strong></summary>
 
 ```text
 Erstellen Sie aus den verfügbaren Materialien eine Gliederung der Arbeit.
@@ -327,7 +311,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 <a id="evidence"></a>
 
 <details>
-<summary><strong>3.3 Die Rolle jedes Belegs prüfen</strong></summary>
+<summary><strong>3.3 Prüfen, was meine Materialien belegen können</strong></summary>
 
 ```text
 Prüfen Sie die Rolle dieser Experimente, Analysen oder Argumente in der Arbeit.
@@ -350,7 +334,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 <a id="story"></a>
 
 <details>
-<summary><strong>3.4 Hauptargument und Beiträge klären</strong></summary>
+<summary><strong>3.4 Die Hauptaussage und den Beitrag der Arbeit klären</strong></summary>
 
 ```text
 Klären Sie anhand dieser Materialien Hauptargument, Forschungsfrage, Beiträge und Belege der Arbeit.
@@ -374,7 +358,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>3.5 Vor Beginn Genehmigungen, Aufzeichnungen und Analyseplanung prüfen</strong></summary>
+<summary><strong>3.5 Prüfen, was ich vor dem Start brauche</strong></summary>
 
 ```text
 Ermitteln Sie, welche Vorkehrungen vor Beginn dieser Studie geklärt werden müssen.
@@ -395,12 +379,12 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 
 <a id="records"></a>
 
-## 4. Forschung durchführen, Aufzeichnungen ordnen und Analysen prüfen
+## 4. Forschungsnotizen und Abbildungen ordnen
 
-Diese Aufgaben benötigen tatsächliche Forschungsmaterialien. Prompts können Aufzeichnungen ordnen, beurteilen, ob Analysen Aussagen stützen, und bei der Abbildungsplanung helfen. Empfohlene Datenerhebungen, Experimente oder Analysen müssen noch durchgeführt werden.
+Stellen Sie Ihre tatsächlichen Aufzeichnungen, Daten oder Herleitungen bereit. Die KI kann sie ordnen und auf Probleme hinweisen. Vorgeschlagene Untersuchungen und Analysen müssen noch durchgeführt werden.
 
 <details>
-<summary><strong>4.1 Forschungsaufzeichnungen ordnen und ein Belegverzeichnis erstellen</strong></summary>
+<summary><strong>4.1 Forschungsnotizen und Materialien so ordnen, dass ich sie wiederfinde</strong></summary>
 
 ```text
 Ordnen Sie vorhandene Forschungsaufzeichnungen in einem Verzeichnis, das Schreiben und Überprüfung unterstützt.
@@ -420,7 +404,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>4.2 Prüfen, ob Analysen, Interpretationen oder Herleitungen einen Schluss stützen</strong></summary>
+<summary><strong>4.2 Prüfen, ob Auswertung und Schlussfolgerungen nachvollziehbar sind</strong></summary>
 
 ```text
 Bewerten Sie, welche Schlussfolgerungen die verfügbaren Analysen oder Argumente stützen.
@@ -442,7 +426,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>4.3 Abbildungen und Tabellen planen und Beschriftungen verfassen</strong></summary>
+<summary><strong>4.3 Abbildungen und Tabellen planen und verständlich beschreiben</strong></summary>
 
 ```text
 Planen Sie Abbildungen und Tabellen anhand vorhandener Ergebnisse und verfassen Sie zugehörige Titel, Beschriftungen oder Tabellenanmerkungen.
@@ -463,12 +447,12 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 
 <a id="drafting"></a>
 
-## 5. Aus den Materialien einen Entwurf schreiben
+## 5. Einen ersten Entwurf schreiben
 
-Beginnen Sie mit den Abschnitten, für die die belastbarsten Materialien vorliegen, und kehren Sie dann zu Abstract und Titel zurück. Folgen Sie der für Ihre Argumentation nötigen Struktur und markieren Sie fehlende Belege. Aufgabe [2.3](#literature) unterstützt auch das Schreiben zu verwandten Arbeiten.
+Beginnen Sie mit einem Abschnitt, für den Sie bereits Materialien haben. Ohne Ergebnisse sollten Entwürfe Platzhalter enthalten. Für einen Überblick über frühere Forschung hilft auch Aufgabe [2.3](#literature).
 
 <details>
-<summary><strong>5.1 Einen bestimmten Abschnitt anhand der Gliederung schreiben</strong></summary>
+<summary><strong>5.1 Einen Abschnitt aus meiner Gliederung schreiben</strong></summary>
 
 ```text
 Ich habe Materialien und eine Gliederung. Helfen Sie, den angegebenen Teil der Arbeit zu entwerfen.
@@ -491,7 +475,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>5.2 Den Methodenteil schreiben</strong></summary>
+<summary><strong>5.2 Die Methoden beschreiben: Wie wurde die Forschung durchgeführt?</strong></summary>
 
 ```text
 Schreiben Sie anhand tatsächlicher Aufzeichnungen einen Methodenteil, damit die Lesenden nachvollziehen können, wie die Forschung durchgeführt wurde, und beurteilen können, wie sie sich reproduzieren lässt.
@@ -511,7 +495,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>5.3 Die Einleitung schreiben</strong></summary>
+<summary><strong>5.3 Die Einleitung schreiben: Warum ist die Frage wichtig?</strong></summary>
 
 ```text
 Schreiben Sie die Einleitung anhand der folgenden Materialien neu. Lassen Sie früh erkennen, warum die Forschung wichtig ist, was offenbleibt und was diese Arbeit leistet.
@@ -534,7 +518,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>5.4 Einen Ergebnisabsatz schreiben</strong></summary>
+<summary><strong>5.4 Die Ergebnisse beschreiben: Was habe ich herausgefunden?</strong></summary>
 
 ```text
 Überführen Sie die folgenden Ergebnisse in einen Absatz für die Arbeit.
@@ -555,7 +539,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>5.5 Diskussion und Einschränkungen schreiben</strong></summary>
+<summary><strong>5.5 Die Diskussion schreiben: Was bedeuten die Ergebnisse und wo liegen ihre Grenzen?</strong></summary>
 
 ```text
 Schreiben Sie anhand dieser Ergebnisse die Diskussion und die Einschränkungen.
@@ -575,7 +559,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>5.6 Das Fazit schreiben</strong></summary>
+<summary><strong>5.6 Das Fazit schreiben: Was lässt sich aus der Arbeit schließen?</strong></summary>
 
 ```text
 Schreiben Sie anhand dieser Materialien ein Fazit.
@@ -595,7 +579,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>5.7 Das Abstract schreiben</strong></summary>
+<summary><strong>5.7 Das Abstract schreiben: Die ganze Arbeit kurz vorstellen</strong></summary>
 
 ```text
 Schreiben Sie aus den folgenden Materialien ein Abstract.
@@ -637,12 +621,12 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 
 <a id="editing"></a>
 
-## 6. Den Entwurf überarbeiten
+## 6. Einen Entwurf verbessern
 
-Klären Sie Hauptargument, Struktur und Logik, bevor Sie Sätze, Begriffe und Formatierung bearbeiten. Erhalten Sie treffende Formulierungen. Dokumentieren Sie bei abschnittsweiser Bearbeitung Versionen und offene Folgeänderungen.
+Prüfen Sie zunächst Aufbau und Gedankengang, dann einzelne Sätze. Sie können auch nur Grammatik prüfen lassen oder festhalten, wo Sie bei der nächsten Überarbeitung weitermachen.
 
 <details>
-<summary><strong>6.1 Zuerst Struktur und Argumentation überarbeiten</strong></summary>
+<summary><strong>6.1 Den Aufbau und den Gedankengang verbessern</strong></summary>
 
 ```text
 Ich habe einen vollständigen Entwurf. Prüfen Sie zunächst Gesamtstruktur und Argumentation, bevor Sie über die Überarbeitung entscheiden.
@@ -664,7 +648,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>6.2 Wissenschaftliche Sprache auf Genauigkeit und Lesbarkeit überarbeiten</strong></summary>
+<summary><strong>6.2 Sätze präziser und leichter lesbar machen</strong></summary>
 
 ```text
 Überarbeiten Sie diesen wissenschaftlichen Abschnitt auf Genauigkeit, Lesbarkeit und Kohärenz, ohne seine fachliche Bedeutung zu verändern.
@@ -696,7 +680,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>6.3 Floskeln und schematische Muster entfernen</strong></summary>
+<summary><strong>6.3 Floskeln und umständliche Formulierungen entfernen</strong></summary>
 
 ```text
 Prüfen Sie diesen Text auf schematische Sprache und lassen Sie ihn wie den Text einer tatsächlichen Autorin oder eines tatsächlichen Autors wirken.
@@ -743,7 +727,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 Leere Selbstabwertung und Übertreibung prüfen</strong></summary>
+<summary><strong>6.5 Übertriebene Aussagen und unnötige Selbstabwertung prüfen</strong></summary>
 
 ```text
 Prüfen Sie diesen Manuskripttext und unterscheiden Sie:
@@ -767,7 +751,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>6.6 Wissenschaftlichen Text unter Erhalt von Bedeutung und Belegstärke übersetzen</strong></summary>
+<summary><strong>6.6 Die Arbeit übersetzen, ohne ihre Bedeutung zu ändern</strong></summary>
 
 ```text
 Übersetzen Sie diesen wissenschaftlichen Text unter Erhalt seiner Bedeutung und der Stärke der Belege.
@@ -786,7 +770,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>6.7 Eine Übergabenotiz für abschnittsweise Überarbeitung erstellen</strong></summary>
+<summary><strong>6.7 Änderungen festhalten, um später weiterzuarbeiten</strong></summary>
 
 ```text
 Erstellen Sie eine knappe Arbeitsnotiz für die weitere abschnittsweise Überarbeitung.
@@ -843,12 +827,12 @@ Wenn die tatsächliche Methode gemeinsam genutzte Berechnungen zwischenspeichert
 
 <a id="audit"></a>
 
-## 7. Das Manuskript prüfen
+## 7. Die Arbeit vor der Abgabe prüfen
 
-Prüfen Sie Fakten und Quellenangaben anhand der Quellen, danach Argumentation und Vollständigkeit der Darstellung. Nennen Sie jedes Mal den tatsächlichen Prüfungsumfang und kehren Sie zur Problemlösung zu betroffenen Abschnitten zurück. Eine vollständig ausgefüllte Checkliste belegt kein tragfähiges Studiendesign.
+Lassen Sie Probleme suchen und gleichen Sie die Antwort mit Ihren Materialien ab. Geben Sie an, welche Abschnitte tatsächlich geprüft werden können; fehlende Teile sind damit noch nicht geprüft.
 
 <details>
-<summary><strong>7.1 Fakten und Argumente anhand der Ausgangsmaterialien prüfen</strong></summary>
+<summary><strong>7.1 Fakten und Schlussfolgerungen mit den Originalmaterialien abgleichen</strong></summary>
 
 ```text
 Prüfen Sie diesen Manuskriptabschnitt anhand der bereitgestellten Materialien. Ergänzen Sie keine fehlenden Fakten.
@@ -875,7 +859,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>7.2 Die Arbeit aus Leser- oder Gutachterperspektive prüfen</strong></summary>
+<summary><strong>7.2 Probleme aus Sicht von Lesenden oder Gutachtenden finden</strong></summary>
 
 ```text
 Prüfen Sie die inhaltlichen Fragen, die Lesende und Gutachtende dieses Fachgebiets zu diesem Manuskript wahrscheinlich stellen werden.
@@ -894,7 +878,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>7.3 Eine umfassende Prüfung vor der Einreichung durchführen</strong></summary>
+<summary><strong>7.3 Die gesamte Arbeit vor der Abgabe prüfen</strong></summary>
 
 ```text
 Prüfen Sie dieses Manuskript vor der Einreichung. Berichten Sie zuerst Probleme, ohne die ganze Arbeit neu zu schreiben.
@@ -925,7 +909,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>7.4 Quellenidentität, Metadaten und Stützung zitierter Aussagen prüfen</strong></summary>
+<summary><strong>7.4 Prüfen, ob Quellen existieren und richtig verwendet werden</strong></summary>
 
 ```text
 Prüfen Sie bei jeder Quelle Identität, Metadaten und die Unterstützung der konkreten Aussage, für die sie zitiert wird.
@@ -949,7 +933,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>7.5 Vollständigkeit anhand passender Berichtsleitlinien prüfen</strong></summary>
+<summary><strong>7.5 Anhand der Anforderungen prüfen, ob Angaben fehlen</strong></summary>
 
 ```text
 Prüfen Sie, ob dieses Manuskript die von anwendbaren Leitlinien geforderten Informationen berichtet.
@@ -988,9 +972,9 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 
 <a id="submission"></a>
 
-## 8. Eine Zeitschrift wählen und die Einreichung vorbereiten
+## 8. Bei Bedarf bei einer Zeitschrift einreichen
 
-Berücksichtigen Sie Zeitschriften- oder Textsortenanforderungen schon bei der Planung und prüfen Sie vor der Einreichung die aktuelle Fassung. Ordnen Sie Dateien, Formatierung und Erklärungen nach tatsächlichen Anforderungen. Fehlende Informationen bestätigen die Verfassenden.
+Für eine Lehrveranstaltung gelten die Anforderungen Ihrer Lehrenden. Nutzen Sie diese Aufgaben, wenn Sie Ihre Arbeit bei einer Zeitschrift einreichen möchten.
 
 <details>
 <summary><strong>8.1 Das Literaturverzeichnis formatieren</strong></summary>
@@ -1017,7 +1001,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>8.2 Ein Begleitschreiben verfassen</strong></summary>
+<summary><strong>8.2 Ein Anschreiben an die Zeitschriftenredaktion verfassen</strong></summary>
 
 ```text
 Verfassen Sie anhand dieser Materialien ein Begleitschreiben an {{Zeitschrift}}.
@@ -1035,7 +1019,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>8.3 Zeitschriftenpassung und Einreichungsmaterialien prüfen</strong></summary>
+<summary><strong>8.3 Prüfen, ob die Zeitschrift passt und welche Dateien benötigt werden</strong></summary>
 
 ```text
 Ordnen Sie die Einreichungsvorbereitung anhand der aktuellen Anforderungen der Zielzeitschrift. Wenn noch keine Zeitschrift gewählt ist, prüfen Sie zuerst die Bedingungen einer passenden Auswahl.
@@ -1057,7 +1041,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>8.4 Beitrags- und weitere Erklärungen vorbereiten</strong></summary>
+<summary><strong>8.4 Beiträge der Verfassenden beschreiben und Erklärungen zur Einreichung vorbereiten</strong></summary>
 
 ```text
 Entwerfen Sie anhand bestätigter Fakten passende Erklärungen zu Autorenbeiträgen, Finanzierung, Interessenkonflikten, Ethik, Daten- oder Codeverfügbarkeit und KI-Nutzung.
@@ -1081,10 +1065,10 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 
 ## 9. Nach Rückmeldungen überarbeiten
 
-Überführen Sie Rückmeldungen von Betreuung, Mitwirkenden und Fachkollegen in Überarbeitungsaufgaben. Erstellen Sie Punkt-für-Punkt-Antworten, wenn die formelle Begutachtung sie verlangt. Kommentare können die Rückkehr zu Literatur, Forschung oder Analyse erfordern. Nutzen Sie nach Ablehnung bei einer neuen Zeitschrift [8.3](#submission), um Anforderungen zu vergleichen.
+Fügen Sie die tatsächlichen Kommentare Ihrer Lehrenden, Kolleginnen und Kollegen oder Gutachtenden bei. Klären Sie zunächst, was geändert werden muss, bevor Sie den Text überarbeiten.
 
 <details>
-<summary><strong>9.1 Rückmeldungen verstehen und Änderungen priorisieren</strong></summary>
+<summary><strong>9.1 Rückmeldungen verstehen und die Reihenfolge der Änderungen festlegen</strong></summary>
 
 ```text
 Helfen Sie mir, diese Rückmeldungen zu verstehen und einen Überarbeitungsplan zu ordnen, bevor die ganze Arbeit neu geschrieben wird.
@@ -1104,7 +1088,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>9.2 Das Manuskript überarbeiten und tatsächliche Änderungen dokumentieren</strong></summary>
+<summary><strong>9.2 Den Text überarbeiten und Änderungen festhalten</strong></summary>
 
 ```text
 Überarbeiten Sie das Manuskript anhand vereinbarter Rückmeldungen und führen Sie ein überprüfbares Änderungsprotokoll.
@@ -1126,7 +1110,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>9.3 Auf Basis abgeschlossener Änderungen auf Gutachten antworten</strong></summary>
+<summary><strong>9.3 Auf Gutachten mit den tatsächlich vorgenommenen Änderungen antworten</strong></summary>
 
 ```text
 Helfen Sie mir, jeden Gutachterkommentar zu beantworten.
@@ -1150,12 +1134,12 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 
 <a id="publication"></a>
 
-## 10. Korrekturfahnen prüfen und Aufgaben nach der Veröffentlichung bearbeiten
+## 10. Bei Bedarf nach Annahme oder Veröffentlichung weiterarbeiten
 
-Nach der Annahme folgt die Prüfung der Korrekturfahnen. Bewahren Sie nachvollziehbare Versionen auf und archivieren Sie nach Genehmigungen und Zeitschriftenvorgaben. Klären Sie bei einem entdeckten Fehler zuerst dessen Folgen, bevor Sie ihn über das vorgesehene Verfahren mitteilen.
+Prüfen Sie die von der Zeitschrift gesetzte Fassung und bewahren Sie Ihre Forschungsmaterialien auf. Wenn Sie nach der Veröffentlichung einen Fehler finden, prüfen Sie ihn und folgen Sie dem Verfahren der Zeitschrift.
 
 <details>
-<summary><strong>10.1 Angenommenes Manuskript und Korrekturfahnen vergleichen</strong></summary>
+<summary><strong>10.1 Die gesetzte Fassung der Zeitschrift mit meinem Manuskript vergleichen</strong></summary>
 
 ```text
 Vergleichen Sie angenommenes Manuskript und Korrekturfahnen und ordnen Sie Änderungen, die eine redaktionelle Bestätigung benötigen.
@@ -1178,7 +1162,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>10.2 Dokumentation für Archivierung und Nachnutzung vorbereiten</strong></summary>
+<summary><strong>10.2 Forschungsmaterialien aufbewahren und ihre Nutzung erklären</strong></summary>
 
 ```text
 Ordnen Sie die Forschungsmaterialien für Archivierung und Nachnutzung.
@@ -1198,7 +1182,7 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 </details>
 
 <details>
-<summary><strong>10.3 Fehlerfolgen bewerten und Korrespondenz zur Berichtigung vorbereiten</strong></summary>
+<summary><strong>10.3 Einen Fehler nach der Veröffentlichung beschreiben und eine Nachricht an die Redaktion entwerfen</strong></summary>
 
 ```text
 Nach Veröffentlichung wurde ein mögliches Problem entdeckt. Helfen Sie, Folgen und Kommunikation zu ordnen.
@@ -1221,7 +1205,12 @@ Stützen Sie Fakten nur auf bereitgestellte oder tatsächlich geprüfte Material
 
 <a id="skill"></a>
 
-## 🛠️ Als Agent Skill installieren (optional)
+## Nutzen Sie häufig Codex oder WorkBuddy?
+
+Sie können die Schreibvorgaben in Ihrem Werkzeug installieren, um sie später wiederzuverwenden.
+
+<details>
+<summary><strong>Installationsanleitung anzeigen (optional)</strong></summary>
 
 Wenn Sie häufig Arbeiten in einem Agenten bearbeiten, installieren Sie [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md). Der Skill bündelt diese Schreibvorgaben und phasenspezifischen Aufgaben als eigenständige Anweisungen. Andere Skills oder das ganze Repository sind nicht erforderlich. Beim direkten Kopieren der Prompts können Sie diesen Abschnitt überspringen.
 
@@ -1263,9 +1252,16 @@ Andere Werkzeuge mit Unterstützung für `SKILL.md` können eigene Importverfahr
 
 Die Installationswege wurden mit offizieller Dokumentation abgeglichen, Installation und Verhalten aber nicht in jedem Client getestet. Prüfen Sie, ob Ihre Materialien hochgeladen werden dürfen. Auch ein lokaler Agent kann ein entferntes Modell verwenden. Prüfen Sie vor der Einreichung die Vorgaben der Zielzeitschrift zu KI-Nutzung und Offenlegung.
 
+</details>
+
 <a id="quality"></a>
 
-## Abdeckung und Bewertung
+## Wurden diese Prompts schon ausprobiert?
+
+Für ausgewählte chinesische und englische Aufgaben liegen Testprotokolle vor. Die deutsche Fassung wurde bisher nur als Übersetzung geprüft; Verhaltenstests stehen noch aus. Prüfen Sie Antworten der KI, bevor Sie sie verwenden.
+
+<details>
+<summary>Testprotokolle und Quellen ansehen</summary>
 
 Diese Sammlung unterstützt übliche Aufgaben zur Forschungsvorbereitung, zum wissenschaftlichen Schreiben und zur Überarbeitung. Wählen Sie Aufgaben nach Fachgebiet, Ansatz und Zeitschrift. Aus der Anzahl der Aufgaben wird kein Abdeckungsprozentsatz berechnet.
 
@@ -1280,10 +1276,17 @@ Fünf der 43 englischen Aufgaben-Prompts wurden direkt in der Standardumgebung e
 
 Für die deutsche Fassung wurden noch keine unabhängigen Verhaltenstests durchgeführt. Die Ergebnisse der englischen Prompts belegen nicht die Qualität der deutschen Fassung. Grenzen der Übersetzungsbewertung sind unter [Sprachversionen](docs/translations.md) beschrieben.
 
-## Pflege und Rückmeldungen
+</details>
+
+<details>
+<summary>Ein Problem melden oder bei der Verbesserung helfen</summary>
+
+Nennen Sie auf der [Seite für Rückmeldungen](https://github.com/huh7i5/AI-prompts-writing/issues) die Aufgabennummer, Ihre Eingabe und was an der Antwort nicht hilfreich war. Entfernen Sie vorher private Informationen.
 
 Die Prompts werden anhand tatsächlicher Nutzung, Fehlerfälle und Schreiberfahrung weiterentwickelt. Beiträge können allgemeine Aufgaben, fachliche Anpassungen, Fehlerfälle oder bessere Prüfmethoden umfassen. Erläutern Sie Kontext, benötigte Eingaben und bekannte Grenzen.
 
 Prüfen Sie nach einer Aufgabenänderung dieselbe Aufgabennummer in [jeder Sprachversion](docs/translations.md), `.agents/skills/ai-prompt-writing/SKILL.md`, die festen Fälle und Bewertungsprotokolle. Änderungen an Grenzen für Suche, Analyse, Zitieren, Einreichung oder Fahnenprüfung sollen mindestens die zugehörigen Fälle auslösen; bewahren Sie alte und neue Ausgaben auf.
 
 Das Projekt bleibt textbasiert. Es benötigt keinen Code, ist nicht an ein Modell gebunden und verspricht nicht, dass ein Prompt allein ein korrektes Ergebnis garantiert.
+
+</details>

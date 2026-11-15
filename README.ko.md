@@ -12,88 +12,37 @@
 </p>
 
 <p>
-  <a href="#start">복사해서 사용하기</a> ·
-  <a href="#control">글쓰기 기본 지침</a> ·
-  <a href="#catalog">현재 단계에 맞는 작업 찾기</a> ·
-  <a href="#skill">스킬로 설치하기</a> ·
-  <a href="#quality">지원 범위와 평가</a> ·
-  <a href="#showcase">수정 예시</a>
+  <a href="#start">처음 사용하는 분께</a> ·
+  <a href="#catalog">필요한 작업 고르기</a> ·
+  <a href="#showcase">수정 예시 보기</a>
 </p>
 
 </div>
 
-주제 선정, 연구 자료 정리, 초안 작성, 수정, 투고, 출판 후 점검에 사용할 수 있는 프롬프트입니다. 원하는 작업을 펼쳐 프롬프트를 복사한 뒤, 자리표시자를 자신의 자료로 바꾸면 됩니다.
-
-목표는 정확하고 읽기 쉬운 학술 문장입니다. 전문 개념을 정확하게 사용하되, 전문 용어를 나열하거나 문장을 불필요하게 늘이거나 설명을 비유로 대신하지 않습니다.
-
-<a id="showcase"></a>
-
-## ✦ 문장이 어떻게 달라지는지 살펴보기
-
-중국어로 생성한 짧은 서론을 이 프로젝트의 프롬프트와 스킬로 수정했습니다. 아래 영문 그림은 기록된 원문과 수정문을 번역하고, 구체적인 수정 사항과 그 이유를 보여 줍니다.
-
-![짧은 서론의 수정 전후와 구체적인 수정 사항](assets/showcase-before-after-en.png)
-
-[전체 입력·출력과 수정 기록 보기](docs/showcase/README.en.md) · [중국어 예시 보기](docs/showcase/README.md)
+AI에 그대로 보낼 수 있는 요청문, 즉 ‘프롬프트’ 43개를 모았습니다. 주제를 정하고, 자료를 찾고, 논문 개요를 만들고, 글을 고칠 때 쓸 수 있습니다. 이 페이지에서 읽고 복사하면 되므로 다운로드하거나 코드를 작성할 필요가 없습니다.
 
 <a id="start"></a>
 
-## 📋 복사해서 사용하기
+## 📋 처음이라면 이 세 단계만 따라 하세요
 
-ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수 있습니다. 설치하거나 코드를 작성할 필요가 없습니다.
+ChatGPT, Claude, DeepSeek처럼 평소 사용하는 AI 채팅 도구에서 새 대화를 여세요.
 
-1. 새 대화에 [글쓰기 기본 지침](#control)과 작업 프롬프트를 순서대로 보내 문체와 검증 기준을 설정합니다.
-2. [단계별 목록](#catalog)에서 필요한 작업을 찾아 프롬프트를 펼친 뒤 복사합니다.
-3. `{{이중 중괄호 자리표시자}}`를 자신의 자료로 바꿉니다. 답변을 검토한 후 채택합니다.
+1. **글쓰기 요구사항부터 보내세요.** 아래의 ‘복사하기: 글쓰기 요구사항’을 펼쳐 배경색이 있는 상자 안의 글을 복사한 뒤 AI에 보내세요. 같은 대화에서는 한 번만 보내면 됩니다.
+2. **필요한 작업 하나를 고르세요.** [아래 목록](#catalog)에서 지금 할 일을 찾으세요. 작업 제목이나 왼쪽의 작은 삼각형을 눌러 펼친 뒤, 내용을 채팅 입력창에 복사하세요.
+3. **자신의 정보를 채워 넣고 보내세요.** `{{…}}`를 괄호까지 포함해 자신의 정보로 바꾸고, 작업에 필요한 자료를 함께 보내세요. 답변은 원자료와 비교해 확인한 뒤 사용하세요.
 
-먼저 분야, 논문 유형, 연구 접근법, 예상 독자를 알려 주면 좋습니다. 관련된 정보만 제공하세요. 정량 연구, 정성 연구, 이론 연구, 문헌고찰에 모두 실험 중심의 틀이 필요한 것은 아닙니다.
+예를 들어 `분야: {{분야}}`를 `분야: 교육학`으로 바꾸세요. 모르는 항목은 ‘미제공’이라고 쓰고 해당하지 않는 항목은 지워도 됩니다. 한 번에 한 가지 작업만 골라도 됩니다.
 
-모르는 정보는 "제공되지 않음"으로 쓰고, 해당하지 않는 항목은 삭제하세요. README 전체를 보낼 필요 없이 어느 단계에서든 시작할 수 있습니다. 원고가 길다면 모델이 논문 전체를 기억한다고 가정하지 말고, 매번 해당 부분의 본문·그림·표·용어를 함께 제공하세요.
-
-> 수치, 참고문헌, 투고 시 선언 사항은 저자가 직접 확인해야 합니다. 프롬프트는 문제를 찾는 데 도움을 줄 수 있지만, 오류 없는 출력을 보장하지는 않습니다.
-
-### 첫 논문을 위한 간단한 진행 순서
-
-현재 갖고 있는 자료에 맞는 지점에서 시작하세요.
-
-1. [주제 찾기](#topic)
-2. [문헌 찾고 읽기](#literature)
-3. [연구 계획과 개요 구성하기](#planning)
-4. [자료를 바탕으로 초안 작성하기](#drafting)
-5. [원고 점검하기](#audit)
-6. [피드백에 따라 수정하기](#feedback)
-
-연구 기록, 그림, 선언문, 교정쇄, 출판 후 작업은 필요할 때 활용하세요. 모든 항목을 한꺼번에 펼칠 필요는 없습니다.
-
-<details>
-<summary><strong>작업마다 자료 카드를 함께 제공하기</strong></summary>
-
-```text
-분야와 논문 유형: {{예: 역사학 수업 과제, 정량 연구, 정성 연구, 이론 논문, 문헌고찰}}
-현재 단계: {{주제 선정, 문헌 검토, 계획, 기록 정리, 초안 작성, 문장 수정, 점검, 투고, 피드백에 따른 수정}}
-연구 접근법: {{정량, 정성, 이론, 문헌고찰 또는 기타}}
-독자·언어·분량: {{요구 사항}}
-실제로 제공한 자료와 버전: {{본문, 표, 출처, 기록, 파일명 또는 날짜}}
-핵심 질문 또는 주장: {{질문}}
-확인된 사실: {{수치, 출처, 방법, 완료된 수정 사항}}
-확인되지 않았거나 서로 충돌하는 정보: {{항목}}
-이번 대화에서 할 작업: {{구체적인 요청}}
-```
-
-이 카드는 자료의 색인입니다. 수치와 핵심 주장을 점검할 때는 관련 원문이나 기록도 함께 제공하세요.
-
-</details>
-
-심사 의견, 미공개 데이터, 개인정보를 업로드하기 전에는 비밀유지 요건을 확인하고 필요에 따라 식별 정보를 제거하세요.
+수치와 참고문헌은 직접 확인해야 합니다. 자료를 보내기 전에 공유해도 되는 내용인지 확인하고, 불필요한 이름 등 개인정보를 지워 주세요.
 
 <a id="control"></a>
 
-## ✍️ 먼저 글쓰기 기본 지침 설정하기
+## ✍️ 어떤 글을 원하는지 AI에 먼저 알려 주세요
 
-같은 대화에서 한 번 보내면 됩니다. 작업별 출력 형식이 지정되어 있다면 해당 지침을 따르고, 매번 전체 분석표를 만들지는 않도록 합니다.
+필요한 전문 용어를 살리면서 정확하고 읽기 쉬운 글을 쓰도록 요청합니다. 작업을 부탁하기 전에 아래 내용을 보내세요.
 
 <details>
-<summary><strong>글쓰기 기본 지침 펼쳐서 복사하기</strong></summary>
+<summary><strong>복사하기: 글쓰기 요구사항(같은 대화에서 한 번만)</strong></summary>
 
 ```text
 학술 논문의 작성과 수정을 도와주세요.
@@ -124,7 +73,26 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>연구 접근법에 맞는 점검 항목 선택하기</strong></summary>
+<summary><strong>AI에 어떤 자료를 줘야 할지 모르겠다면 여기를 참고하세요</strong></summary>
+
+```text
+분야와 논문 유형: {{예: 역사학 수업 과제, 정량 연구, 정성 연구, 이론 논문, 문헌고찰}}
+현재 단계: {{주제 선정, 문헌 검토, 계획, 기록 정리, 초안 작성, 문장 수정, 점검, 투고, 피드백에 따른 수정}}
+연구 접근법: {{정량, 정성, 이론, 문헌고찰 또는 기타}}
+독자·언어·분량: {{요구 사항}}
+실제로 제공한 자료와 버전: {{본문, 표, 출처, 기록, 파일명 또는 날짜}}
+핵심 질문 또는 주장: {{질문}}
+확인된 사실: {{수치, 출처, 방법, 완료된 수정 사항}}
+확인되지 않았거나 서로 충돌하는 정보: {{항목}}
+이번 대화에서 할 작업: {{구체적인 요청}}
+```
+
+이 카드는 자료의 색인입니다. 수치와 핵심 주장을 점검할 때는 관련 원문이나 기록도 함께 제공하세요.
+
+</details>
+
+<details>
+<summary><strong>연구 종류별로 확인할 내용(필요할 때)</strong></summary>
 
 - **정량 연구** — 연구 설계, 측정, 비교 조건, 결측치와 제외 기준, 분석 가정, 불확실성, 대안적 설명.
 - **정성 연구** — 표집, 자료 출처, 코딩, 해석, 연구자의 위치성, 반례, 인용문 위치.
@@ -137,39 +105,55 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="catalog"></a>
 
-## 🧭 단계별 프롬프트 찾기
+## 🧭 지금 하고 싶은 일을 고르세요
 
-현재 갖고 있는 자료를 기준으로 선택하세요. 피드백을 받으면 다시 점검하기 전에 문헌, 근거, 구조를 재검토해야 할 수도 있습니다.
+왼쪽 항목을 누르면 해당 작업으로 이동합니다. 필요한 곳에서 시작하면 됩니다.
 
-| 현재 상황 | 시작할 작업 | 준비할 자료 |
-| --- | --- | --- |
-| 아직 주제가 분명하지 않음 | [1. 주제 찾기](#topic) | 활용 가능한 자원, 관심 방향, 구체적인 질문 |
-| 초기 아이디어가 있음 | [2. 문헌 찾고 읽기](#literature) | 검색 기록, 비교 자료, 관련 연구 |
-| 자료가 어느 정도 있어 계획을 세우려 함 | [3. 연구 계획과 개요 구성하기](#planning) | 접근법, 근거, 실행 가능한 설계 |
-| 연구를 진행 중이며 기록이나 결과가 있음 | [4. 기록 정리와 분석 점검](#records) | 추적 가능한 자료, 분석, 그림 |
-| 자료를 논문으로 작성할 준비가 됨 | [5. 초안 작성](#drafting) | 근거가 있는 절과 주장 |
-| 수정이 필요한 초안이 있음 | [6. 초안 수정](#editing) | 구조, 논증, 문장, 버전 기록 |
-| 원고가 거의 완성됨 | [7. 원고 점검](#audit) | 사실, 참고문헌, 보고 항목, 일관성 |
-| 학술지를 고르거나 투고를 준비 중임 | [8. 투고 준비](#submission) | 요구 사항, 파일, 확인된 선언 사항 |
-| 지도교수·동료·심사자의 피드백을 받음 | [9. 피드백에 따른 수정](#feedback) | 실제 수정 사항, 수정 기록, 답변 |
-| 게재가 승인되었거나 출판됨 | [10. 교정쇄·보관·정정](#publication) | 버전 점검, 재사용 정보, 문제 대응 |
+| 지금 하고 싶은 일 | AI의 도움으로 만들 수 있는 것 |
+| --- | --- |
+| [무엇을 쓸지 정하고 싶어요](#topic) | 비교할 주제 후보와 다음에 알아볼 질문 |
+| [아이디어에 맞는 자료를 찾고 싶어요](#literature) | 검색어, 자료 비교, 읽을 자료 추천 |
+| [연구 방법과 글의 순서를 정하고 싶어요](#planning) | 연구 계획과 논문 개요 |
+| [메모, 데이터, 그림·표를 정리하고 싶어요](#records) | 정리한 기록, 확인할 사항, 그림·표 설명 |
+| [가지고 있는 자료로 첫 원고를 쓰고 싶어요](#drafting) | 제공한 자료를 바탕으로 쓴 부분별 초안 |
+| [이미 쓴 글을 명확하고 읽기 쉽게 고치고 싶어요](#editing) | 수정한 글과 주요 변경 사항 설명 |
+| [제출 전에 문제가 없는지 확인하고 싶어요](#audit) | 문제가 있는 위치와 수정 제안 |
+| [학술지에 투고하고 싶어요](#submission) | 투고 편지와 준비할 자료 목록 |
+| [선생님이나 심사자의 수정 의견을 받았어요](#feedback) | 수정 순서, 고친 본문, 의견별 답변 |
+| [게재 승인이나 출판 후에 점검하고 싶어요](#publication) | 인쇄용 원고 점검, 보관 자료 정리, 오류 대응 제안 |
 
-[중국어 연구·글쓰기 전 과정 그림 보기](assets/research-writing-lifecycle.png).
+<details>
+<summary>연구와 글쓰기의 전체 과정 살펴보기</summary>
 
-각 단계는 다시 돌아가 수행할 수 있습니다. 이 프로젝트는 질문 정리, 글쓰기, 수정, 점검을 지원합니다. 연구 수행, 근거 검증, 저자 판단은 연구자가 맡으며, 출판 여부는 학술지가 결정합니다. 처음부터 데이터, 출처, 버전 기록을 남기세요.
+![연구와 글쓰기의 단계를 보여 주는 그림(중국어)](assets/research-writing-lifecycle.png)
 
-이 작업 흐름은 연구 지원, 데이터 관리, 개방형 연구, 출판 관련 자료를 프로젝트의 목적에 맞게 참고해 구성했습니다. [출처와 지원 범위(중국어)](docs/coverage.md) · [평가 기록(중국어)](docs/validation/README.md).
+필요한 단계만 사용하거나 앞 단계로 돌아가도 됩니다. 연구 수행과 중요한 판단은 저자가 맡고, 게재 여부는 학술지가 결정합니다. [과정 참고 자료(중국어)](docs/coverage.md) · [사용 시험 기록(중국어)](docs/validation/README.md)
+
+</details>
+
+<a id="showcase"></a>
+
+<details>
+<summary><strong>글을 고치기 전과 후가 어떻게 다른지 보기</strong></summary>
+
+중국어로 생성한 짧은 서론을 이 프로젝트의 프롬프트와 스킬로 수정했습니다. 아래 영문 그림은 기록된 원문과 수정문을 번역하고, 구체적인 수정 사항과 그 이유를 보여 줍니다.
+
+![짧은 서론의 수정 전후와 구체적인 수정 사항](assets/showcase-before-after-en.png)
+
+[전체 입력·출력과 수정 기록 보기](docs/showcase/README.en.md) · [중국어 예시 보기](docs/showcase/README.md)
+
+</details>
 
 <a id="topic"></a>
 
-## 1. 주제 찾기
+## 1. 무엇을 쓸지 생각하기
 
-관심사와 접근 가능한 자료에서 출발해 연구 방향을 구체적인 질문으로 좁혀 보세요. 후보 주제의 가치는 문헌 검토와 연구를 통해 확인해야 합니다.
+전공, 관심사, 사용할 수 있는 자료 등을 알려 주고 주제 후보를 비교해 보세요. 연구할 가치가 있는 주제인지는 문헌을 읽고 직접 판단해야 합니다.
 
 <a id="positioning"></a>
 
 <details>
-<summary><strong>1.1 관심사와 자원을 바탕으로 주제 찾기</strong></summary>
+<summary><strong>1.1 관심사와 현재 여건에 맞는 주제 찾기</strong></summary>
 
 ```text
 아직 명확한 주제가 없습니다. 현재 여건을 바탕으로 탐구할 가치가 있는 연구 질문을 찾도록 도와주세요.
@@ -189,7 +173,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>1.2 연구 방향을 연구 질문으로 구체화하기</strong></summary>
+<summary><strong>1.2 막연한 생각을 구체적인 질문으로 바꾸기</strong></summary>
 
 ```text
 아래 자료를 바탕으로 연구 질문과 가능한 기여를 명확히 하세요.
@@ -208,12 +192,12 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="literature"></a>
 
-## 2. 문헌 찾고 읽기
+## 2. 아이디어가 있다면 자료를 찾고 읽기
 
-관련 연구를 찾아 무엇을 밝혔고 무엇을 해결하지 못했는지 비교하세요. 출처와 검색 범위를 기록하고, 일반적인 관련 연구 검토와 체계적 문헌고찰을 구별하세요.
+검색에 쓸 단어를 정한 뒤, 읽은 연구를 비교해 보세요. AI가 추천한 문헌은 직접 확인해야 합니다. 제목만 보고 본문을 읽었다고 여겨서는 안 됩니다.
 
 <details>
-<summary><strong>2.1 검색 계획을 세우고 관련 자료 찾기</strong></summary>
+<summary><strong>2.1 검색에 쓸 단어와 관련 자료 찾기</strong></summary>
 
 ```text
 초기 아이디어가 있습니다. 관련 자료를 찾고 기존 연구가 이 아이디어를 어디까지 다루었는지 평가하도록 도와주세요.
@@ -240,7 +224,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>2.2 문헌을 비교하고 연구 질문 다듬기</strong></summary>
+<summary><strong>2.2 읽은 문헌을 비교하고 무엇을 연구할지 정하기</strong></summary>
 
 ```text
 제가 제공한 자료 속 연구를 정리해 연구 질문을 좁히도록 도와주세요.
@@ -258,7 +242,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>2.3 문헌 비교를 관련 연구 서술로 작성하기</strong></summary>
+<summary><strong>2.3 앞선 연구에서 밝혀진 내용 정리하기</strong></summary>
 
 ```text
 기존 문헌 비교와 독서 메모를 관련 연구 문단으로 작성하세요.
@@ -279,12 +263,12 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="planning"></a>
 
-## 3. 연구 계획과 개요 구성하기
+## 3. 연구 진행 방법과 논문 순서 정하기
 
-분야와 접근법에 맞게 근거, 방법, 구조를 정리하세요. 연구 초기부터 학술지나 글의 유형뿐 아니라 윤리, 허가, 연구 기록도 고려하세요. 완료된 작업과 계획을 구분하세요.
+해결할 질문, 필요한 자료, 글의 순서를 정리하세요. 아직 하지 않은 연구는 계획으로 써야 합니다.
 
 <details>
-<summary><strong>3.1 실행 가능한 연구 계획 세우기</strong></summary>
+<summary><strong>3.1 연구를 어떻게 진행할지 계획하기</strong></summary>
 
 ```text
 아래 연구 질문을 실행 가능한 계획으로 구체화하세요. 논문을 쓰기 전에 실행 가능성부터 평가하세요.
@@ -307,7 +291,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>3.2 논문 개요 작성하기</strong></summary>
+<summary><strong>3.2 논문에 쓸 내용과 순서 정하기</strong></summary>
 
 ```text
 활용 가능한 자료로 논문 개요를 작성하세요.
@@ -327,7 +311,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 <a id="evidence"></a>
 
 <details>
-<summary><strong>3.3 각 근거의 역할 점검하기</strong></summary>
+<summary><strong>3.3 지금 가진 자료로 무엇을 말할 수 있는지 확인하기</strong></summary>
 
 ```text
 이 실험, 분석, 논증이 논문에서 어떤 역할을 하는지 점검하세요.
@@ -350,7 +334,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 <a id="story"></a>
 
 <details>
-<summary><strong>3.4 핵심 논증과 기여 명확히 하기</strong></summary>
+<summary><strong>3.4 논문의 핵심 내용과 새롭게 보탤 점 정리하기</strong></summary>
 
 ```text
 이 자료를 사용해 논문의 핵심 논증, 연구 질문, 기여, 근거를 명확히 하세요.
@@ -374,7 +358,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>3.5 연구 시작 전 허가·기록·분석 방침 점검하기</strong></summary>
+<summary><strong>3.5 연구를 시작하기 전에 필요한 준비 확인하기</strong></summary>
 
 ```text
 이 연구를 시작하기 전에 명확히 해야 할 사항을 정리하세요.
@@ -395,12 +379,12 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="records"></a>
 
-## 4. 연구 수행·기록 정리·분석 점검하기
+## 4. 연구 메모와 그림·표 정리하기
 
-이 작업에는 실제 연구 자료가 필요합니다. 프롬프트는 기록을 정리하고 분석이 주장을 뒷받침하는지 평가하며 그림 구성을 계획하는 데 도움을 줄 수 있습니다. 권고받은 자료 수집, 실험, 분석은 실제로 수행해야 합니다.
+메모, 데이터, 결과가 있다면 여기서 정리를 시작하세요. AI는 정리와 점검을 도울 수 있고, 실제 연구는 직접 진행해야 합니다.
 
 <details>
-<summary><strong>4.1 연구 기록과 근거 색인 정리하기</strong></summary>
+<summary><strong>4.1 연구 메모와 자료를 나중에 찾기 쉽게 정리하기</strong></summary>
 
 ```text
 기존 연구 기록을 글쓰기와 검증에 활용할 수 있는 색인으로 정리하세요.
@@ -420,7 +404,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>4.2 분석·해석·도출 과정이 결론을 뒷받침하는지 점검하기</strong></summary>
+<summary><strong>4.2 분석 과정과 결론이 타당한지 확인하기</strong></summary>
 
 ```text
 확보된 분석이나 논증이 어떤 결론을 뒷받침하는지 평가하세요.
@@ -442,7 +426,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>4.3 그림·표를 계획하고 설명 작성하기</strong></summary>
+<summary><strong>4.3 그림과 표를 계획하고 설명 쓰기</strong></summary>
 
 ```text
 기존 결과를 바탕으로 그림과 표를 계획하고, 제목·그림 설명·표 주석을 작성하세요.
@@ -463,12 +447,12 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="drafting"></a>
 
-## 5. 자료를 바탕으로 초안 작성하기
+## 5. 자료를 바탕으로 첫 원고 쓰기
 
-자료가 가장 충분한 절부터 쓴 다음 초록과 제목으로 돌아오세요. 논증에 필요한 구조를 따르고 부족한 근거를 표시하세요. 관련 연구 작성에는 [2.3](#literature)도 활용할 수 있습니다.
+지금 쓸 부분을 골라 가지고 있는 자료와 함께 AI에 보내세요. 결과가 없는 부분은 지어내지 말고 나중에 채워 넣으세요.
 
 <details>
-<summary><strong>5.1 개요에 따라 지정한 절 작성하기</strong></summary>
+<summary><strong>5.1 개요에 맞춰 필요한 부분 쓰기</strong></summary>
 
 ```text
 자료와 개요가 있습니다. 논문의 지정한 부분을 작성하도록 도와주세요.
@@ -491,7 +475,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>5.2 연구 방법 작성하기</strong></summary>
+<summary><strong>5.2 방법 쓰기: 연구를 어떻게 했는지 설명하기</strong></summary>
 
 ```text
 독자가 연구 수행 과정을 이해하고 재현 방법을 판단할 수 있도록 실제 기록을 바탕으로 연구 방법 절을 작성하세요.
@@ -511,7 +495,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>5.3 서론 작성하기</strong></summary>
+<summary><strong>5.3 서론 쓰기: 왜 이 문제를 연구하는지 설명하기</strong></summary>
 
 ```text
 아래 자료를 사용해 서론을 다시 작성하세요. 독자가 연구의 중요성, 미해결 문제, 이 논문이 수행한 일을 일찍 파악할 수 있도록 하세요.
@@ -534,7 +518,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>5.4 결과 문단 작성하기</strong></summary>
+<summary><strong>5.4 결과 쓰기: 연구에서 무엇을 발견했는지 설명하기</strong></summary>
 
 ```text
 아래 결과를 논문에 넣을 문단으로 작성하세요.
@@ -555,7 +539,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>5.5 논의와 한계 작성하기</strong></summary>
+<summary><strong>5.5 논의 쓰기: 결과의 의미와 연구의 한계 설명하기</strong></summary>
 
 ```text
 이 결과를 바탕으로 논의와 한계를 작성하세요.
@@ -575,7 +559,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>5.6 결론 작성하기</strong></summary>
+<summary><strong>5.6 결론 쓰기: 논문에서 밝혀낸 내용 정리하기</strong></summary>
 
 ```text
 이 자료를 바탕으로 결론을 작성하세요.
@@ -595,7 +579,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>5.7 초록 작성하기</strong></summary>
+<summary><strong>5.7 초록 쓰기: 논문 전체를 짧게 소개하기</strong></summary>
 
 ```text
 아래 자료를 바탕으로 초록을 작성하세요.
@@ -618,7 +602,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>5.8 논문 제목 제안하기</strong></summary>
+<summary><strong>5.8 논문 제목 정하기</strong></summary>
 
 ```text
 간결하고 정확한 논문 제목을 5개 제안하고, 각각 한 문장으로 이유를 설명하세요.
@@ -637,12 +621,12 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="editing"></a>
 
-## 6. 초안 수정하기
+## 6. 이미 쓴 글을 읽기 쉽게 고치기
 
-문장, 용어, 형식을 다듬기 전에 핵심 논증, 구조, 추론부터 정리하세요. 적절한 표현은 유지하세요. 절별로 수정할 때는 버전과 아직 반영하지 못한 수정 사항을 기록하세요.
+글 전체의 흐름이 이해하기 어렵다면 6.1을, 한 문단을 읽기 쉽게 고치고 싶다면 6.2를 사용하세요.
 
 <details>
-<summary><strong>6.1 구조와 논증부터 수정하기</strong></summary>
+<summary><strong>6.1 글의 순서와 논리 흐름 다듬기</strong></summary>
 
 ```text
 완성된 초안이 있습니다. 어떻게 수정할지 결정하기 전에 전체 구조와 논증을 검토하세요.
@@ -664,7 +648,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>6.2 정확하고 읽기 쉽게 학술 문장 다듬기</strong></summary>
+<summary><strong>6.2 문장을 정확하고 읽기 쉽게 고치기</strong></summary>
 
 ```text
 연구 내용의 의미를 바꾸지 않으면서 이 학술 문장의 정확성, 가독성, 일관성을 높이세요.
@@ -697,7 +681,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>6.3 상투적인 표현과 정형화된 패턴 줄이기</strong></summary>
+<summary><strong>6.3 상투적인 문구와 어색한 표현 고치기</strong></summary>
 
 ```text
 이 글에서 정형화된 표현을 점검하고 저자가 직접 쓴 자연스러운 글이 되도록 수정하세요.
@@ -726,7 +710,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>6.4 문법·철자·형식만 점검하기</strong></summary>
+<summary><strong>6.4 문법·맞춤법·형식만 확인하기</strong></summary>
 
 ```text
 이 글의 문법, 철자, 문장부호, 형식, 명백한 용어 오류만 점검하세요. 문체를 다듬거나 의미를 바꾸지 마세요.
@@ -744,7 +728,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 불필요한 자기비하와 과장 점검하기</strong></summary>
+<summary><strong>6.5 연구를 과장하거나 지나치게 낮춰 말한 곳 확인하기</strong></summary>
 
 ```text
 이 원고를 점검하고 다음을 구분하세요.
@@ -768,7 +752,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>6.6 의미와 근거의 강도를 유지하며 학술 문장 번역하기</strong></summary>
+<summary><strong>6.6 원래 뜻을 유지하며 논문 번역하기</strong></summary>
 
 ```text
 의미와 근거의 강도를 유지하면서 이 학술 문장을 번역하세요.
@@ -787,7 +771,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>6.7 절별 수정을 이어가기 위한 인계 기록 작성하기</strong></summary>
+<summary><strong>6.7 다음에 이어서 고칠 수 있도록 이번 수정 기록하기</strong></summary>
 
 ```text
 이후 절별 수정을 이어갈 수 있도록 간결한 작업 기록을 작성하세요.
@@ -844,12 +828,12 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="audit"></a>
 
-## 7. 원고 점검하기
+## 7. 제출 전에 직접 확인하기
 
-출처를 바탕으로 사실과 인용을 검증한 다음 추론과 보고의 완결성을 검토하세요. 매번 실제 점검 범위를 밝히고, 영향을 받는 절로 돌아가 문제를 해결하세요. 점검표를 모두 채웠다고 연구 설계가 타당해지는 것은 아닙니다.
+본문을 원자료와 비교한 뒤 발견한 문제를 고치세요. AI의 지적도 확인한 뒤 반영해야 합니다.
 
 <details>
-<summary><strong>7.1 원자료와 대조해 사실과 논증 점검하기</strong></summary>
+<summary><strong>7.1 원자료와 비교해 사실과 결론 확인하기</strong></summary>
 
 ```text
 이 원고의 구절을 제공된 자료와 대조해 점검하세요. 빠진 사실을 채우지 마세요.
@@ -876,7 +860,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>7.2 독자·심사자의 관점에서 논문 검토하기</strong></summary>
+<summary><strong>7.2 독자나 심사자의 입장에서 문제 찾기</strong></summary>
 
 ```text
 이 원고에 대해 해당 분야의 독자와 심사자가 제기할 가능성이 큰 실질적인 질문을 점검하세요.
@@ -895,7 +879,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>7.3 투고 전 종합 점검하기</strong></summary>
+<summary><strong>7.3 제출 전에 논문 전체 확인하기</strong></summary>
 
 ```text
 투고 전에 이 원고를 점검하세요. 논문 전체를 다시 쓰기보다 문제를 먼저 보고하세요.
@@ -926,7 +910,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>7.4 출처의 실재·서지 정보·인용 근거 검증하기</strong></summary>
+<summary><strong>7.4 참고문헌이 실제로 있는지, 올바르게 인용했는지 확인하기</strong></summary>
 
 ```text
 각 출처의 실재 여부, 서지 정보, 인용된 구체적 주장에 대한 뒷받침 여부를 점검하세요.
@@ -950,7 +934,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>7.5 적용 가능한 보고 지침에 따라 누락 점검하기</strong></summary>
+<summary><strong>7.5 작성 요건에 맞춰 빠진 내용 확인하기</strong></summary>
 
 ```text
 적용 가능한 지침에서 요구하는 정보를 이 원고가 보고하고 있는지 점검하세요.
@@ -989,9 +973,9 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="submission"></a>
 
-## 8. 학술지 선택과 투고 준비하기
+## 8. 학술지 투고 준비하기(필요할 때)
 
-계획 단계에서 학술지나 글의 유형에 따른 요건을 고려하고, 투고 전에는 최신 지침을 확인하세요. 실제 요구 사항을 바탕으로 파일, 형식, 선언 사항을 정리하세요. 빠진 정보는 저자가 확인해야 합니다.
+수업 과제라면 선생님의 안내를 따르세요. 학술지에 투고할 때는 여기서 필요한 작업을 고르면 됩니다.
 
 <details>
 <summary><strong>8.1 참고문헌 목록의 형식 맞추기</strong></summary>
@@ -1018,7 +1002,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>8.2 투고 서신 작성하기</strong></summary>
+<summary><strong>8.2 학술지 편집자에게 보낼 투고 편지 쓰기</strong></summary>
 
 ```text
 이 자료를 사용해 {{학술지}}에 보낼 투고 서신을 작성하세요.
@@ -1036,7 +1020,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>8.3 학술지 적합성과 투고 자료 점검하기</strong></summary>
+<summary><strong>8.3 투고할 학술지가 맞는지, 필요한 자료가 모두 있는지 확인하기</strong></summary>
 
 ```text
 목표 학술지의 최신 요건에 따라 투고 준비를 정리하세요. 학술지를 아직 고르지 않았다면 먼저 적합한 학술지를 선택하기 위한 조건을 평가하세요.
@@ -1058,7 +1042,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>8.4 저자 기여와 기타 선언문 준비하기</strong></summary>
+<summary><strong>8.4 저자별 역할과 투고에 필요한 선언문 정리하기</strong></summary>
 
 ```text
 확인된 사실을 바탕으로 저자 기여, 연구비 지원, 이해충돌, 윤리, 데이터·코드 이용 가능성, AI 사용에 관한 해당 선언문을 작성하세요.
@@ -1080,12 +1064,12 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="feedback"></a>
 
-## 9. 피드백에 따라 수정하기
+## 9. 수정 의견을 받았다면 다시 고치기
 
-지도교수, 공동연구자, 동료의 피드백을 수정 작업으로 구체화하세요. 정식 심사에서 요구하면 항목별 답변을 준비하세요. 의견에 따라 문헌, 연구, 분석으로 돌아가야 할 수도 있습니다. 거절 후 다른 학술지에 투고한다면 [8.3](#submission)에서 요건을 비교하세요.
+선생님, 동료, 심사자가 보낸 의견을 그대로 AI에 제공하세요. 무엇을 바꿔야 하는지 이해한 뒤 본문을 고치세요.
 
 <details>
-<summary><strong>9.1 피드백을 이해하고 수정 우선순위 정하기</strong></summary>
+<summary><strong>9.1 수정 의견을 이해하고 어디부터 고칠지 정하기</strong></summary>
 
 ```text
 논문 전체를 다시 쓰기 전에 이 피드백을 이해하고 수정 계획을 세우도록 도와주세요.
@@ -1105,7 +1089,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>9.2 원고를 수정하고 실제 변경 사항 기록하기</strong></summary>
+<summary><strong>9.2 의견에 따라 본문을 고치고 변경 사항 기록하기</strong></summary>
 
 ```text
 합의된 피드백에 따라 원고를 수정하고 검증 가능한 변경 기록을 남기세요.
@@ -1127,7 +1111,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>9.3 완료한 수정에 근거해 심사자에게 답변하기</strong></summary>
+<summary><strong>9.3 실제로 수정한 내용을 바탕으로 심사 의견에 하나씩 답하기</strong></summary>
 
 ```text
 각 심사 의견에 답변하도록 도와주세요.
@@ -1151,12 +1135,12 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="publication"></a>
 
-## 10. 교정쇄 점검과 출판 후 작업 처리하기
+## 10. 게재 승인이나 출판 후에 확인하기(필요할 때)
 
-게재가 승인되면 교정쇄를 점검합니다. 추적 가능한 버전을 보존하고 허가와 학술지 요건에 따라 자료를 보관하세요. 오류를 발견하면 관련 절차로 소통하기 전에 그 영향을 파악하세요.
+학술지에서 편집한 인쇄용 원고를 확인하고 연구 자료를 보관하세요. 출판 후 오류를 발견하면 사실부터 확인한 뒤 학술지의 절차를 따르세요.
 
 <details>
-<summary><strong>10.1 게재 승인 원고와 교정쇄 비교하기</strong></summary>
+<summary><strong>10.1 학술지에서 편집한 인쇄용 원고를 원본과 비교하기</strong></summary>
 
 ```text
 게재 승인 원고와 교정쇄를 비교하고 편집자의 확인이 필요한 변경 사항을 정리하세요.
@@ -1179,7 +1163,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>10.2 보관과 재사용을 위한 문서 준비하기</strong></summary>
+<summary><strong>10.2 연구 자료를 보관하고 사용 방법 쓰기</strong></summary>
 
 ```text
 보관과 재사용을 위해 연구 자료를 정리하세요.
@@ -1199,7 +1183,7 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 </details>
 
 <details>
-<summary><strong>10.3 오류의 영향을 평가하고 정정 관련 서신 준비하기</strong></summary>
+<summary><strong>10.3 출판 후 발견한 오류를 정리하고 편집자에게 보낼 글 쓰기</strong></summary>
 
 ```text
 출판 후 문제가 의심되는 부분을 발견했습니다. 그 영향과 소통 내용을 정리하도록 도와주세요.
@@ -1222,7 +1206,12 @@ ChatGPT, Claude, DeepSeek, Kimi, Doubao 등 대화형 도구에서 사용할 수
 
 <a id="skill"></a>
 
-## 🛠️ 에이전트 스킬로 설치하기(선택)
+## Codex나 WorkBuddy를 자주 사용하시나요?
+
+이 글쓰기 지침을 도구에 설치해 두면 다음에도 편하게 사용할 수 있습니다.
+
+<details>
+<summary><strong>설치 방법 보기(선택)</strong></summary>
 
 에이전트에서 논문을 자주 수정한다면 [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)을 설치하세요. 이 스킬은 글쓰기 기본 지침과 단계별 작업을 독립적으로 사용할 수 있는 지침으로 묶었습니다. 다른 스킬이나 저장소 전체가 필요하지 않습니다. 프롬프트를 직접 복사해 사용한다면 이 부분은 건너뛰어도 됩니다.
 
@@ -1264,9 +1253,16 @@ Codex에서는 `$skill-name`으로 스킬을 호출할 수 있습니다. CLI와 
 
 설치 진입점은 공식 문서를 기준으로 확인했지만, 모든 클라이언트에서 설치와 동작을 시험한 것은 아닙니다. 자료를 업로드해도 되는지 확인하세요. 로컬 에이전트도 원격 모델을 사용할 수 있습니다. 투고 전에는 목표 학술지의 AI 사용·공개 요건을 확인하세요.
 
+</details>
+
 <a id="quality"></a>
 
-## 지원 범위와 평가
+## 이 요청문을 실제로 사용해 봤나요?
+
+일부 중국어·영어 작업에는 사용 시험 기록이 있습니다. 한국어판은 아직 별도의 동작 시험과 한국어 원어민 전문가의 감수를 거치지 않았습니다. AI의 답변은 직접 확인해 주세요.
+
+<details>
+<summary>사용 시험 기록과 참고 자료 보기</summary>
 
 이 모음은 일반적인 연구 준비, 학술 글쓰기, 수정 작업을 지원합니다. 분야, 접근법, 학술지에 맞는 작업을 선택하세요. 작업 수를 기준으로 지원 비율을 계산하지 않습니다.
 
@@ -1281,10 +1277,17 @@ Codex에서는 `$skill-name`으로 스킬을 호출할 수 있습니다. CLI와 
 
 한국어판은 아직 별도의 동작 시험과 한국어 원어민 전문가의 감수를 거치지 않았습니다. 영문판의 시험 결과만으로 한국어판의 동작이나 번역 품질이 검증되었다고 볼 수는 없습니다. 자세한 상태와 한계는 [번역 안내](docs/translations.md)를 확인하세요.
 
-## 유지보수와 피드백
+</details>
+
+<details>
+<summary>문제를 알리거나 개선에 참여하기</summary>
+
+[문제 제보 페이지](https://github.com/huh7i5/AI-prompts-writing/issues)에 작업 번호, 제공한 자료, 답변에서 아쉬웠던 점을 알려 주세요. 올리기 전에 개인정보를 지워 주세요.
 
 프롬프트는 실제 사용, 실패 사례, 글쓰기 경험을 바탕으로 계속 수정합니다. 일반 작업, 분야별 조정, 실패 사례, 더 나은 검증 방법으로 기여할 수 있습니다. 사용 상황, 필요한 입력, 알려진 한계를 설명해 주세요.
 
 작업을 수정한 뒤에는 [모든 언어 버전](docs/translations.md)에서 같은 작업 번호의 내용을 확인하고 동기화하세요. `.agents/skills/ai-prompt-writing/SKILL.md`, 고정 사례, 평가 기록도 함께 확인하세요. 검색, 분석, 인용, 투고, 교정쇄 점검의 경계를 바꾸면 최소한 관련 사례를 다시 실행하고 이전 출력과 새 출력을 모두 보존해야 합니다.
 
 이 프로젝트는 텍스트 중심으로 유지합니다. 코드가 필요하지 않고 특정 모델에 묶이지 않으며, 프롬프트만으로 올바른 결과가 보장된다고 약속하지 않습니다.
+
+</details>

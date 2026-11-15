@@ -12,88 +12,37 @@
 </p>
 
 <p>
-  <a href="#start">直接复制使用</a> ·
-  <a href="#control">整篇文章的写作风格</a> ·
-  <a href="#catalog">按写作阶段找提示词</a> ·
-  <a href="#skill">安装为 Skill</a> ·
-  <a href="#quality">覆盖与验证</a> ·
-  <a href="#showcase">效果对照</a>
+  <a href="#start">第一次用</a> ·
+  <a href="#catalog">选我需要的任务</a> ·
+  <a href="#showcase">看修改例子</a>
 </p>
 
 </div>
 
-从还没想好写什么，到整理研究材料、写稿改稿、投稿返修和发表后核对，这里整理了常用任务的提示词。展开需要的任务，复制后填入自己的材料即可。
-
-希望写出来的文章准确、好读，有必要的学术性。专业概念要说准，但没必要堆术语、拉长句子，或用比喻代替解释。
-
-<a id="showcase"></a>
-
-## ✦ 看一段文字怎样修改
-
-同一份写作任务先生成短引言，再交给项目的改稿提示词与 Skill 修改。图中逐句对应原始输出，标出修改位置和理由。
-
-![短引言修改前后及具体修改说明](assets/showcase-before-after.png)
-
-[查看完整输入、原始输出与修改记录](docs/showcase/README.md) · [Read the example in English](docs/showcase/README.en.md)
+这里整理了 43 段可以直接发给 AI 的话，也就是“提示词”，帮你想选题、找资料、列大纲和改文章。本页就能阅读和复制，不用下载项目，也不用写代码。
 
 <a id="start"></a>
 
-## 📋 直接复制使用
+## 📋 第一次用，跟着这三步
 
-适合在豆包、ChatGPT、Claude、Kimi、DeepSeek 等聊天工具中使用，不需要安装或运行代码。
+在你常用的 AI 聊天工具里新开一个对话，比如豆包、ChatGPT 或 DeepSeek。
 
-1. 在新对话中先发一次[写作要求](#control)，再发单项任务，统一风格与核查要求。
-2. 从[阶段目录](#catalog)找到当前要做的事，展开并复制对应提示词。
-3. 将 `{{双大括号}}` 替换为自己的材料，检查输出后再决定是否采用。
+1. **先发写作要求。** 点开下方“展开复制：写作要求”，复制灰色文字框里的内容，发给 AI。同一对话发一次即可。
+2. **再选一个任务。** 从[下面的目录](#catalog)找到你现在要做的事，点标题或左侧小三角展开，把文字复制到聊天框。
+3. **填入自己的内容，再发送。** 把 `{{……}}` 连同括号换成你的信息，附上需要处理的材料。收到回答后，对照原文检查，再决定采用哪些建议。
 
-开始时可以补充学科、论文类型、研究方式和目标读者，只填与任务有关的内容。定量、质性、理论与综述不必套同一套实验模板。
+例如，`研究领域：{{领域}}` 填成 `研究领域：教育学`。不知道的写“未提供”，不适用的项目可以删去。每次只选一个任务即可。
 
-不知道的填“未提供”，不适用的字段可以删去。不用一次发送整个 README，也不用从第一阶段开始。处理长文时，每次带上相关段落、图表和术语约定，不假定模型记得之前的全文。
-
-> 数字、引用和投稿声明仍需作者核对。提示词能帮助检查问题，不能保证模型不出错。
-
-### 如果你只想先完成一篇文章
-
-按手头情况走下面这条最短路线即可：
-
-1. [还没想好选题](#topic)
-2. [有了想法，找资料](#literature)
-3. [定方案、列大纲](#planning)
-4. [把材料写成初稿](#drafting)
-5. [定稿自查](#audit)
-6. [收到意见后修改](#feedback)
-
-研究记录、图表、投稿声明、校样和发表后处理，按需要补做，不必一开始全部展开。
-
-<details>
-<summary><strong>建议每次都带一张材料卡</strong></summary>
-
-```text
-学科与论文类型：{{例如：历史学课程论文 / 定量实证 / 质性研究 / 理论论文 / 综述}}
-当前阶段：{{选题、找文献、定方案、研究记录、初稿、修改、自查、投稿或反馈修改}}
-研究方式：{{定量、质性、理论、综述或其他}}
-目标读者、语言与篇幅：{{要求}}
-本次实际提供的材料与版本：{{正文、表格、来源、记录、文件名或日期}}
-核心问题或主张：{{问题}}
-已确认事实：{{数字、来源、方法、已完成修改}}
-待核实或有冲突的内容：{{事项}}
-这次希望完成：{{具体任务}}
-```
-
-材料卡只是索引，不能替代正文、原始记录和来源。涉及数字或核心主张时，仍要把相关原文带上。
-
-</details>
-
-审稿意见、未公开数据和含个人信息的材料，上传前先确认保密要求并做必要的去标识化。
+数字和参考文献需要自己核对。上传材料前，确认可以分享，并删去不需要的姓名等个人信息。
 
 <a id="control"></a>
 
-## ✍️ 先统一整篇文章的写作风格
+## ✍️ 先告诉 AI，你希望文章怎么写
 
-这段在同一对话中发一次即可。后面的任务有具体输出要求时，按任务要求处理，不必每次都生成一套分析表。
+让文章准确、好读，保留必要的专业表达。先发下面这段，再使用具体任务。
 
 <details>
-<summary><strong>展开并复制：写作要求</strong></summary>
+<summary><strong>展开复制：写作要求（同一对话发一次）</strong></summary>
 
 ```text
 请协助我写作和修改学术论文。
@@ -124,7 +73,26 @@
 </details>
 
 <details>
-<summary><strong>按研究方式选择检查重点</strong></summary>
+<summary><strong>不知道该给 AI 哪些材料？看这里（按需填写）</strong></summary>
+
+```text
+学科与论文类型：{{例如：历史学课程论文 / 定量实证 / 质性研究 / 理论论文 / 综述}}
+当前阶段：{{选题、找文献、定方案、研究记录、初稿、修改、自查、投稿或反馈修改}}
+研究方式：{{定量、质性、理论、综述或其他}}
+目标读者、语言与篇幅：{{要求}}
+本次实际提供的材料与版本：{{正文、表格、来源、记录、文件名或日期}}
+核心问题或主张：{{问题}}
+已确认事实：{{数字、来源、方法、已完成修改}}
+待核实或有冲突的内容：{{事项}}
+这次希望完成：{{具体任务}}
+```
+
+材料卡只是索引，不能替代正文、原始记录和来源。涉及数字或核心主张时，仍要把相关原文带上。
+
+</details>
+
+<details>
+<summary><strong>不同类型的论文，分别要注意什么（按需看）</strong></summary>
 
 - **定量研究**：设计、测量、比较条件、缺失与排除、分析假设、不确定性和替代解释。
 - **质性研究**：取样、资料来源、编码、解释过程、研究者立场、反例和引文位置。
@@ -137,34 +105,50 @@
 
 <a id="catalog"></a>
 
-## 🧭 按写作阶段找提示词
+## 🧭 选一件你现在要做的事
 
-按手头已有的材料选择入口。收到反馈后，可以回到前面的阶段补材料、改结构，再做一遍自查。
+点击左栏，跳到对应任务。不用从头走完全部步骤。
 
-| 我现在的情况 | 从这里开始 | 这一步准备什么 |
-| --- | --- | --- |
-| 还没想好写什么 | [一、找选题](#topic) | 条件、方向和具体研究问题 |
-| 已经有了想法 | [二、找资料、读文献](#literature) | 检索记录、阅读比较与相关工作 |
-| 有一些材料，准备开展研究 | [三、定方案、列大纲](#planning) | 研究方式、证据安排与可行方案 |
-| 正在研究，已有记录或结果 | [四、整理记录、检查分析](#records) | 可追溯的材料、分析与图表 |
-| 准备把材料写成文章 | [五、写初稿](#drafting) | 有证据支撑的章节和主张 |
-| 初稿还不够完整、清楚 | [六、从初稿改到定稿](#editing) | 结构、论证、语言和版本记录 |
-| 稿件基本完成，想查漏补缺 | [七、定稿自查](#audit) | 事实、引用、报告完整性与全文一致性 |
-| 准备选择期刊或提交 | [八、准备投稿](#submission) | 匹配的要求、文件和已确认声明 |
-| 收到导师、同行或审稿意见 | [九、根据反馈修改](#feedback) | 改稿、实际改动记录与回复 |
-| 已接收或已发表 | [十、校样、归档与更正](#publication) | 版本核对、复用说明与问题处理 |
+| 我现在想做什么 | AI 可以帮我得到什么 |
+| --- | --- |
+| [还没想好写什么](#topic) | 几个可比较的选题和接下来要查的问题 |
+| [有了想法，想找资料](#literature) | 搜索关键词、资料比较和阅读建议 |
+| [不知道研究怎么做、文章怎么安排](#planning) | 研究计划和论文大纲 |
+| [想整理笔记、数据或图表](#records) | 整理后的记录、检查意见和图表说明 |
+| [有材料，准备写初稿](#drafting) | 根据已有材料写出的章节草稿 |
+| [已经写了，想改得清楚好读](#editing) | 修改后的文章和主要修改说明 |
+| [快交了，想检查有没有问题](#audit) | 标出位置的问题和修改建议 |
+| [准备向期刊投稿](#submission) | 投稿信和需要准备的材料清单 |
+| [收到老师或审稿人的修改意见](#feedback) | 修改顺序、改稿和逐条回复 |
+| [论文接收或发表了](#publication) | 排版检查、材料整理和错误处理建议 |
 
-![从选题到发表后的研究与写作流程，以及 AI-prompts-writing 可以提供的辅助](assets/research-writing-lifecycle.png)
+<details>
+<summary>想看完整的研究与写作流程？</summary>
 
-这是一条可以往返的路线。项目帮助梳理、写作、修改和核对；研究实施、专业判断、作者确认和期刊决定仍由相应的人完成。数据、来源和版本记录要从前期开始保留。
+![从选题到发表后的研究与写作流程](assets/research-writing-lifecycle.png)
 
-流程参考了大学研究支持、数据管理、开放研究与出版流程，按本项目用途重新整理。[查看来源、任务对应与缺口](docs/coverage.md)；提示词的实际试跑另见[验证记录](docs/validation/README.md)。
+这些步骤可以往返，也可以按需使用。研究实施、重要判断和投稿决定仍由作者与期刊负责。[流程参考资料](docs/coverage.md) · [试用记录](docs/validation/README.md)
+
+</details>
+
+<a id="showcase"></a>
+
+<details>
+<summary><strong>看看一段文章修改前后有什么变化</strong></summary>
+
+同一份写作任务先生成短引言，再交给项目的改稿提示词与 Skill 修改。图中逐句对应原始输出，标出修改位置和理由。
+
+![短引言修改前后及具体修改说明](assets/showcase-before-after.png)
+
+[查看完整输入、原始输出与修改记录](docs/showcase/README.md) · [Read the example in English](docs/showcase/README.en.md)
+
+</details>
 
 <a id="topic"></a>
 
 ## 一、还没想好写什么
 
-先看自己关心什么、能拿到什么材料，再把方向收窄成问题。这一步得到的是候选选题，还需要文献和研究来验证。
+提供你的专业、兴趣和现有条件，让 AI 帮你比较几个选题。选题是否值得做，还要继续查资料和判断。
 
 <a id="positioning"></a>
 
@@ -189,7 +173,7 @@
 </details>
 
 <details>
-<summary><strong>1.2 把方向收窄成研究问题</strong></summary>
+<summary><strong>1.2 把大方向变成一个具体问题</strong></summary>
 
 ```text
 请根据材料梳理研究问题和可能的贡献。
@@ -210,10 +194,10 @@
 
 ## 二、有了想法，找资料、读文献
 
-先找与想法相关的研究，再比较它们回答了什么、还没回答什么。保留来源和检索范围，一般相关工作与系统综述要区分。
+先找搜索关键词，再比较读到的研究。AI 给出的文献要核对，不能只凭标题就当作读过全文。
 
 <details>
-<summary><strong>2.1 把想法变成检索方案，寻找相关材料</strong></summary>
+<summary><strong>2.1 找搜索关键词和相关资料</strong></summary>
 
 ```text
 我已经有一个初步想法，请帮我寻找相关材料，判断这个问题已经被研究到什么程度。
@@ -240,7 +224,7 @@
 </details>
 
 <details>
-<summary><strong>2.2 比较文献，明确自己的问题</strong></summary>
+<summary><strong>2.2 比较读过的文献，确定自己要研究什么</strong></summary>
 
 ```text
 请根据我提供的材料整理已有研究，帮助我收窄自己的问题。
@@ -258,7 +242,7 @@
 </details>
 
 <details>
-<summary><strong>2.3 把文献比较写成相关工作</strong></summary>
+<summary><strong>2.3 写清别人已经研究了什么</strong></summary>
 
 ```text
 请把已有的文献比较和阅读笔记写成相关工作段落。
@@ -279,12 +263,12 @@
 
 <a id="planning"></a>
 
-## 三、有了材料，定方案、列大纲
+## 三、安排研究，列出大纲
 
-结合学科和研究方式安排证据、方法与文章结构。目标期刊或文体可以提前了解；伦理、许可和研究记录也要尽早考虑。已有工作与计划分开。
+把要解决的问题、需要的材料和文章顺序理清楚。还没做的研究要写成计划。
 
 <details>
-<summary><strong>3.1 拟定可行的研究方案</strong></summary>
+<summary><strong>3.1 安排研究怎么做</strong></summary>
 
 ```text
 请把下面的研究问题整理成一个可以执行的方案，先检查可行性，不急着写论文。
@@ -327,7 +311,7 @@
 <a id="evidence"></a>
 
 <details>
-<summary><strong>3.3 检查每份证据在论文中的作用</strong></summary>
+<summary><strong>3.3 检查现有材料能说明什么</strong></summary>
 
 ```text
 请检查这些实验、分析或论证材料在论文中各自起什么作用。
@@ -350,7 +334,7 @@
 <a id="story"></a>
 
 <details>
-<summary><strong>3.4 梳理论文主线与贡献</strong></summary>
+<summary><strong>3.4 理清论文要讲什么、有哪些贡献</strong></summary>
 
 ```text
 请根据以下材料梳理论文主线，让读者看清研究问题、贡献和证据。
@@ -374,7 +358,7 @@
 </details>
 
 <details>
-<summary><strong>3.5 开始前核对权限、记录与分析安排</strong></summary>
+<summary><strong>3.5 开始研究前，检查还要准备什么</strong></summary>
 
 ```text
 请检查这项研究开始前需要明确哪些安排。
@@ -395,12 +379,12 @@
 
 <a id="records"></a>
 
-## 四、开展研究，整理记录与检查分析
+## 四、整理研究记录和图表
 
-这一步需要真实的研究材料。提示词可整理记录、检查分析是否支持主张，并帮助安排图表；建议的采集、实验或分析仍须实际完成。
+已有笔记、数据或结果时，从这里整理。AI 可以帮你检查和解释，实际研究仍需要自己完成。
 
 <details>
-<summary><strong>4.1 整理研究记录与证据索引</strong></summary>
+<summary><strong>4.1 整理研究笔记和材料，方便以后查找</strong></summary>
 
 ```text
 请把现有研究记录整理成能够支持写作和核对的材料索引。
@@ -420,7 +404,7 @@
 </details>
 
 <details>
-<summary><strong>4.2 检查分析、解释或推导是否支持结论</strong></summary>
+<summary><strong>4.2 检查分析过程和结论是否合理</strong></summary>
 
 ```text
 请检查已有分析或论证能支持什么结论。
@@ -442,7 +426,7 @@
 </details>
 
 <details>
-<summary><strong>4.3 安排图表，写清图题、图注与表注</strong></summary>
+<summary><strong>4.3 安排图表，写清图表说明</strong></summary>
 
 ```text
 请根据已有结果安排图表，并撰写对应图题、图注或表注。
@@ -465,10 +449,10 @@
 
 ## 五、把材料写成初稿
 
-先写材料最充分的章节，再回看摘要和标题。不强制采用同一种章节顺序；缺证据时保留待补项。相关工作也可使用 [2.3](#literature)。
+选你现在要写的部分，把已有材料一同发给 AI。缺少结果的地方留待补充，不要让它编。
 
 <details>
-<summary><strong>5.1 按大纲写指定章节</strong></summary>
+<summary><strong>5.1 按大纲写一节内容</strong></summary>
 
 ```text
 我已经有材料和大纲，请协助我写出初稿，先完成指定部分。
@@ -491,7 +475,7 @@
 </details>
 
 <details>
-<summary><strong>5.2 写方法</strong></summary>
+<summary><strong>5.2 写方法：说明研究是怎么做的</strong></summary>
 
 ```text
 请根据实际记录撰写方法部分，使读者能理解研究如何进行，并判断怎样复现。
@@ -511,7 +495,7 @@
 </details>
 
 <details>
-<summary><strong>5.3 写引言</strong></summary>
+<summary><strong>5.3 写引言：说明为什么研究这个问题</strong></summary>
 
 ```text
 请根据下面的材料重写引言，让读者尽早知道研究为什么重要、还缺什么、本文做了什么。
@@ -534,7 +518,7 @@
 </details>
 
 <details>
-<summary><strong>5.4 写结果段落</strong></summary>
+<summary><strong>5.4 写结果：说明研究发现了什么</strong></summary>
 
 ```text
 请将下面的结果写成论文段落。
@@ -555,7 +539,7 @@
 </details>
 
 <details>
-<summary><strong>5.5 写讨论和限制</strong></summary>
+<summary><strong>5.5 写讨论：解释结果和研究不足</strong></summary>
 
 ```text
 请根据下面的结果写讨论和限制。
@@ -575,7 +559,7 @@
 </details>
 
 <details>
-<summary><strong>5.6 写结论</strong></summary>
+<summary><strong>5.6 写结论：总结这篇文章</strong></summary>
 
 ```text
 请根据下面的材料写结论。
@@ -595,7 +579,7 @@
 </details>
 
 <details>
-<summary><strong>5.7 写摘要</strong></summary>
+<summary><strong>5.7 写摘要：用一小段介绍整篇论文</strong></summary>
 
 ```text
 请根据下面的材料写一份摘要。
@@ -618,7 +602,7 @@
 </details>
 
 <details>
-<summary><strong>5.8 拟论文标题</strong></summary>
+<summary><strong>5.8 给论文起标题</strong></summary>
 
 ```text
 请生成 5 个简洁、准确的论文标题，每个附一句选择理由。
@@ -637,12 +621,12 @@
 
 <a id="editing"></a>
 
-## 六、从初稿改到定稿
+## 六、修改已有的文章
 
-先解决主线、结构和论证，再改句子、术语和格式。准确的表达可以保留；分章改稿时保存版本和待同步事项。
+文章顺序不清楚，先用 6.1；只想把一段话改得好读，用 6.2。
 
 <details>
-<summary><strong>6.1 先改整体结构与论证</strong></summary>
+<summary><strong>6.1 先理顺文章结构和思路</strong></summary>
 
 ```text
 我已经有一份完整初稿，请先检查整体结构和论证，再决定如何修改。
@@ -664,7 +648,7 @@
 </details>
 
 <details>
-<summary><strong>6.2 做学术润色，让段落准确、好读</strong></summary>
+<summary><strong>6.2 修改句子，让段落准确、好读</strong></summary>
 
 ```text
 请修改下面的学术段落，重点是准确、好读和前后衔接，不改变研究含义。
@@ -696,7 +680,7 @@
 </details>
 
 <details>
-<summary><strong>6.3 去掉套话和模板化表达</strong></summary>
+<summary><strong>6.3 去掉套话和生硬的表达</strong></summary>
 
 ```text
 请检查下面的文字是否有明显的模板化表达，让语言更像真实作者写的文章。
@@ -743,7 +727,7 @@
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 检查过度自谦和夸大表达</strong></summary>
+<summary><strong>6.5 检查有没有夸大或过分贬低自己的研究</strong></summary>
 
 ```text
 请检查下面的论文文字，区分：
@@ -767,7 +751,7 @@
 </details>
 
 <details>
-<summary><strong>6.6 翻译学术文字，保留原意与证据强度</strong></summary>
+<summary><strong>6.6 翻译论文，保留原意</strong></summary>
 
 ```text
 请翻译下面的学术文字，保留原意与证据强度。
@@ -786,7 +770,7 @@
 </details>
 
 <details>
-<summary><strong>6.7 为分章改稿整理工作记录</strong></summary>
+<summary><strong>6.7 记下这次改了什么，方便下次接着改</strong></summary>
 
 ```text
 请为后续分章修改整理一份简短的工作记录。
@@ -806,7 +790,7 @@
 </details>
 
 <details>
-<summary>写贡献时，可以检查这几件事</summary>
+<summary>怎样写清研究做了什么？看看这些建议</summary>
 
 读者需要知道研究解决了什么问题、有什么发现，以及为什么相信这些发现。写作时可以检查下面几件事：
 
@@ -843,12 +827,12 @@
 
 <a id="audit"></a>
 
-## 七、定稿自查
+## 七、提交前，自己检查一遍
 
-对照来源核查事实和引用，再检查论证与报告完整性。每次说明实际检查范围，发现问题后回到对应章节处理；清单齐全不能证明研究设计可靠。
+把正文和原始材料放在一起检查，发现问题再修改。AI 的检查结果也需要你确认。
 
 <details>
-<summary><strong>7.1 对照原始材料，核对事实与论证</strong></summary>
+<summary><strong>7.1 对照原始材料，检查事实和结论</strong></summary>
 
 ```text
 请对照材料检查论文片段，不要替我补写事实。
@@ -894,7 +878,7 @@
 </details>
 
 <details>
-<summary><strong>7.3 提交前做一次综合检查</strong></summary>
+<summary><strong>7.3 提交前检查整篇文章</strong></summary>
 
 ```text
 请对下面的论文做提交前审计，先报告问题，不直接重写全文。
@@ -925,7 +909,7 @@
 </details>
 
 <details>
-<summary><strong>7.4 核对文献身份、元数据与引用支持</strong></summary>
+<summary><strong>7.4 检查参考文献是否真实、有没有用错</strong></summary>
 
 ```text
 请逐条检查文献身份、元数据以及它是否支持文中的具体论断。
@@ -946,7 +930,7 @@
 </details>
 
 <details>
-<summary><strong>7.5 按适用的报告指南检查交代是否完整</strong></summary>
+<summary><strong>7.5 按写作要求，检查有没有漏写</strong></summary>
 
 ```text
 请按适用的报告要求检查稿件有没有交代完整。
@@ -982,9 +966,9 @@
 
 <a id="submission"></a>
 
-## 八、选择期刊，准备投稿
+## 八、准备向期刊投稿（按需使用）
 
-可以在方案阶段先看期刊或文体要求，提交前再查最新版本。依据实际要求整理文件、格式和声明；未确认的信息由作者补齐。
+课程论文可以按老师要求处理；需要向期刊投稿时，再看这里。
 
 <details>
 <summary><strong>8.1 整理参考文献格式</strong></summary>
@@ -1010,7 +994,7 @@
 </details>
 
 <details>
-<summary><strong>8.2 写投稿信</strong></summary>
+<summary><strong>8.2 写给期刊编辑的投稿信</strong></summary>
 
 ```text
 请根据下面的材料写一封投给《{{期刊}}》的 Cover Letter。
@@ -1028,7 +1012,7 @@
 </details>
 
 <details>
-<summary><strong>8.3 核对期刊匹配条件与提交材料</strong></summary>
+<summary><strong>8.3 检查期刊是否合适、材料是否齐全</strong></summary>
 
 ```text
 请根据当前目标期刊要求整理投稿准备事项；如果尚未选刊，先判断匹配条件。
@@ -1050,7 +1034,7 @@
 </details>
 
 <details>
-<summary><strong>8.4 整理作者贡献与各项声明</strong></summary>
+<summary><strong>8.4 整理作者分工和投稿时需要的声明</strong></summary>
 
 ```text
 请根据已确认的事实整理作者贡献、资助、利益冲突、伦理、数据或代码可用性、AI 使用等声明。
@@ -1072,12 +1056,12 @@ AI 工具的实际用途和核查记录：{{记录}}
 
 <a id="feedback"></a>
 
-## 九、根据反馈修改
+## 九、收到意见，继续修改
 
-导师、合作者和同行意见先整理成改稿任务；正式审稿再按要求逐条回复。意见可能要求回到文献、研究或分析阶段。拒稿转投时，用 [8.3](#submission) 比较新旧要求。
+把老师、同学或审稿人的原话发给 AI，先弄清要改什么，再改正文。
 
 <details>
-<summary><strong>9.1 理解反馈，排出修改顺序</strong></summary>
+<summary><strong>9.1 看懂修改意见，安排先改什么</strong></summary>
 
 ```text
 请先帮助我理解下面的反馈，整理出改稿顺序，暂时不要直接重写全文。
@@ -1097,7 +1081,7 @@ AI 工具的实际用途和核查记录：{{记录}}
 </details>
 
 <details>
-<summary><strong>9.2 根据意见修改正文，记录实际改动</strong></summary>
+<summary><strong>9.2 按意见改正文，并记录改动</strong></summary>
 
 ```text
 请根据已经明确的反馈修改稿件，并保留可核对的改动记录。
@@ -1119,7 +1103,7 @@ AI 工具的实际用途和核查记录：{{记录}}
 </details>
 
 <details>
-<summary><strong>9.3 根据已完成的修改，逐条回复审稿人</strong></summary>
+<summary><strong>9.3 把已经完成的修改逐条回复给审稿人</strong></summary>
 
 ```text
 请协助我逐条回复审稿意见。
@@ -1143,12 +1127,12 @@ AI 工具的实际用途和核查记录：{{记录}}
 
 <a id="publication"></a>
 
-## 十、接收后的校样与发表后的处理
+## 十、论文接收或发表以后（按需使用）
 
-接收后还需核对校样；发表后保留可追溯版本，按许可和期刊要求归档。发现错误时先核实影响，再按流程沟通。
+检查期刊排版后的文章，保存研究材料。发表后发现错误，先核实，再按期刊要求处理。
 
 <details>
-<summary><strong>10.1 比较接收稿与校样</strong></summary>
+<summary><strong>10.1 对照原稿，检查期刊排版后的版本</strong></summary>
 
 ```text
 请比较接收稿与校样，整理需要向编辑确认的修改。
@@ -1171,7 +1155,7 @@ AI 工具的实际用途和核查记录：{{记录}}
 </details>
 
 <details>
-<summary><strong>10.2 整理材料归档与复用说明</strong></summary>
+<summary><strong>10.2 保存研究材料，写清使用方法</strong></summary>
 
 ```text
 请整理研究材料的归档与复用说明。
@@ -1191,7 +1175,7 @@ AI 工具的实际用途和核查记录：{{记录}}
 </details>
 
 <details>
-<summary><strong>10.3 发现错误后，整理影响与更正沟通材料</strong></summary>
+<summary><strong>10.3 发表后发现错误，整理说明和联系编辑的草稿</strong></summary>
 
 ```text
 论文发表后发现了可能的问题，请帮助我整理影响与沟通材料。
@@ -1214,7 +1198,12 @@ AI 工具的实际用途和核查记录：{{记录}}
 
 <a id="skill"></a>
 
-## 🛠️ 在 Agent 中安装为 Skill（可选）
+## 经常用 Codex 或 WorkBuddy？
+
+可以把这套写作要求装进工具，方便以后继续使用。
+
+<details>
+<summary><strong>展开安装方法（可选）</strong></summary>
 
 如果你经常在 Agent 中改论文，可以安装 [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)。它把上面的写作要求和各阶段任务整理成独立指令，不需要安装其他技能，也不依赖整个仓库。直接复制提示词的用户可以跳过这一节。
 
@@ -1255,9 +1244,16 @@ WorkBuddy 的对话安装目前面向技能市场，自定义技能包需要上�
 
 安装入口已按官方文档核对，尚未逐一完成各客户端的安装和效果测试。使用前确认材料可以上传；本地 Agent 不等于离线运行。投稿时也要核对目标期刊的 AI 使用与披露要求。
 
+</details>
+
 <a id="quality"></a>
 
-## 覆盖范围与验证
+## 这些提示词试过吗？
+
+已有部分中文和英文任务的试用记录，其他语言目前只做了翻译检查。AI 的回答仍需你核对。
+
+<details>
+<summary>查看试用记录和参考资料</summary>
 
 这份提示词库面向常见的研究准备、论文写作与修改任务。不同学科、研究方式和期刊的要求不同，可以按需跳转。项目没有用任务数量推算“覆盖率”。
 
@@ -1267,10 +1263,17 @@ WorkBuddy 的对话安装目前面向技能市场，自定义技能包需要上�
 - [插图说明与生成提示词](assets/research-writing-lifecycle-prompt.md)：图示表达的范围与绘制方法。
 - [从改稿经验补入的检查项](docs/editorial-lessons.md)：标题、段落、读者视角、统计口径与关联修改的处理。
 
-## 维护与反馈
+</details>
+
+<details>
+<summary>遇到问题，或者想一起改进？</summary>
+
+可以到[问题反馈页](https://github.com/huh7i5/AI-prompts-writing/issues)说明任务编号、你提供了什么，以及回答哪里不合适。发之前删去私人信息。
 
 这里的提示词会根据实际使用、失败案例和新的写作经验继续修改。欢迎提交新的通用任务、不同学科的改写、失效案例和更好的核查方法，并说明适用场景、输入要求和已知边界。
 
 修改 README 中的任务后，要按相同编号同步检查[各语言版本](docs/translations.md)、`.agents/skills/ai-prompt-writing/SKILL.md`、固定案例和验证记录；涉及检索、分析、引用、投稿或校样边界的改动，至少重跑对应案例，并保留原输出与新输出。
 
 项目保持“文字优先”：不要求代码，不绑定某个模型，也不承诺一段提示词能保证结果正确。
+
+</details>

@@ -12,88 +12,37 @@
 </p>
 
 <p>
-  <a href="#start">Copiar y usar</a> ·
-  <a href="#control">Preferencias de escritura</a> ·
-  <a href="#catalog">Buscar por etapa</a> ·
-  <a href="#skill">Instalar como Skill</a> ·
-  <a href="#quality">Cobertura y evaluación</a> ·
-  <a href="#showcase">Ejemplo de revisión</a>
+  <a href="#start">Empiece aquí</a> ·
+  <a href="#catalog">Elija una tarea</a> ·
+  <a href="#showcase">Vea un ejemplo de revisión</a>
 </p>
 
 </div>
 
-Instrucciones para elegir un tema, organizar materiales de investigación, redactar, revisar, preparar el envío a una revista y comprobar el trabajo después de su publicación. Abra una tarea, copie sus instrucciones y sustituya los campos entre llaves por sus propios materiales.
-
-El objetivo es una prosa académica precisa y fácil de leer. Utilice los conceptos técnicos con rigor, sin acumular jerga, alargar las oraciones ni sustituir las explicaciones por metáforas.
-
-<a id="showcase"></a>
-
-## ✦ Vea cómo cambia un pasaje
-
-Se generó una breve introducción en chino y después se revisó con las instrucciones y la Skill de este proyecto. La figura en inglés traduce los pasajes registrados e identifica los cambios y sus motivos.
-
-![Una breve introducción antes y después de la revisión, con cambios concretos](assets/showcase-before-after-en.png)
-
-[Consulte los materiales de entrada, las respuestas y el registro completo de cambios](docs/showcase/README.en.md) · [Consulte el ejemplo en chino](docs/showcase/README.md)
+Estas 43 peticiones listas para copiar, también llamadas prompts, le ayudan a encontrar un tema, buscar fuentes, organizar un trabajo y mejorar un borrador. Puede leerlas y copiarlas en esta página: no necesita descargar nada ni saber programar.
 
 <a id="start"></a>
 
-## 📋 Copiar y usar
+## 📋 ¿Es su primera visita? Siga estos tres pasos
 
-Utilice estas instrucciones en ChatGPT, Claude, DeepSeek, Kimi, Doubao u otras herramientas de conversación. No se requiere instalación ni código.
+Abra una conversación nueva en la herramienta de IA que ya utilice, como ChatGPT, Claude o DeepSeek.
 
-1. En una conversación nueva, envíe las [preferencias de escritura](#control) y, a continuación, las instrucciones de una tarea para establecer los requisitos de estilo y verificación.
-2. Busque su tarea en el [índice por etapas](#catalog), ábrala y copie sus instrucciones.
-3. Sustituya los `{{campos entre llaves dobles}}` por sus materiales. Revise la respuesta antes de incorporarla a su trabajo.
+1. **Envíe primero las indicaciones de escritura.** Abra «Copiar las indicaciones de escritura» más abajo, copie el texto del recuadro y envíelo a la IA. Hágalo una vez por conversación.
+2. **Elija una tarea.** Busque lo que quiere hacer en el [directorio de abajo](#catalog). Pulse el título de la tarea o el pequeño triángulo para abrirla y copie su texto en el cuadro de conversación.
+3. **Añada sus datos y envíe el mensaje.** Sustituya cada `{{…}}`, incluidas las llaves, por su información y adjunte los materiales necesarios. Compare la respuesta con los originales antes de aceptar los cambios.
 
-Puede empezar por indicar la disciplina, el tipo de trabajo, el enfoque de investigación y los lectores a quienes se dirige. Incluya solo los detalles pertinentes. La investigación cuantitativa, cualitativa, teórica y de revisión no necesita siempre una plantilla experimental.
+Por ejemplo, cambie `Disciplina: {{disciplina}}` por `Disciplina: educación`. Escriba «no proporcionado» cuando desconozca un dato y elimine los campos que no correspondan. Use una tarea cada vez.
 
-Escriba «no proporcionado» cuando desconozca un dato y elimine los campos que no correspondan. Puede empezar por cualquier etapa sin enviar todo el README. Para manuscritos extensos, incluya en cada ocasión los pasajes, figuras, tablas y términos pertinentes, sin dar por hecho que el modelo recuerda el trabajo completo.
-
-> Los autores deben verificar las cifras, las referencias y las declaraciones para el envío. Estas instrucciones pueden ayudar a detectar problemas, pero no garantizan respuestas sin errores.
-
-### Un recorrido breve para su primer trabajo
-
-Elija el punto que corresponda a los materiales de los que dispone.
-
-1. [Elegir un tema](#topic)
-2. [Buscar y leer bibliografía](#literature)
-3. [Planificar el estudio y elaborar un esquema](#planning)
-4. [Redactar a partir de sus materiales](#drafting)
-5. [Comprobar el manuscrito](#audit)
-6. [Revisar a partir de los comentarios recibidos](#feedback)
-
-Utilice las tareas sobre registros de investigación, figuras, declaraciones, pruebas de imprenta y trabajo posterior a la publicación cuando las necesite. No es necesario abrirlas todas a la vez.
-
-<details>
-<summary><strong>Incluya una ficha de materiales en cada tarea</strong></summary>
-
-```text
-Disciplina y tipo de trabajo: {{por ejemplo, trabajo de una asignatura de historia, estudio cuantitativo, estudio cualitativo, trabajo teórico o revisión}}
-Etapa actual: {{elección del tema, bibliografía, planificación, registros, redacción, edición, comprobación, envío o revisión a partir de comentarios}}
-Enfoque de investigación: {{cuantitativo, cualitativo, teórico, de revisión u otro}}
-Lectores, idioma y extensión: {{requisitos}}
-Materiales y versiones realmente proporcionados: {{textos, tablas, fuentes, registros, nombres de archivos o fechas}}
-Pregunta o afirmación central: {{pregunta}}
-Hechos confirmados: {{cifras, fuentes, métodos y cambios realizados}}
-Información no verificada o contradictoria: {{elementos}}
-Tarea de esta sesión: {{petición concreta}}
-```
-
-Esta ficha sirve de índice de sus materiales. Incluya los textos o registros originales pertinentes al comprobar cifras y afirmaciones centrales.
-
-</details>
-
-Antes de subir comentarios de revisores, datos inéditos o información personal, compruebe los requisitos de confidencialidad y elimine los datos identificativos cuando sea necesario.
+Compruebe las cifras y las referencias. Antes de subir materiales, asegúrese de que puede compartirlos y quite los datos personales que no sean necesarios.
 
 <a id="control"></a>
 
-## ✍️ Establezca primero las preferencias de escritura
+## ✍️ Indique a la IA cómo quiere que esté escrito el trabajo
 
-Envíelas una vez dentro de la misma conversación. Cuando una tarea especifique el formato de la respuesta, siga esas indicaciones en vez de generar una tabla de análisis completa en cada ocasión.
+Busque una redacción clara y precisa, con los términos técnicos necesarios. Envíe estas indicaciones antes de las instrucciones de una tarea.
 
 <details>
-<summary><strong>Abrir y copiar las preferencias de escritura</strong></summary>
+<summary><strong>Copiar las indicaciones de escritura (una vez por conversación)</strong></summary>
 
 ```text
 Ayúdeme a redactar y revisar trabajos académicos.
@@ -124,7 +73,26 @@ Por defecto, presente primero el texto revisado y después una explicación brev
 </details>
 
 <details>
-<summary><strong>Elija las comprobaciones adecuadas para el enfoque de investigación</strong></summary>
+<summary><strong>¿No sabe qué enviar a la IA? Vea qué puede incluir</strong></summary>
+
+```text
+Disciplina y tipo de trabajo: {{por ejemplo, trabajo de una asignatura de historia, estudio cuantitativo, estudio cualitativo, trabajo teórico o revisión}}
+Etapa actual: {{elección del tema, bibliografía, planificación, registros, redacción, edición, comprobación, envío o revisión a partir de comentarios}}
+Enfoque de investigación: {{cuantitativo, cualitativo, teórico, de revisión u otro}}
+Lectores, idioma y extensión: {{requisitos}}
+Materiales y versiones realmente proporcionados: {{textos, tablas, fuentes, registros, nombres de archivos o fechas}}
+Pregunta o afirmación central: {{pregunta}}
+Hechos confirmados: {{cifras, fuentes, métodos y cambios realizados}}
+Información no verificada o contradictoria: {{elementos}}
+Tarea de esta sesión: {{petición concreta}}
+```
+
+Esta ficha sirve de índice de sus materiales. Incluya los textos o registros originales pertinentes al comprobar cifras y afirmaciones centrales.
+
+</details>
+
+<details>
+<summary><strong>Qué comprobar según el tipo de investigación (opcional)</strong></summary>
 
 - **Investigación cuantitativa**: diseño, medición, condiciones de comparación, datos faltantes y exclusiones, supuestos analíticos, incertidumbre y explicaciones alternativas.
 - **Investigación cualitativa**: muestreo, fuentes, codificación, interpretación, posicionamiento del investigador, contraejemplos y ubicación de las citas textuales.
@@ -137,39 +105,55 @@ Utilice solo los campos pertinentes para el enfoque. Las pruebas estadísticas, 
 
 <a id="catalog"></a>
 
-## 🧭 Buscar instrucciones por etapa
+## 🧭 Elija lo que quiere hacer ahora
 
-Elija según los materiales de los que disponga. Los comentarios recibidos pueden requerir volver a la bibliografía, la evidencia o la estructura antes de realizar otra comprobación.
+Pulse en la columna izquierda para llegar a las tareas. Puede empezar por cualquiera.
 
-| Su situación | Empiece aquí | Qué debe preparar |
-| --- | --- | --- |
-| Todavía no tiene un tema claro | [1. Elegir un tema](#topic) | Recursos, posibles líneas y una pregunta concreta |
-| Tiene una idea inicial | [2. Buscar y leer bibliografía](#literature) | Registros de búsqueda, comparaciones y trabajos relacionados |
-| Dispone de materiales y puede empezar a planificar | [3. Planificar y elaborar un esquema](#planning) | Enfoque, evidencia y un diseño viable |
-| La investigación está en marcha y hay registros o resultados | [4. Organizar registros y comprobar análisis](#records) | Materiales trazables, análisis y figuras |
-| Puede convertir los materiales en un trabajo académico | [5. Redactar](#drafting) | Secciones y afirmaciones respaldadas |
-| Tiene un borrador que necesita revisión | [6. Revisar el borrador](#editing) | Estructura, argumento, lenguaje y notas de versión |
-| El manuscrito está casi terminado | [7. Comprobar el manuscrito](#audit) | Hechos, referencias, información comunicada y coherencia |
-| Está eligiendo revista o preparando el envío | [8. Preparar el envío](#submission) | Requisitos, archivos y declaraciones confirmadas |
-| Ha recibido comentarios de un supervisor, colega o revisor | [9. Revisar a partir de los comentarios](#feedback) | Cambios realizados, registro de cambios y respuestas |
-| El trabajo ha sido aceptado o publicado | [10. Pruebas de imprenta, archivo y correcciones](#publication) | Comprobación de versiones, información para la reutilización y gestión de incidencias |
+| Qué quiero hacer | Qué me puede ayudar a preparar la IA |
+| --- | --- |
+| [Encontrar un tema sobre el que escribir](#topic) | Posibles temas para comparar y preguntas que investigar |
+| [Buscar fuentes para una idea](#literature) | Palabras de búsqueda, comparaciones de fuentes y lecturas sugeridas |
+| [Planificar la investigación y organizar el trabajo](#planning) | Un plan de investigación y un esquema del trabajo |
+| [Ordenar notas, datos o figuras](#records) | Registros organizados, comprobaciones y descripciones de figuras |
+| [Convertir mis materiales en un primer borrador](#drafting) | Secciones redactadas a partir de los materiales que aporte |
+| [Hacer que el borrador se entienda mejor](#editing) | Texto revisado y explicación de los cambios principales |
+| [Comprobar el trabajo antes de entregarlo](#audit) | Problemas localizados y propuestas para corregirlos |
+| [Enviar el trabajo a una revista](#submission) | Una carta de presentación y una lista de los materiales necesarios |
+| [Revisar tras recibir comentarios de un profesor o revisor](#feedback) | Prioridades de revisión, texto corregido y respuestas a los comentarios |
+| [Comprobar el trabajo después de su aceptación o publicación](#publication) | Revisión de las pruebas de imprenta, organización de materiales y ayuda ante errores |
 
-[Consulte la ilustración del ciclo de investigación en chino](assets/research-writing-lifecycle.png).
+<details>
+<summary>¿Quiere ver el proceso completo de investigación y escritura?</summary>
 
-Puede volver a las etapas anteriores. El proyecto ayuda a organizar preguntas, redactar, revisar y comprobar. Los investigadores realizan el estudio, verifican la evidencia y toman las decisiones que corresponden a los autores. Las revistas deciden sobre la publicación. Mantenga registros de datos, fuentes y versiones desde el principio.
+![Etapas de investigación y escritura, en chino](assets/research-writing-lifecycle.png)
 
-El flujo de trabajo se basa en recursos de apoyo a la investigación, gestión de datos, investigación abierta y publicación, adaptados a los fines del proyecto. [Fuentes y cobertura, en chino](docs/coverage.md) · [Registros de evaluación, en chino](docs/validation/README.md).
+Puede volver a cualquier etapa según lo necesite. Los autores realizan la investigación y toman las decisiones importantes; las revistas deciden sobre la publicación. [Fuentes del proceso (chino)](docs/coverage.md) · [Registros de pruebas (chino)](docs/validation/README.md)
+
+</details>
+
+<a id="showcase"></a>
+
+<details>
+<summary><strong>Vea cómo cambia un pasaje después de revisarlo</strong></summary>
+
+Se generó una breve introducción en chino y después se revisó con las instrucciones y la Skill de este proyecto. La figura en inglés traduce los pasajes registrados e identifica los cambios y sus motivos.
+
+![Una breve introducción antes y después de la revisión, con cambios concretos](assets/showcase-before-after-en.png)
+
+[Consulte los materiales, las respuestas y el registro de cambios (inglés)](docs/showcase/README.en.md) · [Consulte el ejemplo en chino](docs/showcase/README.md)
+
+</details>
 
 <a id="topic"></a>
 
-## 1. Elegir un tema
+## 1. Encontrar un tema sobre el que escribir
 
-Parta de sus intereses y de los materiales a los que pueda acceder; después, delimite la línea elegida hasta formular una pregunta. Los temas propuestos requieren todavía una revisión bibliográfica y una investigación que permitan establecer su valor.
+Comparta su disciplina, intereses y recursos para comparar posibles temas. Todavía tendrá que leer y decidir si merece la pena estudiarlos.
 
 <a id="positioning"></a>
 
 <details>
-<summary><strong>1.1 Elegir un tema según sus intereses y recursos</strong></summary>
+<summary><strong>1.1 Encontrar un tema que encaje con sus intereses y recursos</strong></summary>
 
 ```text
 Todavía no tengo un tema claro. Ayúdeme a identificar preguntas de investigación que merezca la pena estudiar, teniendo en cuenta mi situación actual.
@@ -189,7 +173,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>1.2 Convertir una línea de trabajo en una pregunta de investigación</strong></summary>
+<summary><strong>1.2 Convertir una idea amplia en una pregunta concreta</strong></summary>
 
 ```text
 Utilice los materiales siguientes para aclarar la pregunta de investigación y las posibles aportaciones.
@@ -208,12 +192,12 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 
 <a id="literature"></a>
 
-## 2. Buscar y leer bibliografía
+## 2. Buscar fuentes y leer los estudios
 
-Busque investigaciones pertinentes y compare las preguntas que responden y las que dejan abiertas. Registre las fuentes y el alcance de las búsquedas. Distinga una sección convencional de trabajos relacionados de una revisión sistemática.
+Empiece por las palabras de búsqueda y después compare los estudios que lea. Compruebe las referencias sugeridas por la IA; un título no sustituye la lectura de la fuente.
 
 <details>
-<summary><strong>2.1 Elaborar un plan de búsqueda y encontrar materiales pertinentes</strong></summary>
+<summary><strong>2.1 Encontrar palabras de búsqueda y fuentes útiles</strong></summary>
 
 ```text
 Tengo una idea inicial. Ayúdeme a encontrar materiales pertinentes y a evaluar hasta qué punto la investigación existente la ha abordado.
@@ -240,7 +224,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>2.2 Comparar la bibliografía y precisar su pregunta</strong></summary>
+<summary><strong>2.2 Comparar lo que ha leído y decidir qué investigar</strong></summary>
 
 ```text
 Organice la investigación contenida en los materiales que le proporcione para ayudarme a delimitar mi pregunta.
@@ -258,7 +242,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>2.3 Convertir las comparaciones bibliográficas en una sección de trabajos relacionados</strong></summary>
+<summary><strong>2.3 Escribir sobre lo que han encontrado otros estudios</strong></summary>
 
 ```text
 Convierta las comparaciones bibliográficas y las notas de lectura disponibles en párrafos de una sección de trabajos relacionados.
@@ -279,12 +263,12 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 
 <a id="planning"></a>
 
-## 3. Planificar el estudio y elaborar un esquema
+## 3. Planificar la investigación y hacer un esquema
 
-Organice la evidencia, los métodos y la estructura según su disciplina y enfoque. Considere desde el principio la revista o el género del texto, además de la ética, los permisos y los registros de investigación. Distinga el trabajo realizado de los planes.
+Aclare la pregunta, los materiales y el orden del trabajo. Presente como planes las actividades que aún no haya realizado.
 
 <details>
-<summary><strong>3.1 Elaborar un plan de estudio viable</strong></summary>
+<summary><strong>3.1 Planificar cómo realizar la investigación</strong></summary>
 
 ```text
 Convierta la pregunta de investigación siguiente en un plan que pueda ejecutarse. Evalúe su viabilidad antes de redactar el trabajo.
@@ -307,7 +291,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>3.2 Elaborar el esquema del trabajo</strong></summary>
+<summary><strong>3.2 Decidir las partes del trabajo y su orden</strong></summary>
 
 ```text
 Elabore un esquema del trabajo a partir de los materiales disponibles.
@@ -327,7 +311,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 <a id="evidence"></a>
 
 <details>
-<summary><strong>3.3 Comprobar la función de cada elemento de evidencia</strong></summary>
+<summary><strong>3.3 Comprobar qué respalda cada dato o fuente</strong></summary>
 
 ```text
 Compruebe la función de estos experimentos, análisis o argumentos dentro del trabajo.
@@ -350,7 +334,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 <a id="story"></a>
 
 <details>
-<summary><strong>3.4 Aclarar el argumento principal y las aportaciones</strong></summary>
+<summary><strong>3.4 Aclarar la idea principal y qué aporta el trabajo</strong></summary>
 
 ```text
 Utilice estos materiales para aclarar el argumento principal, la pregunta de investigación, las aportaciones y la evidencia del trabajo.
@@ -374,7 +358,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>3.5 Comprobar permisos, registros y decisiones de análisis antes de comenzar</strong></summary>
+<summary><strong>3.5 Revisar permisos y decisiones de investigación antes de empezar</strong></summary>
 
 ```text
 Identifique los aspectos que deben aclararse antes de comenzar este estudio.
@@ -394,12 +378,12 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 <a id="records"></a>
 
-## 4. Realizar la investigación, organizar los registros y comprobar los análisis
+## 4. Ordenar notas, datos y figuras
 
-Estas tareas requieren materiales de investigación reales. Las instrucciones ayudan a organizar registros, valorar si los análisis respaldan las afirmaciones y planificar figuras. Las actividades recomendadas de recopilación de datos, experimentación o análisis todavía deben realizarse.
+Aporte sus registros y resultados reales para organizarlos y comprobar qué respaldan. Si la IA propone nuevos análisis o experimentos, todavía habrá que realizarlos.
 
 <details>
-<summary><strong>4.1 Organizar los registros de investigación y un índice de evidencia</strong></summary>
+<summary><strong>4.1 Ordenar notas, datos y fuentes para poder encontrarlos</strong></summary>
 
 ```text
 Organice los registros de investigación existentes en un índice que sirva para redactar y verificar.
@@ -418,7 +402,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>4.2 Comprobar si los análisis, interpretaciones o derivaciones respaldan una conclusión</strong></summary>
+<summary><strong>4.2 Comprobar si el análisis respalda la conclusión</strong></summary>
 
 ```text
 Evalúe qué conclusiones respaldan los análisis o argumentos disponibles.
@@ -439,7 +423,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>4.3 Planificar figuras y tablas y redactar pies</strong></summary>
+<summary><strong>4.3 Elegir figuras y tablas y escribir sus descripciones</strong></summary>
 
 ```text
 Planifique figuras y tablas a partir de los resultados existentes y redacte sus títulos, pies o notas.
@@ -459,12 +443,12 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 
 <a id="drafting"></a>
 
-## 5. Redactar a partir de los materiales
+## 5. Convertir sus materiales en un primer borrador
 
-Empiece por las secciones con materiales más sólidos y vuelva después al resumen y al título. Siga la estructura que necesite el argumento y marque la evidencia faltante. La tarea [2.3](#literature) también sirve para redactar trabajos relacionados.
+Empiece por las partes para las que tenga materiales suficientes. Después prepare el resumen y el título. Para escribir sobre estudios anteriores, use la tarea [2.3](#literature).
 
 <details>
-<summary><strong>5.1 Redactar una sección concreta a partir del esquema</strong></summary>
+<summary><strong>5.1 Redactar una parte del trabajo a partir del esquema</strong></summary>
 
 ```text
 Tengo materiales y un esquema. Ayúdeme a redactar la parte especificada del trabajo.
@@ -486,7 +470,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>5.2 Redactar los métodos</strong></summary>
+<summary><strong>5.2 Explicar cómo se hizo la investigación</strong></summary>
 
 ```text
 Redacte una sección de métodos a partir de registros reales para que los lectores entiendan cómo se realizó la investigación y puedan valorar su reproducción.
@@ -505,7 +489,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>5.3 Redactar la introducción</strong></summary>
+<summary><strong>5.3 Presentar el tema y la pregunta en la introducción</strong></summary>
 
 ```text
 Reescriba la introducción con los materiales siguientes. Ayude a los lectores a entender pronto por qué importa la investigación, qué sigue sin resolverse y qué hace este trabajo.
@@ -527,7 +511,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>5.4 Redactar un párrafo de resultados</strong></summary>
+<summary><strong>5.4 Describir los resultados obtenidos</strong></summary>
 
 ```text
 Convierta los resultados siguientes en un párrafo para el trabajo.
@@ -547,7 +531,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>5.5 Redactar la discusión y las limitaciones</strong></summary>
+<summary><strong>5.5 Explicar qué significan los resultados y cuáles son sus límites</strong></summary>
 
 ```text
 Redacte la discusión y las limitaciones a partir de estos resultados.
@@ -566,7 +550,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>5.6 Redactar la conclusión</strong></summary>
+<summary><strong>5.6 Escribir la conclusión</strong></summary>
 
 ```text
 Redacte una conclusión a partir de estos materiales.
@@ -585,7 +569,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>5.7 Redactar el resumen</strong></summary>
+<summary><strong>5.7 Resumir el trabajo</strong></summary>
 
 ```text
 Redacte un resumen a partir de los materiales siguientes.
@@ -607,7 +591,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>5.8 Proponer títulos para el trabajo</strong></summary>
+<summary><strong>5.8 Buscar un título para el trabajo</strong></summary>
 
 ```text
 Proponga 5 títulos concisos y precisos, cada uno con un motivo de una oración.
@@ -624,12 +608,12 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 <a id="editing"></a>
 
-## 6. Revisar el borrador
+## 6. Hacer que el borrador se entienda mejor
 
-Resuelva el argumento principal, la estructura y el razonamiento antes de editar oraciones, términos y formato. Conserve la redacción correcta. Para la edición por secciones, registre las versiones y las actualizaciones pendientes.
+Revise primero el orden de las ideas y lo que quiere explicar; después, las frases. Si trabaja por partes, anote los cambios para poder continuar sin perder el contexto.
 
 <details>
-<summary><strong>6.1 Revisar primero la estructura y el argumento</strong></summary>
+<summary><strong>6.1 Mejorar el orden de las ideas y el razonamiento</strong></summary>
 
 ```text
 Tengo un borrador completo. Revise su estructura general y su argumento antes de decidir cómo revisarlo.
@@ -650,7 +634,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>6.2 Editar prosa académica para lograr precisión y claridad</strong></summary>
+<summary><strong>6.2 Hacer el texto más claro y preciso</strong></summary>
 
 ```text
 Edite este pasaje académico para mejorar su precisión, legibilidad y coherencia sin cambiar el significado de la investigación.
@@ -681,7 +665,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>6.3 Eliminar frases hechas y patrones repetitivos</strong></summary>
+<summary><strong>6.3 Quitar frases vacías y expresiones repetitivas</strong></summary>
 
 ```text
 Compruebe si este texto contiene lenguaje formular y haga que se lea como la prosa de un autor real.
@@ -709,7 +693,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>6.4 Comprobar solo gramática, ortografía y formato</strong></summary>
+<summary><strong>6.4 Revisar solo gramática, ortografía y formato</strong></summary>
 
 ```text
 Compruebe únicamente errores claros de gramática, ortografía, puntuación, formato y terminología. No pula el estilo ni cambie el significado.
@@ -725,7 +709,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 Comprobar la autodescalificación vacía y las exageraciones</strong></summary>
+<summary><strong>6.5 Explicar las aportaciones sin restarles valor ni exagerarlas</strong></summary>
 
 ```text
 Compruebe este texto del manuscrito y distinga:
@@ -748,7 +732,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>6.6 Traducir texto académico conservando significado y fuerza de la evidencia</strong></summary>
+<summary><strong>6.6 Traducir el texto sin cambiar su significado</strong></summary>
 
 ```text
 Traduzca este texto académico conservando su significado y la fuerza de la evidencia.
@@ -766,7 +750,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>6.7 Preparar una nota de traspaso para la revisión por secciones</strong></summary>
+<summary><strong>6.7 Dejar una nota para continuar la revisión otro día</strong></summary>
 
 ```text
 Prepare un registro de trabajo conciso para una revisión posterior por secciones.
@@ -823,12 +807,12 @@ Si el método real almacena en caché cálculos compartidos para reducir el trab
 
 <a id="audit"></a>
 
-## 7. Comprobar el manuscrito
+## 7. Comprobar el trabajo antes de entregarlo
 
-Verifique los hechos y las citas frente a las fuentes; después revise el razonamiento y la integridad de la información comunicada. Indique el alcance real en cada ocasión y vuelva a las secciones afectadas para resolver los problemas. Una lista de comprobación completa no demuestra la solidez del diseño del estudio.
+Compare las afirmaciones y las citas con sus fuentes y busque contradicciones o información que falte. La revisión solo puede abarcar los materiales que proporcione.
 
 <details>
-<summary><strong>7.1 Comprobar hechos y argumentos frente a las fuentes</strong></summary>
+<summary><strong>7.1 Comparar hechos y afirmaciones con las fuentes</strong></summary>
 
 ```text
 Compruebe este pasaje del manuscrito frente a los materiales proporcionados. No complete los hechos faltantes.
@@ -854,7 +838,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>7.2 Revisar el trabajo desde la perspectiva de lectores o revisores</strong></summary>
+<summary><strong>7.2 Ver qué podría cuestionar un lector o revisor</strong></summary>
 
 ```text
 Compruebe las cuestiones sustantivas que probablemente planteen los lectores y revisores de esta disciplina sobre el manuscrito.
@@ -872,7 +856,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>7.3 Ejecutar una comprobación exhaustiva antes del envío</strong></summary>
+<summary><strong>7.3 Hacer una revisión general antes de entregar el trabajo</strong></summary>
 
 ```text
 Audite este manuscrito antes del envío. Informe primero de los problemas, sin reescribir todo el trabajo.
@@ -902,7 +886,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>7.4 Verificar identidad, metadatos y respaldo de las citas</strong></summary>
+<summary><strong>7.4 Comprobar que las referencias son correctas y respaldan lo que dice el texto</strong></summary>
 
 ```text
 Compruebe la identidad y los metadatos de cada fuente y su respaldo a la afirmación concreta que la cita.
@@ -925,7 +909,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>7.5 Comprobar la integridad según las guías de comunicación aplicables</strong></summary>
+<summary><strong>7.5 Comprobar si falta información exigida para este tipo de estudio</strong></summary>
 
 ```text
 Compruebe si este manuscrito comunica la información requerida por las guías aplicables.
@@ -962,12 +946,12 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 <a id="submission"></a>
 
-## 8. Elegir una revista y preparar el envío
+## 8. Enviar el trabajo a una revista, si lo necesita
 
-Considere los requisitos de la revista o del género durante la planificación y consulte su versión vigente antes del envío. Organice archivos, formato y declaraciones según los requisitos reales. Los autores confirman la información faltante.
+Para un trabajo de clase, siga las indicaciones de su profesor. Use estas tareas si quiere enviar un artículo a una revista.
 
 <details>
-<summary><strong>8.1 Dar formato a la bibliografía</strong></summary>
+<summary><strong>8.1 Dar formato a la lista de referencias</strong></summary>
 
 ```text
 Compruebe estas referencias según el estilo requerido.
@@ -990,7 +974,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>8.2 Redactar una carta de presentación</strong></summary>
+<summary><strong>8.2 Escribir una carta al editor de la revista</strong></summary>
 
 ```text
 Redacte una carta de presentación para {{revista}} con estos materiales.
@@ -1007,7 +991,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>8.3 Comprobar la adecuación a la revista y los materiales de envío</strong></summary>
+<summary><strong>8.3 Comprobar si la revista encaja y qué archivos pide</strong></summary>
 
 ```text
 Organice la preparación del envío según los requisitos vigentes de la revista de destino. Si todavía no se ha elegido una, evalúe primero las condiciones para una elección adecuada.
@@ -1028,7 +1012,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>8.4 Preparar declaraciones de contribuciones y otras declaraciones</strong></summary>
+<summary><strong>8.4 Describir el trabajo de los autores y preparar las declaraciones del envío</strong></summary>
 
 ```text
 Redacte las declaraciones aplicables sobre contribuciones de los autores, financiación, conflictos de intereses, ética, disponibilidad de datos o código y uso de IA a partir de hechos confirmados.
@@ -1049,12 +1033,12 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 
 <a id="feedback"></a>
 
-## 9. Revisar a partir de los comentarios recibidos
+## 9. Revisar después de recibir comentarios
 
-Convierta los comentarios de supervisores, colaboradores y colegas en tareas de revisión. Prepare respuestas punto por punto cuando lo exija la revisión formal. Puede ser necesario volver a la bibliografía, la investigación o el análisis. Para elegir otra revista después de un rechazo, use [8.3](#submission) y compare requisitos.
+Incluya los comentarios reales de su profesor, colegas o revisores. Aclare qué necesita cambiar antes de editar el texto.
 
 <details>
-<summary><strong>9.1 Entender los comentarios y priorizar las revisiones</strong></summary>
+<summary><strong>9.1 Entender los comentarios y decidir qué revisar primero</strong></summary>
 
 ```text
 Ayúdeme a entender estos comentarios y organizar un plan de revisión antes de reescribir todo el trabajo.
@@ -1073,7 +1057,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>9.2 Revisar el manuscrito y registrar los cambios realizados</strong></summary>
+<summary><strong>9.2 Revisar el texto y anotar los cambios</strong></summary>
 
 ```text
 Revise el manuscrito en respuesta a los comentarios acordados y mantenga un registro verificable de cambios.
@@ -1094,7 +1078,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>9.3 Responder a los revisores a partir de cambios realizados</strong></summary>
+<summary><strong>9.3 Responder a los revisores con los cambios que realmente hizo</strong></summary>
 
 ```text
 Ayúdeme a responder a cada comentario de los revisores.
@@ -1117,12 +1101,12 @@ Los cambios pueden afectar conjuntamente al resumen, figuras, tablas, discusión
 
 <a id="publication"></a>
 
-## 10. Comprobar las pruebas de imprenta y gestionar el trabajo posterior a la publicación
+## 10. Después de la aceptación o publicación, si lo necesita
 
-Tras la aceptación se revisan las pruebas de imprenta. Conserve versiones trazables y archive según permisos y requisitos de la revista. Si se descubre un error, establezca sus implicaciones antes de comunicarlo por el procedimiento pertinente.
+Compruebe la versión preparada por la revista y conserve sus materiales de investigación. Si encuentra un error después de publicar, verifíquelo y siga el procedimiento de la revista.
 
 <details>
-<summary><strong>10.1 Comparar el manuscrito aceptado con las pruebas de imprenta</strong></summary>
+<summary><strong>10.1 Comparar la versión preparada por la revista con su manuscrito</strong></summary>
 
 ```text
 Compare el manuscrito aceptado y las pruebas de imprenta y organice los cambios que requieren confirmación editorial.
@@ -1144,7 +1128,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>10.2 Preparar la documentación de archivo y reutilización</strong></summary>
+<summary><strong>10.2 Guardar los materiales de investigación y explicar cómo usarlos</strong></summary>
 
 ```text
 Organice los materiales de investigación para su archivo y reutilización.
@@ -1163,7 +1147,7 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 </details>
 
 <details>
-<summary><strong>10.3 Evaluar las implicaciones de un error y preparar correspondencia para corregirlo</strong></summary>
+<summary><strong>10.3 Explicar un error publicado y preparar una nota para el editor</strong></summary>
 
 ```text
 Se ha encontrado un posible problema después de la publicación. Ayúdeme a organizar sus implicaciones y la comunicación.
@@ -1185,7 +1169,12 @@ Base los hechos únicamente en materiales proporcionados o realmente verificados
 
 <a id="skill"></a>
 
-## 🛠️ Instalar como Agent Skill (opcional)
+## ¿Usa Codex o WorkBuddy a menudo?
+
+Puede instalar estas indicaciones de escritura en su herramienta para utilizarlas más adelante.
+
+<details>
+<summary><strong>Ver las instrucciones de instalación (opcional)</strong></summary>
 
 Si edita trabajos con frecuencia en un agente, instale [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md). Reúne las preferencias de escritura y las tareas por etapas como instrucciones autónomas. No requiere otras habilidades ni el repositorio completo. Puede omitir esta sección si copia las instrucciones directamente.
 
@@ -1227,9 +1216,16 @@ Otras herramientas compatibles con `SKILL.md` pueden tener sus propios procedimi
 
 Los puntos de instalación se comprobaron con documentación oficial, pero no se han probado la instalación y el comportamiento en todos los clientes. Confirme que puede subir sus materiales. Un agente local puede seguir usando un modelo remoto. Compruebe los requisitos de uso y declaración de IA de la revista antes del envío.
 
+</details>
+
 <a id="quality"></a>
 
-## Cobertura y evaluación
+## ¿Se han probado estas instrucciones?
+
+Hay registros de pruebas de algunas tareas en chino e inglés. Esta versión aún no se ha probado en conversaciones con IA ni ha pasado una revisión experta por hablantes nativos. Revise las respuestas de la IA antes de usarlas.
+
+<details>
+<summary>Ver los registros de pruebas y las fuentes</summary>
 
 Esta biblioteca apoya tareas habituales de preparación de la investigación, escritura académica y revisión. Elija las tareas adecuadas para su disciplina, enfoque y revista. El número de tareas no se utiliza para calcular un porcentaje de cobertura.
 
@@ -1244,10 +1240,17 @@ Cinco de las 43 tareas en inglés cuentan con pruebas directas de comportamiento
 
 La versión en español no se ha sometido a pruebas de comportamiento ni a una revisión experta por colaboradores nativos. Los resultados de las cinco tareas en inglés no constituyen evidencia de la eficacia de la versión española.
 
-## Mantenimiento y comentarios
+</details>
+
+<details>
+<summary>¿Encontró un problema o quiere ayudar a mejorar el proyecto?</summary>
+
+Use la [página de comentarios](https://github.com/huh7i5/AI-prompts-writing/issues) para indicar el número de tarea, los materiales que proporcionó y qué parte de la respuesta no le sirvió. Quite antes la información privada.
 
 Las instrucciones seguirán cambiando según el uso real, los fallos y la experiencia de escritura. Las contribuciones pueden incluir tareas generales, adaptaciones por disciplina, casos de fallo o mejores métodos de verificación. Explique el contexto, las entradas necesarias y los límites conocidos.
 
 Después de cambiar una tarea, compruebe el mismo identificador en [todas las versiones lingüísticas](docs/translations.md), `.agents/skills/ai-prompt-writing/SKILL.md`, los casos fijos y los registros de evaluación. Los cambios en los límites de búsqueda, análisis, citas, envío o revisión de pruebas deben activar al menos los casos pertinentes, conservando las salidas antiguas y nuevas.
 
 El proyecto se centra en el texto. No requiere código, no está ligado a un modelo y no promete que unas instrucciones por sí solas garanticen resultados correctos.
+
+</details>
