@@ -14,6 +14,7 @@
 <p>
   <a href="#start">第一次用</a> ·
   <a href="#catalog">选我需要的任务</a> ·
+  <a href="#lifecycle">看写作流程</a> ·
   <a href="#showcase">看修改例子</a>
 </p>
 
@@ -122,27 +123,23 @@
 | [收到老师或审稿人的修改意见](#feedback) | 修改顺序、改稿和逐条回复 |
 | [论文接收或发表了](#publication) | 排版检查、材料整理和错误处理建议 |
 
-<details>
-<summary>想看完整的研究与写作流程？</summary>
+<a id="lifecycle"></a>
+
+## 写作生命周期
 
 ![从选题到发表后的研究与写作流程](assets/research-writing-lifecycle.png)
 
 这些步骤可以往返，也可以按需使用。研究实施、重要判断和投稿决定仍由作者与期刊负责。[流程参考资料](docs/coverage.md) · [试用记录](docs/validation/README.md)
 
-</details>
-
 <a id="showcase"></a>
 
-<details>
-<summary><strong>看看一段文章修改前后有什么变化</strong></summary>
+## 看看修改前后的变化
 
 同一份写作任务先生成短引言，再交给项目的改稿提示词与 Skill 修改。图中逐句对应原始输出，标出修改位置和理由。
 
 ![短引言修改前后及具体修改说明](assets/showcase-before-after.png)
 
 [查看完整输入、原始输出与修改记录](docs/showcase/README.md) · [Read the example in English](docs/showcase/README.en.md)
-
-</details>
 
 <a id="topic"></a>
 

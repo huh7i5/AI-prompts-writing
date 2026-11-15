@@ -14,6 +14,7 @@
 <p>
   <a href="#start">Start here</a> ·
   <a href="#catalog">Choose a task</a> ·
+  <a href="#lifecycle">See the writing process</a> ·
   <a href="#showcase">See an editing example</a>
 </p>
 
@@ -122,27 +123,23 @@ Click the left column to reach the tasks. You can start anywhere.
 | [Revise after comments from a teacher or reviewer](#feedback) | Revision priorities, edited text, and replies to comments |
 | [Check work after acceptance or publication](#publication) | Checks of the typeset text, saved materials, and advice on errors |
 
-<details>
-<summary>Want to see the full research and writing process?</summary>
+<a id="lifecycle"></a>
+
+## The research and writing process
 
 ![Research and writing stages, in Chinese](assets/research-writing-lifecycle.png)
 
 You can revisit stages or use them as needed. Authors carry out the research and make important judgments; journals make publication decisions. [Workflow sources (Chinese)](docs/coverage.md) · [Trial records (Chinese)](docs/validation/README.md)
 
-</details>
-
 <a id="showcase"></a>
 
-<details>
-<summary><strong>See how a passage changes after editing</strong></summary>
+## See how a passage changes after editing
 
 A short introduction was generated in Chinese, then revised using this project's prompts and Skill. The English figure translates the recorded passages and identifies the edits and reasons.
 
 ![A short introduction before and after revision, with specific edits](assets/showcase-before-after-en.png)
 
 [Read the full inputs, outputs, and change record](docs/showcase/README.en.md) · [查看中文示例](docs/showcase/README.md)
-
-</details>
 
 <a id="topic"></a>
 

@@ -14,6 +14,7 @@
 <p>
   <a href="#start">Commencer ici</a> ·
   <a href="#catalog">Choisir une tâche</a> ·
+  <a href="#lifecycle">Voir les étapes de rédaction</a> ·
   <a href="#showcase">Voir un exemple de révision</a>
 </p>
 
@@ -122,27 +123,23 @@ Cliquez dans la colonne de gauche pour accéder aux tâches. Vous pouvez commenc
 | [Réviser après les remarques d’un enseignant ou d’un évaluateur](#feedback) | Des priorités de révision, un texte corrigé et des réponses aux remarques |
 | [Vérifier le travail après acceptation ou publication](#publication) | Une vérification des épreuves, des documents à conserver et des conseils en cas d’erreur |
 
-<details>
-<summary>Voir l’ensemble des étapes de recherche et de rédaction</summary>
+<a id="lifecycle"></a>
+
+## Les étapes de recherche et de rédaction
 
 ![Étapes de recherche et de rédaction, en chinois](assets/research-writing-lifecycle.png)
 
 Revenez à chaque étape selon vos besoins. Les auteurs réalisent la recherche et prennent les décisions importantes ; les revues décident de la publication. [Sources du parcours (chinois)](docs/coverage.md) · [Relevés des essais (chinois)](docs/validation/README.md)
 
-</details>
-
 <a id="showcase"></a>
 
-<details>
-<summary><strong>Voir comment un passage change après révision</strong></summary>
+## Voir comment un passage change après révision
 
 Une courte introduction a été générée en chinois, puis révisée à l’aide des prompts et du Skill de ce projet. La figure en anglais traduit les passages conservés et indique les modifications et leurs raisons.
 
 ![Une brève introduction avant et après la révision, avec des modifications spécifiques](assets/showcase-before-after-en.png)
 
 [Consulter les documents, les réponses et le relevé des modifications (anglais)](docs/showcase/README.en.md) · [Voir l’exemple en chinois](docs/showcase/README.md)
-
-</details>
 
 <a id="topic"></a>
 

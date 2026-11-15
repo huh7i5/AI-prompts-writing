@@ -14,6 +14,7 @@
 <p>
   <a href="#start">Empiece aquí</a> ·
   <a href="#catalog">Elija una tarea</a> ·
+  <a href="#lifecycle">Ver el proceso de escritura</a> ·
   <a href="#showcase">Vea un ejemplo de revisión</a>
 </p>
 
@@ -122,27 +123,23 @@ Pulse en la columna izquierda para llegar a las tareas. Puede empezar por cualqu
 | [Revisar tras recibir comentarios de un profesor o revisor](#feedback) | Prioridades de revisión, texto corregido y respuestas a los comentarios |
 | [Comprobar el trabajo después de su aceptación o publicación](#publication) | Revisión de las pruebas de imprenta, organización de materiales y ayuda ante errores |
 
-<details>
-<summary>¿Quiere ver el proceso completo de investigación y escritura?</summary>
+<a id="lifecycle"></a>
+
+## El proceso de investigación y escritura
 
 ![Etapas de investigación y escritura, en chino](assets/research-writing-lifecycle.png)
 
 Puede volver a cualquier etapa según lo necesite. Los autores realizan la investigación y toman las decisiones importantes; las revistas deciden sobre la publicación. [Fuentes del proceso (chino)](docs/coverage.md) · [Registros de pruebas (chino)](docs/validation/README.md)
 
-</details>
-
 <a id="showcase"></a>
 
-<details>
-<summary><strong>Vea cómo cambia un pasaje después de revisarlo</strong></summary>
+## Vea cómo cambia un pasaje después de revisarlo
 
 Se generó una breve introducción en chino y después se revisó con las instrucciones y la Skill de este proyecto. La figura en inglés traduce los pasajes registrados e identifica los cambios y sus motivos.
 
 ![Una breve introducción antes y después de la revisión, con cambios concretos](assets/showcase-before-after-en.png)
 
 [Consulte los materiales, las respuestas y el registro de cambios (inglés)](docs/showcase/README.en.md) · [Consulte el ejemplo en chino](docs/showcase/README.md)
-
-</details>
 
 <a id="topic"></a>
 

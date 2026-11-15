@@ -14,6 +14,7 @@
 <p>
   <a href="#start">Comece aqui</a> ·
   <a href="#catalog">Escolha uma tarefa</a> ·
+  <a href="#lifecycle">Ver as etapas da escrita</a> ·
   <a href="#showcase">Veja um exemplo de revisão</a>
 </p>
 
@@ -122,27 +123,23 @@ Clique na coluna da esquerda para chegar às tarefas. Você pode começar por qu
 | [Revisar depois de receber comentários de um professor ou avaliador](#feedback) | Prioridades de revisão, texto corrigido e respostas aos comentários |
 | [Conferir o trabalho após a aceitação ou publicação](#publication) | Verificação da versão diagramada, organização dos materiais e ajuda com erros |
 
-<details>
-<summary>Quer ver todas as etapas da pesquisa e da escrita?</summary>
+<a id="lifecycle"></a>
+
+## As etapas da pesquisa e da escrita
 
 ![Etapas de pesquisa e escrita, em chinês](assets/research-writing-lifecycle.png)
 
 Você pode voltar às etapas conforme precisar. Os autores realizam a pesquisa e tomam as decisões importantes; as revistas decidem sobre a publicação. [Fontes do processo (chinês)](docs/coverage.md) · [Registros dos testes (chinês)](docs/validation/README.md)
 
-</details>
-
 <a id="showcase"></a>
 
-<details>
-<summary><strong>Veja como um trecho muda depois da revisão</strong></summary>
+## Veja como um trecho muda depois da revisão
 
 Uma breve introdução foi gerada em chinês e depois revisada com os prompts e a Skill deste projeto. A figura em inglês traduz os trechos registrados e identifica as alterações e seus motivos.
 
 ![Uma breve introdução antes e depois da revisão, com alterações específicas](assets/showcase-before-after-en.png)
 
 [Leia os materiais, as respostas e o registro de alterações (inglês)](docs/showcase/README.en.md) · [Veja o exemplo em chinês](docs/showcase/README.md)
-
-</details>
 
 <a id="topic"></a>
 

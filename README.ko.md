@@ -14,6 +14,7 @@
 <p>
   <a href="#start">처음 사용하는 분께</a> ·
   <a href="#catalog">필요한 작업 고르기</a> ·
+  <a href="#lifecycle">글쓰기 과정 보기</a> ·
   <a href="#showcase">수정 예시 보기</a>
 </p>
 
@@ -122,27 +123,23 @@ ChatGPT, Claude, DeepSeek처럼 평소 사용하는 AI 채팅 도구에서 새 �
 | [선생님이나 심사자의 수정 의견을 받았어요](#feedback) | 수정 순서, 고친 본문, 의견별 답변 |
 | [게재 승인이나 출판 후에 점검하고 싶어요](#publication) | 인쇄용 원고 점검, 보관 자료 정리, 오류 대응 제안 |
 
-<details>
-<summary>연구와 글쓰기의 전체 과정 살펴보기</summary>
+<a id="lifecycle"></a>
+
+## 연구와 글쓰기의 전체 과정
 
 ![연구와 글쓰기의 단계를 보여 주는 그림(중국어)](assets/research-writing-lifecycle.png)
 
 필요한 단계만 사용하거나 앞 단계로 돌아가도 됩니다. 연구 수행과 중요한 판단은 저자가 맡고, 게재 여부는 학술지가 결정합니다. [과정 참고 자료(중국어)](docs/coverage.md) · [사용 시험 기록(중국어)](docs/validation/README.md)
 
-</details>
-
 <a id="showcase"></a>
 
-<details>
-<summary><strong>글을 고치기 전과 후가 어떻게 다른지 보기</strong></summary>
+## 글을 고치기 전과 후 비교하기
 
 중국어로 생성한 짧은 서론을 이 프로젝트의 프롬프트와 스킬로 수정했습니다. 아래 영문 그림은 기록된 원문과 수정문을 번역하고, 구체적인 수정 사항과 그 이유를 보여 줍니다.
 
 ![짧은 서론의 수정 전후와 구체적인 수정 사항](assets/showcase-before-after-en.png)
 
 [전체 입력·출력과 수정 기록 보기](docs/showcase/README.en.md) · [중국어 예시 보기](docs/showcase/README.md)
-
-</details>
 
 <a id="topic"></a>
 

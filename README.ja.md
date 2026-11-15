@@ -14,6 +14,7 @@
 <p>
   <a href="#start">初めての方へ</a> ·
   <a href="#catalog">やりたいことを選ぶ</a> ·
+  <a href="#lifecycle">執筆の流れを見る</a> ·
   <a href="#showcase">修正例を見る</a>
 </p>
 
@@ -122,27 +123,23 @@ ChatGPT、Claude、DeepSeek など、普段使っている AI のチャットで
 | [先生や査読者のコメントに対応したい](#feedback) | 直す順番、修正した本文、コメントへの回答 |
 | [採択・出版後の確認をしたい](#publication) | 誌面の確認、保存用の資料整理、誤りへの対応案 |
 
-<details>
-<summary>研究と執筆の全体の流れを見る</summary>
+<a id="lifecycle"></a>
+
+## 研究と執筆の全体の流れ
 
 ![研究と執筆の段階を示した図（中国語）](assets/research-writing-lifecycle.png)
 
 必要に応じて前の段階に戻ったり、一部だけ使ったりできます。研究の実施と重要な判断は著者が行い、掲載の判断は学術誌が行います。[流れの参考資料（中国語）](docs/coverage.md) · [試用記録（中国語）](docs/validation/README.md)
 
-</details>
-
 <a id="showcase"></a>
 
-<details>
-<summary><strong>文章を直すと、どう変わるか見る</strong></summary>
+## 文章を直す前と後を比べる
 
 中国語で短い序論を生成し、このプロジェクトのプロンプトと Skill を使って修正しました。英語の図では、保存された文章を翻訳し、変更箇所とその理由を示しています。
 
 ![短い序論の修正前後と具体的な変更点](assets/showcase-before-after-en.png)
 
 [入力・出力・変更記録の全文を読む](docs/showcase/README.en.md) · [中国語の例を見る](docs/showcase/README.md)
-
-</details>
 
 <a id="topic"></a>
 

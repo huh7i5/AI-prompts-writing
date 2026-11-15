@@ -14,6 +14,7 @@
 <p>
   <a href="#start">Hier anfangen</a> ·
   <a href="#catalog">Eine Aufgabe auswählen</a> ·
+  <a href="#lifecycle">Schreibablauf ansehen</a> ·
   <a href="#showcase">Ein Überarbeitungsbeispiel ansehen</a>
 </p>
 
@@ -122,27 +123,23 @@ Klicken Sie in der linken Spalte auf Ihr Anliegen, um zu den Aufgaben zu gelange
 | [Nach Rückmeldungen von Lehrenden oder Gutachtenden überarbeiten](#feedback) | Änderungen priorisieren, Text überarbeiten und Antworten formulieren |
 | [Nach Annahme oder Veröffentlichung prüfen](#publication) | Die gesetzte Fassung und gespeicherte Materialien prüfen sowie Fehler klären |
 
-<details>
-<summary>Den gesamten Forschungs- und Schreibablauf ansehen</summary>
+<a id="lifecycle"></a>
+
+## Der Forschungs- und Schreibablauf
 
 ![Phasen von Forschung und Schreiben, auf Chinesisch](assets/research-writing-lifecycle.png)
 
 Sie können Phasen wiederholen oder bei Bedarf nutzen. Die Verfassenden führen die Forschung durch und treffen wichtige fachliche Entscheidungen; Zeitschriften entscheiden über die Veröffentlichung. [Quellen zum Ablauf (Chinesisch)](docs/coverage.md) · [Testprotokolle (Chinesisch)](docs/validation/README.md)
 
-</details>
-
 <a id="showcase"></a>
 
-<details>
-<summary><strong>Ansehen, wie sich ein Textabschnitt durch Überarbeitung verändert</strong></summary>
+## Ein Text vor und nach der Überarbeitung
 
 Eine kurze Einleitung wurde auf Chinesisch generiert und anschließend mit den Prompts und dem Skill dieses Projekts überarbeitet. Die englische Abbildung übersetzt die dokumentierten Textfassungen und erläutert die Änderungen und ihre Gründe.
 
 ![Eine kurze Einleitung vor und nach der Überarbeitung mit konkreten Änderungen](assets/showcase-before-after-en.png)
 
 [Vollständige Eingaben, Ausgaben und Änderungsprotokoll lesen (Englisch)](docs/showcase/README.en.md) · [Chinesisches Beispiel ansehen](docs/showcase/README.md)
-
-</details>
 
 <a id="topic"></a>
 
