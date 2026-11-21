@@ -22,6 +22,8 @@
 
 Diese 43 fertigen Anfragen an eine KI, auch Prompts genannt, helfen Ihnen bei der Themenwahl, der Literatursuche, der Gliederung und der Überarbeitung. Sie können die Texte direkt auf dieser Seite lesen und kopieren. Sie müssen nichts herunterladen und nicht programmieren können.
 
+Wenn Sie mit Codex oder WorkBuddy wissenschaftliche Arbeiten schreiben, können Sie den [Skill für wissenschaftliches Schreiben](#skill) installieren.
+
 <a id="start"></a>
 
 ## 📋 In drei Schritten eine vollständige Nachricht senden

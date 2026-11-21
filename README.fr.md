@@ -22,6 +22,8 @@
 
 Ces 43 demandes prêtes à copier, appelées prompts, vous aident à trouver un sujet, chercher des sources, organiser un article et améliorer un brouillon. Vous pouvez les lire et les copier sur cette page, sans rien télécharger ni savoir programmer.
 
+Si vous rédigez des articles avec Codex ou WorkBuddy, vous pouvez installer le [Skill de rédaction académique](#skill).
+
 <a id="start"></a>
 
 ## 📋 Première visite ? Suivez ces trois étapes

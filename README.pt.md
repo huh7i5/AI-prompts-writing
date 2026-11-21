@@ -22,6 +22,8 @@
 
 Estes 43 pedidos prontos para copiar, também chamados de prompts, ajudam você a encontrar um tema, buscar fontes, organizar um trabalho e melhorar um rascunho. Você pode ler e copiar tudo nesta página, sem baixar nada nem saber programar.
 
+Se você usa o Codex ou o WorkBuddy para escrever artigos, pode instalar a [Skill de escrita acadêmica](#skill).
+
 <a id="start"></a>
 
 ## 📋 É sua primeira visita? Siga estes três passos

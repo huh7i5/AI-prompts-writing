@@ -1,6 +1,8 @@
 ---
 name: ai-prompt-writing
-description: Help with research topics, literature, study plans, evidence records, and clear academic writing. Use for manuscript drafting, revision, translation, citation and reporting checks, submission materials, feedback, proofs, archiving, or corrections. Adapt to quantitative, qualitative, theoretical, and review work. Do not use for general marketing copy.
+description: >-
+  Academic writing skill for drafting and revising a research paper or thesis. Use for choosing a topic, reviewing literature, planning a study, checking evidence and citations, editing or translating a manuscript, preparing submissions, responding to reviewers, or checking proofs and corrections.
+  用于论文写作和修改，适合“我想写论文”“帮我写文献综述”“润色这段引言”或“怎么回复审稿意见”等请求。
 ---
 
 # AI Prompt Writing

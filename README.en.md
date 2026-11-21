@@ -22,6 +22,8 @@
 
 These 43 ready-to-copy requests, called prompts, help you find a topic, search for sources, outline a paper, and improve a draft. Read and copy them on this page; no download or coding is needed.
 
+If you use Codex or WorkBuddy to write research papers, you can install the [academic writing skill](#skill).
+
 <a id="start"></a>
 
 ## 📋 First time here? Follow these three steps

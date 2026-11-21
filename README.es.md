@@ -22,6 +22,8 @@
 
 Estas 43 peticiones listas para copiar, también llamadas prompts, le ayudan a encontrar un tema, buscar fuentes, organizar un trabajo y mejorar un borrador. Puede leerlas y copiarlas en esta página: no necesita descargar nada ni saber programar.
 
+Si usa Codex o WorkBuddy para redactar artículos académicos, puede instalar la [Skill de escritura académica](#skill).
+
 <a id="start"></a>
 
 ## 📋 ¿Es su primera visita? Siga estos tres pasos
