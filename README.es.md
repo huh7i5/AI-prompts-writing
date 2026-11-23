@@ -55,7 +55,7 @@ Utilice un lenguaje directo y preciso, con los términos técnicos necesarios y 
 Al revisar:
 1. Aclare quién hizo qué, qué se comparó y cuáles fueron los resultados. Organice cada párrafo en torno a una pregunta concreta. Adapte su extensión al contenido en lugar de repetir una estructura fija.
 2. Conserve los términos informativos, los matices y la incertidumbre. No sustituya palabras, añada expresiones coloquiales ni introduzca errores solo para eliminar una supuesta «apariencia de IA». Palabras como «puede», «solo» y «todavía no» no están prohibidas.
-3. Exponga directamente las aportaciones respaldadas por evidencia, sin restarles valor de forma reiterada. Verifique o acote afirmaciones sin respaldo como «primero», «mejor», «universal» o «significativo».
+3. Exponga directamente las aportaciones respaldadas por evidencia, sin restarles valor de forma reiterada. Verifique o acote afirmaciones sin respaldo como «primero», «mejor», «universal» o «significativo». Al redactar, diga qué se observó y en qué condiciones. Si omitir un matiz cambia la interpretación del resultado, expréselo junto a ese resultado.
 4. No invente datos, referencias, DOI, lagunas de investigación, mecanismos ni declaraciones de los autores. No modifique sin indicarlo cifras, unidades, tamaños de muestra, condiciones del estudio ni citas. Muestre la evidencia y las fórmulas utilizadas en los cálculos.
 5. Distinga entre observaciones, hipótesis y recomendaciones. No convierta una asociación en causalidad ni un experimento en un hallazgo general. Diferencie la significación estadística, el tamaño del efecto y la importancia práctica.
 6. Conserve los resultados desfavorables, los controles esenciales y las limitaciones que afecten a la conclusión. No cambie las medidas ni las definiciones de comparación porque un resultado sea menos favorable. Examine las ventajas y desventajas contrapuestas solo cuando la evidencia las respalde.
@@ -974,7 +974,7 @@ Texto:
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 Explicar las aportaciones sin restarles valor ni exagerarlas</strong></summary>
+<summary><strong>6.5 Explicar los resultados sin disculparse ni exagerar su alcance</strong></summary>
 
 ```text
 Compruebe este texto del manuscrito y distinga:
@@ -985,6 +985,8 @@ Compruebe este texto del manuscrito y distinga:
 Responda con un lenguaje claro y preciso, manteniendo los términos técnicos, las condiciones y los matices necesarios, así como el tono académico. Evite las expresiones recargadas y las analogías infantiles. Limítese a esta tarea, sin ampliaciones innecesarias.
 
 Una oración puede contener autodescalificación y una limitación necesaria. Elimine la primera y conserve la segunda. Expresiones como «solo», «puede» y «no alcanzó» no son problemas por sí mismas.
+
+Si un párrafo empieza respondiendo a una objeción que nadie ha planteado, busque la observación que permiten comunicar los datos. Si quitar una salvedad cambia lo que se puede concluir sobre la comparación, sus causas o su alcance, exprésela junto al resultado. Si el sentido se mantiene, suprima el preámbulo o la reserva repetida. Conserve los resultados desfavorables y los contrastes relevantes. Si queda una duda de fondo, señálela en una nota para el autor.
 
 Para cada asunto, proporcione el original, el diagnóstico, la redacción sugerida y un motivo breve. Después ofrezca una revisión coherente. Conserve las cifras, las condiciones del estudio y las citas. Explique por separado cualquier delimitación necesaria de una conclusión. Conserve las oraciones correctas en lugar de cambiarlas para cumplir una cuota.
 
@@ -998,6 +1000,9 @@ Texto que se comprobará:
 Materiales de apoyo, si están disponibles:
 {{resultados, tablas o fuentes}}
 ```
+
+[Ejemplos en chino e inglés con los cambios y las frases que se conservaron](docs/validation/runs/2026-11-23/README.md)
+
 </details>
 
 <details>

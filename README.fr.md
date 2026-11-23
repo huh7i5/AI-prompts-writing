@@ -55,7 +55,7 @@ Employez une langue directe et précise, avec les termes techniques nécessaires
 Lors de la révision :
 1. Précisez qui a fait quoi, ce qui a été comparé et les résultats obtenus. Organisez chaque paragraphe autour d’une question précise. Adaptez sa longueur au contenu au lieu de répéter une structure fixe.
 2. Conservez les termes informatifs, les nuances et l’incertitude. Ne remplacez pas des mots, n’ajoutez pas d’argot et n’introduisez pas d’erreurs dans le seul but d’effacer une « impression d’IA ». Les mots comme « peut », « seulement » et « pas encore » ne sont pas interdits.
-3. Exprimez directement les contributions étayées, sans autodépréciation répétée. Vérifiez ou restreignez les affirmations non étayées telles que « premier », « meilleur », « universel » ou « significatif ».
+3. Exprimez directement les contributions étayées, sans autodépréciation répétée. Vérifiez ou restreignez les affirmations non étayées telles que « premier », « meilleur », « universel » ou « significatif ». À la rédaction, dites ce qui a été observé et dans quelles conditions. Si une précision change la façon de comprendre un résultat, donnez-la au moment où vous présentez ce résultat.
 4. N’inventez pas de données, de références, de DOI, de lacunes dans la recherche, de mécanismes ou de déclarations d’auteurs. Ne modifiez pas silencieusement les valeurs numériques, les unités, les tailles d’échantillon, les conditions de l’étude ou les citations. Fournissez les éléments justificatifs et les formules des calculs.
 5. Distinguez les observations, les hypothèses et les recommandations. Ne transformez pas une association en causalité, ni une seule expérience en résultat général. Distinguez la significativité statistique, la taille de l’effet et l’importance pratique.
 6. Conservez les résultats défavorables, les contrôles essentiels et les limites qui affectent la conclusion. Ne modifiez pas les mesures ou les définitions de comparaison parce qu’un résultat est moins favorable. Ne discutez des compromis que si les éléments probants les étayent.
@@ -991,7 +991,7 @@ Texte :
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 Expliquer les apports sans les dévaloriser ni les exagérer</strong></summary>
+<summary><strong>6.5 Présenter les résultats sans s’excuser ni en exagérer la portée</strong></summary>
 
 ```text
 Examinez ce passage du manuscrit et distinguez :
@@ -1002,6 +1002,8 @@ Examinez ce passage du manuscrit et distinguez :
 Répondez dans une langue claire et précise, en conservant les termes techniques, les conditions et les nuances nécessaires, ainsi que le ton scientifique. Évitez les tournures recherchées et les analogies enfantines. Traitez uniquement cette tâche, sans ajout superflu.
 
 Une même phrase peut contenir une autodépréciation inutile et une limite nécessaire. Supprimez la première en conservant la seconde. Des mots comme « seulement », « peut » ou « n’a pas encore atteint » ne constituent pas des problèmes en eux-mêmes.
+
+Si un paragraphe s’ouvre sur une réponse à une objection que personne n’a soulevée, cherchez d’abord ce que les données permettent de dire. Si la suppression d’une réserve change ce que le lecteur peut conclure sur la comparaison, la causalité ou la portée du résultat, précisez cette limite là où vous présentez le résultat. Si le sens reste le même, supprimez le préambule ou la réserve répétée. Conservez les résultats défavorables et les contrastes qui éclairent le propos. Signalez à l’auteur, dans une note, toute question de fond encore ouverte.
 
 Pour chaque problème, fournissez le texte original, le diagnostic, une formulation proposée et une brève justification. Donnez ensuite une révision cohérente. Conservez les valeurs numériques, les conditions de l’étude et les citations. Expliquez séparément toute restriction nécessaire d’une conclusion. Gardez les phrases correctes au lieu de les modifier pour atteindre un quota.
 
@@ -1015,6 +1017,8 @@ Texte à vérifier :
 Documents de support, si disponibles :
 {{résultats, tableaux ou sources}}
 ```
+
+[Exemples en chinois et en anglais avec les passages modifiés ou conservés](docs/validation/runs/2026-11-23/README.md)
 
 </details>
 

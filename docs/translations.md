@@ -16,7 +16,7 @@ The Chinese and English READMEs are the reference versions. Each language file i
 
 The translations started from the task text in commit [`329f86e`](https://github.com/huh7i5/AI-prompts-writing/commit/329f86e), with later shared updates recorded below. They keep the same task IDs, HTML anchors, links, and placeholder meanings. The navigation names each language in that language, without country flags.
 
-The new translations were prepared and reviewed with model assistance. They have not been reviewed by native-speaking contributors or domain experts, and no behavioral trials have been run in Spanish, French, German, Portuguese, Japanese, Korean, or Russian. The [existing English trials](validation/runs/2026-11-10-en/README.md) cover five English tasks only. Their results do not establish how another language version performs.
+The new translations were prepared and reviewed with model assistance. They have not been reviewed by native-speaking contributors or domain experts, and no behavioral trials have been run in Spanish, French, German, Portuguese, Japanese, Korean, or Russian. Five English tasks were tried on November 10, followed by task 6.5 on November 23. Each record gives the inputs and results for that language. [First English trials](validation/runs/2026-11-10-en/README.md) · [Task 6.5 trials](validation/runs/2026-11-23/README.md)
 
 The example image remains an English translation of a recorded Chinese run. The standalone Skill remains the shared [Chinese instruction file](../.agents/skills/ai-prompt-writing/SKILL.md); these README translations do not add separately tested language-specific Skills. Supporting source notes and evaluation records keep the language named in their links.
 

@@ -21,6 +21,12 @@
 
 对口径修改，追踪变化所影响的位置。材料足够时给出实际改稿或计算，缺材料的经济性指标等保留待重算状态。
 
+## 反防御性写作
+
+“这只是一次粗浅的尝试，请读者包涵”没有告诉读者这项研究能说明什么。“学生自行选择是否开启提醒”却决定了两组差异该怎样解释。任务 6.5 会删去前一句，把后一句放到比较结果旁。这个虚构例子同时包含有利和不利的数字，两者都要写进改稿。[完整输入与实测改稿](validation/runs/2026-11-23/README.md)
+
+这次修订参考了两份公开 Skill。Kiterlin 提出，写稿时要留意那些专门回应假想质疑的铺垫。Fabian Ritter 区分了观察到的现象与对成因的解释。读者若会把一句观察误读为因果结论，就值得把证据的边界留在原处。[Kiterlin 的 Anti-Defensive Writing](https://github.com/Kiterlin/anti-defensive-writing/blob/f516147d017a3fe43ae99192cb89d8261b0c8679/skill/anti-defensive-writing/SKILL.md#preserve-necessary-precision) · [Fabian Ritter 的 Academic Writing](https://github.com/FabianRitter/paper-writing-agents/blob/96921148976a49d84236586a8a71becf1a67fce4/skills/academic-writing/SKILL.md#L168-L174)
+
 ## 示例与验证
 
 [首页对照记录](showcase/README.md)保存固定的生成请求、首次输出、改稿请求与修改说明。图中文字按记录逐句核对。

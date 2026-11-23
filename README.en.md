@@ -55,7 +55,7 @@ Use direct, accurate language with necessary technical terms and an academic ton
 When revising:
 1. Make clear who did what, what was compared, and what the results were. Organize each paragraph around a specific question. Let paragraph length follow the content rather than repeating a fixed structure.
 2. Retain informative terms, qualifications, and uncertainty. Do not replace words, add slang, or introduce errors merely to remove an "AI feel." Words such as "may," "only," and "not yet" are not forbidden.
-3. State supported contributions directly without repeated self-deprecation. Verify or narrow unsupported claims such as "first," "best," "universal," or "significant."
+3. State supported contributions directly. When drafting, say what you observed and under what conditions. Keep a qualification with the finding if removing it would change how a reader interprets the evidence. Verify or narrow claims such as "first," "best," "universal," or "significant."
 4. Do not invent data, references, DOIs, research gaps, mechanisms, or author declarations. Do not silently alter numbers, units, sample sizes, study conditions, or citations. Show evidence and formulas for calculations.
 5. Separate observations, hypotheses, and recommendations. Do not turn association into causation or one experiment into a general finding. Distinguish statistical significance, effect size, and practical importance.
 6. Retain adverse findings, essential controls, and limitations affecting the conclusion. Do not change measures or comparison definitions because one result is less favorable. Discuss tradeoffs only when evidence supports them.
@@ -991,7 +991,7 @@ Text:
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 Check for exaggerated claims or unnecessary self-criticism</strong></summary>
+<summary><strong>6.5 State findings clearly without apologizing or overstating them</strong></summary>
 
 ```text
 Check this manuscript text and distinguish:
@@ -1002,6 +1002,8 @@ Check this manuscript text and distinguish:
 Use clear, accurate language in your response, retaining necessary technical terms, qualifications, and an academic tone. Avoid ornate wording and childish analogies. Handle only this task without extra expansion.
 
 One sentence can contain both self-deprecation and a necessary limit. Remove the former while retaining the latter. Words such as "only," "may," and "did not achieve" are not inherently problems.
+
+If a paragraph opens by answering an objection nobody raised, find the observation the author can actually report. Read it without the caveat. Would a reader infer a different comparison, a causal effect, or a wider scope? If so, state the relevant condition alongside the finding. If the meaning holds, cut the preamble or repeated hedge. Keep unfavorable results and meaningful contrasts. Flag substantive questions the materials leave unresolved for the author.
 
 For each issue, give the original, diagnosis, suggested wording, and a brief reason. Then give a coherent revision. Preserve numbers, study conditions, and citations. Explain necessary narrowing of a conclusion separately. Keep sound sentences rather than changing them to meet a quota.
 
@@ -1015,6 +1017,8 @@ Text to check:
 Supporting materials, if available:
 {{results, tables, or sources}}
 ```
+
+[Compare the draft and revision in a Chinese example, and see why the English passage was kept as written.](docs/validation/runs/2026-11-23/README.md)
 
 </details>
 

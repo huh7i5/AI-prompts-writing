@@ -55,7 +55,7 @@ Verwenden Sie direkte, präzise Sprache mit den erforderlichen Fachbegriffen und
 Bei der Überarbeitung:
 1. Machen Sie deutlich, wer was getan hat, was verglichen wurde und welche Ergebnisse vorliegen. Ordnen Sie jeden Absatz um eine konkrete Frage. Richten Sie die Absatzlänge nach dem Inhalt, statt eine feste Struktur zu wiederholen.
 2. Erhalten Sie informative Begriffe, Einschränkungen und Unsicherheiten. Ersetzen Sie keine Wörter, fügen Sie keinen Slang hinzu und bauen Sie keine Fehler ein, nur um einen „KI-Eindruck“ zu beseitigen. Wörter wie „kann“, „nur“ und „noch nicht“ sind nicht verboten.
-3. Benennen Sie belegte Beiträge direkt und ohne wiederholte Selbstabwertung. Prüfen oder begrenzen Sie unbelegte Aussagen wie „erstmals“, „am besten“, „universell“ oder „signifikant“.
+3. Benennen Sie belegte Beiträge direkt und ohne wiederholte Selbstabwertung. Prüfen oder begrenzen Sie unbelegte Aussagen wie „erstmals“, „am besten“, „universell“ oder „signifikant“. Schreiben Sie, was unter welchen Bedingungen beobachtet wurde. Wenn sich das Ergebnis ohne eine Einschränkung anders lesen würde, nennen Sie diese direkt beim Befund.
 4. Erfinden Sie keine Daten, Quellen, DOIs, Forschungslücken, Mechanismen oder Erklärungen der Verfassenden. Ändern Sie Zahlen, Einheiten, Stichprobengrößen, Studienbedingungen oder Quellenangaben nicht stillschweigend. Zeigen Sie bei Berechnungen die Belege und Formeln.
 5. Trennen Sie Beobachtungen, Hypothesen und Empfehlungen. Machen Sie aus einem Zusammenhang keine Kausalität und aus einem einzelnen Experiment keinen allgemeinen Befund. Unterscheiden Sie statistische Signifikanz, Effektstärke und praktische Bedeutung.
 6. Erhalten Sie ungünstige Befunde, wesentliche Kontrollbedingungen und Einschränkungen, die den Schluss beeinflussen. Ändern Sie weder Messgrößen noch Vergleichsdefinitionen, weil ein Ergebnis weniger günstig ausfällt. Erörtern Sie Abwägungen zwischen Vor- und Nachteilen nur, wenn Belege dafür vorliegen.
@@ -991,7 +991,7 @@ Text:
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 Übertriebene Aussagen und unnötige Selbstabwertung prüfen</strong></summary>
+<summary><strong>6.5 Ergebnisse klar und ohne Rechtfertigung oder Übertreibung darstellen</strong></summary>
 
 ```text
 Prüfen Sie diesen Manuskripttext und unterscheiden Sie:
@@ -1002,6 +1002,8 @@ Prüfen Sie diesen Manuskripttext und unterscheiden Sie:
 Antworten Sie klar und präzise. Behalten Sie nötige Fachbegriffe, Einschränkungen und einen wissenschaftlichen Ton bei. Vermeiden Sie blumige Formulierungen und kindliche Analogien. Bearbeiten Sie nur diese Aufgabe, ohne den Auftrag auszuweiten.
 
 Ein Satz kann sowohl Selbstabwertung als auch eine notwendige Grenze enthalten. Entfernen Sie Erstere und erhalten Sie Letztere. Wörter wie „nur“, „kann“ und „nicht erreicht“ sind nicht an sich problematisch.
+
+Beginnt ein Absatz mit der Antwort auf einen Einwand, den niemand erhoben hat, arbeiten Sie heraus, welche Beobachtung die Daten stützen. Wenn sich ohne einen Vorbehalt andere Schlüsse aus dem Vergleich, über Ursachen oder über den Geltungsbereich ziehen ließen, nennen Sie die Einschränkung beim Befund. Bleibt die Aussage dieselbe, streichen Sie die überflüssige Einleitung oder den wiederholten Vorbehalt. Behalten Sie ungünstige Ergebnisse und sachlich wichtige Gegenüberstellungen bei. Vermerken Sie offene inhaltliche Fragen als Hinweis für die Verfassenden.
 
 Geben Sie für jedes Problem Original, Diagnose, Formulierungsvorschlag und eine kurze Begründung an. Liefern Sie danach eine kohärente Überarbeitung. Erhalten Sie Zahlen, Studienbedingungen und Quellenangaben. Erklären Sie nötige Begrenzungen von Schlussfolgerungen separat. Behalten Sie treffende Sätze bei, statt sie für eine Änderungsquote umzuschreiben.
 
@@ -1015,6 +1017,8 @@ Zu prüfender Text:
 Stützende Materialien, falls vorhanden:
 {{Ergebnisse, Tabellen oder Quellen}}
 ```
+
+[Beispiele auf Chinesisch und Englisch mit Änderungen und beibehaltenen Formulierungen](docs/validation/runs/2026-11-23/README.md)
 
 </details>
 

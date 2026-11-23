@@ -55,7 +55,7 @@ Use uma linguagem direta e precisa, com os termos técnicos necessários e tom a
 Ao revisar:
 1. Deixe claro quem fez o quê, o que foi comparado e quais foram os resultados. Organize cada parágrafo em torno de uma pergunta específica. Deixe a extensão dos parágrafos acompanhar o conteúdo, sem repetir uma estrutura fixa.
 2. Preserve termos informativos, ressalvas e incertezas. Não substitua palavras, acrescente gírias ou introduza erros apenas para remover uma "aparência de texto de IA". Palavras como "pode", "apenas" e "ainda não" não são proibidas.
-3. Apresente diretamente as contribuições sustentadas pelas evidências, sem autodepreciação repetida. Verifique ou restrinja afirmações não sustentadas, como "primeiro", "melhor", "universal" ou "significativo".
+3. Apresente diretamente as contribuições sustentadas pelas evidências, sem autodepreciação repetida. Verifique ou restrinja afirmações não sustentadas, como "primeiro", "melhor", "universal" ou "significativo". Ao redigir, diga o que foi observado e em quais condições. Se omitir uma ressalva mudar a interpretação de um resultado, inclua a ressalva junto dele.
 4. Não invente dados, referências, DOIs, lacunas de pesquisa, mecanismos ou declarações dos autores. Não altere silenciosamente números, unidades, tamanhos amostrais, condições do estudo ou citações. Mostre as evidências e as fórmulas dos cálculos.
 5. Separe observações, hipóteses e recomendações. Não transforme associação em causalidade nem um único experimento em um achado geral. Distinga significância estatística, tamanho de efeito e importância prática.
 6. Preserve resultados desfavoráveis, controles essenciais e limitações que afetem a conclusão. Não altere medidas ou definições de comparação porque um resultado é menos favorável. Discuta compromissos entre vantagens e desvantagens apenas quando houver evidências que os sustentem.
@@ -991,7 +991,7 @@ Texto:
 <a id="defensive"></a>
 
 <details>
-<summary><strong>6.5 Explicar as contribuições sem desvalorizar nem exagerar</strong></summary>
+<summary><strong>6.5 Apresentar os resultados sem pedir desculpas nem exagerar seu alcance</strong></summary>
 
 ```text
 Verifique este texto do manuscrito e distinga:
@@ -1002,6 +1002,8 @@ Verifique este texto do manuscrito e distinga:
 Responda com uma linguagem clara e precisa, mantendo os termos técnicos, as condições e as ressalvas necessárias, além do tom acadêmico. Evite linguagem rebuscada e analogias infantis. Faça apenas esta tarefa, sem ampliar o pedido.
 
 Uma frase pode conter tanto autodepreciação quanto uma limitação necessária. Remova a primeira e preserve a segunda. Palavras como "apenas", "pode" e "não alcançou" não são problemas por si sós.
+
+Se um parágrafo começar respondendo a uma objeção que ninguém levantou, identifique a observação que os dados permitem relatar. Se retirar uma ressalva mudar o que o leitor pode concluir sobre a comparação, a causalidade ou o alcance do resultado, explicite essa condição junto ao resultado. Se o sentido permanecer o mesmo, corte a introdução desnecessária ou a ressalva repetida. Preserve resultados desfavoráveis e contrastes que ajudem a entender o argumento. Se restar uma dúvida de conteúdo, registre-a em uma nota para o autor.
 
 Para cada problema, apresente o original, o diagnóstico, a formulação sugerida e uma breve justificativa. Depois forneça uma revisão coerente. Preserve números, condições do estudo e citações. Explique separadamente qualquer restrição necessária de uma conclusão. Mantenha frases adequadas em vez de alterá-las para cumprir uma cota.
 
@@ -1015,6 +1017,8 @@ Texto a verificar:
 Materiais de suporte, se disponíveis:
 {{resultados, tabelas ou fontes}}
 ```
+
+[Exemplos em chinês e inglês com os trechos alterados e mantidos](docs/validation/runs/2026-11-23/README.md)
 
 </details>
 
