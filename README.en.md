@@ -34,6 +34,8 @@ Open a new conversation in an AI chat tool you already use, such as ChatGPT, Cla
 2. **Put your requirements first and materials last.** Specify the language, length, or scope of the task, then paste your text, notes, data, or feedback under “My materials” at the end.
 3. **Send everything in one message.** Each task includes basic writing instructions. Send the completed prompt and materials together, then check the response against your originals before accepting the suggestions.
 
+Try [calculating a library’s attendance rate](docs/examples/reading-room.en.md) or [comparing a ferry notice with a passenger’s diary](docs/examples/text-reading.en.md). Each example includes the materials in the prompt. Send it to your AI, then open the worked answer to check the result.
+
 Replace each `{{…}}`, including the braces, with your content. The material fields are suggestions: you can delete unused field labels and placeholders, then paste a complete draft or notes directly under “My materials” without splitting them up or writing a separate summary. When comparing sources, keep their names and versions, such as “original draft,” “reviewer comments,” and “change record.” Write “not provided” for anything unknown and remove items that do not apply.
 
 Check numbers and references yourself. Before uploading material, make sure you may share it and remove personal details that are not needed.

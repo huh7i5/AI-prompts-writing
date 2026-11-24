@@ -34,6 +34,8 @@ Wenn Sie mit Codex oder WorkBuddy wissenschaftliche Arbeiten schreiben, können 
 2. **Die Anforderungen ergänzen.** Tragen Sie Sprache, Umfang oder andere Vorgaben vor den Materialien ein. Ersetzen Sie `{{…}}` samt Klammern durch Ihre Angaben. Schreiben Sie bei unbekannten Informationen „nicht angegeben“ und entfernen Sie Punkte, die nicht zutreffen.
 3. **Materialien am Ende einfügen und alles zusammen senden.** Fügen Sie den Text, Ihre Notizen oder Rückmeldungen unter „Meine Materialien“ ein und senden Sie Anforderungen und Materialien als eine Nachricht. Prüfen Sie die Antwort anhand der Originale, bevor Sie Änderungen übernehmen.
 
+Zum Ausprobieren gibt es zwei englische Beispiele mit Material und Musterlösung: [Daten auswerten](docs/examples/reading-room.en.md) oder [zwei Texte vergleichen](docs/examples/text-reading.en.md).
+
 Die Felder unter „Meine Materialien“ zeigen, welche Angaben hilfreich sind. Sie können nicht benötigte Felder entfernen und einen vollständigen Text oder vorhandene Notizen direkt dort einfügen, ohne sie vorher aufzuteilen oder zusammenzufassen. Kennzeichnen Sie bei mehreren Materialien die Namen und Versionen, etwa „Originaltext“, „Rückmeldung“ und „überarbeitete Fassung“.
 
 Prüfen Sie Zahlen und Quellen selbst. Stellen Sie vor dem Hochladen sicher, dass Sie die Materialien teilen dürfen, und entfernen Sie nicht benötigte personenbezogene Angaben.

@@ -34,6 +34,8 @@ Abra uma conversa nova na ferramenta de IA que você já usa, como ChatGPT, Clau
 2. **Informe os requisitos e cole os materiais no final.** Preencha o idioma, o tamanho do texto ou outras condições necessárias. Depois, cole o artigo, as notas ou os comentários em “Meus materiais”.
 3. **Envie tudo em uma única mensagem.** As instruções e os materiais vão juntos. Compare a resposta com os originais antes de aceitar as sugestões.
 
+Para praticar com o material já incluído, escolha um exemplo em inglês de [análise de dados](docs/examples/reading-room.en.md) ou de [leitura comparada de dois textos](docs/examples/text-reading.en.md).
+
 Substitua cada `{{…}}`, incluindo as chaves, pelo seu conteúdo. Os campos de “Meus materiais” são sugestões do que incluir: se já tiver um texto completo ou notas, pode apagar os campos desnecessários e colar seu conteúdo diretamente nessa seção, sem separar ou resumir antes. Se enviar vários documentos ou versões, indique o nome e a versão de cada um. Escreva “não informado” quando não souber um dado e apague o que não se aplica.
 
 Confira os números e as referências. Antes de enviar materiais, verifique se pode compartilhá-los e retire os dados pessoais que não forem necessários.

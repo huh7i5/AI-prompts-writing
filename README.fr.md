@@ -34,6 +34,8 @@ Ouvrez une nouvelle conversation dans l’outil d’IA que vous utilisez déjà,
 2. **Précisez vos consignes et collez les documents à la fin.** Indiquez la langue, la longueur ou les autres conditions utiles. Collez ensuite l’article, les notes ou les commentaires dans « Mes documents ».
 3. **Envoyez le tout dans un seul message.** Les consignes et les documents partent ensemble. Comparez la réponse avec vos originaux avant d’accepter les changements.
 
+Pour essayer avec des documents déjà fournis, choisissez un exemple en anglais : [analyse de données](docs/examples/reading-room.en.md) ou [commentaire de texte](docs/examples/text-reading.en.md).
+
 Remplacez chaque `{{…}}`, accolades comprises, par votre contenu. Les champs de « Mes documents » servent de repères : si vous avez déjà un texte complet ou des notes, vous pouvez supprimer les champs inutiles et coller vos documents directement dans cette section, sans les découper ni les résumer. Si vous fournissez plusieurs documents ou versions, indiquez le nom et la version de chacun. Écrivez « non fourni » pour une information inconnue et supprimez ce qui ne s’applique pas.
 
 Vérifiez vous-même les chiffres et les références. Avant de transmettre des documents, assurez-vous de pouvoir les partager et retirez les données personnelles inutiles.

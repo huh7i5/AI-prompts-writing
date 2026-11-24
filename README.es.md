@@ -34,6 +34,8 @@ Abra una conversación nueva en la herramienta de IA que ya utilice, como ChatGP
 2. **Indique sus requisitos y pegue los materiales al final.** Complete el idioma, la extensión u otras condiciones que necesite. Después, pegue el artículo, las notas o los comentarios en «Mis materiales».
 3. **Envíelo todo en un solo mensaje.** Las instrucciones y los materiales van juntos. Compare la respuesta con los originales antes de aceptar los cambios.
 
+Para probar con materiales ya preparados, elige un ejemplo en inglés de [análisis de datos](docs/examples/reading-room.en.md) o de [comentario de texto](docs/examples/text-reading.en.md).
+
 Sustituya cada `{{…}}`, incluidas las llaves, por su contenido. Los campos de «Mis materiales» son orientativos: si ya tiene un texto completo o unas notas, puede borrar los campos que no necesite y pegarlos directamente en esa sección, sin dividirlos ni resumirlos primero. Si aporta varios documentos o versiones, indique el nombre y la versión de cada uno. Escriba «no proporcionado» cuando desconozca un dato y elimine lo que no corresponda.
 
 Compruebe las cifras y las referencias. Antes de subir materiales, asegúrese de que puede compartirlos y quite los datos personales que no sean necesarios.
