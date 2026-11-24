@@ -15,7 +15,8 @@
   <a href="#start">第一次用</a> ·
   <a href="#catalog">选我需要的任务</a> ·
   <a href="#lifecycle">看写作流程</a> ·
-  <a href="#showcase">看修改例子</a>
+  <a href="#showcase">看修改例子</a> ·
+  <a href="docs/examples/reading-room-paper.md">读论文样稿</a>
 </p>
 
 </div>
@@ -1703,3 +1704,12 @@ WorkBuddy 的对话安装目前面向技能市场，自定义技能包需要上�
 项目保持“文字优先”：不要求代码，不绑定某个模型，也不承诺一段提示词能保证结果正确。
 
 </details>
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=huh7i5%2FAI-prompts-writing&amp;type=date&amp;legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;theme=dark&amp;legend=top-left">
+    <img src="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;legend=top-left" alt="这个项目的 GitHub Star 数随时间的变化" width="700">
+  </picture>
+</a>

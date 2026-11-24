@@ -15,7 +15,8 @@
   <a href="#start">Commencer ici</a> ·
   <a href="#catalog">Choisir une tâche</a> ·
   <a href="#lifecycle">Voir les étapes de rédaction</a> ·
-  <a href="#showcase">Voir un exemple de révision</a>
+  <a href="#showcase">Voir un exemple de révision</a> ·
+  <a href="docs/examples/reading-room-paper.en.md">Exemple d’article (anglais)</a>
 </p>
 
 </div>
@@ -1709,3 +1710,12 @@ Après avoir modifié une tâche, vérifiez le même numéro dans [chaque versio
 Le projet reste centré sur le texte. Il ne nécessite aucun code, n’est lié à aucun modèle particulier et ne promet pas qu’un prompt suffise à garantir un résultat correct.
 
 </details>
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=huh7i5%2FAI-prompts-writing&amp;type=date&amp;legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;theme=dark&amp;legend=top-left">
+    <img src="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;legend=top-left" alt="Évolution du nombre d’étoiles du projet sur GitHub" width="700">
+  </picture>
+</a>

@@ -15,7 +15,8 @@
   <a href="#start">처음 사용하는 분께</a> ·
   <a href="#catalog">필요한 작업 고르기</a> ·
   <a href="#lifecycle">글쓰기 과정 보기</a> ·
-  <a href="#showcase">수정 예시 보기</a>
+  <a href="#showcase">수정 예시 보기</a> ·
+  <a href="docs/examples/reading-room-paper.en.md">논문 예시(영어)</a>
 </p>
 
 </div>
@@ -1709,3 +1710,12 @@ Codex에서는 `$skill-name`으로 스킬을 호출할 수 있습니다. CLI와 
 이 프로젝트는 텍스트 중심으로 유지합니다. 코드가 필요하지 않고 특정 모델에 묶이지 않으며, 프롬프트만으로 올바른 결과가 보장된다고 약속하지 않습니다.
 
 </details>
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=huh7i5%2FAI-prompts-writing&amp;type=date&amp;legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;theme=dark&amp;legend=top-left">
+    <img src="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;legend=top-left" alt="이 프로젝트의 GitHub 스타 수 변화" width="700">
+  </picture>
+</a>

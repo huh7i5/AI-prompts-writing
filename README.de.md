@@ -15,7 +15,8 @@
   <a href="#start">Hier anfangen</a> ·
   <a href="#catalog">Eine Aufgabe auswählen</a> ·
   <a href="#lifecycle">Schreibablauf ansehen</a> ·
-  <a href="#showcase">Ein Überarbeitungsbeispiel ansehen</a>
+  <a href="#showcase">Ein Überarbeitungsbeispiel ansehen</a> ·
+  <a href="docs/examples/reading-room-paper.en.md">Musterarbeit (Englisch)</a>
 </p>
 
 </div>
@@ -1709,3 +1710,12 @@ Prüfen Sie nach einer Aufgabenänderung dieselbe Aufgabennummer in [jeder Sprac
 Das Projekt bleibt textbasiert. Es benötigt keinen Code, ist nicht an ein Modell gebunden und verspricht nicht, dass ein Prompt allein ein korrektes Ergebnis garantiert.
 
 </details>
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=huh7i5%2FAI-prompts-writing&amp;type=date&amp;legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;theme=dark&amp;legend=top-left">
+    <img src="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;legend=top-left" alt="Entwicklung der GitHub-Sterne dieses Projekts" width="700">
+  </picture>
+</a>

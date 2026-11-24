@@ -15,7 +15,8 @@
   <a href="#start">Empiece aquí</a> ·
   <a href="#catalog">Elija una tarea</a> ·
   <a href="#lifecycle">Ver el proceso de escritura</a> ·
-  <a href="#showcase">Vea un ejemplo de revisión</a>
+  <a href="#showcase">Vea un ejemplo de revisión</a> ·
+  <a href="docs/examples/reading-room-paper.en.md">Artículo de ejemplo (inglés)</a>
 </p>
 
 </div>
@@ -1675,3 +1676,12 @@ Después de cambiar una tarea, compruebe el mismo identificador en [todas las ve
 El proyecto se centra en el texto. No requiere código, no está ligado a un modelo y no promete que unas instrucciones por sí solas garanticen resultados correctos.
 
 </details>
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=huh7i5%2FAI-prompts-writing&amp;type=date&amp;legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;theme=dark&amp;legend=top-left">
+    <img src="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;legend=top-left" alt="Evolución de las estrellas del proyecto en GitHub" width="700">
+  </picture>
+</a>

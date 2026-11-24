@@ -15,7 +15,8 @@
   <a href="#start">Начать здесь</a> ·
   <a href="#catalog">Выбрать задачу</a> ·
   <a href="#lifecycle">Посмотреть этапы работы</a> ·
-  <a href="#showcase">Посмотреть пример правки</a>
+  <a href="#showcase">Посмотреть пример правки</a> ·
+  <a href="docs/examples/reading-room-paper.en.md">Образец статьи (на английском)</a>
 </p>
 
 </div>
@@ -1709,3 +1710,12 @@ Codex поддерживает вызов навыка через `$skill-name`.
 Проект остаётся текстовым. Он не требует программирования, не привязан к одной модели и не обещает, что один промпт гарантирует правильный результат.
 
 </details>
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=huh7i5%2FAI-prompts-writing&amp;type=date&amp;legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;theme=dark&amp;legend=top-left">
+    <img src="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;legend=top-left" alt="Количество звёзд проекта на GitHub с течением времени" width="700">
+  </picture>
+</a>

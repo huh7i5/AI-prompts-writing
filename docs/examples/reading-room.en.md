@@ -34,3 +34,5 @@ Overall attendance for evening bookings fell from 82% in March to 63% in April, 
 You can check April’s total by counting bookings. There were 63 check-ins for 100 bookings, giving 63%. Averaging the two slot rates gives 75%, which gives the slot with 20 bookings the same weight as the one with 80.
 
 </details>
+
+[Read the sample paper built from these four booking records](reading-room-paper.en.md)

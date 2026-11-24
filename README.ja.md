@@ -15,7 +15,8 @@
   <a href="#start">初めての方へ</a> ·
   <a href="#catalog">やりたいことを選ぶ</a> ·
   <a href="#lifecycle">執筆の流れを見る</a> ·
-  <a href="#showcase">修正例を見る</a>
+  <a href="#showcase">修正例を見る</a> ·
+  <a href="docs/examples/reading-room-paper.en.md">論文の見本（英語）</a>
 </p>
 
 </div>
@@ -1707,3 +1708,12 @@ WorkBuddy の対話による導入は、現在は Skill マーケットプレイ
 このプロジェクトは文章を中心としています。コードは不要で、特定のモデルに依存せず、プロンプトだけで正しい結果が保証されるとも約束しません。
 
 </details>
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=huh7i5%2FAI-prompts-writing&amp;type=date&amp;legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;theme=dark&amp;legend=top-left">
+    <img src="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;legend=top-left" alt="GitHub でこのプロジェクトに付いたスター数の推移" width="700">
+  </picture>
+</a>

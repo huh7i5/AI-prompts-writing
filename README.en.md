@@ -15,7 +15,8 @@
   <a href="#start">Start here</a> ·
   <a href="#catalog">Choose a task</a> ·
   <a href="#lifecycle">See the writing process</a> ·
-  <a href="#showcase">See an editing example</a>
+  <a href="#showcase">See an editing example</a> ·
+  <a href="docs/examples/reading-room-paper.en.md">Read a sample paper</a>
 </p>
 
 </div>
@@ -1707,3 +1708,12 @@ After changing a task, check the same task ID in [every language version](docs/t
 The project stays text-first. It requires no code, is not tied to one model, and does not promise that a prompt alone guarantees a correct result.
 
 </details>
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=huh7i5%2FAI-prompts-writing&amp;type=date&amp;legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;theme=dark&amp;legend=top-left">
+    <img src="https://api.star-history.com/chart?repos=huh7i5/AI-prompts-writing&amp;type=date&amp;legend=top-left" alt="GitHub stars over time for this project" width="700">
+  </picture>
+</a>
