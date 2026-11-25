@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-11-25T09:07:57+00:00",
+  "total_checked": 5,
+  "verified_count": 5,
+  "invalid_or_fake_count": 0,
+  "status": "PASS",
+  "results": [
+    {
+      "identifier": "10.24432/c5w894",
+      "id_type": "doi",
+      "verification_status": "API_VERIFIED",
+      "matched_source": "openalex",
+      "title": "Bike Sharing",
+      "authors": [
+        "Hadi Fanaee‐T"
+      ],
+      "year": 2013,
+      "reading_depth": "METADATA_ONLY"
+    },
+    {
+      "identifier": "10.1007/s13748-013-0040-3",
+      "id_type": "doi",
+      "verification_status": "API_VERIFIED",
+      "matched_source": "crossref",
+      "title": "Event labeling combining ensemble detectors and background knowledge",
+      "authors": [
+        "Hadi Fanaee-T",
+        "Joao Gama"
+      ],
+      "year": 2014,
+      "reading_depth": "METADATA_ONLY"
+    },
+    {
+      "identifier": "10.1007/s11116-014-9540-7",
+      "id_type": "doi",
+      "verification_status": "API_VERIFIED",
+      "matched_source": "crossref",
+      "title": "The impact of weather conditions on bikeshare trips in Washington, DC",
+      "authors": [
+        "Kyle Gebhart",
+        "Robert B. Noland"
+      ],
+      "year": 2014,
+      "reading_depth": "METADATA_ONLY"
+    },
+    {
+      "identifier": "10.3141/2387-13",
+      "id_type": "doi",
+      "verification_status": "API_VERIFIED",
+      "matched_source": "crossref",
+      "title": "Are Bikeshare Users Different from Regular Cyclists?",
+      "authors": [
+        "Darren Buck",
+        "Ralph Buehler",
+        "Patricia Happ",
+        "Bradley Rawls",
+        "Payton Chung",
+        "Natalie Borecki"
+      ],
+      "year": 2013,
+      "reading_depth": "ABSTRACT_READ"
+    },
+    {
+      "identifier": "10.1016/j.tra.2020.02.021",
+      "id_type": "doi",
+      "verification_status": "API_VERIFIED",
+      "matched_source": "crossref",
+      "title": "Comparing the Temporal Determinants of Dockless Scooter-share and Station-based Bike-share in Washington, D.C.",
+      "authors": [
+        "Hannah Younes",
+        "Zhenpeng Zou",
+        "Jiahui Wu",
+        "Giovanni Baiocchi"
+      ],
+      "year": 2020,
+      "reading_depth": "METADATA_ONLY"
+    }
+  ]
+}

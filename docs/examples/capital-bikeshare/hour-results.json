@@ -1,0 +1,586 @@
+{
+  "input": {
+    "citation": "Fanaee-T, H. (2013). Bike Sharing [Dataset]. UCI Machine Learning Repository.",
+    "doi": "https://doi.org/10.24432/C5W894",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "archive_url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+    "archive_sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+    "uncompressed_hour_csv_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+    "day_csv_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be"
+  },
+  "coverage": {
+    "observed_date_hour_pairs": 17379,
+    "dates_checked_against_day_csv": 731,
+    "absent_date_hour_labels_in_24_slot_grid": 165,
+    "missing_labels_by_hour": [
+      5,
+      7,
+      16,
+      34,
+      34,
+      14,
+      6,
+      4,
+      4,
+      4,
+      4,
+      4,
+      3,
+      2,
+      2,
+      2,
+      1,
+      1,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "dates_without_all_six_window_labels": [
+      "2011-01-18",
+      "2011-01-26",
+      "2011-01-27",
+      "2011-08-27",
+      "2012-10-29",
+      "2012-10-30"
+    ],
+    "incomplete_24_label_dates_by_year": {
+      "2011": 60,
+      "2012": 16
+    },
+    "all_daily_rental_totals_match": true
+  },
+  "morning_hour_labels": [
+    7,
+    8,
+    9
+  ],
+  "afternoon_hour_labels": [
+    16,
+    17,
+    18
+  ],
+  "six_hour_days": {
+    "n_working_days": 495,
+    "n_nonworking_days": 230,
+    "periods": {
+      "morning": {
+        "casual": {
+          "working_mean": 58.87676767676768,
+          "nonworking_mean": 74.17826086956522,
+          "working_minus_nonworking": -15.30149319279754
+        },
+        "registered": {
+          "working_mean": 951.9757575757576,
+          "nonworking_mean": 246.76956521739132,
+          "working_minus_nonworking": 705.2061923583663
+        },
+        "cnt": {
+          "working_mean": 1010.8525252525252,
+          "nonworking_mean": 320.9478260869565,
+          "working_minus_nonworking": 689.9046991655688
+        }
+      },
+      "afternoon": {
+        "casual": {
+          "working_mean": 156.75353535353534,
+          "nonworking_mean": 325.6434782608696,
+          "working_minus_nonworking": -168.88994290733422
+        },
+        "registered": {
+          "working_mean": 1161.5474747474748,
+          "nonworking_mean": 634.4565217391304,
+          "working_minus_nonworking": 527.0909530083443
+        },
+        "cnt": {
+          "working_mean": 1318.3010101010102,
+          "nonworking_mean": 960.1,
+          "working_minus_nonworking": 358.2010101010101
+        }
+      },
+      "both_windows": {
+        "casual": {
+          "working_mean": 215.63030303030303,
+          "nonworking_mean": 399.82173913043476,
+          "working_minus_nonworking": -184.19143610013174
+        },
+        "registered": {
+          "working_mean": 2113.523232323232,
+          "nonworking_mean": 881.2260869565217,
+          "working_minus_nonworking": 1232.2971453667105
+        },
+        "cnt": {
+          "working_mean": 2329.1535353535355,
+          "nonworking_mean": 1281.0478260869565,
+          "working_minus_nonworking": 1048.1057092665787
+        }
+      },
+      "outside_windows": {
+        "casual": {
+          "working_mean": 396.76969696969695,
+          "nonworking_mean": 976.2913043478261,
+          "working_minus_nonworking": -579.5216073781291
+        },
+        "registered": {
+          "working_mean": 1899.6767676767677,
+          "nonworking_mean": 2086.808695652174,
+          "working_minus_nonworking": -187.13192797540623
+        },
+        "cnt": {
+          "working_mean": 2296.446464646465,
+          "nonworking_mean": 3063.1,
+          "working_minus_nonworking": -766.6535353535354
+        }
+      },
+      "whole_day": {
+        "casual": {
+          "working_mean": 612.4,
+          "nonworking_mean": 1376.1130434782608,
+          "working_minus_nonworking": -763.7130434782608
+        },
+        "registered": {
+          "working_mean": 4013.2,
+          "nonworking_mean": 2968.034782608696,
+          "working_minus_nonworking": 1045.1652173913044
+        },
+        "cnt": {
+          "working_mean": 4625.6,
+          "nonworking_mean": 4344.147826086956,
+          "working_minus_nonworking": 281.45217391304345
+        }
+      }
+    }
+  },
+  "full_days": {
+    "n_working_days": 443,
+    "n_nonworking_days": 212,
+    "periods": {
+      "morning": {
+        "casual": {
+          "working_mean": 62.94808126410835,
+          "nonworking_mean": 79.33962264150944,
+          "working_minus_nonworking": -16.391541377401083
+        },
+        "registered": {
+          "working_mean": 1003.9751693002257,
+          "nonworking_mean": 261.5141509433962,
+          "working_minus_nonworking": 742.4610183568295
+        },
+        "cnt": {
+          "working_mean": 1066.923250564334,
+          "nonworking_mean": 340.85377358490564,
+          "working_minus_nonworking": 726.0694769794284
+        }
+      },
+      "afternoon": {
+        "casual": {
+          "working_mean": 168.58916478555304,
+          "nonworking_mean": 342.1839622641509,
+          "working_minus_nonworking": -173.59479747859788
+        },
+        "registered": {
+          "working_mean": 1228.1918735891647,
+          "nonworking_mean": 661.3537735849056,
+          "working_minus_nonworking": 566.8381000042591
+        },
+        "cnt": {
+          "working_mean": 1396.7810383747178,
+          "nonworking_mean": 1003.5377358490566,
+          "working_minus_nonworking": 393.24330252566125
+        }
+      },
+      "both_windows": {
+        "casual": {
+          "working_mean": 231.5372460496614,
+          "nonworking_mean": 421.52358490566036,
+          "working_minus_nonworking": -189.98633885599898
+        },
+        "registered": {
+          "working_mean": 2232.1670428893904,
+          "nonworking_mean": 922.8679245283018,
+          "working_minus_nonworking": 1309.2991183610886
+        },
+        "cnt": {
+          "working_mean": 2463.704288939052,
+          "nonworking_mean": 1344.3915094339623,
+          "working_minus_nonworking": 1119.3127795050896
+        }
+      },
+      "outside_windows": {
+        "casual": {
+          "working_mean": 426.9367945823928,
+          "nonworking_mean": 1029.3207547169811,
+          "working_minus_nonworking": -602.3839601345884
+        },
+        "registered": {
+          "working_mean": 2009.453724604966,
+          "nonworking_mean": 2184.1415094339623,
+          "working_minus_nonworking": -174.68778482899612
+        },
+        "cnt": {
+          "working_mean": 2436.390519187359,
+          "nonworking_mean": 3213.4622641509436,
+          "working_minus_nonworking": -777.0717449635845
+        }
+      },
+      "whole_day": {
+        "casual": {
+          "working_mean": 658.4740406320542,
+          "nonworking_mean": 1450.8443396226414,
+          "working_minus_nonworking": -792.3702989905873
+        },
+        "registered": {
+          "working_mean": 4241.620767494357,
+          "nonworking_mean": 3107.009433962264,
+          "working_minus_nonworking": 1134.6113335320924
+        },
+        "cnt": {
+          "working_mean": 4900.0948081264105,
+          "nonworking_mean": 4557.853773584906,
+          "working_minus_nonworking": 342.2410345415052
+        }
+      }
+    }
+  },
+  "full_day_hourly_means": [
+    {
+      "day_type": "working",
+      "hour": 0,
+      "casual": 7.729119638826185,
+      "registered": 31.78781038374718,
+      "cnt": 39.51693002257336
+    },
+    {
+      "day_type": "working",
+      "hour": 1,
+      "casual": 4.056433408577878,
+      "registered": 13.63431151241535,
+      "cnt": 17.69074492099323
+    },
+    {
+      "day_type": "working",
+      "hour": 2,
+      "casual": 2.2799097065462752,
+      "registered": 6.887133182844244,
+      "cnt": 9.167042889390519
+    },
+    {
+      "day_type": "working",
+      "hour": 3,
+      "casual": 0.9503386004514672,
+      "registered": 4.167042889390519,
+      "cnt": 5.1173814898419865
+    },
+    {
+      "day_type": "working",
+      "hour": 4,
+      "casual": 0.7968397291196389,
+      "registered": 4.81038374717833,
+      "cnt": 5.6072234762979685
+    },
+    {
+      "day_type": "working",
+      "hour": 5,
+      "casual": 1.3860045146726863,
+      "registered": 25.232505643340858,
+      "cnt": 26.618510158013542
+    },
+    {
+      "day_type": "working",
+      "hour": 6,
+      "casual": 4.697516930022573,
+      "registered": 104.65462753950338,
+      "cnt": 109.35214446952595
+    },
+    {
+      "day_type": "working",
+      "hour": 7,
+      "casual": 13.10609480812641,
+      "registered": 296.75169300225735,
+      "cnt": 309.85778781038374
+    },
+    {
+      "day_type": "working",
+      "hour": 8,
+      "casual": 23.785553047404065,
+      "registered": 480.26185101580137,
+      "cnt": 504.0474040632054
+    },
+    {
+      "day_type": "working",
+      "hour": 9,
+      "casual": 26.056433408577877,
+      "registered": 226.96162528216703,
+      "cnt": 253.0180586907449
+    },
+    {
+      "day_type": "working",
+      "hour": 10,
+      "casual": 33.39277652370203,
+      "registered": 109.38374717832957,
+      "cnt": 142.7765237020316
+    },
+    {
+      "day_type": "working",
+      "hour": 11,
+      "casual": 40.34988713318285,
+      "registered": 127.2392776523702,
+      "cnt": 167.58916478555304
+    },
+    {
+      "day_type": "working",
+      "hour": 12,
+      "casual": 44.433408577878104,
+      "registered": 168.7471783295711,
+      "cnt": 213.1805869074492
+    },
+    {
+      "day_type": "working",
+      "hour": 13,
+      "casual": 45.91422121896163,
+      "registered": 165.058690744921,
+      "cnt": 210.9729119638826
+    },
+    {
+      "day_type": "working",
+      "hour": 14,
+      "casual": 49.46726862302483,
+      "registered": 145.91422121896161,
+      "cnt": 195.38148984198645
+    },
+    {
+      "day_type": "working",
+      "hour": 15,
+      "casual": 49.8058690744921,
+      "registered": 164.24379232505643,
+      "cnt": 214.04966139954854
+    },
+    {
+      "day_type": "working",
+      "hour": 16,
+      "casual": 52.27313769751693,
+      "registered": 260.73814898419863,
+      "cnt": 313.0112866817156
+    },
+    {
+      "day_type": "working",
+      "hour": 17,
+      "casual": 61.51015801354402,
+      "registered": 498.1489841986456,
+      "cnt": 559.6591422121896
+    },
+    {
+      "day_type": "working",
+      "hour": 18,
+      "casual": 54.8058690744921,
+      "registered": 469.30474040632055,
+      "cnt": 524.1106094808126
+    },
+    {
+      "day_type": "working",
+      "hour": 19,
+      "casual": 44.668171557562076,
+      "registered": 326.4762979683973,
+      "cnt": 371.1444695259594
+    },
+    {
+      "day_type": "working",
+      "hour": 20,
+      "casual": 34.191873589164786,
+      "registered": 232.28893905191873,
+      "cnt": 266.4808126410835
+    },
+    {
+      "day_type": "working",
+      "hour": 21,
+      "casual": 26.92099322799097,
+      "registered": 172.0270880361174,
+      "cnt": 198.94808126410834
+    },
+    {
+      "day_type": "working",
+      "hour": 22,
+      "casual": 21.27313769751693,
+      "registered": 126.42212189616252,
+      "cnt": 147.69525959367945
+    },
+    {
+      "day_type": "working",
+      "hour": 23,
+      "casual": 14.623024830699775,
+      "registered": 80.47855530474041,
+      "cnt": 95.10158013544019
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 0,
+      "casual": 17.56132075471698,
+      "registered": 77.89150943396227,
+      "cnt": 95.45283018867924
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 1,
+      "casual": 13.20754716981132,
+      "registered": 60.132075471698116,
+      "cnt": 73.33962264150944
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 2,
+      "casual": 10.99056603773585,
+      "registered": 44.79716981132076,
+      "cnt": 55.7877358490566
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 3,
+      "casual": 6.64622641509434,
+      "registered": 19.86320754716981,
+      "cnt": 26.50943396226415
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 4,
+      "casual": 2.349056603773585,
+      "registered": 6.169811320754717,
+      "cnt": 8.518867924528301
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 5,
+      "casual": 1.778301886792453,
+      "registered": 7.10377358490566,
+      "cnt": 8.882075471698114
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 6,
+      "casual": 4.066037735849057,
+      "registered": 15.768867924528301,
+      "cnt": 19.83490566037736
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 7,
+      "casual": 9.29245283018868,
+      "registered": 37.08490566037736,
+      "cnt": 46.37735849056604
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 8,
+      "casual": 21.900943396226417,
+      "registered": 90.43396226415095,
+      "cnt": 112.33490566037736
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 9,
+      "casual": 48.14622641509434,
+      "registered": 133.99528301886792,
+      "cnt": 182.14150943396226
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 10,
+      "casual": 84.27830188679245,
+      "registered": 186.0943396226415,
+      "cnt": 270.37264150943395
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 11,
+      "casual": 112.99056603773585,
+      "registered": 219.39150943396226,
+      "cnt": 332.3820754716981
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 12,
+      "casual": 133.52358490566039,
+      "registered": 251.54245283018867,
+      "cnt": 385.0660377358491
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 13,
+      "casual": 143.79245283018867,
+      "registered": 247.03773584905662,
+      "cnt": 390.8301886792453
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 14,
+      "casual": 146.66509433962264,
+      "registered": 234.98584905660377,
+      "cnt": 381.6509433962264
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 15,
+      "casual": 143.75471698113208,
+      "registered": 231.51415094339623,
+      "cnt": 375.2688679245283
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 16,
+      "casual": 135.31603773584905,
+      "registered": 234.21226415094338,
+      "cnt": 369.52830188679246
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 17,
+      "casual": 118.11792452830188,
+      "registered": 221.47169811320754,
+      "cnt": 339.58962264150944
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 18,
+      "casual": 88.75,
+      "registered": 205.66981132075472,
+      "cnt": 294.4198113207547
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 19,
+      "casual": 69.46698113207547,
+      "registered": 173.86320754716982,
+      "cnt": 243.33018867924528
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 20,
+      "casual": 49.62264150943396,
+      "registered": 134.22641509433961,
+      "cnt": 183.8490566037736
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 21,
+      "casual": 38.283018867924525,
+      "registered": 110.95754716981132,
+      "cnt": 149.24056603773585
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 22,
+      "casual": 29.95754716981132,
+      "registered": 92.63207547169812,
+      "cnt": 122.58962264150944
+    },
+    {
+      "day_type": "nonworking",
+      "hour": 23,
+      "casual": 20.38679245283019,
+      "registered": 70.16981132075472,
+      "cnt": 90.55660377358491
+    }
+  ]
+}

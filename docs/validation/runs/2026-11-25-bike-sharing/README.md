@@ -1,6 +1,8 @@
 # 工作日，谁在租共享单车？
 
-[读研究样稿](workspace/04_drafts/manuscript.md) · [看给 Agent 的任务](input.md) · [查看审查记录](workspace/05_audit/04-audit.md)
+想读完整文章，可以直接看[共享单车的工作日差异集中在哪些时段？](../../../examples/capital-bikeshare/paper.md)。下方保存第一次试跑的短稿及其原始检查记录。
+
+[读首次试跑的短稿](workspace/04_drafts/manuscript.md) · [看给 Agent 的任务](input.md) · [查看审查记录](workspace/05_audit/04-audit.md)
 
 只看总量，华盛顿 Capital Bikeshare 在工作日平均每天多租出 254.7 次。拆开后能看到两种相反的变化。与非工作日相比，注册用户日均多租 1019.2 次，临时用户日均少租 764.6 次。2011 年和 2012 年分别计算，方向都一样。三个差值分别从未取整的均值算出，显示到一位小数。[原始日表](workspace/02_evidence/day.csv) · [分年结果和分母](workspace/02_evidence/results.json)
 

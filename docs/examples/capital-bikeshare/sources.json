@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "checked_on": "2026-11-25",
+  "is_systematic_review": false,
+  "capability_state": "ONLINE_API_VERIFIED",
+  "search_protocol": {
+    "primary_query": "Capital Bikeshare bike sharing casual members hourly Washington temporal determinants",
+    "counter_or_alt_query": "Washington Capital Bikeshare members casual purpose survey weather",
+    "databases_queried": [
+      "Crossref",
+      "OpenAlex"
+    ],
+    "year_from": 2010,
+    "keyword_unique_returned": 8,
+    "source_diagnostics": {
+      "crossref:COUNTER_OR_ALT_QUERY": "NET_ERR:URLError"
+    },
+    "supplementary_lookup": [
+      "依研究地点、时段、调查目的和题名补找出版者摘要、作者机构存档与运营方原始报告。"
+    ],
+    "criteria": "直接使用华盛顿共享单车记录或用户调查，且能交代时间、日历、天气或出行目的；另收原始数据和配套论文以确认出处。"
+  },
+  "total_verified_entries": 7,
+  "entries": [
+    {
+      "ref_id": "fanaee2013bike",
+      "title": "Bike Sharing",
+      "authors": [
+        "Hadi Fanaee‐T"
+      ],
+      "year": 2013,
+      "venue": "UCI Machine Learning Repository",
+      "doi": "10.24432/C5W894",
+      "url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+      "verification_status": "API_VERIFIED",
+      "sources_matched": [
+        "openalex"
+      ],
+      "reading_depth": "FULLTEXT_READ",
+      "read_locator": "UCI Variables Table, Additional Variable Information, Dataset Files, License",
+      "supported_claims_notes": "数据包括日表和小时表。workingday 排除周末与节假日，hr 为 0 至 23，cnt 包括 casual 和 registered 两项租借次数。",
+      "limits": "目录首页的实例数与 hour.csv 行数存在差异。涉及覆盖范围、缺失时段或租借笔数时须直接从文件计算。"
+    },
+    {
+      "ref_id": "fanaee2014event",
+      "title": "Event labeling combining ensemble detectors and background knowledge",
+      "authors": [
+        "Hadi Fanaee-T",
+        "Joao Gama"
+      ],
+      "year": 2014,
+      "venue": "Progress in Artificial Intelligence 2, 113–127",
+      "doi": "10.1007/s13748-013-0040-3",
+      "url": "https://link.springer.com/article/10.1007/s13748-013-0040-3",
+      "verification_status": "API_VERIFIED",
+      "sources_matched": [
+        "crossref"
+      ],
+      "reading_depth": "ABSTRACT_READ",
+      "read_locator": "Springer Abstract；UCI Introductory Paper 栏",
+      "supported_claims_notes": "UCI 所列的配套研究用共享单车日志、多个事件检测器以及背景知识进行事件标注。",
+      "limits": "该文用于说明数据来源。摘要没有给出本研究的用户类别差值。",
+      "published_online": "2013-11-26"
+    },
+    {
+      "ref_id": "gebhart2014weather",
+      "title": "The impact of weather conditions on bikeshare trips in Washington, DC",
+      "authors": [
+        "Kyle Gebhart",
+        "Robert B. Noland"
+      ],
+      "year": 2014,
+      "venue": "Transportation 41, 1205–1225",
+      "doi": "10.1007/s11116-014-9540-7",
+      "url": "https://link.springer.com/article/10.1007/s11116-014-9540-7",
+      "verification_status": "API_VERIFIED",
+      "sources_matched": [
+        "crossref"
+      ],
+      "reading_depth": "ABSTRACT_READ",
+      "read_locator": "Springer Abstract",
+      "supported_claims_notes": "研究将华盛顿逐小时的天气记录与用车记录相连，报告低温、降雨和高湿与较低的租车可能性及较短的行程时长有关。",
+      "limits": "仅据摘要判断这一关联；它不能量化本文不同日型的天气构成。"
+    },
+    {
+      "ref_id": "buck2013users",
+      "title": "Are Bikeshare Users Different from Regular Cyclists? A First Look at Short-Term Users, Annual Members, and Area Cyclists in the Washington, D.C., Region",
+      "authors": [
+        "Darren Buck",
+        "Ralph Buehler",
+        "Patricia Happ",
+        "Bradley Rawls",
+        "Payton Chung",
+        "Natalie Borecki"
+      ],
+      "year": 2013,
+      "venue": "Transportation Research Record 2387(1)",
+      "doi": "10.3141/2387-13",
+      "url": "https://journals.sagepub.com/doi/10.3141/2387-13",
+      "verification_status": "API_VERIFIED",
+      "sources_matched": [
+        "crossref"
+      ],
+      "reading_depth": "ABSTRACT_READ",
+      "read_locator": "Sage / Transportation Research Record, Abstract",
+      "supported_claims_notes": "对短期（一日）用户现场调查和年度会员在线调查的比较发现，受访短期用户较常为休闲而骑行。",
+      "limits": "两组的抽样途径不同，且一日用户与年度会员只是本文两类用户的部分人群。"
+    },
+    {
+      "ref_id": "lda2012survey",
+      "title": "Capital Bikeshare 2011 Member Survey: Executive Summary",
+      "authors": [
+        "LDA Consulting"
+      ],
+      "year": 2012,
+      "venue": "Capital Bikeshare, June 14, 2012",
+      "url": "https://d21xlh2maitm24.cloudfront.net/wdc/Capital_Bikeshare_2011_Survey_Executive_Summary.pdf?mtime=20161206135934",
+      "verification_status": "PRIMARY_SOURCE_VERIFIED",
+      "sources_matched": [
+        "Capital Bikeshare, System Data → Member Surveys → 2011",
+        "报告封面、原文"
+      ],
+      "reading_depth": "FULLTEXT_READ",
+      "read_locator": "PDF 第 2 页 Overview 和第 4 页 More than half…，封面日期 2012-06-14。",
+      "supported_claims_notes": "在线调查收到 5,464 份会员答复，报告回应率为 31%。受访者最近一次租骑中，56% 为非工作目的。",
+      "limits": "这是回应者就最近一次行程给出的比例。样本未覆盖全部骑行人群，不能还原注册用户总租次中非工作行程的占比。"
+    },
+    {
+      "ref_id": "younes2020temporal",
+      "title": "Comparing the Temporal Determinants of Dockless Scooter-share and Station-based Bike-share in Washington, D.C.",
+      "authors": [
+        "Hannah Younes",
+        "Zhenpeng Zou",
+        "Jiahui Wu",
+        "Giovanni Baiocchi"
+      ],
+      "year": 2020,
+      "venue": "Transportation Research Part A: Policy and Practice 134, 308–320",
+      "doi": "10.1016/j.tra.2020.02.021",
+      "url": "https://geog.umd.edu/sites/geog.umd.edu/files/pubs/1-s2.0-S0965856419311553-main_0.pdf",
+      "verification_status": "API_VERIFIED",
+      "sources_matched": [
+        "crossref"
+      ],
+      "reading_depth": "FULLTEXT_READ",
+      "read_locator": "作者机构开放全文，p. 311 正文和表 1，p. 312 图 2，pp. 316–317 讨论。",
+      "supported_claims_notes": "2018 年 12 月至 2019 年 6 月，研究观察到华盛顿有桩共享单车会员租骑集中在高峰时段，非会员周末用车多于工作日。",
+      "limits": "研究选入起点或终点位于华盛顿特区界内的行程。年份和地理口径都与 UCI 数据不同。"
+    },
+    {
+      "ref_id": "cabiSystemData",
+      "title": "System Data",
+      "authors": [
+        "Capital Bikeshare"
+      ],
+      "year": null,
+      "venue": "Capital Bikeshare",
+      "url": "https://capitalbikeshare.com/system-data",
+      "verification_status": "PRIMARY_SOURCE_VERIFIED",
+      "sources_matched": [
+        "Capital Bikeshare"
+      ],
+      "reading_depth": "FULLTEXT_READ",
+      "read_locator": "Trip History Data → Member Type 与 2011 年秋票种变更说明；Member Surveys → 2011",
+      "supported_claims_notes": "运营方按票种登记会员类别，包括不同期限的会员和短期票，并记录了 2011 年秋的一次票种调整。",
+      "limits": "运营数据的票种分类不提供出行目的。UCI 表内个人使用的具体票种不可从聚合计数还原。"
+    }
+  ]
+}

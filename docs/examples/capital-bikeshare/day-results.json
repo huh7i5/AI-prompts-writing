@@ -1,0 +1,504 @@
+{
+  "daily_csv_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+  "contrast_units": "rentals/day; working day minus nonworking day",
+  "stratum_weight": "number of retained calendar days in stratum / all retained calendar days",
+  "crude": {
+    "2011": {
+      "work": {
+        "n_days": 250,
+        "sums": {
+          "registered": 737910,
+          "casual": 118354,
+          "cnt": 856264
+        },
+        "means": {
+          "registered": 2951.64,
+          "casual": 473.416,
+          "cnt": 3425.056
+        },
+        "registered_share_of_trips": 0.8617786103351303
+      },
+      "nonwork": {
+        "n_days": 115,
+        "sums": {
+          "registered": 257941,
+          "casual": 128898,
+          "cnt": 386839
+        },
+        "means": {
+          "registered": 2242.965217391304,
+          "casual": 1120.8521739130435,
+          "cnt": 3363.817391304348
+        },
+        "registered_share_of_trips": 0.6667916109802786
+      },
+      "work_minus_nonwork": {
+        "registered": 708.6747826086956,
+        "casual": -647.4361739130435,
+        "cnt": 61.238608695652175
+      }
+    },
+    "2012": {
+      "work": {
+        "n_days": 250,
+        "sums": {
+          "registered": 1251215,
+          "casual": 184931,
+          "cnt": 1436146
+        },
+        "means": {
+          "registered": 5004.86,
+          "casual": 739.724,
+          "cnt": 5744.584
+        },
+        "registered_share_of_trips": 0.8712310586806634
+      },
+      "nonwork": {
+        "n_days": 116,
+        "sums": {
+          "registered": 425596,
+          "casual": 187834,
+          "cnt": 613430
+        },
+        "means": {
+          "registered": 3668.9310344827586,
+          "casual": 1619.2586206896551,
+          "cnt": 5288.189655172414
+        },
+        "registered_share_of_trips": 0.693797173271604
+      },
+      "work_minus_nonwork": {
+        "registered": 1335.9289655172413,
+        "casual": -879.5346206896552,
+        "cnt": 456.3943448275862
+      }
+    },
+    "pooled": {
+      "work": {
+        "n_days": 500,
+        "sums": {
+          "registered": 1989125,
+          "casual": 303285,
+          "cnt": 2292410
+        },
+        "means": {
+          "registered": 3978.25,
+          "casual": 606.57,
+          "cnt": 4584.82
+        },
+        "registered_share_of_trips": 0.8677003677352655
+      },
+      "nonwork": {
+        "n_days": 231,
+        "sums": {
+          "registered": 683537,
+          "casual": 316732,
+          "cnt": 1000269
+        },
+        "means": {
+          "registered": 2959.034632034632,
+          "casual": 1371.1341991341992,
+          "cnt": 4330.168831168831
+        },
+        "registered_share_of_trips": 0.6833531779951193
+      },
+      "work_minus_nonwork": {
+        "registered": 1019.2153679653679,
+        "casual": -764.5641991341992,
+        "cnt": 254.65116883116883
+      }
+    }
+  },
+  "month_standardized": {
+    "observed_strata": 24,
+    "retained_strata": 24,
+    "retained_strata_with_a_single_day_in_either_group": 0,
+    "retained_strata_with_at_most_two_days_in_either_group": 0,
+    "days": 731,
+    "work_days": 500,
+    "nonwork_days": 231,
+    "work_minus_nonwork": {
+      "registered": 994.0527215120507,
+      "casual": -788.8755854211777,
+      "cnt": 205.17713609087286
+    },
+    "excluded_strata": []
+  },
+  "month_sign_counts": {
+    "registered": {
+      "positive": 24,
+      "negative": 0,
+      "zero": 0
+    },
+    "casual": {
+      "positive": 0,
+      "negative": 24,
+      "zero": 0
+    },
+    "cnt": {
+      "positive": 14,
+      "negative": 10,
+      "zero": 0
+    }
+  },
+  "months": [
+    {
+      "month": "2011-01",
+      "work_days": 20,
+      "nonwork_days": 11,
+      "work_minus_nonwork": {
+        "registered": 417.1636363636364,
+        "casual": -83.07727272727273,
+        "cnt": 334.0863636363636
+      }
+    },
+    {
+      "month": "2011-02",
+      "work_days": 19,
+      "nonwork_days": 9,
+      "work_minus_nonwork": {
+        "registered": 409.4093567251462,
+        "casual": -264.7134502923977,
+        "cnt": 144.69590643274853
+      }
+    },
+    {
+      "month": "2011-03",
+      "work_days": 23,
+      "nonwork_days": 8,
+      "work_minus_nonwork": {
+        "registered": 437.0,
+        "casual": -517.9130434782609,
+        "cnt": -80.91304347826087
+      }
+    },
+    {
+      "month": "2011-04",
+      "work_days": 20,
+      "nonwork_days": 10,
+      "work_minus_nonwork": {
+        "registered": 629.05,
+        "casual": -693.8,
+        "cnt": -64.75
+      }
+    },
+    {
+      "month": "2011-05",
+      "work_days": 21,
+      "nonwork_days": 10,
+      "work_minus_nonwork": {
+        "registered": 841.7380952380952,
+        "casual": -938.5428571428571,
+        "cnt": -96.8047619047619
+      }
+    },
+    {
+      "month": "2011-06",
+      "work_days": 22,
+      "nonwork_days": 8,
+      "work_minus_nonwork": {
+        "registered": 675.1136363636364,
+        "casual": -977.5227272727273,
+        "cnt": -302.40909090909093
+      }
+    },
+    {
+      "month": "2011-07",
+      "work_days": 20,
+      "nonwork_days": 11,
+      "work_minus_nonwork": {
+        "registered": 721.9727272727273,
+        "casual": -1111.9727272727273,
+        "cnt": -390.0
+      }
+    },
+    {
+      "month": "2011-08",
+      "work_days": 23,
+      "nonwork_days": 8,
+      "work_minus_nonwork": {
+        "registered": 1303.179347826087,
+        "casual": -509.125,
+        "cnt": 794.054347826087
+      }
+    },
+    {
+      "month": "2011-09",
+      "work_days": 21,
+      "nonwork_days": 9,
+      "work_minus_nonwork": {
+        "registered": 485.6984126984127,
+        "casual": -1145.7936507936508,
+        "cnt": -660.0952380952381
+      }
+    },
+    {
+      "month": "2011-10",
+      "work_days": 20,
+      "nonwork_days": 11,
+      "work_minus_nonwork": {
+        "registered": 780.1772727272727,
+        "casual": -845.35,
+        "cnt": -65.17272727272727
+      }
+    },
+    {
+      "month": "2011-11",
+      "work_days": 20,
+      "nonwork_days": 10,
+      "work_minus_nonwork": {
+        "registered": 673.45,
+        "casual": -596.7,
+        "cnt": 76.75
+      }
+    },
+    {
+      "month": "2011-12",
+      "work_days": 21,
+      "nonwork_days": 10,
+      "work_minus_nonwork": {
+        "registered": 877.0857142857143,
+        "casual": -227.60476190476192,
+        "cnt": 649.4809523809524
+      }
+    },
+    {
+      "month": "2012-01",
+      "work_days": 20,
+      "nonwork_days": 11,
+      "work_minus_nonwork": {
+        "registered": 893.0772727272728,
+        "casual": -260.1818181818182,
+        "cnt": 632.8954545454545
+      }
+    },
+    {
+      "month": "2012-02",
+      "work_days": 20,
+      "nonwork_days": 9,
+      "work_minus_nonwork": {
+        "registered": 1276.2444444444445,
+        "casual": -265.4277777777778,
+        "cnt": 1010.8166666666667
+      }
+    },
+    {
+      "month": "2012-03",
+      "work_days": 22,
+      "nonwork_days": 9,
+      "work_minus_nonwork": {
+        "registered": 1308.6565656565656,
+        "casual": -836.1515151515151,
+        "cnt": 472.5050505050505
+      }
+    },
+    {
+      "month": "2012-04",
+      "work_days": 20,
+      "nonwork_days": 10,
+      "work_minus_nonwork": {
+        "registered": 1309.5,
+        "casual": -1178.9,
+        "cnt": 130.6
+      }
+    },
+    {
+      "month": "2012-05",
+      "work_days": 22,
+      "nonwork_days": 9,
+      "work_minus_nonwork": {
+        "registered": 1076.171717171717,
+        "casual": -1783.530303030303,
+        "cnt": -707.3585858585859
+      }
+    },
+    {
+      "month": "2012-06",
+      "work_days": 21,
+      "nonwork_days": 9,
+      "work_minus_nonwork": {
+        "registered": 915.6825396825396,
+        "casual": -1506.7936507936508,
+        "cnt": -591.1111111111111
+      }
+    },
+    {
+      "month": "2012-07",
+      "work_days": 21,
+      "nonwork_days": 10,
+      "work_minus_nonwork": {
+        "registered": 1584.4619047619049,
+        "casual": -834.1619047619048,
+        "cnt": 750.3
+      }
+    },
+    {
+      "month": "2012-08",
+      "work_days": 23,
+      "nonwork_days": 8,
+      "work_minus_nonwork": {
+        "registered": 1884.0923913043478,
+        "casual": -788.5434782608696,
+        "cnt": 1095.5489130434783
+      }
+    },
+    {
+      "month": "2012-09",
+      "work_days": 19,
+      "nonwork_days": 11,
+      "work_minus_nonwork": {
+        "registered": 1444.6650717703349,
+        "casual": -1421.2057416267942,
+        "cnt": 23.45933014354067
+      }
+    },
+    {
+      "month": "2012-10",
+      "work_days": 22,
+      "nonwork_days": 9,
+      "work_minus_nonwork": {
+        "registered": 1154.1818181818182,
+        "casual": -1185.1767676767677,
+        "cnt": -30.994949494949495
+      }
+    },
+    {
+      "month": "2012-11",
+      "work_days": 20,
+      "nonwork_days": 10,
+      "work_minus_nonwork": {
+        "registered": 1244.55,
+        "casual": -710.25,
+        "cnt": 534.3
+      }
+    },
+    {
+      "month": "2012-12",
+      "work_days": 20,
+      "nonwork_days": 11,
+      "work_minus_nonwork": {
+        "registered": 1458.0318181818182,
+        "casual": -228.01363636363635,
+        "cnt": 1230.0181818181818
+      }
+    }
+  ],
+  "month_standardized_excluding_holidays": {
+    "observed_strata": 24,
+    "retained_strata": 24,
+    "retained_strata_with_a_single_day_in_either_group": 0,
+    "retained_strata_with_at_most_two_days_in_either_group": 0,
+    "days": 710,
+    "work_days": 500,
+    "nonwork_days": 210,
+    "work_minus_nonwork": {
+      "registered": 975.2752141999304,
+      "casual": -808.4360986919831,
+      "cnt": 166.83911550794724
+    },
+    "excluded_strata": []
+  },
+  "month_and_weather_standardized": {
+    "observed_strata": 60,
+    "retained_strata": 48,
+    "retained_strata_with_a_single_day_in_either_group": 4,
+    "retained_strata_with_at_most_two_days_in_either_group": 12,
+    "days": 708,
+    "work_days": 481,
+    "nonwork_days": 227,
+    "work_minus_nonwork": {
+      "registered": 1039.3488318124755,
+      "casual": -756.1113695838218,
+      "cnt": 283.2374622286536
+    },
+    "excluded_strata": [
+      {
+        "month": "2011-01",
+        "weathersit": 3,
+        "work_days": 1,
+        "nonwork_days": 0
+      },
+      {
+        "month": "2011-03",
+        "weathersit": 3,
+        "work_days": 2,
+        "nonwork_days": 0
+      },
+      {
+        "month": "2011-04",
+        "weathersit": 3,
+        "work_days": 0,
+        "nonwork_days": 1
+      },
+      {
+        "month": "2011-09",
+        "weathersit": 3,
+        "work_days": 3,
+        "nonwork_days": 0
+      },
+      {
+        "month": "2011-11",
+        "weathersit": 3,
+        "work_days": 3,
+        "nonwork_days": 0
+      },
+      {
+        "month": "2011-12",
+        "weathersit": 3,
+        "work_days": 2,
+        "nonwork_days": 0
+      },
+      {
+        "month": "2012-02",
+        "weathersit": 3,
+        "work_days": 0,
+        "nonwork_days": 1
+      },
+      {
+        "month": "2012-04",
+        "weathersit": 3,
+        "work_days": 0,
+        "nonwork_days": 1
+      },
+      {
+        "month": "2012-06",
+        "weathersit": 2,
+        "work_days": 5,
+        "nonwork_days": 0
+      },
+      {
+        "month": "2012-07",
+        "weathersit": 3,
+        "work_days": 0,
+        "nonwork_days": 1
+      },
+      {
+        "month": "2012-10",
+        "weathersit": 3,
+        "work_days": 2,
+        "nonwork_days": 0
+      },
+      {
+        "month": "2012-12",
+        "weathersit": 3,
+        "work_days": 1,
+        "nonwork_days": 0
+      }
+    ]
+  },
+  "month_standardized_on_weather_common_support": {
+    "observed_strata": 24,
+    "retained_strata": 24,
+    "retained_strata_with_a_single_day_in_either_group": 0,
+    "retained_strata_with_at_most_two_days_in_either_group": 0,
+    "days": 708,
+    "work_days": 481,
+    "nonwork_days": 227,
+    "work_minus_nonwork": {
+      "registered": 1031.7124462459135,
+      "casual": -793.7077799482428,
+      "cnt": 238.00466629767075
+    },
+    "excluded_strata": []
+  }
+}

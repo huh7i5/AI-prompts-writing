@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-25T09:08:07Z",
+  "research_paradigm": "QUANTITATIVE",
+  "study_time_state": "POST_RESULTS",
+  "one_sentence_storyline": "24 个月内，两个用户群的工作日租借差额始终方向相反；按时段分解，注册用户在早晚六小时的增量超过其全天的净增量。",
+  "evidence_items": [
+    {
+      "evidence_id": "D01",
+      "source_location": "day-results.json: crude, months, month_sign_counts, month_standardized",
+      "recomputation_status": "RECOMPUTED_LOCAL",
+      "known_limitations_or_deviations": "每一天一次观测，只涵盖 2011—2012 年。"
+    },
+    {
+      "evidence_id": "D02",
+      "source_location": "day-results.json: month_standardized_excluding_holidays, month_standardized_on_weather_common_support, month_and_weather_standardized",
+      "recomputation_status": "RECOMPUTED_LOCAL",
+      "known_limitations_or_deviations": "天气粗分类只在同年月两类日期都有相应天气记录时可比。"
+    },
+    {
+      "evidence_id": "H01",
+      "source_location": "hour-results.json: coverage, six_hour_days.periods, full_days.periods",
+      "recomputation_status": "RECOMPUTED_LOCAL",
+      "known_limitations_or_deviations": "窗口完整日与全天完整日的分母不同。"
+    },
+    {
+      "evidence_id": "H02",
+      "source_location": "hour-results.json: full_day_hourly_means (see plot_hour.py)",
+      "recomputation_status": "RECOMPUTED_LOCAL",
+      "known_limitations_or_deviations": "图上的每组每小时使用固定日期；时刻不能识别出行目的。"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C01",
+      "claim_text": "工作日合计多 254.7 次/日，临时用户少 764.6，注册用户多 1019.2。注册租次占比相差 18.43 个百分点。",
+      "support_level": "SUPPORTED",
+      "bound_evidence_ids": [
+        "D01"
+      ],
+      "scope_and_limitations": "系统日均租次与组内租次占比的分母不同。",
+      "has_adverse_or_counterexample": false,
+      "target_sections": [
+        "摘要",
+        "结果",
+        "讨论"
+      ]
+    },
+    {
+      "claim_id": "C02",
+      "claim_text": "24 个年月均见注册正差和临时负差；总量 14 个月正差、10 个月负差。按共同月份权重合计差为 +205.2 次/日。",
+      "support_level": "SUPPORTED",
+      "bound_evidence_ids": [
+        "D01"
+      ],
+      "scope_and_limitations": "两年的月份，不视作独立重复试验。",
+      "has_adverse_or_counterexample": true,
+      "target_sections": [
+        "摘要",
+        "结果",
+        "讨论",
+        "结论"
+      ]
+    },
+    {
+      "claim_id": "C03",
+      "claim_text": "剔除标记节假日及限制在天气有可比记录的日期时，两类用户差额仍方向相反。",
+      "support_level": "SUPPORTED",
+      "bound_evidence_ids": [
+        "D02"
+      ],
+      "scope_and_limitations": "后者只在 708 天内比较；未作因果识别。",
+      "has_adverse_or_counterexample": false,
+      "target_sections": [
+        "方法",
+        "结果",
+        "讨论"
+      ]
+    },
+    {
+      "claim_id": "C04",
+      "claim_text": "725 个窗口完整日中，注册租次在早晚六小时日均多 1232.3 次，余下时段少 187.1 次；655 个全天完整日结论方向一致。",
+      "support_level": "SUPPORTED",
+      "bound_evidence_ids": [
+        "H01",
+        "H02"
+      ],
+      "scope_and_limitations": "基于档案中实际记录的租次；时段外差值反向，观察范围受小时完整性约束。",
+      "has_adverse_or_counterexample": true,
+      "target_sections": [
+        "摘要",
+        "结果",
+        "讨论",
+        "结论"
+      ]
+    }
+  ]
+}
