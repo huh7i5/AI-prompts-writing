@@ -18,7 +18,7 @@ The translations started from the task text in commit [`329f86e`](https://github
 
 The new translations were prepared and reviewed with model assistance. They have not been reviewed by native-speaking contributors or domain experts, and no behavioral trials have been run in Spanish, French, German, Portuguese, Japanese, Korean, or Russian. Five English tasks were tried on November 10, followed by task 6.5 on November 23. Each record gives the inputs and results for that language. [First English trials](validation/runs/2026-11-10-en/README.md) · [Task 6.5 trials](validation/runs/2026-11-23/README.md)
 
-The example image remains an English translation of a recorded Chinese run. The standalone Skill remains the shared [Chinese instruction file](../.agents/skills/ai-prompt-writing/SKILL.md); these README translations do not add separately tested language-specific Skills. Supporting source notes and evaluation records keep the language named in their links.
+The example image remains an English translation of a recorded Chinese run. Under `../.agents/skills/`, the Skills suite (`ai-prompt-writing` router plus four specialized station skills) uses shared Chinese instruction files and Python standard-library check scripts; the Chinese and English reference READMEs document the multi-station suite under `#skill`, while the other seven language READMEs retain the standalone Skill installation note until their next display sync. Supporting source notes and evaluation records keep the language named in their links.
 
 ## Review in this update
 

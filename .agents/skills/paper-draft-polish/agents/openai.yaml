@@ -1,0 +1,6 @@
+interface:
+  display_name: "分章起草与精修润色 · Draft & Polish (Station 03)"
+  short_description: "基于真实材料起草各章节正文，重组结构、去除AI套话与防御性废话、保留原数字与证据强度"
+  default_prompt: "请使用 $paper-draft-polish 帮我起草或修改这段学术论文文字，去除空话套话与多余自谦，准确保留原有数值、限定条件与证据边界。"
+policy:
+  allow_implicit_invocation: true

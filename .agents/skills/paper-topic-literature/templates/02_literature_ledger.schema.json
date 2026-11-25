@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Station01LiteratureLedger",
+  "description": "Verified literature & source grounding ledger produced by paper-topic-literature (Station 01). Serves as the sole citation whitelist for downstream drafting and auditing stations.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_at",
+    "capability_state",
+    "search_protocol",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "description": "UTC ISO-8601 timestamp"
+    },
+    "capability_state": {
+      "type": "string",
+      "enum": [
+        "ONLINE_API_VERIFIED",
+        "OFFLINE_FALLBACK",
+        "USER_MATERIAL_ONLY"
+      ]
+    },
+    "is_systematic_review": {
+      "type": "boolean",
+      "default": false,
+      "description": "Must remain false unless full multi-database search logs, inclusion/exclusion counts, and screening records are present."
+    },
+    "search_protocol": {
+      "type": "object",
+      "required": ["primary_query"],
+      "properties": {
+        "primary_query": { "type": "string" },
+        "counter_or_alt_query": { "type": "string" },
+        "databases_queried": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "year_from": { "type": ["integer", "null"] },
+        "year_to": { "type": ["integer", "null"] },
+        "inclusion_criteria": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ref_id",
+          "title",
+          "verification_status",
+          "reading_depth"
+        ],
+        "properties": {
+          "ref_id": {
+            "type": "string",
+            "description": "Unique citation key used in manuscript drafts, e.g. smith2024generative or Material_A"
+          },
+          "title": { "type": "string" },
+          "authors": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "year": { "type": ["integer", "null"] },
+          "venue": { "type": ["string", "null"] },
+          "doi": { "type": ["string", "null"] },
+          "arxiv_id": { "type": ["string", "null"] },
+          "openalex_id": { "type": ["string", "null"] },
+          "url": { "type": ["string", "null"] },
+          "cited_by_count": { "type": ["integer", "null"] },
+          "sources_matched": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "polarity_tag": {
+            "type": "string",
+            "enum": [
+              "PRIMARY_QUERY",
+              "COUNTER_OR_ALT_QUERY",
+              "USER_PROVIDED"
+            ]
+          },
+          "verification_status": {
+            "type": "string",
+            "enum": [
+              "API_VERIFIED",
+              "USER_UNVERIFIED",
+              "NOT_FOUND",
+              "REJECTED_FAKE_PREFIX"
+            ]
+          },
+          "reading_depth": {
+            "type": "string",
+            "enum": [
+              "METADATA_ONLY",
+              "ABSTRACT_READ",
+              "FULLTEXT_READ",
+              "USER_SNIPPET_ONLY"
+            ]
+          },
+          "abstract_text": { "type": ["string", "null"] },
+          "supported_claims_notes": {
+            "type": "string",
+            "description": "Exact findings & conditions actually supported by the read level; never extrapolate beyond reading_depth."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "方案大纲与证据账本 · Design & Evidence (Station 02)"
+  short_description: "制定可行研究方案与论文大纲、整理研究记录、审查分析/推导反例、规范图表图注并生成核心主张账本"
+  default_prompt: "请使用 $paper-design-evidence 帮我根据当前材料梳理研究方案、论文大纲或检查现有分析与推导能否支撑结论，标出反例、缺口与适用范围。"
+policy:
+  allow_implicit_invocation: true

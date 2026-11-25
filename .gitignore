@@ -1,0 +1,14 @@
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Local test & pipeline scratch workspaces
+paper_workspace/
+.scratch/
+
+# OS & editor metadata
+.DS_Store
+Thumbs.db
+*.swp

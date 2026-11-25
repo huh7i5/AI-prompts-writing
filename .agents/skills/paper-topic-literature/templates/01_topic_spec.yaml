@@ -1,0 +1,35 @@
+# Station 01 -> Station 02 Handoff Artifact: Topic & Scope Specification
+# 由 paper-topic-literature (任务 1.1 / 1.2) 生成，供下游文献检索 (2.1) 与研究方案/大纲工位 (3.1-3.5) 读取
+
+schema_version: "1.0"
+station: "01_topic_scoping"
+status: "SCOPED_PENDING_LITERATURE" # CANDIDATE_OPTIONS | SCOPED_PENDING_LITERATURE | LITERATURE_GROUNDED
+
+project_meta:
+  discipline: ""                    # 例如：历史学 / 计算机科学 / 教育学 / 临床医学
+  paper_type: ""                    # 例如：本科课程论文 (5000字) / 硕士学位论文 / 期刊实证论文 / 聚焦综述
+  research_paradigm: ""             # QUANTITATIVE | QUALITATIVE | ARCHIVAL_TEXTUAL | THEORETICAL | FOCUSED_REVIEW
+  target_language: "zh-CN"
+
+constraints_and_resources:
+  timeframe: ""                     # 例如：6 周
+  accessible_materials: []          # 实际可获取的数据、档案、代码或受访渠道
+  method_skills_available: []       # 作者已掌握的方法（不强加未掌握且无时间学习的复杂方法）
+  hard_limitations: []              # 例如：无经费、无法开展线下访谈、仅单次测量数据等
+
+fact_separation:
+  prior_established_points: []      # 材料中已有依据的结论（需附来源或标为“待文献核实”）
+  author_observations: []           # 作者已观察到的具体现象或初步样本线索
+  untested_hypotheses: []           # 尚待验证的猜测或因果机制（严禁在无结果前当作已证实结论）
+
+selected_research_question:
+  primary_question: ""              # 收窄后的核心研究问题（一句话明确对象、条件与比较关系）
+  sub_questions: []                 # 1-2 个辅助子问题（可选）
+  study_object_and_scope: ""        # 明确结论适用的对象、时间与场景边界
+  minimum_evidence_needed: []       # 回答该问题最少需要哪些可核查证据
+  alternative_explanations: []      # 必须考虑或控制的替代解释/混杂因素
+  candidate_contributions: []       # 候选贡献（显式标记为 UNVERIFIED_UNTIL_RESULTS）
+
+open_gaps_to_verify:
+  - item: ""                        # 进入下一阶段前最需要查明的信息或文献问题
+    next_action: ""                 # 具体检索或核查动作

@@ -1,0 +1,6 @@
+interface:
+  display_name: "事实审计与投稿返修 · Audit, Submission & Review (Station 04)"
+  short_description: "核查跨章节数字与样本量冲突、核对文献支持度、整理投稿声明、联动修改审稿意见并比对校样"
+  default_prompt: "请使用 $paper-audit-submission 对照原始材料检查这段论文的事实、数字一致性与结论依据，标出冲突位置、待确认事项与最小修改方案。"
+policy:
+  allow_implicit_invocation: true

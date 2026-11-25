@@ -1,0 +1,6 @@
+interface:
+  display_name: "选题与文献搜集 · Topic & Literature (Station 01)"
+  short_description: "条件驱动找选题、构建正反双向检索式、联网核验真实文献(OpenAlex/CrossRef/arXiv)并撰写零幻觉相关工作"
+  default_prompt: "请使用 $paper-topic-literature 帮我根据现有条件梳理研究问题、搜集并核验相关文献，明确证据读取深度与待核实边界。"
+policy:
+  allow_implicit_invocation: true

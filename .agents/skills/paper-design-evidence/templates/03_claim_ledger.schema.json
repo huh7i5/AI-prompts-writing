@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Station02ClaimEvidenceLedger",
+  "description": "Master Claim-Evidence-Section Ledger produced by paper-design-evidence (Station 02). Governs prose drafting in Station 03 and cross-section impact propagation in Station 04.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_at",
+    "research_paradigm",
+    "study_time_state",
+    "one_sentence_storyline",
+    "claims"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "research_paradigm": {
+      "type": "string",
+      "enum": [
+        "QUANTITATIVE",
+        "QUALITATIVE",
+        "ARCHIVAL_TEXTUAL",
+        "THEORETICAL",
+        "FOCUSED_REVIEW"
+      ]
+    },
+    "study_time_state": {
+      "type": "string",
+      "enum": [
+        "PRE_STUDY",
+        "IN_PROGRESS",
+        "POST_RESULTS"
+      ],
+      "description": "When PRE_STUDY, no empirical claim may have status SUPPORTED."
+    },
+    "one_sentence_storyline": {
+      "type": "string"
+    },
+    "evidence_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "source_location", "recomputation_status"],
+        "properties": {
+          "evidence_id": { "type": "string", "description": "e.g. E01_Table1, E02_ProofStep1" },
+          "source_location": { "type": "string" },
+          "version_or_date": { "type": "string" },
+          "processing_or_derivation_notes": { "type": "string" },
+          "recomputation_status": {
+            "type": "string",
+            "enum": ["RECOMPUTED_LOCAL", "NOT_RECOMPUTED_TEXT_AUDIT_ONLY"]
+          },
+          "known_limitations_or_deviations": { "type": "string" }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_text",
+          "support_level",
+          "bound_evidence_ids",
+          "has_adverse_or_counterexample",
+          "scope_and_limitations",
+          "target_sections"
+        ],
+        "properties": {
+          "claim_id": { "type": "string", "description": "e.g. C01, C02" },
+          "claim_text": { "type": "string" },
+          "support_level": {
+            "type": "string",
+            "enum": [
+              "SUPPORTED",
+              "CONSISTENT_WITH",
+              "HYPOTHESIS_UNTESTED",
+              "INSUFFICIENT_EVIDENCE",
+              "REFUTED_OR_COUNTEREXAMPLE"
+            ]
+          },
+          "bound_evidence_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "bound_literature_ref_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "has_adverse_or_counterexample": {
+            "type": "boolean"
+          },
+          "scope_and_limitations": {
+            "type": "string",
+            "description": "Required condition bounds, trade-offs, or counterexample domain restrictions."
+          },
+          "unexcluded_alternative_explanations": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "target_sections": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Sections referencing this claim (e.g. ['abstract', 'results_4.1', 'discussion', 'conclusion']) for sync tracking."
+          }
+        }
+      }
+    }
+  }
+}
