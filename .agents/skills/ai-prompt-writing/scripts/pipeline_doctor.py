@@ -2,9 +2,11 @@
 """Master health checker and workspace stage coordinator for the AI-prompts-writing Skills Suite.
 
 Subcommands:
-  selftest  -> Discovers and executes selftest.py across all installed skills (router + 4 stations).
-  diagnose  -> Inspects a paper workspace directory (or raw file list) and outputs current pipeline
-               stage, unlocked/missing artifacts, and exact recommended station skill to invoke next.
+  selftest   -> Discovers and executes selftest.py across all installed skills (router + 4 stations).
+  diagnose   -> Inspects a paper workspace directory and outputs current pipeline stage,
+                unlocked/missing artifacts, and exact recommended station skill to invoke next.
+  run-gates  -> Executes all deterministic quality & compliance gates across a paper workspace
+                (claim ledger contract, style/slop/citation checks per draft, and cross-file numbers).
 
 Zero third-party dependencies (Python 3 standard library only).
 """
@@ -162,17 +164,112 @@ def cmd_diagnose(workspace: Path) -> int:
     return 0
 
 
+def cmd_run_gates(workspace: Path) -> int:
+    ws = workspace.resolve()
+    if not ws.exists():
+        print(json.dumps({"overall_status": "BLOCKED", "error": f"Workspace not found: {ws}"}, indent=2))
+        return 2
+
+    spec_path = ws / "00_project_spec.json"
+    spec = json.loads(spec_path.read_text(encoding="utf-8")) if spec_path.exists() else {}
+    paradigm = spec.get("research_paradigm") or "QUANTITATIVE"
+    time_state = spec.get("study_time_state") or "POST_RESULTS"
+
+    lit_path = ws / "01_literature" / "02_literature_ledger.json"
+    claim_path = ws / "03_backbone" / "03_claim_ledger.json"
+    drafts = sorted((ws / "04_drafts").glob("*.md")) if (ws / "04_drafts").exists() else []
+
+    gate_reports: list[dict[str, Any]] = []
+    has_blocker = False
+    has_warn = False
+
+    # 1. Station 02 Claim Ledger Gate
+    s2_gate = SKILLS_ROOT / "paper-design-evidence" / "scripts" / "design_evidence_gate.py"
+    if claim_path.exists() and s2_gate.exists():
+        cmd = [
+            sys.executable,
+            str(s2_gate),
+            "--task",
+            "3.4",
+            "--paradigm",
+            paradigm,
+            "--time-state",
+            time_state,
+            "--claim-ledger",
+            str(claim_path),
+        ]
+        proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", check=False)
+        rep = json.loads(proc.stdout)
+        gate_reports.append({"check": "station02_claim_ledger", "report": rep})
+        if rep["status"] == "BLOCKED":
+            has_blocker = True
+        elif rep["status"] == "WARN":
+            has_warn = True
+
+    # 2. Station 03 Style & Citation Gate across all draft chapters
+    s3_gate = SKILLS_ROOT / "paper-draft-polish" / "scripts" / "style_and_draft_gate.py"
+    if drafts and s3_gate.exists():
+        for dfile in drafts:
+            sec_low = dfile.stem.lower()
+            sec = "general"
+            for cand in ("abstract", "intro", "methods", "results", "discussion", "conclusion"):
+                if cand in sec_low:
+                    sec = cand
+                    break
+            cmd = [sys.executable, str(s3_gate), "--draft", str(dfile), "--mode", "draft", "--section", sec]
+            if claim_path.exists():
+                cmd.extend(["--claim-ledger", str(claim_path)])
+            if lit_path.exists():
+                cmd.extend(["--lit-ledger", str(lit_path)])
+            proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", check=False)
+            rep = json.loads(proc.stdout)
+            gate_reports.append({"check": f"station03_draft:{dfile.name}", "report": rep})
+            if rep["status"] == "BLOCKED":
+                has_blocker = True
+            elif rep["status"] == "WARN":
+                has_warn = True
+
+    # 3. Station 04 Cross-Section Number & Sample-Size Scanner across all drafts
+    s4_num = SKILLS_ROOT / "paper-audit-submission" / "scripts" / "check_numbers.py"
+    if drafts and s4_num.exists():
+        cmd = [sys.executable, str(s4_num), "--inputs"] + [str(d) for d in drafts]
+        proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", check=False)
+        num_rep = json.loads(proc.stdout)
+        gate_reports.append(
+            {
+                "check": "station04_cross_draft_numbers",
+                "has_sample_size_variation": num_rep.get("has_sample_size_variation", False),
+                "distinct_sample_sizes": num_rep.get("distinct_sample_sizes", []),
+                "alerts_count": len(num_rep.get("alerts") or []),
+            }
+        )
+
+    overall = "BLOCKED" if has_blocker else ("WARN" if has_warn else "PASS")
+    summary = {
+        "workspace": str(ws),
+        "overall_status": overall,
+        "drafts_checked": [d.name for d in drafts],
+        "gates": gate_reports,
+    }
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    return 2 if has_blocker else 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="AI-prompts-writing Skills Suite doctor & stage router.")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("selftest", help="Run self-tests across router and all 4 station skills.")
     p_diag = sub.add_parser("diagnose", help="Inspect workspace state and recommend next station.")
     p_diag.add_argument("--workspace", required=True, help="Path to paper workspace directory.")
+    p_gates = sub.add_parser("run-gates", help="Run all Station 02/03/04 deterministic gates across a workspace.")
+    p_gates.add_argument("--workspace", required=True, help="Path to paper workspace directory.")
 
     args = parser.parse_args()
     if args.command == "selftest":
         return cmd_selftest()
-    return cmd_diagnose(Path(args.workspace))
+    if args.command == "diagnose":
+        return cmd_diagnose(Path(args.workspace))
+    return cmd_run_gates(Path(args.workspace))
 
 
 if __name__ == "__main__":

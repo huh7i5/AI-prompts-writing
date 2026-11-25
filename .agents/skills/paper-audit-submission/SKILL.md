@@ -77,3 +77,7 @@ description: >-
      [--modified-claims C01]
    ```
    若返回 `"status": "BLOCKED"`（退出码 `2`），必须立即删除越界完成声明、全文已核验夸大语或伪造编号后再交付。
+3. **一键将分章草稿与已核验文献编译导出为 Word (`.docx`) 与 LaTeX (`.tex`) 成品**：
+   ```bash
+   python scripts/export_manuscript.py --workspace ./paper_workspace --title "Manuscript Title" --authors "Author List"
+   ```

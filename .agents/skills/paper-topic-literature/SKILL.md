@@ -20,7 +20,7 @@ description: >-
 
 | 探测项 | 判定条件 | 具备能力时的强制动作 | 缺失或受限时的安全降级动作 |
 | :--- | :--- | :--- | :--- |
-| **`CAP_SCRIPT`** | 可执行本地 `python` 命令 | 使用 [lit_search_verify.py](./scripts/lit_search_verify.py) 检索或核验文献（离线时亦可用 `verify --offline` 拦截测试/伪造 DOI 前缀）；成文后必须用 [lit_gate_check.py](./scripts/lit_gate_check.py) 做门禁扫描 | 声明 `[当前环境未启用本地脚本核验]`，按规程逐项人工对照，不宣称已完成自动化扫描 |
+| **`CAP_SCRIPT`** | 可执行本地 `python` 命令 | 使用 [lit_search_verify.py](./scripts/lit_search_verify.py) 检索或核验文献（离线时亦可用 `verify --offline` 拦截测试/伪造 DOI 前缀）；若用户提供了本地 PDF/全文，用 [fulltext_indexer.py](./scripts/fulltext_indexer.py) 切片建页码锚点；成文后用 [lit_gate_check.py](./scripts/lit_gate_check.py) 过门禁 | 声明 `[当前环境未启用本地脚本核验]`，按规程逐项人工对照，不宣称已完成自动化扫描 |
 | **`CAP_NET_SEARCH`** | 允许联网且用户未要求离线 | 优先调用 `lit_search_verify.py search` 获取 OpenAlex / CrossRef / arXiv 真实题录与摘要（或使用宿主已挂载的学术检索 MCP） | 强制进入 **离线检索方案模式**（传 `--offline`）：只给概念拆解、中英文正反检索式与筛选标准，**输出零篇凭记忆拼凑的参考文献** |
 | **`CAP_WORKSPACE`** | 用户指定了工作区目录或要求跑流水线 | 按实际执行的子任务写入对应工件：`1.1/1.2` 写 `01_topic_spec.yaml`；`2.1–2.3` 写 `02_literature_ledger.json` 与 `verified_refs.bib`（参见 `./templates/`） | 采用 **轻量对话模式**：直接在回复中输出结构化结果，不强制创建本地目录 |
 
@@ -80,6 +80,11 @@ description: >-
    ```
    - 离线检索计划模式传 `--mode search-offline`（确保零夹带伪造文献）；
    - 基于用户给定编号材料（如材料 `A,B`）写作时传 `--mode related-work --allowed-ids "A,B"`（脚本会自动兼容 `[A]`、`[材料A]`、`[来源A]`）。
+4. **本地 PDF / 全文文献页码段落锚定（用户提供了全文文件夹时必跑，将摘要级升级为 `FULLTEXT_READ`）**：
+   ```bash
+   python scripts/fulltext_indexer.py index --input ./01_literature/pdfs --out-jsonl ./01_literature/fulltext_chunks.jsonl --ledger 02_literature_ledger.json
+   python scripts/fulltext_indexer.py search --index ./01_literature/fulltext_chunks.jsonl --query "exact claim keywords"
+   ```
 
 ---
 

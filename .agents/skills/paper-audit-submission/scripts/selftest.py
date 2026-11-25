@@ -219,6 +219,78 @@ class Station04SkillTests(unittest.TestCase):
                 ["abstract", "table_1", "caption_1", "conclusion"],
             )
 
+    def test_05_manuscript_export_docx_and_tex(self) -> None:
+        import zipfile
+
+        exp_script = SKILL_DIR / "scripts" / "export_manuscript.py"
+        self.assertTrue(exp_script.exists())
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "ws"
+            (ws / "01_literature").mkdir(parents=True)
+            (ws / "04_drafts").mkdir(parents=True)
+            (ws / "00_project_spec.json").write_text(
+                json.dumps({"title_working": "测试论文题目：AI辅助研究"}), encoding="utf-8"
+            )
+            (ws / "01_literature" / "02_literature_ledger.json").write_text(
+                json.dumps(
+                    {
+                        "entries": [
+                            {
+                                "ref_id": "smith2024study",
+                                "authors": ["Alice Smith", "Bob Lee"],
+                                "year": 2024,
+                                "title": "Controlled Trial of Hints",
+                                "venue": "Journal of Testing",
+                                "doi": "10.1000/test.2024",
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (ws / "04_drafts" / "01_intro.md").write_text(
+                "# 1. 引言\n\n已有研究表明支架设计影响学习表现 [@smith2024study]。\n\n"
+                "| 组别 | 均值 |\n| --- | --- |\n| 对照 | 75% |\n| 实验 | 82% |\n",
+                encoding="utf-8",
+            )
+            res = subprocess.run(
+                [sys.executable, str(exp_script), "--workspace", str(ws), "--authors", "张三, 李四"],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res.returncode, 0, msg=res.stderr)
+            out = json.loads(res.stdout)
+            self.assertEqual(out["status"], "PASS")
+            self.assertEqual(out["resolved_citations_count"], 1)
+
+            docx_path = ws / "06_submission" / "manuscript.docx"
+            tex_path = ws / "06_submission" / "manuscript.tex"
+            self.assertTrue(docx_path.exists())
+            self.assertTrue(tex_path.exists())
+
+            tex_txt = tex_path.read_text(encoding="utf-8")
+            self.assertIn(r"\documentclass[11pt,a4paper]{ctexart}", tex_txt)
+            self.assertIn(r"\bibitem{ref1}", tex_txt)
+
+            with zipfile.ZipFile(docx_path, "r") as zf:
+                names = set(zf.namelist())
+                self.assertIn("word/document.xml", names)
+                self.assertIn("word/styles.xml", names)
+                doc_xml = zf.read("word/document.xml").decode("utf-8")
+                self.assertIn("Controlled Trial of Hints", doc_xml)
+
+            try:
+                import docx  # type: ignore
+
+                d = docx.Document(str(docx_path))
+                full_para_text = "\n".join(p.text for p in d.paragraphs)
+                self.assertIn("引言", full_para_text)
+                self.assertGreaterEqual(len(d.tables), 1)
+            except ImportError:
+                pass
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

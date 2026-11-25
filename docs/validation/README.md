@@ -6,7 +6,7 @@
 
 2026-11-25，在公开提交 `3459e7f` 上用四个工位新写了一篇[共享单车研究样稿](runs/2026-11-25-bike-sharing/README.md)。记录包括原始任务、731 天的公开数据、稿件和检查结果。读者可以从日表重算文章里的 27 个数，也可以复现交换用户类别后的检查结果。
 
-2026-11-25，`.agents/skills/` 升级为“1 个智能总控入口（`ai-prompt-writing`）＋ 4 个专职工位（`paper-topic-literature`、`paper-design-evidence`、`paper-draft-polish`、`paper-audit-submission`）”模块化架构，配套零第三方依赖的 Python 标准库校验与门禁脚本（覆盖开放学术库题录/摘要核验、离线防编造拦截、核心主张账本绑定、套话/防御性道歉扫描及跨段落样本量/单位冲突检测）。中英文 README 更新了页面引导展示与 `#skill` 说明区，十阶段 43 个手工复制提示词正文保持不变。本轮已完成全部 5 个模块的本地自动化单元测试（`pipeline_doctor.py selftest`）及 5 个独立上下文子代理共 11 组盲测（含联网检索、禁网诱导、附页注入、未见数学反例与跨章联动返修），尚未在所有第三方外部客户端逐一完成图形界面导入测试。
+2026-11-25，`.agents/skills/` 升级为“1 个智能总控入口（`ai-prompt-writing`）＋ 4 个专职工位（`paper-topic-literature`、`paper-design-evidence`、`paper-draft-polish`、`paper-audit-submission`）”模块化架构，并补齐端到端工厂核心引擎：本地全文页码/段落锚定索引（`fulltext_indexer.py`）、CSV 确定性统计验算与 SVG 矢量图生成（`stats_and_plot.py`）、主笔/盲审对抗闭环规程（`autopilot-pipeline.md`）、全站联检（`pipeline_doctor.py run-gates`）及原生 Word/LaTeX 编译导出（`export_manuscript.py`），同时在中英文 README 精简首页导语并上线单页在线提示词拼接台（`docs/builder/index.html`）。本轮已完成全部 5 个模块的本地自动化单元测试（`pipeline_doctor.py selftest`）、端到端迷你流水线实跑（真实 PDF + CSV + SVG + 联检 + `.docx`/`.tex` 回读）及 5 个独立上下文子代理共 11 组盲测；拼接台网页已通过 43 项中英文任务数据完整性校验，尚待在真实浏览器点击交互验证及各外部客户端逐一 GUI 导入测试。
 
 2026-11-23，任务 6.5 加入反防御性写作检查。中文用例把被道歉掩盖的发现写清楚，英文用例保留了准确的原文和必要的史料限制。两例的完整输入、首次输出及判定见[6.5 改稿试用](runs/2026-11-23/README.md)。
 

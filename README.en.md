@@ -2,61 +2,44 @@
 
 <h1>🎓 AI-prompts-writing</h1>
 
+<p>Zero-barrier academic writing prompts &amp; state-aware Agent Skills</p>
+
 <p><a href="README.md">简体中文</a> · <strong>English</strong> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
-<p><strong>A zero-barrier academic writing prompt library &amp; state-aware Agent Skills suite</strong><br>
-<sub>Clear, honest scholarly prose · Zero fabricated citations or "AI boilerplate"</sub></p>
-
 <p>
-  <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square&color=f59e0b" alt="GitHub Stars"></a>
-  <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square&color=3b82f6" alt="GitHub Forks"></a>
-  <a href="#catalog"><img src="https://img.shields.io/badge/Prompts-10_Stages_·_43_Tasks-10b981?style=flat-square" alt="43 Prompts"></a>
-  <a href="#skill"><img src="https://img.shields.io/badge/Agent_Skills-1_Router_+_4_Stations-6366f1?style=flat-square" alt="Agent Skills Suite"></a>
-  <a href="docs/translations.md"><img src="https://img.shields.io/badge/Languages-9-64748b?style=flat-square" alt="9 Languages"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Stars"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Forks"></a>
+  <a href="#catalog"><img src="https://img.shields.io/badge/prompts-43_tasks-475569?style=flat-square" alt="43 Prompts"></a>
+  <a href="#skill"><img src="https://img.shields.io/badge/agent_skills-1+4_pipeline-475569?style=flat-square" alt="Agent Skills Suite"></a>
 </p>
 
 <p>
-  <a href="#start">🚀 Start here</a> ·
-  <a href="#catalog">🧭 Choose a task</a> ·
-  <a href="#lifecycle">🗺️ Writing process</a> ·
-  <a href="#showcase">✨ Editing example</a> ·
-  <a href="#skill">🤖 Agent Skills</a> ·
-  <a href="docs/examples/reading-room-paper.en.md">📄 Sample paper</a>
+  <a href="#start">Quick start</a> ·
+  <a href="#catalog">Tasks</a> ·
+  <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">Prompt Builder</a> ·
+  <a href="#showcase">Example</a> ·
+  <a href="#skill">Agent Skills</a> ·
+  <a href="docs/examples/reading-room-paper.en.md">Sample paper</a>
 </p>
 
 </div>
 
----
-
-### 💡 Two Ways to Use This Project
-
-| Mode | Best for | How it works |
-| :--- | :--- | :--- |
-| **📋 Copy & Paste on the Web**<br>*(Zero setup, no coding required)* | Anyone chatting in ChatGPT, Claude, DeepSeek, Gemini, etc. | Open the task you need in the [directory below](#catalog), copy the text box, paste your materials at the end, and send. |
-| **🤖 Install in an AI Agent**<br>*(State-aware end-to-end workflow)* | Researchers using Codex, Claude Code, Antigravity, WorkBuddy, or other `SKILL.md` clients | Install the built-in [Skills Suite](#skill) and drop in whatever ideas, notes, data, or drafts you currently have—the Agent automatically diagnoses your stage and runs topic scoping, real API citation checks, study & outline planning, drafting, anti-slop editing, cross-section number checks, and reviewer responses. |
+- **Copy & paste on the web**: No setup or coding needed—open any task in the [directory below](#catalog) (or use the [interactive prompt builder](https://huh7i5.github.io/AI-prompts-writing/builder/)) and paste into ChatGPT, Claude, or DeepSeek.
+- **Run inside an AI Agent**: Compatible with Codex, Claude Code, Antigravity, and WorkBuddy—share your current materials to run citation checks, PDF page anchoring, CSV stats & SVG plots, drafting, and `.docx`/`.tex` export ([see setup](#skill)).
 
 <a id="start"></a>
 
-## 📋 First time here? Follow these three steps
+## Quick Start
 
-Open a new conversation in an AI chat tool you already use, such as ChatGPT, Claude, or DeepSeek:
-
-1. **Choose a task and copy the whole text box.** Find what you want to do in the [directory below](#catalog). Click the task title or the small triangle to open it, then copy the prompt into your chat box.
-2. **Put your requirements first and materials last.** Specify the language, length, or scope of the task, then paste your text, notes, data, or feedback under “My materials” at the end.
-3. **Send everything in one message.** Each task includes basic writing instructions. Send the completed prompt and materials together, then check the response against your originals before accepting the suggestions.
-
-> [!TIP]
-> **Quick Tips & Worked Examples**
-> - **Don't have materials handy yet?** Try [calculating a library’s attendance rate](docs/examples/reading-room.en.md) or [comparing a ferry notice with a passenger’s diary](docs/examples/text-reading.en.md), then expand the worked answer to compare.
-> - **No need to fill every blank:** Replace each `{{…}}` with your content, or delete unused field labels and paste a complete draft or notes directly under “My materials.” Keep version labels (such as “original draft” vs. “reviewer comments”), and write “not provided” for anything unknown.
-
-**Verification & privacy reminder**: Always check numbers and references yourself. Before uploading material, make sure you have permission to share it and remove unnecessary personal identifiers.
+1. **Pick a task**: Open the step you need below and copy the box (or try [library attendance](docs/examples/reading-room.en.md) / [ferry diary](docs/examples/text-reading.en.md)).
+2. **Add materials**: Put language/length rules first and paste drafts, notes, or data at the end (replace `{{…}}` as needed; delete unused labels).
+3. **Verify outputs**: Send in one message; check every number and citation yourself, and remove private details before uploading.
 
 <a id="control"></a>
 
-## ✍️ Want more detailed writing instructions? (optional)
+## Extra Writing Instructions (optional)
 
-Each task already includes basic writing instructions. For more detailed preferences, place the instructions below before your chosen task, add your materials at the end, and send everything together.
+Each task already includes core rules. For stricter constraints, place the extra box below before your chosen task.
 
 <details>
 <summary><strong>Copy extra writing instructions (optional; send with your task)</strong></summary>
@@ -122,44 +105,38 @@ Use only fields relevant to the approach. Statistical tests, randomized controls
 
 <a id="catalog"></a>
 
-## 🧭 Choose what you want to do now
+## Task Directory
 
-Click the middle column to jump straight to that stage. **You can start anywhere** based on what you have in hand:
+Jump directly to the stage you need—no need to go in order:
 
-| Stage | What I want to do (click to jump) | Tasks · What the AI can help produce |
+| Stage | What I want to do | What it produces (Task IDs) |
 | :--- | :--- | :--- |
-| **01 · Topic** | **[Find something to write about](#topic)** | `1.1–1.2` · Feasible candidate topics to compare and next questions to check |
-| **02 · Literature** | **[Find sources for an idea](#literature)** | `2.1–2.3` · Balanced search queries, source comparison tables, and Related Work paragraphs |
-| **03 · Design** | **[Plan the research and organize the paper](#planning)** | `3.1–3.5` · Executable study plans, paper outlines, core storyline, and pre-study checks |
-| **04 · Evidence** | **[Organize notes, data, or figures](#records)** | `4.1–4.3` · Traceable record indexes, proof/analysis checks, and rigorous figure/table captions |
-| **05 · Drafting** | **[Turn my materials into a first draft](#drafting)** | `5.1–5.8` · Draft sections (Intro, Methods, Results, Discussion, Abstract) and candidate titles |
-| **06 · Editing** | **[Make a draft clearer and easier to read](#editing)** | `6.1–6.7` · Structural reorganization, de-templating, anti-defensive edits, grammar-only check, and translation |
-| **07 · Audit** | **[Check my paper before handing it in](#audit)** | `7.1–7.5` · Fact/number discrepancy flags, reviewer-perspective critique, and citation support checks |
-| **08 · Submission** | **[Submit to a journal](#submission)** | `8.1–8.4` · Reference formatting, cover letters, journal readiness, and author/ethics/AI declarations |
-| **09 · Revision** | **[Revise after comments from a teacher or reviewer](#feedback)** | `9.1–9.3` · Revision priorities, cross-section synced edits, and point-by-point response letters |
-| **10 · Post-Accept** | **[Check work after acceptance or publication](#publication)** | `10.1–10.3` · Page proof comparisons, archiving guides, and post-publication correction notes |
+| <nobr>**01 Topic**</nobr> | [Find something to write about](#topic) | Feasible candidate topics & questions (`1.1–1.2`) |
+| <nobr>**02 Literature**</nobr> | [Find sources for an idea](#literature) | Balanced queries, comparisons & Related Work (`2.1–2.3`) |
+| <nobr>**03 Design**</nobr> | [Plan study & outline](#planning) | Study plans, outlines & storyline (`3.1–3.5`) |
+| <nobr>**04 Evidence**</nobr> | [Organize notes, data, figures](#records) | Record indexes, proof checks & captions (`4.1–4.3`) |
+| <nobr>**05 Drafting**</nobr> | [Turn materials into a draft](#drafting) | Intro, Methods, Results, Discussion & Abstract (`5.1–5.8`) |
+| <nobr>**06 Editing**</nobr> | [Make a draft clear & natural](#editing) | Structure, anti-slop, grammar & translation (`6.1–6.7`) |
+| <nobr>**07 Audit**</nobr> | [Check before submission](#audit) | Number conflicts, citation support & critique (`7.1–7.5`) |
+| <nobr>**08 Submit**</nobr> | [Prepare journal submission](#submission) | Formatting, cover letters & declarations (`8.1–8.4`) |
+| <nobr>**09 Revise**</nobr> | [Revise after peer review](#feedback) | Triage, synced revisions & response letters (`9.1–9.3`) |
+| <nobr>**10 Proofs**</nobr> | [Check proofs & archive](#publication) | Proof diffs, archiving & correction notes (`10.1–10.3`) |
 
 <a id="lifecycle"></a>
 
-## 🗺️ The research and writing process
+## Workflow & Editing Example
 
 <div align="center">
-  <img src="assets/research-writing-lifecycle.png" alt="Research and writing stages, in Chinese" width="840">
-  <p><sub>You can revisit stages or use them as needed. Authors carry out the research and make important judgments; journals make publication decisions.<br>
-  <a href="docs/coverage.md">Workflow sources (Chinese)</a> · <a href="docs/validation/README.md">Trial records (Chinese)</a></sub></p>
+  <img src="assets/research-writing-lifecycle.png" alt="Research and writing stages, in Chinese" width="760">
+  <p><sub>Stages can be revisited as needed (<a href="docs/coverage.md">Sources</a> · <a href="docs/validation/README.md">Trials</a>)</sub></p>
 </div>
 
 <a id="showcase"></a>
 
-## ✨ See how a passage changes after editing
-
 <div align="center">
-  <img src="assets/showcase-before-after-en.png" alt="A short introduction before and after revision, with specific edits" width="840">
-  <p><sub>A short introduction was generated in Chinese, then revised using this project's prompts and Skill, marking each edit and its reason.<br>
-  <a href="docs/showcase/README.en.md">Read the full inputs, outputs, and change record</a> · <a href="docs/showcase/README.md">查看中文示例</a></sub></p>
+  <img src="assets/showcase-before-after-en.png" alt="A short introduction before and after revision, with specific edits" width="760">
+  <p><sub>Line-by-line revision example (<a href="docs/showcase/README.en.md">Full Record</a> · <a href="docs/showcase/README.md">中文示例</a>)</sub></p>
 </div>
-
----
 
 <a id="topic"></a>
 
@@ -1640,72 +1617,65 @@ Confirmed correct information and remaining unknowns:
 
 <a id="skill"></a>
 
-## 🤖 Use Codex, Claude Code, or WorkBuddy Agents?
+## Use with AI Agents (End-to-End Pipeline)
 
-In addition to copying individual prompts on this page, you can install the repository's **Skills Suite** into Agents that support `SKILL.md`. Once installed, you do not need to look up task numbers manually—share whatever materials you currently have, and the Agent will identify your current stage to assist with topic scoping, open-API citation verification, study design and outlining, section drafting, de-templating and anti-defensive revision, cross-section number auditing, and peer-review responses.
+Install the built-in Skills Suite into an Agent that supports `SKILL.md`, then drop in your current materials (ideas, PDFs, CSV data, drafts, or reviews) to diagnose your stage and advance automatically.
 
 ```mermaid
 flowchart LR
-    Input["📄 Your Current Materials<br>(Idea / Notes / Data / Draft / Reviews)"] --> Router["🧭 ai-prompt-writing<br>State Diagnosis & Router"]
-    Router --> S1["Station 01 · Topic & Verified Literature"]
-    Router --> S2["Station 02 · Study Design & Claim Ledger"]
-    Router --> S3["Station 03 · Section Drafting & Polishing"]
-    Router --> S4["Station 04 · Number Audit & Peer Review"]
+    Raw["Current Materials<br>Idea/PDF/CSV/Draft"] --> Router["ai-prompt-writing<br>Router & Review Loop"]
+    Router --> S1["1 Topic & Full-Text"]
+    Router --> S2["2 Stats, SVG & Ledger"]
+    Router --> S3["3 Draft & Anti-Slop"]
+    Router --> S4["4 Audit & Export .docx"]
 ```
 
 <details>
-<summary><strong>Show station overview and installation instructions (optional)</strong></summary>
+<summary><strong>Show station skills, built-in scripts, and installation</strong></summary>
 
-Skip this section if you prefer copying prompts directly. Under `.agents/skills/`, the repository provides **1 smart router + 4 specialized station skills** (backed by zero-dependency Python stdlib verification scripts; `ai-prompt-writing` also works standalone if imported by itself):
+Under `.agents/skills/`, the suite provides **1 smart router + 4 specialized station skills** (zero-dependency Python stdlib scripts; `ai-prompt-writing` also runs standalone):
 
-| Skill folder | Role in the workflow | Built-in checks & boundaries |
-| --- | --- | --- |
-| [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md) | **Smart Router & Coordinator**: diagnoses your current materials and routes or chains stations | Works standalone or orchestrates all 4 stations via `pipeline_doctor.py` |
-| [paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md) | **Station 01 (Topic & Literature)**: feasibility scoping, balanced search queries, Related Work | Keyless OpenAlex / CrossRef / arXiv verification; strict offline fallback with zero memorized citations |
-| [paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md) | **Station 02 (Design & Evidence Ledger)**: study plans, outlines, proof/counterexample checks, captions | Locks pre-study vs. post-results timelines and the master claim ledger; no forced `p`-values on theory/archival work |
-| [paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md) | **Station 03 (Drafting & Polishing)**: section drafts, restructuring, anti-slop & anti-defensive edits, translation | Scans for AI clichés, hollow apologies, and dropped source numbers; preserves already-accurate sentences |
-| [paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md) | **Station 04 (Audit, Submission & Review)**: cross-section number checks, declarations, synced revisions, proofs | Detects sample-size/unit conflicts, tracks cross-chapter sync, and blocks fabricated supplemental experiments |
+| Skill | Role & Built-in Scripts |
+| :--- | :--- |
+| <nobr>[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)</nobr> | **Router**: stage diagnosis, Writer-vs-Reviewer loop, `pipeline_doctor.py` |
+| <nobr>[paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md)</nobr> | **Station 01**: OpenAlex/CrossRef/arXiv checks, `fulltext_indexer.py` PDF page anchoring |
+| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **Station 02**: outlines, proof checks, `stats_and_plot.py` CSV stats & SVG plots |
+| <nobr>[paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md)</nobr> | **Station 03**: drafting, anti-slop & anti-defensive edits, `style_and_draft_gate.py` |
+| <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **Station 04**: number scans, review sync, proofs, `export_manuscript.py` (`.docx`/`.tex`) |
 
 <details>
-<summary><strong>Workspace auto-discovery (loads the full 1+4 suite)</strong></summary>
+<summary><strong>Workspace auto-discovery (loads all 1+4 stations)</strong></summary>
 
-Clone this repository or copy the folders inside `.agents/skills/` into your manuscript project's `.agents/skills/` directory. Clients that discover `.agents/skills/*/SKILL.md` (such as Codex and Antigravity) will mount the router, all four stations, and the local Python check scripts automatically.
+Clone this repository or copy the 5 folders inside `.agents/skills/` into your project's `.agents/skills/` directory. Clients like Codex and Antigravity discover all stations and scripts automatically.
 
 </details>
 
 <details>
 <summary><strong>Codex installation and invocation</strong></summary>
 
-Send this to Codex to install the router skill (install sibling station folders or clone the repository for full local script gates).
-
 ```text
 $skill-installer Please install the skill at https://github.com/huh7i5/AI-prompts-writing/tree/main/.agents/skills/ai-prompt-writing.
 ```
 
-Then share your current materials directly:
-
 ```text
 $ai-prompt-writing Check what stage these notes and draft paragraphs are in,
-clarify the main claim and limitations without inflated wording, and flag any
-numbers or citations that need verification.
+clarify the main claim and limitations, and flag any numbers or citations to verify.
 
 [Paste your materials]
 ```
 
-Codex supports invoking a skill with `$skill-name`. The CLI and IDE extension also provide `/skills`. If the installed skill is not found, reopen the client and try again. [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills).
+See [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills).
 
 </details>
 
 <details>
 <summary><strong>Import and use in WorkBuddy</strong></summary>
 
-Download this repository and compress `.agents/skills/ai-prompt-writing` (and any `paper-*` station folders you need). In WorkBuddy's skills area, add a skill by uploading the archive. [WorkBuddy skills documentation](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
+Compress `.agents/skills/ai-prompt-writing` (and any `paper-*` folders needed) and upload via Skills → Add Skill. See [WorkBuddy skills documentation](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
 
 </details>
 
-Other tools that support `SKILL.md` may use their own import procedures. Otherwise, copy the prompts on this page directly. `/ai-prompt-writing` is not a universal command.
-
-Live citation checks require network access to open scholarly APIs, and local gate scripts require Python 3; when unavailable, the skills degrade gracefully and state their verification scope rather than pretending checks were run. Confirm that your materials may be uploaded, and check your target journal's AI-use and disclosure policies before submission.
+Live citation checks require network access, and local gate scripts require Python 3; otherwise skills degrade cleanly and state their scope. Check target journal AI-disclosure rules before submission.
 
 </details>
 

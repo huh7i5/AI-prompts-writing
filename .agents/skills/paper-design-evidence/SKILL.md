@@ -21,8 +21,8 @@ description: >-
 | 探测项 | 判定条件 | 具备能力时的标准动作 | 缺失或受限时的安全降级动作 |
 | :--- | :--- | :--- | :--- |
 | **`CAP_SCRIPT`** | 可执行本地 `python` 命令 | 工作区模式下运行 [init_workspace.py](./scripts/init_workspace.py)；交付前运行 [design_evidence_gate.py](./scripts/design_evidence_gate.py) 校验账本与文稿边界 | 声明 `[未启用本地脚本门禁]`，按规程人工核对主张与证据映射，不声称已通过自动化契约扫描 |
-| **`CAP_CODE_REPRO`** | 提供了原始数据/代码且允许本地运行 Python | 实际执行计算或反例构造脚本，完整保留输入、公式、步骤与输出后，方可标注 `已本地复现/验算` | 严格限定在**所给文本与摘要数值范围内做逻辑与一致性审查**，绝不宣称“已重新计算复现”或“已完成机器形式化验证” |
-| **`CAP_PLOT_RENDER`** | 仅规划图表（4.3）且未调用专门绘图引擎 | 输出图表选型分工、数据结构要求及可直接使用的图题/图注/表注；如需出图再显式移交绘图工具 | 明确说明**本次仅产出图表安排与图注文本，尚未生成图像文件**，严禁假装已出图 |
+| **`CAP_CODE_REPRO`** | 提供了原始 CSV/数据且允许本地运行 Python | 优先运行 [stats_and_plot.py](./scripts/stats_and_plot.py) 自动算准样本量、SD/95% CI、Welch $t$ 与效应量，同步输出矢量 `.svg` 图与规范图注并回写账本（标注 `已本地复现/验算`） | 严格限定在**所给文本与摘要数值范围内做逻辑与一致性审查**，绝不宣称“已重新计算复现”或“已完成机器形式化验证” |
+| **`CAP_PLOT_RENDER`** | 需要规划或绘制统计对比图（`4.3`） | 有原始 CSV 时由 `stats_and_plot.py --out-svg` 生成矢量 `.svg` 统计图及完整图注；仅规划架构时明确说明尚未绘图 | 明确说明**本次仅产出图表安排与图注文本，尚未生成图像文件**，严禁假装已出图 |
 | **`CAP_WORKSPACE`** | 处于端到端流水线模式或指定了项目目录 | 更新/生成 `03_backbone/03_claim_ledger.json` 与 `03_backbone/04_outline.md`（参见 `./templates/`） | 直接在对话中输出清晰的结构化方案、证据矩阵或图注草稿 |
 
 ---
@@ -82,6 +82,13 @@ description: >-
      [--claim-ledger ./paper_workspace/03_backbone/03_claim_ledger.json]
    ```
    若返回 `"status": "BLOCKED"`（退出码 `2`），必须修正范式错位、越界完成态声明或无依据主张后再交付。
+3. **原始 CSV 自动统计验算与出版级矢量出图（`CAP_CODE_REPRO` 可用时替代手工心算）**：
+   ```bash
+   python scripts/stats_and_plot.py analyze \
+     --csv ./02_evidence/raw_data.csv --group-col group --value-col score --unit "%" \
+     --error-bar ci95 --out-svg ./02_evidence/fig1.svg --out-json ./02_evidence/fig1_stats.json \
+     --out-caption ./02_evidence/fig1_caption.md --update-claim-ledger ./03_backbone/03_claim_ledger.json
+   ```
 
 ---
 

@@ -27,7 +27,7 @@ description: >-
 | **有了研究问题或零散笔记/数据/推导，想排研究方案、列大纲、查证明漏洞或写图注**（阶段 3–4） | 区分事前计划与事后探索 → 查分析/推导反例 → 锁死核心主张账本（`03_claim_ledger.json`）与章节大纲 | [`../paper-design-evidence/SKILL.md`](../paper-design-evidence/SKILL.md) |
 | **已有大纲/材料想写初稿，或已有段落想理顺结构、去 AI 套话、删多余自谦、查语法、做翻译**（阶段 5–6） | 按证据写各章节（缺项标 `[待补]`）→ 重组失衡标题 → 清除套话与空洞道歉，原句准确处直接保留 | [`../paper-draft-polish/SKILL.md`](../paper-draft-polish/SKILL.md) |
 | **快交稿想查漏洞、准备投稿信与声明、收到导师/审稿意见要改稿回复，或核对校样**（阶段 7–10） | 扫描跨章数字/样本量冲突 → 核对文献是否真支持该句 → 整理合规声明 → 联动改稿并逐点回复（拒造假补实验） | [`../paper-audit-submission/SKILL.md`](../paper-audit-submission/SKILL.md) |
-| **提供了论文工作区目录，要求“帮我顺着往下推进整篇论文”** | 运行 `python scripts/pipeline_doctor.py diagnose --workspace <dir>`，从首个未完成门禁的工位起逐步推进，遇缺失实测数据或待作者拍板处停驻确认 | 串联 Station 01 → 02 → 03 → 04 |
+| **提供了论文工作区目录，要求“帮我顺着往下推进整篇论文”** | 先读 [autopilot-pipeline.md](./references/autopilot-pipeline.md)，运行 `python scripts/pipeline_doctor.py diagnose --workspace <dir>` 定位工位，完成主笔与盲审对抗闭环后，运行 `pipeline_doctor.py run-gates` 联检并调用 4 号工位 `export_manuscript.py` 导出 `.docx`/`.tex` | 串联 Station 01 → 02 → 03 → 04 |
 
 > **克制推进原则**：普通对话中，只处理用户当前明确需要的那一步（或相连组合），不强迫用户从头走完全套十阶段；关键前提缺失会导致路线分叉时，集中提问 **不超过 3 个问题**，其余局部缺口用 `[待补: 具体项]` 占位推进。
 

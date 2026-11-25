@@ -290,6 +290,78 @@ class Station01SkillTests(unittest.TestCase):
         self.assertEqual(key, "jost2024impact")
         self.assertEqual(lsv._clean_doi("https://doi.org/10.1007/s10664-024-10594-x.pdf"), "10.1007/s10664-024-10594-x")
 
+    def test_06_fulltext_indexer_and_ledger_upgrade(self) -> None:
+        indexer = SCRIPTS_DIR / "fulltext_indexer.py"
+        self.assertTrue(indexer.exists())
+        with tempfile.TemporaryDirectory() as tmp:
+            tpath = Path(tmp)
+            papers_dir = tpath / "pdfs"
+            papers_dir.mkdir()
+            paper_md = papers_dir / "smith2024caching.md"
+            paper_md.write_text(
+                "--- Page 1 ---\n"
+                "Introduction: Cache locality strongly governs memory latency under skewed read workloads.\n\n"
+                "--- Page 2 ---\n"
+                "Experiment 2 measured tail latency on 48-core servers: P99 dropped from 38 ms to 19 ms under batched eviction.\n",
+                encoding="utf-8",
+            )
+            ledger_path = tpath / "02_literature_ledger.json"
+            ledger_path.write_text(
+                json.dumps(
+                    {
+                        "schema_version": "1.0",
+                        "generated_at": "2026-11-25T00:00:00+00:00",
+                        "capability_state": "ONLINE_API_VERIFIED",
+                        "search_protocol": {"primary_query": "cache tail latency"},
+                        "entries": [
+                            {
+                                "ref_id": "smith2024caching",
+                                "title": "Cache Locality and Tail Latency",
+                                "doi": "10.1145/1234567.89",
+                                "verification_status": "API_VERIFIED",
+                                "reading_depth": "ABSTRACT_READ",
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            chunks_jsonl = tpath / "fulltext_chunks.jsonl"
+            res_idx = subprocess.run(
+                [
+                    sys.executable,
+                    str(indexer),
+                    "index",
+                    "--input",
+                    str(papers_dir),
+                    "--out-jsonl",
+                    str(chunks_jsonl),
+                    "--ledger",
+                    str(ledger_path),
+                ],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res_idx.returncode, 0, msg=res_idx.stderr)
+            idx_json = json.loads(res_idx.stdout)
+            self.assertEqual(idx_json["upgraded_to_fulltext_read"], ["smith2024caching"])
+            updated_ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+            self.assertEqual(updated_ledger["entries"][0]["reading_depth"], "FULLTEXT_READ")
+
+            res_search = subprocess.run(
+                [sys.executable, str(indexer), "search", "--index", str(chunks_jsonl), "--query", "48-core P99 batched eviction"],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res_search.returncode, 0)
+            hits = json.loads(res_search.stdout)["top_hits"]
+            self.assertGreaterEqual(len(hits), 1)
+            self.assertEqual(hits[0]["anchor"], "[smith2024caching.md, p.2, para.1]")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

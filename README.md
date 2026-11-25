@@ -2,63 +2,45 @@
 
 <h1>🎓 AI-prompts-writing</h1>
 
+<p>零门槛学术论文提示词库 · 智能全流程 Agent Skills</p>
+
 <p><strong>简体中文</strong> · <a href="README.en.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
-<p><strong>专为学术小白与研究者打造的零门槛 AI 论文辅导提示词库 &amp; 智能全流程 Skills 套件</strong><br>
-<sub>告别“AI 八股腔”与数据文献幻觉 · 把研究实实在在写清楚</sub></p>
-
 <p>
-  <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square&color=f59e0b" alt="GitHub Stars"></a>
-  <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square&color=3b82f6" alt="GitHub Forks"></a>
-  <a href="#catalog"><img src="https://img.shields.io/badge/提示词任务-10阶段%20·%2043项-10b981?style=flat-square" alt="43 Prompts"></a>
-  <a href="#skill"><img src="https://img.shields.io/badge/Agent_Skills-1总控%20+%204工位-6366f1?style=flat-square" alt="Agent Skills Suite"></a>
-  <a href="docs/translations.md"><img src="https://img.shields.io/badge/多语言版本-9种语言-64748b?style=flat-square" alt="9 Languages"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Stars"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Forks"></a>
+  <a href="#catalog"><img src="https://img.shields.io/badge/prompts-43_tasks-475569?style=flat-square" alt="43 Prompts"></a>
+  <a href="#skill"><img src="https://img.shields.io/badge/agent_skills-1+4_pipeline-475569?style=flat-square" alt="Agent Skills Suite"></a>
 </p>
 
 <p>
-  <a href="#start">🚀 第一次用</a> ·
-  <a href="#catalog">🧭 选我需要的任务</a> ·
-  <a href="#lifecycle">🗺️ 看写作流程</a> ·
-  <a href="#showcase">✨ 看修改例子</a> ·
-  <a href="#skill">🤖 安装 Agent 技能</a> ·
-  <a href="docs/examples/capital-bikeshare/paper.md">📄 读完整论文样稿</a>
+  <a href="#start">快速上手</a> ·
+  <a href="#catalog">任务目录</a> ·
+  <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">在线拼接器</a> ·
+  <a href="#showcase">改稿示例</a> ·
+  <a href="#skill">Agent 技能</a> ·
+  <a href="docs/examples/capital-bikeshare/paper.md">实证样稿</a>
 </p>
 
 </div>
 
----
-
-### 💡 两种使用方式，按你的习惯任选
-
-| 使用方式 | 适合谁 | 怎么用 |
-| :--- | :--- | :--- |
-| **📋 网页直接复制**<br>*(零门槛，无需下载或写代码)* | 用豆包、ChatGPT、DeepSeek、Claude、Kimi 等网页/客户端聊天的同学 | 在下方[任务目录](#catalog)点开你现在要做的那一小步，复制整个文字框，填上自己的材料直接发送即可。 |
-| **🤖 装入 AI Agent**<br>*(智能识别现状，自动推进全流程)* | 用 Codex、Claude Code、Antigravity、WorkBuddy 等支持 `SKILL.md` 工具的研究者 | 安装内置的 [论文全流程 Skills 套件](#skill) 后无需再查任务编号——直接把现有的想法、文献、数据或草稿发给 Agent，自动完成**现状诊断 → 选题与真文献核验 → 规划设计与大纲 → 分章写作 → 去 AI 腔修改 → 数字口径核查与审稿回复**。 |
-
-想看一篇用真实数据写成的文章？华盛顿的共享单车在工作日平均每天多租出 255 次，这些租借发生在哪些时段？[读完整研究样稿](docs/examples/capital-bikeshare/paper.md) · [复算三张表](docs/examples/capital-bikeshare/README.md) · [读更短的图书馆示例](docs/examples/reading-room-paper.md)
+- **网页直接用**：不用下载或写代码，在[下方目录](#catalog)点开任务复制，发给豆包、ChatGPT 或 DeepSeek（也可用[在线拼接网页](https://huh7i5.github.io/AI-prompts-writing/builder/)填表一键生成）。
+- **装入 Agent 用**：支持 Codex、Claude Code、Antigravity、WorkBuddy 等，发给它现有材料即可自动识别阶段，串联真文献核验、PDF 锚定、统计制图、写稿改稿与文档导出（[查看安装](#skill)）。
+- **真实数据样稿**：四工位实跑产出的[共享单车实证研究](docs/examples/capital-bikeshare/paper.md)（[复算三张表](docs/examples/capital-bikeshare/README.md) · [短篇图书馆示例](docs/examples/reading-room-paper.md)）。
 
 <a id="start"></a>
 
-## 📋 第一次用，跟着这三步
+## 快速上手
 
-在你常用的 AI 聊天工具里新开一个对话，比如豆包、ChatGPT 或 DeepSeek：
-
-1. **选一个任务，复制整个文字框。** 从[下面的目录](#catalog)找到你现在要做的事，点标题或左侧小三角展开，把提示词复制到聊天框。
-2. **先填要求，再贴材料。** 语言、篇幅、修改范围等要求写在前面，文章、笔记、数据或反馈粘贴在末尾的“我的材料”里。
-3. **合在一条消息里发送。** 每个任务都带有基本写作要求，填好后一起发给 AI。收到回答后，对照原文检查，再决定采用哪些建议。
-
-> [!TIP]
-> **填写与试玩小贴士**
-> - **手边还没材料？先拿现成例子试试手**：你可以[算算图书馆的到场率](docs/examples/reading-room.md)，也可以[读一则渡口告示和一段乘客日记](docs/examples/text-reading.md)——把框里的提示词和材料一起发给 AI，再展开参考答案对照效果。
-> - **不必强求填满所有空格**：把 `{{……}}` 连同括号换成自己的内容即可。有现成草稿或笔记时，可以删掉不需要的提示小栏目，直接整段粘贴在“我的材料”下面；比较多份材料时保留各自名称（如“原稿”“审稿意见”），不知道的写“未提供”。
-
-**安全与核实提醒**：数字和参考文献请务必亲自核对。上传材料前，确认内容允许分享，并提前删去不需要的姓名、学号、单位等个人信息。
+1. **选任务**：在[任务目录](#catalog)点开当前要做的事，复制整个文字框（无材料可先试[图书馆到场率](docs/examples/reading-room.md)或[渡口日记](docs/examples/text-reading.md)）。
+2. **填材料**：要求写在前面，草稿、数据或笔记直接贴在末尾“我的材料”下（`{{……}}` 按需替换，不用的栏目可删）。
+3. **查结果**：合在一条消息发送；AI 输出的数字与文献请核对原文，上传前删去个人隐私信息。
 
 <a id="control"></a>
 
-## ✍️ 想把写作要求说得更细？（可选）
+## 补充写作要求（可选）
 
-各个任务已经包含基本写作要求。需要更细的约定时，把下面这段放在选好的任务前面，再附上材料，一起发送。
+各任务已自带基本要求；如需更严格约束，可将下方补充框放在任务前面一并发送。
 
 <details>
 <summary><strong>展开复制：补充写作要求（可选，和任务一起发）</strong></summary>
@@ -124,44 +106,38 @@
 
 <a id="catalog"></a>
 
-## 🧭 选一件你现在要做的事
+## 任务目录
 
-点击中间一栏即可跳到对应任务。**不用从头走完全部步骤**，手头卡在哪一步就点哪一步：
+按当前进度点击跳转，无需从头走完全部步骤：
 
-| 阶段 | 我现在想做什么（点击跳转） | 任务范围 · AI 可以帮我得到什么 |
+| 阶段 | 我现在想做什么 | 能得到什么（任务编号） |
 | :--- | :--- | :--- |
-| **01 · 选题** | **[还没想好写什么](#topic)** | `1.1–1.2` · 结合现有条件给出可比较的候选选题和接下来要查的问题 |
-| **02 · 文献** | **[有了想法，想找资料](#literature)** | `2.1–2.3` · 中英文正反搜索词、文献对比表和相关工作段落 |
-| **03 · 方案** | **[不知道研究怎么做、文章怎么安排](#planning)** | `3.1–3.5` · 可执行的研究计划、论文大纲、主线贡献与开题前核对清单 |
-| **04 · 证据** | **[想整理笔记、数据或图表](#records)** | `4.1–4.3` · 可追溯的研究记录索引、推导/分析检查意见和严谨图注表注 |
-| **05 · 初稿** | **[有材料，准备写初稿](#drafting)** | `5.1–5.8` · 根据已有材料写出的引言、方法、结果、讨论、摘要与候选标题 |
-| **06 · 改稿** | **[已经写了，想改得清楚好读](#editing)** | `6.1–6.7` · 理顺结构、去套话、反防御性修改、纯语法检查、学术翻译与改稿记录 |
-| **07 · 自查** | **[快交了，想检查有没有问题](#audit)** | `7.1–7.5` · 对照原始材料标出数字冲突、逻辑漏洞、引用错配和修改建议 |
-| **08 · 投稿** | **[准备向期刊投稿](#submission)** | `8.1–8.4` · 参考文献格式核查、投稿信、期刊匹配度与作者/伦理/AI 声明草稿 |
-| **09 · 返修** | **[收到老师或审稿人的修改意见](#feedback)** | `9.1–9.3` · 修改优先级排序、跨章节同步改稿对照表和逐条回复信 |
-| **10 · 发表后** | **[论文接收或发表了](#publication)** | `10.1–10.3` · 排版校样核对、研究材料归档说明与发表后错误沟通草稿 |
+| <nobr>**01 选题**</nobr> | [还没想好写什么](#topic) | 候选选题对比与查证问题（`1.1–1.2`） |
+| <nobr>**02 文献**</nobr> | [有了想法，想找资料](#literature) | 检索式、文献对比与相关工作（`2.1–2.3`） |
+| <nobr>**03 方案**</nobr> | [规划研究与列大纲](#planning) | 研究计划、大纲与主线贡献（`3.1–3.5`） |
+| <nobr>**04 证据**</nobr> | [整理笔记、数据或图表](#records) | 记录索引、推导检查与图注（`4.1–4.3`） |
+| <nobr>**05 初稿**</nobr> | [把材料写成章节初稿](#drafting) | 引言、方法、结果、讨论与摘要（`5.1–5.8`） |
+| <nobr>**06 改稿**</nobr> | [改得准确、自然好读](#editing) | 结构调整、去 AI 腔、反防御与翻译（`6.1–6.7`） |
+| <nobr>**07 自查**</nobr> | [交稿前核查漏洞](#audit) | 数值冲突、引用核验与审稿视角（`7.1–7.5`） |
+| <nobr>**08 投稿**</nobr> | [准备向期刊投稿](#submission) | 格式核对、投稿信与作者声明（`8.1–8.4`） |
+| <nobr>**09 返修**</nobr> | [根据审稿意见修改](#feedback) | 修改优先级、联动改稿与逐条回复（`9.1–9.3`） |
+| <nobr>**10 发表后**</nobr> | [核对校样与归档](#publication) | 校样比对、材料归档与更正说明（`10.1–10.3`） |
 
 <a id="lifecycle"></a>
 
-## 🗺️ 写作生命周期
+## 写作流程与改稿示例
 
 <div align="center">
-  <img src="assets/research-writing-lifecycle.png" alt="从选题到发表后的研究与写作流程" width="840">
-  <p><sub>这些步骤可以往返，也可以按需取用。研究实施、重要判断和投稿决定仍由作者与期刊负责。<br>
-  <a href="docs/coverage.md">流程参考资料</a> · <a href="docs/validation/README.md">试用与验证记录</a></sub></p>
+  <img src="assets/research-writing-lifecycle.png" alt="从选题到发表后的研究与写作流程" width="760">
+  <p><sub>步骤可按需往返（<a href="docs/coverage.md">流程参考</a> · <a href="docs/validation/README.md">验证记录</a>）</sub></p>
 </div>
 
 <a id="showcase"></a>
 
-## ✨ 看看修改前后的变化
-
 <div align="center">
-  <img src="assets/showcase-before-after.png" alt="短引言修改前后及具体修改说明" width="840">
-  <p><sub>同一份写作任务先生成短引言，再交给本项目的改稿提示词与 Skill 修订，逐句标出修改位置与理由。<br>
-  <a href="docs/showcase/README.md">查看完整输入、原始输出与修改记录</a> · <a href="docs/showcase/README.en.md">Read the example in English</a></sub></p>
+  <img src="assets/showcase-before-after.png" alt="短引言修改前后及具体修改说明" width="760">
+  <p><sub>同一份任务改稿前后逐句对照（<a href="docs/showcase/README.md">查看完整记录</a> · <a href="docs/showcase/README.en.md">English Example</a>）</sub></p>
 </div>
-
----
 
 <a id="topic"></a>
 
@@ -1642,49 +1618,45 @@ AI 工具的实际用途和核查记录：
 
 <a id="skill"></a>
 
-## 🤖 经常用 Codex、Claude Code 或 WorkBuddy 等 AI Agent？
+## 装进 AI Agent（端到端智能流水线）
 
-除了在网页里手动复制上面的提示词，你也可以把仓库里的 **Skills 套件** 装进支持 `SKILL.md` 的 Agent 工具里。装好后不用再自己翻目录找任务编号——你手头有什么材料就直接发给它，Agent 会自动识别当前处在哪个阶段，按需完成调查选题、查核真文献、规划研究方案与大纲、起草正文、去套话润色修改、核对前后数字冲突与回复审稿意见。
+装入支持 `SKILL.md` 的 Agent 后，直接发给它现有原料（想法、PDF 文献、CSV 数据、初稿或审稿意见），即可自动诊断阶段并完成从查证出图到编译导出的全流程。
 
 ```mermaid
 flowchart LR
-    Input["📄 你手头的任意现状材料<br>(想法 / 摘要 / 实验表 / 初稿 / 审稿意见)"] --> Router["🧭 ai-prompt-writing<br>智能现状诊断与路由"]
-    Router --> S1["1号工位 · 选题与真文献核验"]
-    Router --> S2["2号工位 · 方案大纲与证据账本"]
-    Router --> S3["3号工位 · 分章起草与去AI腔精修"]
-    Router --> S4["4号工位 · 数字审计与审稿返修"]
+    Raw["现有材料<br>想法/PDF/CSV/草稿"] --> Router["ai-prompt-writing<br>诊断与对抗调度"]
+    Router --> S1["1 选题与全文核验"]
+    Router --> S2["2 统计制图与账本"]
+    Router --> S3["3 起草与去AI腔"]
+    Router --> S4["4 审计与导出.docx"]
 ```
 
 <details>
-<summary><strong>展开查看智能工位分工与安装方法（可选）</strong></summary>
+<summary><strong>展开查看工位分工、脚本工具与安装方式</strong></summary>
 
-直接复制提示词的网页用户可以跳过这一节。本仓库在 `.agents/skills/` 下提供了 **1 个智能总控入口 + 4 个专职工位 Skill**（均含零第三方依赖的 Python 核验与门禁脚本；若只单独导入总控包 `ai-prompt-writing`，也可独立运行）：
+仓库在 `.agents/skills/` 下提供 **1 个智能总控 + 4 个专职工位**（零第三方依赖 Python 标准库，单装总控包也可独立运行）：
 
-| 模块名称 | 负责什么 | 内置核验与防呆边界 |
-| --- | --- | --- |
-| [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md) | **现状诊断与总调度**：自动判断手头材料所处阶段，分流或串联各工位 | 单包可独立运行；全套件下支持 `pipeline_doctor.py` 巡检工作区进度 |
-| [paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md) | **1号工位（选题与资料搜集）**：条件驱动找选题、正反双向检索、写相关工作 | 免 Key 对接 OpenAlex / CrossRef / arXiv 核验真文献；离线自动退回纯检索计划，零记忆造文 |
-| [paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md) | **2号工位（规划设计与证据账本）**：可行性方案、论文大纲、推导反例审查、图表图注 | 锁定事前/事后时间线与核心主张账本，不向理论/史料研究强索 `p` 值，不把计划写成已发现结果 |
-| [paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md) | **3号工位（分章写作与精修修改）**：各章初稿、理顺结构、去 AI 套话、反防御性改稿、翻译 | 自动扫描提纲腔、空洞道歉与夸大词，核对改稿前后原始数字零丢失；原句已准确则直接保留 |
-| [paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md) | **4号工位（事实核查与投稿返修）**：跨章数字/样本量核对、投稿声明、审稿联动改稿、校样比对 | 自动扫描摘要/正文/表格样本量与单位冲突，追踪跨章同步修改，严禁伪造“已补做实验”或默认勾选声明 |
+| 模块 | 职责与内置脚本 |
+| :--- | :--- |
+| <nobr>[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)</nobr> | **智能总控**：现状诊断、主笔/盲审对抗闭环、`pipeline_doctor.py` 全站联检 |
+| <nobr>[paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md)</nobr> | **1号工位**：选题、OpenAlex/CrossRef/arXiv 真文献核验、`fulltext_indexer.py` PDF 页码锚定 |
+| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **2号工位**：方案大纲、推导反例审查、`stats_and_plot.py` CSV 统计与矢量 SVG 出图 |
+| <nobr>[paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md)</nobr> | **3号工位**：分章起草、去套话与反防御写作、`style_and_draft_gate.py` 数值保真扫描 |
+| <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **4号工位**：样本量冲突扫描、审稿联动、校样比对、`export_manuscript.py` 一键导出 `.docx/.tex` |
 
 <details>
-<summary><strong>项目级直接启用（最省心，自动挂载全部 1+4 工位）</strong></summary>
+<summary><strong>项目级直接启用（挂载全部 1+4 工位）</strong></summary>
 
-将本仓库克隆到本地并作为工作区打开（或把 `.agents/skills/` 下的 5 个文件夹复制到你论文项目的 `.agents/skills/` 目录中），支持 `.agents/skills` 标准发现的客户端（如 Codex、Antigravity 等）会自动识别全部工位与校验脚本。
+克隆本仓库作为工作区打开，或将 `.agents/skills/` 下的 5 个文件夹复制到你的论文项目 `.agents/skills/` 目录，Codex、Antigravity 等客户端会自动加载全部工位与脚本。
 
 </details>
 
 <details>
-<summary><strong>Codex：对话安装与调用</strong></summary>
-
-把下面这段发给 Codex，可安装总控入口（如需完整四工位与本地脚本门禁，可一并安装同级工位目录或直接克隆仓库）：
+<summary><strong>Codex：安装与调用</strong></summary>
 
 ```text
 $skill-installer 请安装 https://github.com/huh7i5/AI-prompts-writing/tree/main/.agents/skills/ai-prompt-writing 中的技能。
 ```
-
-安装后直接描述你的现状即可，例如：
 
 ```text
 $ai-prompt-writing 我刚整理好实验记录和草稿片段，请判断现在该先补哪一步，
@@ -1693,22 +1665,18 @@ $ai-prompt-writing 我刚整理好实验记录和草稿片段，请判断现在�
 [粘贴现有材料]
 ```
 
-Codex 支持用 `$技能名` 调用技能，CLI 和 IDE 扩展也可通过 `/skills` 选择。如果安装后找不到，重新打开客户端再试。具体以 [Codex 技能文档](https://learn.chatgpt.com/docs/build-skills) 为准。
+也可通过 `/skills` 选择；参见 [Codex 技能文档](https://learn.chatgpt.com/docs/build-skills)。
 
 </details>
 
 <details>
-<summary><strong>WorkBuddy：导入与使用</strong></summary>
+<summary><strong>WorkBuddy：上传压缩包使用</strong></summary>
 
-下载本仓库后，可将 `.agents/skills/ai-prompt-writing`（以及按需使用的各 `paper-*` 工位文件夹）分别压缩，再到“技能 → 添加技能 → 上传技能”中导入压缩包。确认技能已启用后，在对话中指定使用对应技能处理论文。
-
-WorkBuddy 的对话安装目前面向技能市场，自定义技能包需要上传，不能把 Codex 的安装指令直接照搬过去。参见 [WorkBuddy 技能说明](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market)。
+下载仓库后将 `.agents/skills/ai-prompt-writing`（及按需使用的 `paper-*` 文件夹）分别压缩，在“技能 → 添加技能 → 上传技能”中导入并启用。参见 [WorkBuddy 技能说明](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market)。
 
 </details>
 
-其他支持 `SKILL.md` 的工具（如 Claude Code 等）可按各自的技能目录规则放入文件夹；不支持就直接复制本页提示词。`/ai-prompt-writing` 不是各工具通用的命令。
-
-真实联网文献核验依赖宿主允许访问开放学术接口，确定性门禁脚本依赖本地 Python 3 环境；权限受限时技能会自动降级并标明核查边界，绝不假装已执行。使用前确认材料可以上传；本地 Agent 不等于离线运行。实验与研究仍须真实开展，投稿前请人工核对全部事实及目标期刊的 AI 使用披露要求。
+真实联网检索依赖宿主网络，脚本依赖 Python 3；受限时会自动降级并标明边界。投稿前请核对所有事实及目标期刊的 AI 披露要求。
 
 </details>
 
