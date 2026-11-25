@@ -1,0 +1,8 @@
+{
+  "station": "03_draft_polish",
+  "mode": "draft",
+  "status": "PASS",
+  "blocker_count": 0,
+  "warn_count": 0,
+  "findings": []
+}

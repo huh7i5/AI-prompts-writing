@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-25T08:47:40+00:00",
+  "capability_state": "ONLINE_API_VERIFIED",
+  "is_systematic_review": false,
+  "search_protocol": {
+    "primary_query": "Capital Bikeshare Washington registered casual weekday weekend ridership",
+    "counter_or_alt_query": "Capital Bikeshare weather seasonal variation daily trip counts",
+    "databases_queried": [
+      "OpenAlex",
+      "Crossref"
+    ],
+    "year_from": 2010,
+    "year_to": 2026,
+    "inclusion_criteria": [
+      "UCI 数据与介绍论文，或直接基于华盛顿共享单车使用记录、分析日历或天气条件的实证研究。",
+      "定向补查的身份须能用 DOI 核实，文中所用定义或方法须能定位到数据说明或作者摘要。"
+    ],
+    "supplementary_lookup": [
+      "UCI 数据页及其 Introductory Paper，DOI 单条核验。",
+      "华盛顿天气研究的定向题名查找，出版社摘要与 DOI 单条核验。"
+    ]
+  },
+  "source_diagnostics": {
+    "openalex:PRIMARY_QUERY": "NET_ERR:URLError",
+    "crossref:PRIMARY_QUERY": "HTTP_429",
+    "crossref:COUNTER_OR_ALT_QUERY": "HTTP_429"
+  },
+  "screening": {
+    "keyword_unique_returned": 2,
+    "keyword_included": 0,
+    "keyword_excluded": [
+      {
+        "key": "yang2018impact",
+        "reason": "波士顿，超出地区范围。"
+      },
+      {
+        "key": "martin2016bikesharing",
+        "reason": "主要考察碰撞与伤害，未提供相关日类型比较。"
+      }
+    ],
+    "supplementary_included": 3
+  },
+  "total_verified_entries": 3,
+  "entries": [
+    {
+      "ref_id": "fanaee2013bike",
+      "title": "Bike Sharing",
+      "authors": [
+        "Hadi Fanaee-T"
+      ],
+      "year": 2013,
+      "venue": "UCI Machine Learning Repository",
+      "doi": "10.24432/C5W894",
+      "url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+      "sources_matched": [
+        "OpenAlex (DOI)",
+        "UCI Machine Learning Repository (creator, citation, variable definitions)"
+      ],
+      "verification_status": "API_VERIFIED",
+      "reading_depth": "FULLTEXT_READ",
+      "read_locator": "Dataset Information; Variables Table; Additional Variable Information; Dataset Files; Citation; License (dataset documentation, not a journal article)",
+      "supported_claims_notes": "UCI 说明涵盖 2011—2012 年，列出小时表与日表。workingday=1 表示非周末且非节假日。casual 与 registered 是两类用户的租车计数，cnt 包括二者。页面载明 CC BY 4.0。分析天数、均值和差额须另由 day.csv 复算。",
+      "acquisition": "UCI 数据页与 DOI 单条核验"
+    },
+    {
+      "ref_id": "fanaee2014event",
+      "title": "Event labeling combining ensemble detectors and background knowledge",
+      "authors": [
+        "Hadi Fanaee-T",
+        "Joao Gama"
+      ],
+      "year": 2014,
+      "published_online": "2013-11-26",
+      "venue": "Progress in Artificial Intelligence",
+      "volume": "2",
+      "pages": "113–127",
+      "doi": "10.1007/s13748-013-0040-3",
+      "url": "https://link.springer.com/article/10.1007/s13748-013-0040-3",
+      "sources_matched": [
+        "Crossref (DOI)",
+        "UCI (Introductory Paper)",
+        "Springer (abstract and citation)"
+      ],
+      "verification_status": "API_VERIFIED",
+      "reading_depth": "ABSTRACT_READ",
+      "read_locator": "Springer article header and Abstract, first paragraph",
+      "supported_claims_notes": "UCI 将该文列为数据集介绍论文。作者在摘要中描述了利用共享单车使用日志、检测器集成和背景知识标注事件的方法。卷期属 2014 年，2013 年为在线发表年。摘要未给出本文所需的工作日差额。",
+      "acquisition": "UCI 的 Introductory Paper 栏定向追溯"
+    },
+    {
+      "ref_id": "gebhart2014weather",
+      "title": "The impact of weather conditions on bikeshare trips in Washington, DC",
+      "authors": [
+        "Kyle Gebhart",
+        "Robert B. Noland"
+      ],
+      "year": 2014,
+      "venue": "Transportation",
+      "volume": "41",
+      "issue": "6",
+      "pages": "1205–1225",
+      "doi": "10.1007/s11116-014-9540-7",
+      "url": "https://link.springer.com/article/10.1007/s11116-014-9540-7",
+      "sources_matched": [
+        "Crossref (DOI)",
+        "Springer (abstract and citation)",
+        "Rutgers (bibliographic fields)"
+      ],
+      "verification_status": "API_VERIFIED",
+      "reading_depth": "ABSTRACT_READ",
+      "read_locator": "Springer Abstract; Rutgers citation lists volume, issue and pages",
+      "supported_claims_notes": "据摘要，作者连接华盛顿逐小时的用车与天气记录，报告低温、降雨和高湿条件下用车可能性较低、行程时间较短。用于说明天气值得讨论；本文所分析的工作日差额是否与天气有关仍须直接检验。",
+      "acquisition": "用地名、天气和 bikeshare 定向补查"
+    }
+  ]
+}

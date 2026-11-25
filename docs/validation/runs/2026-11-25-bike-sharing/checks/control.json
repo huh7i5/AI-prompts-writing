@@ -1,0 +1,84 @@
+{
+  "result": "REPRODUCED",
+  "change": "Only the two pooled casual and registered category labels were exchanged in a temporary copy.",
+  "source_sha256": "90f93495fb16a84e6910c5a6e3724e39a36b7b79a6446518733c7b0f0b410c6e",
+  "source_unchanged": true,
+  "data_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+  "data_matches_pinned_snapshot": true,
+  "numeric_token_multiset_unchanged": true,
+  "original": {
+    "native_gate": {
+      "exit_code": 0,
+      "status": "PASS",
+      "findings": []
+    },
+    "additional_check": {
+      "exit_code": 0,
+      "status": "PASS",
+      "numeric_cells_checked": 27,
+      "issues": []
+    }
+  },
+  "swapped": {
+    "native_gate": {
+      "exit_code": 0,
+      "status": "PASS",
+      "findings": []
+    },
+    "additional_check": {
+      "exit_code": 2,
+      "status": "BLOCKED",
+      "numeric_cells_checked": 27,
+      "issues": [
+        {
+          "line": 27,
+          "year": "合并",
+          "category": "注册",
+          "column": "工作日日均",
+          "observed": "606.6",
+          "expected": "3978.3"
+        },
+        {
+          "line": 27,
+          "year": "合并",
+          "category": "注册",
+          "column": "非工作日日均",
+          "observed": "1371.1",
+          "expected": "2959.0"
+        },
+        {
+          "line": 27,
+          "year": "合并",
+          "category": "注册",
+          "column": "差值",
+          "observed": "-764.6",
+          "expected": "1019.2"
+        },
+        {
+          "line": 28,
+          "year": "合并",
+          "category": "临时",
+          "column": "工作日日均",
+          "observed": "3978.3",
+          "expected": "606.6"
+        },
+        {
+          "line": 28,
+          "year": "合并",
+          "category": "临时",
+          "column": "非工作日日均",
+          "observed": "2959.0",
+          "expected": "1371.1"
+        },
+        {
+          "line": 28,
+          "year": "合并",
+          "category": "临时",
+          "column": "差值",
+          "observed": "1019.2",
+          "expected": "-764.6"
+        }
+      ]
+    }
+  }
+}

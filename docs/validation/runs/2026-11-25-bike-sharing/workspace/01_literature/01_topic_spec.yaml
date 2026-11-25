@@ -1,0 +1,42 @@
+schema_version: "1.0"
+station: "01_topic_scoping"
+status: "LITERATURE_GROUNDED"
+
+project_meta:
+  discipline: "交通研究"
+  paper_type: "中文观察性描述研究"
+  research_paradigm: "QUANTITATIVE"
+  target_language: "zh-CN"
+constraints_and_resources:
+  timeframe: "观察窗口为 2011 年和 2012 年。"
+  accessible_materials:
+    - "UCI Bike Sharing 日表 day.csv 与数据字典 [@fanaee2013bike]"
+  method_skills_available: ["按日分组、计算日均数与均值差、按年分层"]
+  hard_limitations:
+    - "日表按系统汇总，无个人身份、行程目的或站点层面的供给信息。"
+fact_separation:
+  prior_established_points:
+    - "按 UCI 字段定义，工作日排除周末及节假日，日总量包含两类用户的租车次数。[@fanaee2013bike]"
+    - "华盛顿的小时级研究在摘要中报告天气与用车相关。[@gebhart2014weather]"
+  author_observations: []
+  untested_hypotheses:
+    - "两类用户的工作日差额可能方向相反，合计差额因而可能小于某一分项的差额。"
+selected_research_question:
+  primary_question: "在华盛顿地区 Capital Bikeshare 2011—2012 年的服务记录中，工作日和非工作日的平均每日租车次数相差多少？"
+  sub_questions:
+    - "注册用户与临时用户各贡献多少日均差额？"
+    - "2011 年、2012 年分别计算时，各组差额的方向和量级如何？"
+  study_object_and_scope: "分析单位为系统的一个日历日，限两年观测期。每个日期等权，统计次数以次/日表示。"
+  minimum_evidence_needed:
+    - "检查日期范围、唯一性、完整性及日类型编码，记录各组天数。"
+    - "检查每行 cnt = casual + registered；按日类型汇总三列，并分年复算。"
+  alternative_explanations:
+    - "季节、天气或同期服务规模变化可能对应日均租车量的差别。"
+    - "租车身份并不记录出行目的，同一使用者可以贡献多次租车。"
+  candidate_contributions:
+    - "UNVERIFIED_UNTIL_RESULTS：给出可回溯到日表的合计与分项差额。"
+open_gaps_to_verify:
+  - item: "目录页上的实例数不能直接当作日表天数。"
+    next_action: "在 day.csv 中独立清点不同日期，并按年、日类型列出分母。"
+  - item: "系统层的日期分类与两类用户的差额需要数据支持。"
+    next_action: "以工作日均值减非工作日均值，同一分组内核对两项差额之和与总差额。"

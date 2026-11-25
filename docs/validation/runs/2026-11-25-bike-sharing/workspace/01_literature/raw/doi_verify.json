@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-11-25T08:46:31+00:00",
+  "total_checked": 2,
+  "verified_count": 2,
+  "invalid_or_fake_count": 0,
+  "status": "PASS",
+  "results": [
+    {
+      "identifier": "10.24432/c5w894",
+      "id_type": "doi",
+      "verification_status": "API_VERIFIED",
+      "matched_source": "openalex",
+      "title": "Bike Sharing",
+      "authors": [
+        "Hadi Fanaee‐T"
+      ],
+      "year": 2013,
+      "reading_depth": "METADATA_ONLY"
+    },
+    {
+      "identifier": "10.1007/s13748-013-0040-3",
+      "id_type": "doi",
+      "verification_status": "API_VERIFIED",
+      "matched_source": "crossref",
+      "title": "Event labeling combining ensemble detectors and background knowledge",
+      "authors": [
+        "Hadi Fanaee-T",
+        "Joao Gama"
+      ],
+      "year": 2014,
+      "reading_depth": "METADATA_ONLY"
+    }
+  ]
+}

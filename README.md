@@ -35,6 +35,8 @@
 | **📋 网页直接复制**<br>*(零门槛，无需下载或写代码)* | 用豆包、ChatGPT、DeepSeek、Claude、Kimi 等网页/客户端聊天的同学 | 在下方[任务目录](#catalog)点开你现在要做的那一小步，复制整个文字框，填上自己的材料直接发送即可。 |
 | **🤖 装入 AI Agent**<br>*(智能识别现状，自动推进全流程)* | 用 Codex、Claude Code、Antigravity、WorkBuddy 等支持 `SKILL.md` 工具的研究者 | 安装内置的 [论文全流程 Skills 套件](#skill) 后无需再查任务编号——直接把现有的想法、文献、数据或草稿发给 Agent，自动完成**现状诊断 → 选题与真文献核验 → 规划设计与大纲 → 分章写作 → 去 AI 腔修改 → 数字口径核查与审稿回复**。 |
 
+想看 Agent 实际写出了什么？这次用 731 天的公开记录分析了华盛顿的共享单车。可以直接[读文章](docs/validation/runs/2026-11-25-bike-sharing/workspace/04_drafts/manuscript.md)，也可以[看数据、复算方法和一次故意改错的测试](docs/validation/runs/2026-11-25-bike-sharing/README.md)。
+
 <a id="start"></a>
 
 ## 📋 第一次用，跟着这三步

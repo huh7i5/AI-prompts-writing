@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-25T08:51:47Z",
+  "research_paradigm": "QUANTITATIVE",
+  "study_time_state": "POST_RESULTS",
+  "one_sentence_storyline": "两年中，工作日的注册用户日均租借量较高，临时用户较低，两类租借量相加后只能看到较小的正差值。",
+  "evidence_items": [
+    {
+      "evidence_id": "E01_calendar",
+      "source_location": "02_evidence/day.csv, dteday, workingday, holiday, casual, registered, cnt; 02_evidence/results.json#/calendar and /checks",
+      "processing_or_derivation_notes": "逐日检查连续性、类别编码和租借次数加总。",
+      "recomputation_status": "RECOMPUTED_LOCAL",
+      "known_limitations_or_deviations": "以数据提供方的节假日标记为准。"
+    },
+    {
+      "evidence_id": "E02_annual",
+      "source_location": "02_evidence/results.json#/groups (period=2011,2012) and /contrasts (period=2011,2012); underlying 02_evidence/day.csv",
+      "processing_or_derivation_notes": "每年分别按 workingday 求算术平均数，再计算工作日均值减非工作日均值。",
+      "recomputation_status": "RECOMPUTED_LOCAL",
+      "known_limitations_or_deviations": "年度差额是描述统计量，未调整天气和季节。"
+    },
+    {
+      "evidence_id": "E03_pooled",
+      "source_location": "02_evidence/results.json#/groups (period=pooled) and /contrasts (period=pooled); underlying 02_evidence/day.csv",
+      "processing_or_derivation_notes": "分别合并两年全部工作日和全部非工作日后计算均值及其差值。",
+      "recomputation_status": "RECOMPUTED_LOCAL",
+      "known_limitations_or_deviations": "非工作日包括周末和节假日，未区分两者。"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C01",
+      "claim_text": "覆盖连续的 731 天，其中 500 个工作日、231 个非工作日，每日两类租借次数相加均等于总数。",
+      "support_level": "SUPPORTED",
+      "bound_evidence_ids": [
+        "E01_calendar",
+        "E03_pooled"
+      ],
+      "bound_literature_ref_ids": [
+        "fanaee2013bike"
+      ],
+      "has_adverse_or_counterexample": false,
+      "scope_and_limitations": "限于华盛顿该系统 2011—2012 年的租借笔数，逐日等权。",
+      "unexcluded_alternative_explanations": [],
+      "target_sections": [
+        "methods",
+        "results"
+      ]
+    },
+    {
+      "claim_id": "C02",
+      "claim_text": "工作日注册用户日均租借量高于非工作日，临时用户日均租借量低于非工作日。2011 年和 2012 年各自都出现了这组方向。",
+      "support_level": "SUPPORTED",
+      "bound_evidence_ids": [
+        "E02_annual"
+      ],
+      "bound_literature_ref_ids": [
+        "fanaee2013bike"
+      ],
+      "has_adverse_or_counterexample": false,
+      "scope_and_limitations": "限于华盛顿该系统 2011—2012 年的租借笔数，逐日等权。",
+      "unexcluded_alternative_explanations": [
+        "日记录不含出行目的。"
+      ],
+      "target_sections": [
+        "abstract",
+        "results",
+        "discussion"
+      ]
+    },
+    {
+      "claim_id": "C03",
+      "claim_text": "两年合并比较，注册用户工作日日均多 1019.2 次，临时用户少 764.6 次，合计多 254.7 次。两类差值部分相抵。",
+      "support_level": "SUPPORTED",
+      "bound_evidence_ids": [
+        "E01_calendar",
+        "E03_pooled"
+      ],
+      "bound_literature_ref_ids": [
+        "fanaee2013bike"
+      ],
+      "has_adverse_or_counterexample": false,
+      "scope_and_limitations": "限于华盛顿该系统 2011—2012 年的租借笔数，逐日等权。",
+      "unexcluded_alternative_explanations": [
+        "数据未按天气、季节或系统规模调整。"
+      ],
+      "target_sections": [
+        "abstract",
+        "results",
+        "discussion"
+      ]
+    }
+  ]
+}

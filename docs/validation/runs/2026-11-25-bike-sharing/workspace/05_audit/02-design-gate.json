@@ -1,0 +1,13 @@
+{
+  "station": "02_design_evidence",
+  "tasks": [
+    "3.4",
+    "4.3"
+  ],
+  "paradigm": "QUANTITATIVE",
+  "time_state": "POST_RESULTS",
+  "status": "PASS",
+  "blocker_count": 0,
+  "warn_count": 0,
+  "findings": []
+}

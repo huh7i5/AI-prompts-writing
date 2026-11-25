@@ -1,0 +1,2 @@
+# Preserve the UCI archive member's CRLF bytes and SHA-256 on every checkout.
+day.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol

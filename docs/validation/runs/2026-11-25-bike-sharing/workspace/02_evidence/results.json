@@ -1,0 +1,137 @@
+{
+  "source_file": "day.csv",
+  "sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+  "calendar": {
+    "first_date": "2011-01-01",
+    "last_date": "2012-12-31",
+    "n_rows": 731,
+    "n_unique_dates": 731
+  },
+  "checks": {
+    "year_code_mismatches": 0,
+    "workingday_or_holiday_code_errors": 0,
+    "count_identity_mismatches": 0,
+    "negative_count_rows": 0,
+    "duplicate_dates": 0,
+    "missing_calendar_dates": 0,
+    "out_of_period_dates": 0
+  },
+  "groups": [
+    {
+      "period": "2011",
+      "workingday": 0,
+      "n_days": 115,
+      "rental_sums": {
+        "casual": 128898,
+        "registered": 257941,
+        "cnt": 386839
+      },
+      "mean_rentals_per_day": {
+        "casual": 1120.8521739130435,
+        "registered": 2242.965217391304,
+        "cnt": 3363.817391304348
+      }
+    },
+    {
+      "period": "2011",
+      "workingday": 1,
+      "n_days": 250,
+      "rental_sums": {
+        "casual": 118354,
+        "registered": 737910,
+        "cnt": 856264
+      },
+      "mean_rentals_per_day": {
+        "casual": 473.416,
+        "registered": 2951.64,
+        "cnt": 3425.056
+      }
+    },
+    {
+      "period": "2012",
+      "workingday": 0,
+      "n_days": 116,
+      "rental_sums": {
+        "casual": 187834,
+        "registered": 425596,
+        "cnt": 613430
+      },
+      "mean_rentals_per_day": {
+        "casual": 1619.2586206896551,
+        "registered": 3668.9310344827586,
+        "cnt": 5288.189655172414
+      }
+    },
+    {
+      "period": "2012",
+      "workingday": 1,
+      "n_days": 250,
+      "rental_sums": {
+        "casual": 184931,
+        "registered": 1251215,
+        "cnt": 1436146
+      },
+      "mean_rentals_per_day": {
+        "casual": 739.724,
+        "registered": 5004.86,
+        "cnt": 5744.584
+      }
+    },
+    {
+      "period": "pooled",
+      "workingday": 0,
+      "n_days": 231,
+      "rental_sums": {
+        "casual": 316732,
+        "registered": 683537,
+        "cnt": 1000269
+      },
+      "mean_rentals_per_day": {
+        "casual": 1371.1341991341992,
+        "registered": 2959.034632034632,
+        "cnt": 4330.168831168831
+      }
+    },
+    {
+      "period": "pooled",
+      "workingday": 1,
+      "n_days": 500,
+      "rental_sums": {
+        "casual": 303285,
+        "registered": 1989125,
+        "cnt": 2292410
+      },
+      "mean_rentals_per_day": {
+        "casual": 606.57,
+        "registered": 3978.25,
+        "cnt": 4584.82
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "period": "2011",
+      "working_minus_nonworking_rentals_per_day": {
+        "casual": -647.4361739130435,
+        "registered": 708.6747826086956,
+        "cnt": 61.238608695652175
+      }
+    },
+    {
+      "period": "2012",
+      "working_minus_nonworking_rentals_per_day": {
+        "casual": -879.5346206896552,
+        "registered": 1335.9289655172413,
+        "cnt": 456.3943448275862
+      }
+    },
+    {
+      "period": "pooled",
+      "working_minus_nonworking_rentals_per_day": {
+        "casual": -764.5641991341992,
+        "registered": 1019.2153679653679,
+        "cnt": 254.65116883116883
+      }
+    }
+  ]
+}

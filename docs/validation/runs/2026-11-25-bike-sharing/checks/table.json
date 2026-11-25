@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "data_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+  "days_by_period_and_workingday": {
+    "2011": {
+      "0": 115,
+      "1": 250
+    },
+    "2012": {
+      "0": 116,
+      "1": 250
+    },
+    "pooled": {
+      "0": 231,
+      "1": 500
+    }
+  },
+  "unique_dates": 731,
+  "table_rows_checked": 9,
+  "numeric_cells_checked": 27,
+  "issues": []
+}

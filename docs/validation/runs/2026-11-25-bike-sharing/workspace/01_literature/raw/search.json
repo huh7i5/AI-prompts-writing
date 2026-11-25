@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-25T08:46:32+00:00",
+  "capability_state": "ONLINE_API_VERIFIED",
+  "is_systematic_review": false,
+  "source_diagnostics": {
+    "openalex:PRIMARY_QUERY": "NET_ERR:URLError",
+    "crossref:PRIMARY_QUERY": "HTTP_429",
+    "crossref:COUNTER_OR_ALT_QUERY": "HTTP_429"
+  },
+  "search_protocol": {
+    "primary_query": "Capital Bikeshare Washington registered casual weekday weekend ridership",
+    "counter_or_alt_query": "Capital Bikeshare weather seasonal variation daily trip counts",
+    "databases_queried": [
+      "openalex"
+    ],
+    "year_from": 2010,
+    "year_to": 2026,
+    "inclusion_criteria": []
+  },
+  "total_verified_entries": 2,
+  "entries": [
+    {
+      "title": "The Impact of Weather Conditions on Bikeshare Trips in Boston",
+      "authors": [
+        "Hong Yang"
+      ],
+      "year": 2018,
+      "venue": "DigitalGeorgetown (Georgetown University Library)",
+      "doi": null,
+      "arxiv_id": null,
+      "openalex_id": "https://openalex.org/W2811201145",
+      "url": "http://hdl.handle.net/10822/1050843",
+      "cited_by_count": 1,
+      "sources_matched": [
+        "openalex"
+      ],
+      "polarity_tag": "COUNTER_OR_ALT_QUERY",
+      "verification_status": "API_VERIFIED",
+      "reading_depth": "ABSTRACT_READ",
+      "abstract_text": "The present study analyzes the effect of weather on the use of the Boston bike share system, Hubway, exploiting a dataset of all trips made on the system from 2015 to 2017. The study links daily weather data, including temperature, humidity, visibility, wind speed, rainfall, snow, and fog to daily usage data. Additionally, it uses GIS to visualize the number of bikeshare trips under different weather condition in different Boston areas to develop a view of the difference in bikeshare usage across different weather patterns. The study also evaluates how the number of bikeshare trips is affected by number and location of colleges, the number and route of subway stations, bus stops, and route of bike lanes. To increase understanding of the major users of shared bicycles in Boston, how Boston’s MBTA and Hubway work together to serve Boston’s public transit system. and whether there is any gap in the current network of public transport system. The study finds that the number of bikeshare trips in Boston is statistically significant correlated with average temperature, average visibility, snowy days, rain, and average humidity. Average humidity and average visibility are the key indicators of influence one the number of bikeshare trips in summer and winter respectively. Particularly in winter seasons, bikeshare use is extremely rare from docking stations in close proximity to are with well-developed metro stations. These results have important implications for the city of Boston’s bikeshare expansion project planned for summer 2018, as well as for those planning bikeshare systems in other cities.",
+      "ref_id": "yang2018impact"
+    },
+    {
+      "title": "Bikesharing and Bicycle Safety",
+      "authors": [
+        "Elliot W. Martin",
+        "Adam P. Cohen",
+        "Jan L. Botha",
+        "Susan Shaheen"
+      ],
+      "year": 2016,
+      "venue": "San José State University ScholarWorks (San Jose State University)",
+      "doi": null,
+      "arxiv_id": null,
+      "openalex_id": "https://openalex.org/W2295112086",
+      "url": "https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=1206&context=mti_publications",
+      "cited_by_count": 46,
+      "sources_matched": [
+        "openalex"
+      ],
+      "polarity_tag": "COUNTER_OR_ALT_QUERY",
+      "verification_status": "API_VERIFIED",
+      "reading_depth": "ABSTRACT_READ",
+      "abstract_text": "The growth of bikesharing in the United States has had a transformative impact on urban transportation. Major cities have established large bikesharing systems, including Boston, Chicago, Denver, Minneapolis-Saint Paul, New York City, Salt Lake City, the San Francisco Bay Area, Seattle, Washington DC, and others. These systems began operating as early as 2010, and no fatalities have occurred within the US as of this writing. However, three have happened in North America—two in Canada and one in Mexico. Bikesharing has some qualities that appear inherently unsafe for bicyclists. Most prominently, helmet usage is documented to be quite low in most regions. Bikesharing is also used by irregular bicyclists who are less familiar with the local terrain. In this study, researchers take a closer look at bikesharing safety from qualitative and quantitative perspectives. Through a series of four focus groups, they discussed bikesharing usage and safety with bikesharing members and nonmembers in the Bay Area. They further engaged experts nationwide from a variety of fields to evaluate their opinions and perspectives on bikesharing and safety. Finally, researchers conducted an analysis of bicycle and bikesharing activity data, as well as bicycle and bikesharing collisions to evaluate injury rates associated with bikesharing when compared with benchmarks of personal bicycling. The data analysis found that collision and injury rates for bikesharing are lower than previously computed rates for personal bicycling. Experts and focus group participants independently pointed to bikesharing rider behavior and bikesharing bicycle design as possible factors. In particular, bikesharing bicycles are generally designed in ways that promote stability and limited speeds, which mitigate the conditions that contribute to collisions. Data analysis also explored whether there was evidence of a “safety in numbers benefit” that resulted from bikesharing activity. However, no significant impact from bikesharing activity on broader bicycle collisions could be found within the regions in which they operate. Discussion and recommendations are presented in the conclusion.",
+      "ref_id": "martin2016bikesharing"
+    }
+  ]
+}
