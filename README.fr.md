@@ -4,7 +4,7 @@
 
 <p><a href="README.md">简体中文</a> · <a href="README.en.md">English</a> · <a href="README.es.md">Español</a> · <strong>Français</strong> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
-<p><strong>Assistant de rédaction IA avec diagnostic automatique d'étape, conseils ciblés et 43 prompts prêts à l'emploi (Web &amp; Agent Skills)</strong></p>
+<p><strong>Diagnostique l'étape d'écriture · Donne des conseils ciblés · Accompagne rédaction, réécriture, vérification et export (43 prompts + Agent Skills)</strong></p>
 
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Stars"></a>

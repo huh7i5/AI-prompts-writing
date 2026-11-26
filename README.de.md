@@ -4,7 +4,7 @@
 
 <p><a href="README.md">简体中文</a> · <a href="README.en.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <strong>Deutsch</strong> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
-<p><strong>KI-Schreibassistent mit automatischer Statusdiagnose, gezielten Schreibtipps &amp; 43 sofort nutzbaren Prompts (Web &amp; Agent Skills)</strong></p>
+<p><strong>Schreibstatus automatisch erkennen · Gezielte Schreibtipps geben · Entwürfe, Entklischeeung, Literaturprüfung &amp; Export unterstützen (43 Prompts + Agent Skills)</strong></p>
 
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="Sterne auf GitHub"></a>

@@ -2,9 +2,9 @@
 
 <h1>🎓 AI-prompts-writing</h1>
 
-<p><strong>State-Aware AI &amp; Academic Writing Assistant · Agent Skills &amp; 43 Structured Prompts</strong></p>
+<p><strong>Auto-Diagnose Writing Stage · Give Actionable Advice · Draft &amp; Revise Full Papers with AI</strong></p>
 
-<p><sub>Auto-diagnose your draft stage · Give actionable writing advice · Keep numbers &amp; citations grounded · Export <code>.docx</code> &amp; <code>.tex</code><br>Copy-paste on Web (ChatGPT / Claude / DeepSeek / Kimi) · Native Agent Skills (Claude Code / Codex / Cursor / Antigravity / WorkBuddy)</sub></p>
+<p><sub>Anti-AI-slop polishing · Verified citations &amp; PDF page anchors · CSV stats &amp; SVG plots · Export <code>.docx</code> &amp; <code>.tex</code> · 43 Web Prompts + 1+4 Agent Skills<br>Copy-paste on Web (ChatGPT / Claude / DeepSeek / Kimi) · Native Agent Skills (Claude Code / Codex / Cursor / Antigravity / WorkBuddy)</sub></p>
 
 <p><a href="README.md">简体中文</a> · <strong>English</strong> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
@@ -27,7 +27,7 @@
 
 </div>
 
-> **Turn ad-hoc AI writing into a state-aware, verifiable workflow.** Drop in a rough idea, PDFs, CSV tables, draft paragraphs, or reviewer comments—the assistant **automatically diagnoses what stage you are in, gives specific writing advice on missing evidence or weak logic, and assists drafting and revision** without inventing data or references (if helpful, consider leaving a ⭐ Star).
+> **Turn ad-hoc AI writing into a state-aware, verifiable workflow.** Drop in a rough idea, PDFs, CSV tables, draft paragraphs, or reviewer comments—**automatically diagnose what stage you are in, get specific writing advice on missing evidence or weak logic, and draft or revise cleanly** without inventing data or references (if helpful, consider leaving a ⭐ Star).
 
 - **Copy & paste on the web**: No setup or coding needed—open any task in the [directory below](#catalog) or use the [interactive prompt builder](https://huh7i5.github.io/AI-prompts-writing/builder/) with ChatGPT, Claude, or DeepSeek.
 - **Run inside an AI Agent**: Compatible with Claude Code, Codex, Cursor, Antigravity, and WorkBuddy—share your materials to auto-diagnose stage, get targeted advice, verify citations, anchor PDF pages, compute stats/SVG plots, revise prose, and export `.docx`/`.tex` ([see setup](#skill)).

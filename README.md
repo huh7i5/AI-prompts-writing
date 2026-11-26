@@ -2,9 +2,9 @@
 
 <h1>🎓 AI-prompts-writing</h1>
 
-<p><strong>智能判断写作状态的 AI 写作助手 · 论文辅助写作与全流程提示词库</strong></p>
+<p><strong>自动判断写作状态 · 给出写作建议 · 辅助 AI 写作与论文写作全流程写稿改稿</strong></p>
 
-<p><sub>自动识别手头材料阶段 · 给出针对性写作建议 · 去 AI 腔保真辅助写作 · 本地脚本查文献/出图/导出 <code>.docx</code> &amp; <code>.tex</code><br>网页直用适配 <b>DeepSeek / ChatGPT / Claude / Kimi / 豆包</b> · Agent 兼容 <b>Claude Code / Codex / Cursor / Antigravity / WorkBuddy</b></sub></p>
+<p><sub>去 AI 味润色 · 查真文献与 PDF 页码锚定 · CSV 统计画图 · 导出 <code>.docx</code> &amp; <code>.tex</code> · 含 43 项网页提示词与 1+4 Agent Skills<br>网页直用适配 <b>DeepSeek / ChatGPT / Claude / Kimi / 豆包</b> · Agent 兼容 <b>Claude Code / Codex / Cursor / Antigravity / WorkBuddy</b></sub></p>
 
 <p><strong>简体中文</strong> · <a href="README.en.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 

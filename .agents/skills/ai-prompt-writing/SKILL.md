@@ -1,8 +1,8 @@
 ---
 name: ai-prompt-writing
 description: >-
-  Smart state-aware AI writing & academic paper assistant: automatically diagnoses what writing stage and evidence state the user currently has (vague idea, reading notes/PDFs, raw CSV data/proofs, rough draft, or reviewer comments), gives targeted writing advice on missing evidence or revisions, and assists execution across the 4 specialized station skills (topic & verified literature -> study design, SVG stats & claim ledger -> section drafting & anti-AI-slop polishing -> numeric audit, peer-review sync & .docx/.tex export) or standalone when installed alone.
-  智能 AI 写作助手与学术论文辅助写作总控：自动判断当前写作状态与研究阶段，先给出针对性写作建议与缺口诊断，再辅助完成选题查文献、研究大纲与图表、分章写作、去 AI 味润色、数字引用核查及审稿回复。
+  Auto-diagnose writing stage, give targeted writing advice, and assist full-cycle AI & academic paper drafting and revision (de-slop polishing, real citation & PDF page verification, CSV stats & SVG plotting, .docx/.tex export). Evaluates whatever materials the user currently has (vague idea, reading notes/PDFs, raw CSV data/proofs, rough draft, or reviewer comments) and orchestrates the 4 specialized station skills or runs standalone.
+  自动判断写作状态、给出写作建议，并辅助 AI 写作与论文全流程写稿改稿（去 AI 味、查真文献与 PDF 定位、统计画图、数字核查、审稿回复与导出 Word/LaTeX）。
 ---
 
 # AI Prompt Writing · 智能写作状态诊断与辅助写作总控
