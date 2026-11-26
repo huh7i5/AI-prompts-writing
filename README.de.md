@@ -9,14 +9,20 @@
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="Sterne auf GitHub"></a>
   <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square" alt="Forks auf GitHub"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0"><img src="https://img.shields.io/github/v/release/huh7i5/AI-prompts-writing?style=flat-square&color=1f6feb" alt="Release v1.0.0"></a>
+  <a href="#catalog"><img src="https://img.shields.io/badge/prompts-43_tasks-475569?style=flat-square" alt="43 Prompts"></a>
+  <a href="#skill"><img src="https://img.shields.io/badge/agent_skills-1+4_pipeline-475569?style=flat-square" alt="Agent Skills Suite"></a>
 </p>
 
 <p>
   <a href="#start">Hier anfangen</a> ·
-  <a href="#catalog">Eine Aufgabe auswählen</a> ·
-  <a href="#lifecycle">Schreibablauf ansehen</a> ·
-  <a href="#showcase">Ein Überarbeitungsbeispiel ansehen</a> ·
-  <a href="docs/examples/reading-room-paper.en.md">Musterarbeit (Englisch)</a>
+  <a href="#catalog">43 Aufgaben</a> ·
+  <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">Web-Generator</a> ·
+  <a href="#lifecycle">Ablauf</a> ·
+  <a href="#showcase">Überarbeitungsbeispiel</a> ·
+  <a href="#skill">Agent Skills</a> ·
+  <a href="docs/examples/capital-bikeshare/paper.md">Empirische Studie</a> ·
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0">v1.0.0</a>
 </p>
 
 </div>
@@ -1625,25 +1631,37 @@ Bestätigte korrekte Informationen und verbleibende Unbekannte:
 
 <a id="skill"></a>
 
-## Nutzen Sie häufig Codex oder WorkBuddy?
+## Einsatz in KI-Agenten (1+4 Agent Skills Suite)
 
-Sie können die Schreibvorgaben in Ihrem Werkzeug installieren, um sie später wiederzuverwenden.
+Installieren Sie die Suite in einem `SKILL.md`-kompatiblen Client (Claude Code, Codex, Cursor, Antigravity, OpenCode oder WorkBuddy) und übergeben Sie Notizen, PDFs, CSV-Tabellen oder Entwürfe an `ai-prompt-writing`:
+
+1. **Automatische Statusdiagnose**: Erkennt die aktuelle Schreibphase (1–10) und trennt Entwurfspläne (`PRE_STUDY`) von vorliegenden Ergebnissen (`POST_RESULTS`).
+2. **Gezielte Schreibhinweise**: Benennt fehlende Belege, Zahlenkonflikte oder unscharfe Übergänge vor dem Umschreiben.
+3. **Durchgängige Unterstützung ohne Fremdpakete**: Prüft Zitationen, verankert PDF-Seiten, erstellt Statistiken/SVG-Grafiken und exportiert nach `.docx` und `.tex` (siehe auch den [interaktiven Prompt Builder mit Vorlagen](https://huh7i5.github.io/AI-prompts-writing/builder/)).
+
+```bash
+python scripts/install_skill.py install --host codex   # claude / codex / cursor / antigravity / opencode / project
+python scripts/install_skill.py verify --host codex    # Installation & Selbsttests prüfen
+python scripts/install_skill.py update --host codex --backup-existing  # Sicher mit Backup aktualisieren
+```
+
+| Modul | Aufgabe & integrierte Skripte |
+| :--- | :--- |
+| <nobr>[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)</nobr> | **Router**: Statusdiagnose, Autor/Gutachter-Schleife und `pipeline_doctor.py` |
+| <nobr>[paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md)</nobr> | **Station 01**: OpenAlex/CrossRef/arXiv-Prüfung und PDF-Verankerung `fulltext_indexer.py` |
+| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **Station 02**: Vorlagen (`--preset`), Beweisprüfung und `stats_and_plot.py` (CSV/SVG) |
+| <nobr>[paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md)</nobr> | **Station 03**: Entwurf ohne KI-Floskeln und Zahlenkontrolle `style_and_draft_gate.py` |
+| <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **Station 04**: Zahlenabgleich (`check_numbers.py`) und `.docx`/`.tex`-Export (`export_manuscript.py`) |
+
+- **Vorlagen, verifiziertes LaTeX & eigene Templates (BYO)**: `init_workspace.py --preset general|journal_en|journal_zh|thesis_zh|review` sowie `export_manuscript.py --tex-template` (`ctexart`, `ctexbook`, `IEEEtran`, `elsarticle`, `sn-jnl`, `thuthesis`, `pkuthss`, `sjtuthesis`, `ustcthesis`) oder `--inspect-tex` / `--template-tex` zur Einbindung eigener `.tex`-Vorlagen ohne Kopieren geschützter `.cls`-Dateien ([verifizierte Quellen](.agents/skills/paper-audit-submission/references/verified-latex-templates.md)).
+- **Praxisbeispiele**: [Empirische Studie](docs/examples/capital-bikeshare/paper.md) · [Automatische Statusdiagnose](docs/examples/state-diagnosis-demo.md) · [Dissertationsabgleich](docs/examples/thesis-chapter-revision.md) · [Qualitative/Review-Verankerung](docs/examples/qualitative-review-anchoring.md).
 
 <details>
-<summary><strong>Installationsanleitung anzeigen (optional)</strong></summary>
-
-Wenn Sie häufig Arbeiten in einem Agenten bearbeiten, installieren Sie [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md). Der Skill bündelt diese Schreibvorgaben und phasenspezifischen Aufgaben als eigenständige Anweisungen. Andere Skills oder das ganze Repository sind nicht erforderlich. Beim direkten Kopieren der Prompts können Sie diesen Abschnitt überspringen.
-
-<details>
-<summary><strong>Installation und Aufruf in Codex</strong></summary>
-
-Senden Sie dies an Codex, um den vorhandenen Skill aus dem Repository zu installieren.
+<summary><strong>Codex: Remote-Installation und Aufruf</strong></summary>
 
 ```text
 $skill-installer Installieren Sie den Skill unter https://github.com/huh7i5/AI-prompts-writing/tree/main/.agents/skills/ai-prompt-writing.
 ```
-
-Verwenden Sie ihn anschließend so.
 
 ```text
 $ai-prompt-writing Überarbeiten Sie diese Einleitung. Klären Sie Forschungsfrage und
@@ -1653,26 +1671,18 @@ oder gezwungene Metaphern. Geben Sie überarbeiteten Text und zentrale Änderung
 [Originaltext einfügen]
 ```
 
-Codex unterstützt den Aufruf eines Skills mit `$skill-name`. CLI und IDE-Erweiterung bieten außerdem `/skills`. Wird ein installierter Skill nicht gefunden, öffnen Sie den Client erneut und versuchen Sie es noch einmal. [Codex-Dokumentation zu Skills](https://learn.chatgpt.com/docs/build-skills).
-
-Wird dieses Repository als Projekt geöffnet, kann Codex den Skill auch im Verzeichnis `.agents/skills` finden. Das Verhalten hängt von der aktuellen Clientversion ab.
+Codex unterstützt `$skill-name` sowie `/skills` und erkennt `.agents/skills/` beim Öffnen des Repositorys als Projekt. [Codex-Dokumentation zu Skills](https://learn.chatgpt.com/docs/build-skills).
 
 </details>
 
 <details>
-<summary><strong>In WorkBuddy importieren und verwenden</strong></summary>
+<summary><strong>WorkBuddy: Import per ZIP-Archiv</strong></summary>
 
-Laden Sie dieses Repository herunter und komprimieren Sie den Ordner `.agents/skills/ai-prompt-writing`. Fügen Sie im Skill-Bereich von WorkBuddy einen Skill durch Hochladen des Archivs hinzu. Bestätigen Sie, dass er aktiviert ist, und bitten Sie dann um Nutzung von `ai-prompt-writing` für Ihr Manuskript.
-
-Die Installation per Unterhaltung in WorkBuddy bezieht sich derzeit auf dessen Skill-Marktplatz. Eigene Pakete müssen hochgeladen werden; verwenden Sie daher den Codex-Installationsbefehl nicht wie einen WorkBuddy-Befehl. [WorkBuddy-Dokumentation zu Skills](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
+Laden Sie das Repository herunter, komprimieren Sie `.agents/skills/ai-prompt-writing` (und bei Bedarf `paper-*`) und laden Sie das Archiv unter Skills → Add Skill hoch. [WorkBuddy-Dokumentation zu Skills](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
 
 </details>
 
-Andere Werkzeuge mit Unterstützung für `SKILL.md` können eigene Importverfahren verwenden. Kopieren Sie andernfalls die Prompts direkt. `/ai-prompt-writing` ist kein universeller Befehl.
-
-Die Installationswege wurden mit offizieller Dokumentation abgeglichen, Installation und Verhalten aber nicht in jedem Client getestet. Prüfen Sie, ob Ihre Materialien hochgeladen werden dürfen. Auch ein lokaler Agent kann ein entferntes Modell verwenden. Prüfen Sie vor der Einreichung die Vorgaben der Zielzeitschrift zu KI-Nutzung und Offenlegung.
-
-</details>
+Live-Literaturprüfungen erfordern Netzwerkzugriff und die Prüfskripte Python 3. Beachten Sie vor der Einreichung die KI-Offenlegungsregeln der Zielzeitschrift.
 
 <a id="quality"></a>
 

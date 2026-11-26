@@ -9,14 +9,20 @@
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Stars"></a>
   <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Forks"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0"><img src="https://img.shields.io/github/v/release/huh7i5/AI-prompts-writing?style=flat-square&color=1f6feb" alt="Release v1.0.0"></a>
+  <a href="#catalog"><img src="https://img.shields.io/badge/prompts-43_tasks-475569?style=flat-square" alt="43 Prompts"></a>
+  <a href="#skill"><img src="https://img.shields.io/badge/agent_skills-1+4_pipeline-475569?style=flat-square" alt="Agent Skills Suite"></a>
 </p>
 
 <p>
   <a href="#start">初めての方へ</a> ·
-  <a href="#catalog">やりたいことを選ぶ</a> ·
-  <a href="#lifecycle">執筆の流れを見る</a> ·
-  <a href="#showcase">修正例を見る</a> ·
-  <a href="docs/examples/reading-room-paper.en.md">論文の見本（英語）</a>
+  <a href="#catalog">43タスク</a> ·
+  <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">Webビルダー</a> ·
+  <a href="#lifecycle">執筆の流れ</a> ·
+  <a href="#showcase">修正例</a> ·
+  <a href="#skill">Agent Skills</a> ·
+  <a href="docs/examples/capital-bikeshare/paper.md">実証論文例</a> ·
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0">v1.0.0</a>
 </p>
 
 </div>
@@ -1625,25 +1631,37 @@ ChatGPT、Claude、DeepSeek など、普段使っている AI のチャットで
 
 <a id="skill"></a>
 
-## Codex や WorkBuddy をよく使う方へ
+## AI エージェントでの利用（1+4 Agent Skills スイート）
 
-この執筆用の指示をツールに追加すると、次回からも使いやすくなります。
+`SKILL.md` に対応したクライアント（Claude Code、Codex、Cursor、Antigravity、OpenCode、WorkBuddy）に導入し、メモ、PDF、CSV 表、草稿などをそのまま `ai-prompt-writing` に渡せます：
+
+1. **執筆段階の自動判定**：現在の段階（1–10）を特定し、研究計画（`PRE_STUDY`）と取得済み結果（`POST_RESULTS`）を厳密に区別します。
+2. **具体的な改善助言の先行提示**：書き換える前に不足根拠、数値の矛盾、論理の飛躍を指摘します。
+3. **外部依存なしの一貫支援**：文献検証、PDF ページアンカー、統計/SVG 描画、`.docx` / `.tex` 出力まで連携します（文書種別プリセット付きの[オンラインビルダー](https://huh7i5.github.io/AI-prompts-writing/builder/)も利用可能です）。
+
+```bash
+python scripts/install_skill.py install --host codex   # claude / codex / cursor / antigravity / opencode / project 対応
+python scripts/install_skill.py verify --host codex    # 導入済みスキルとセルフテストを一括検証
+python scripts/install_skill.py update --host codex --backup-existing  # バックアップ付きで安全更新
+```
+
+| モジュール | 役割と内蔵スクリプト |
+| :--- | :--- |
+| <nobr>[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)</nobr> | **ルーター**：状態診断、執筆・査読対話ループ、`pipeline_doctor.py` |
+| <nobr>[paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md)</nobr> | **ステーション 01**：OpenAlex/CrossRef/arXiv 照合、PDF ページアンカー `fulltext_indexer.py` |
+| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **ステーション 02**：論文プリセット（`--preset`）、証明点検、`stats_and_plot.py`（CSV/SVG） |
+| <nobr>[paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md)</nobr> | **ステーション 03**：脱AI文体の執筆支援と数値保全ゲート `style_and_draft_gate.py` |
+| <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **ステーション 04**：数値矛盾スキャン（`check_numbers.py`）と `.docx`/`.tex` 出力（`export_manuscript.py`） |
+
+- **プリセット・検証済み LaTeX・独自テンプレート対応（BYO）**：`init_workspace.py --preset general|journal_en|journal_zh|thesis_zh|review` および `export_manuscript.py --tex-template`（`ctexart`, `ctexbook`, `IEEEtran`, `elsarticle`, `sn-jnl`, `thuthesis`, `pkuthss`, `sjtuthesis`, `ustcthesis`）に対応し、`--inspect-tex` / `--template-tex` で大学の公式 `.tex` を壊さずに本文を注入できます（権利保護された `.cls` 等は同梱しません。[出典一覧](.agents/skills/paper-audit-submission/references/verified-latex-templates.md)）。
+- **実例アーカイブ**：[自転車シェア実証論文](docs/examples/capital-bikeshare/paper.md) · [自動状態診断デモ](docs/examples/state-diagnosis-demo.md) · [学位論文の章間数値同期](docs/examples/thesis-chapter-revision.md) · [質的・レビュー文献アンカー](docs/examples/qualitative-review-anchoring.md)。
 
 <details>
-<summary><strong>追加する方法を見る（任意）</strong></summary>
-
-エージェントで論文を頻繁に編集する場合は、[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)を導入できます。この執筆方針と段階別のタスクを、単独で使える指示にまとめたものです。他の Skill やリポジトリ全体は不要です。プロンプトを直接コピーする場合は、この節を省略できます。
-
-<details>
-<summary><strong>Codex への導入と呼び出し</strong></summary>
-
-リポジトリにある既存の Skill を導入するには、次を Codex に送ってください。
+<summary><strong>Codex へのリモート導入と呼び出し</strong></summary>
 
 ```text
 $skill-installer https://github.com/huh7i5/AI-prompts-writing/tree/main/.agents/skills/ai-prompt-writing にある Skill をインストールしてください。
 ```
-
-導入後は、次のように使います。
 
 ```text
 $ai-prompt-writing この序論を修正してください。研究上の問いと貢献を明確にし、
@@ -1653,26 +1671,18 @@ $ai-prompt-writing この序論を修正してください。研究上の問い�
 ［原文を貼り付ける］
 ```
 
-Codex では `$skill-name` で Skill を呼び出せます。CLI と IDE 拡張には `/skills` もあります。導入済みの Skill が見つからなければ、クライアントを開き直して再試行してください。[Codex Skills のドキュメント](https://learn.chatgpt.com/docs/build-skills)。
-
-このリポジトリをプロジェクトとして開いた場合、Codex が `.agents/skills` 内の Skill を見つけることもできます。動作はクライアントの現在の版によって異なります。
+Codex では `$skill-name` や `/skills` で呼び出せるほか、本リポジトリをプロジェクトとして開くと `.agents/skills/` が自動認識されます。[Codex Skills のドキュメント](https://learn.chatgpt.com/docs/build-skills)。
 
 </details>
 
 <details>
-<summary><strong>WorkBuddy への読み込みと利用</strong></summary>
+<summary><strong>WorkBuddy への ZIP インポート</strong></summary>
 
-このリポジトリをダウンロードし、`.agents/skills/ai-prompt-writing` フォルダを圧縮してください。WorkBuddy の Skill 管理画面で、そのアーカイブをアップロードして追加します。有効になっていることを確認したら、原稿に `ai-prompt-writing` を使うよう依頼してください。
-
-WorkBuddy の対話による導入は、現在は Skill マーケットプレイスを対象としています。独自パッケージはアップロードが必要です。Codex の導入コマンドを WorkBuddy のコマンドとして流用しないでください。[WorkBuddy Skills のドキュメント](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market)。
+リポジトリをダウンロードして `.agents/skills/ai-prompt-writing`（および必要な `paper-*` フォルダ）を圧縮し、WorkBuddy の Skills → Add Skill からアップロードしてください。[WorkBuddy Skills のドキュメント](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market)。
 
 </details>
 
-`SKILL.md` に対応する他のツールでは、独自の読み込み手順が必要な場合があります。そうでなければプロンプトを直接コピーしてください。`/ai-prompt-writing` は共通コマンドではありません。
-
-導入方法は公式ドキュメントと照合しましたが、すべてのクライアントで導入と動作を試したわけではありません。資料をアップロードしてよいか確認してください。ローカルのエージェントでも遠隔のモデルを使う場合があります。投稿前に、学術誌の AI 利用・開示要件を確認してください。
-
-</details>
+実オンライン文献検証にはネットワーク接続、検査スクリプトには Python 3 が必要です。投稿前には対象学術誌の AI 開示規定を必ずご確認ください。
 
 <a id="quality"></a>
 

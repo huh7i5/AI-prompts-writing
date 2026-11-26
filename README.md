@@ -11,6 +11,7 @@
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Stars"></a>
   <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Forks"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0"><img src="https://img.shields.io/github/v/release/huh7i5/AI-prompts-writing?style=flat-square&color=1f6feb" alt="Release v1.0.0"></a>
   <a href="#catalog"><img src="https://img.shields.io/badge/prompts-43_tasks-475569?style=flat-square" alt="43 Prompts"></a>
   <a href="#skill"><img src="https://img.shields.io/badge/agent_skills-1+4_pipeline-475569?style=flat-square" alt="Agent Skills Suite"></a>
 </p>
@@ -18,20 +19,21 @@
 <p>
   <a href="#why">核心差异</a> ·
   <a href="#start">快速上手</a> ·
+  <a href="#examples">实跑样稿</a> ·
   <a href="#catalog">任务目录</a> ·
   <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">在线拼接器</a> ·
-  <a href="#showcase">改稿示例</a> ·
+  <a href="#templates">预设与模板</a> ·
   <a href="#skill">Agent 技能</a> ·
-  <a href="docs/examples/capital-bikeshare/paper.md">实证样稿</a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0">v1.0.0 发布</a>
 </p>
 
 </div>
 
 > **把“瞎聊式 AI 写作”变成先判断状态、再给建议、最后有据落笔的可核查流程。** 直接发来几句想法、PDF 文献、CSV 数据、半成品草稿或审稿意见，系统即可**自动识别写作阶段、诊断证据缺口并给出可落地写作建议**，再按需辅助完成写作、改稿与核验（觉得有帮助欢迎右上角点亮 ⭐ Star）。
 
-- **网页直接用**：不用下载或写代码，在[下方目录](#catalog)选任务复制，或打开[在线拼接网页](https://huh7i5.github.io/AI-prompts-writing/builder/)填表生成后发给 DeepSeek / ChatGPT / Claude / 豆包。
-- **装入 Agent 自动做**：支持 Claude Code、Codex、Cursor、Antigravity、WorkBuddy 等，扔进现有材料即可**自动判断写作状态与阶段**，主动给写作建议并联动 1+4 工位跑通文献核验、PDF 锚定、统计制图、改稿与导出（[查看安装](#skill)）。
-- **真实数据样稿**：四工位实跑产出的[共享单车实证研究](docs/examples/capital-bikeshare/paper.md)（[复算三张表](docs/examples/capital-bikeshare/README.md) · [短篇图书馆示例](docs/examples/reading-room-paper.md)） · **差异化场景示例**：[自动状态诊断与预设建议](docs/examples/state-diagnosis-demo.md) · [中文大论文跨章改稿与数值同步](docs/examples/thesis-chapter-revision.md) · [质性/综述逐段页码锚定](docs/examples/qualitative-review-anchoring.md)。
+- **网页直接用**：不用下载或写代码，在[下方目录](#catalog)选任务复制，或打开[在线拼接网页](https://huh7i5.github.io/AI-prompts-writing/builder/)（直达文体预设：[期刊小论文](https://huh7i5.github.io/AI-prompts-writing/builder/?preset=journal) · [硕博大论文](https://huh7i5.github.io/AI-prompts-writing/builder/?preset=thesis) · [文献综述](https://huh7i5.github.io/AI-prompts-writing/builder/?preset=review)）填表生成后发给 DeepSeek / ChatGPT / Claude / Kimi / 豆包。
+- **装入 Agent 自动做**：兼容 Claude Code、Codex、Cursor、Antigravity、OpenCode 与 WorkBuddy；一条安装命令即可挂载 1+4 工位，自动跑通文献查证、PDF 页码锚定、统计出图、去 AI 味改稿与 `.docx`/`.tex` 导出（[查看安装与模板](#skill)）。
+- **先看真实跑通记录**：下方[实跑样稿与差异化示例](#examples)展示实证 CSV 复算论文、自动诊断改稿对话、GB/T 7713.1 硕博大论文跨章冲突排查，以及无 CSV 质性/综述逐段锚定。
 
 <a id="why"></a>
 
@@ -50,6 +52,18 @@
 1. **选任务**：在[任务目录](#catalog)点开当前要做的事，复制整个文字框（无材料可先试[图书馆到场率](docs/examples/reading-room.md)或[渡口日记](docs/examples/text-reading.md)）。
 2. **填材料**：要求写在前面，草稿、数据或笔记直接贴在末尾“我的材料”下（`{{……}}` 按需替换，不用的栏目可删）。
 3. **查结果**：合在一条消息发送；AI 输出的数字与文献请核对原文，上传前删去个人隐私信息。
+
+<a id="examples"></a>
+
+## 实跑样稿与差异化示例
+
+| 场景 / 论文形态 | 重点展示能力 | 查看记录 |
+| :--- | :--- | :--- |
+| **完整实证研究**（英文定量） | 1+4 工位全流程跑通：真实共享单车 CSV 复算、SVG 制图与三张结果表审计 | [实证成稿](docs/examples/capital-bikeshare/paper.md) · [复算三张表](docs/examples/capital-bikeshare/README.md) |
+| **半成品片段**（免查任务编号） | 自动判定写作阶段 → 先给出 3 条具体写作建议 → 去 AI 腔改稿并守住样本口径 | [自动状态诊断对话实录](docs/examples/state-diagnosis-demo.md) |
+| **中文硕博学位大论文**（GB/T 7713.1） | `thesis_zh` 预设 + `check_numbers.py` 抓出第 1 章 `N=320` 与第 3 章 `n=288` 冲突 | [大论文跨章返修示例](docs/examples/thesis-chapter-revision.md) |
+| **质性研究 / 纯文献综述**（无 CSV） | `review` 预设 + `fulltext_indexer.py` 逐段页码硬锚定 `[file, p.X, para.Y]` 与过门禁 | [综述页码锚定实录](docs/examples/qualitative-review-anchoring.md) |
+| **零门槛网页试用** | 不依赖数据文件的短篇成稿，以及同一任务改稿前后逐句对照 | [图书馆短篇示例](docs/examples/reading-room-paper.md) · [改稿前后对照](#showcase) |
 
 <a id="control"></a>
 
@@ -1639,9 +1653,7 @@ AI 工具的实际用途和核查记录：
 
 1. **自动判断写作状态**：识别处于 1–10 哪个环节、区分“未出结果（`PRE_STUDY`）”与“已有实证结果（`POST_RESULTS`）”。
 2. **先给写作建议与缺口提示**：点明当前还缺什么证据、有哪些数字/文献冲突、这一步该怎么改最有效。
-3. **协同四工位脚本辅助写作**：按需联动文献查证、PDF 页码锚定、CSV 统计与 SVG 制图、去 AI 腔写稿，以及冲突审计与 `.docx/.tex` 导出。
-   - **内置论文类型预设**：`init_workspace.py --preset general|journal_en|journal_zh|thesis_zh|review` 自动生成对应分章大纲（含 GB/T 7713.1 硕博大论文跨章闭环自查）。
-   - **真实权威源头 LaTeX / 高校模板与 BYO 接入**：`export_manuscript.py --tex-template` 对接 `ctexart` / `ctexbook` / `IEEEtran` / `elsarticle` / `sn-jnl` 及清华 `thuthesis`、北大 `pkuthss`、上交 `sjtuthesis`、中科大 `ustcthesis` 官方分章与引用宏规范（不搬运受版权/商标约束的第三方 `.cls` 或校徽）；也可通过 `--inspect-tex` 与 `--template-tex` 直接注入本校自定义 `.tex` 模板（详情见[权威模板来源清单](.agents/skills/paper-audit-submission/references/verified-latex-templates.md)与[模板适配说明](.agents/skills/paper-audit-submission/references/04-latex-and-thesis-templates.md)）。
+3. **协同四工位脚本辅助写作**：按需联动文献查证、PDF 页码锚定、CSV 统计与 SVG 制图、去 AI 腔写稿，以及冲突审计与 `.docx`/`.tex` 导出。
 
 ```mermaid
 flowchart LR
@@ -1649,39 +1661,42 @@ flowchart LR
     Router --> S1["1 选题与全文核验"]
     Router --> S2["2 统计制图与账本"]
     Router --> S3["3 起草与去AI腔"]
-    Router --> S4["4 审计与导出.docx"]
+    Router --> S4["4 审计与导出.docx/.tex"]
 ```
 
-<details>
-<summary><strong>展开查看工位分工、脚本工具与安装方式</strong></summary>
+### 一键跨宿主安装（1 个智能总控 + 4 个专职工位）
 
-仓库在 `.agents/skills/` 下提供 **1 个智能总控 + 4 个专职工位**（零第三方依赖 Python 标准库，单装总控包也可独立运行）：
+克隆仓库后运行零第三方依赖安装脚本（自动复制全部 5 个工位并运行 `pipeline_doctor.py selftest` 自检）：
+
+```bash
+python scripts/install_skill.py install --host codex   # 支持 claude / codex / cursor / antigravity / opencode / project
+python scripts/install_skill.py verify --host codex    # 核查已安装工位并跑通全部自检
+python scripts/install_skill.py update --host codex --backup-existing  # 备份旧版后安全升级
+```
+
+或将 `.agents/skills/` 下的 5 个文件夹直接复制到论文项目 `.agents/skills/` 目录，Codex、Antigravity 等客户端会自动加载全部工位（零第三方 Python 依赖；单装 `ai-prompt-writing` 也可独立运行）。
 
 | 模块 | 职责与内置脚本 |
 | :--- | :--- |
 | <nobr>[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)</nobr> | **智能总控**：现状诊断、主笔/盲审对抗闭环、`pipeline_doctor.py` 全站联检 |
 | <nobr>[paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md)</nobr> | **1号工位**：选题、OpenAlex/CrossRef/arXiv 真文献核验、`fulltext_indexer.py` PDF 页码锚定 |
-| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **2号工位**：方案大纲、推导反例审查、`stats_and_plot.py` CSV 统计与矢量 SVG 出图 |
+| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **2号工位**：分章大纲、推导反例审查、`init_workspace.py --preset` 与 `stats_and_plot.py` 统计/SVG |
 | <nobr>[paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md)</nobr> | **3号工位**：分章起草、去套话与反防御写作、`style_and_draft_gate.py` 数值保真扫描 |
-| <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **4号工位**：样本量冲突扫描、审稿联动、校样比对、`export_manuscript.py` 一键导出 `.docx/.tex` |
+| <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **4号工位**：跨章样本量冲突扫描、审稿联动、校样比对、`export_manuscript.py` 一键导出 `.docx/.tex` |
+
+<a id="templates"></a>
+
+### 内置论文预设、Word 排版与权威源头 LaTeX 适配
+
+- **5 种工作区论文预设**（`init_workspace.py --preset`）：`general`（通用）、`journal_en`（英文期刊/会议）、`journal_zh`（中文核心期刊）、`thesis_zh`（**GB/T 7713.1** 中文硕博大论文，含开篇创新点→末章闭合与跨章口径自查）、`review`（默认匹配 `FOCUSED_REVIEW` 检索纳入与证据综合矩阵）。
+- **Word `.docx` 零依赖升级导出**：自动嵌入 PNG/JPEG 插图（`<w:drawing>`）、规范学术三线表（顶/底 1.5pt、表头下 0.75pt、无竖线）、居中页脚页码与大论文章前自动分页。
+- **10 套已核实上游源头 `.tex` 模板与 BYO 校模板适配**（`export_manuscript.py`；**不复制受版权/商标约束的第三方 `.cls` 或校徽图形**）：
+  - **开箱可编期刊与国标大论文**：`ctexart`、`article`、`ctexbook`（CTAN + GB/T 7713.1 / `gbt7714`）、`ieee`（CTAN `IEEEtran`）、`elsarticle`（CTAN `elsarticle`）、`sn-jnl`（Springer Nature）。
+  - **高校学位论文官方结构对接**：清华大学 `thuthesis`（`data/chap*.tex` + `ref/refs.bib`）、北京大学 `pkuthss`（`chap/chap*.tex` + `\parencite`）、上海交通大学 `sjtuthesis`（`contents/*.tex`）、中国科学技术大学 `ustcthesis`（`chapters/*.tex` + `\declarationofaiusage`）。
+  - **任意自带校/刊模板适配（BYO）**：`--inspect-tex` 只读识别本地模板目录的文档类、章节指令与引用宏命令，`--template-tex` 安全注入正文而不破坏学校封面与盲审配置（详见[权威模板来源清单](.agents/skills/paper-audit-submission/references/verified-latex-templates.md)与[模板适配规程](.agents/skills/paper-audit-submission/references/04-latex-and-thesis-templates.md)）。
 
 <details>
-<summary><strong>项目级 / 跨宿主一键安装（挂载全部 1+4 工位）</strong></summary>
-
-克隆本仓库后可直接运行内置零依赖跨宿主安装脚本（自动复制 5 个工位并运行 `pipeline_doctor.py selftest` 自检）：
-
-```bash
-python scripts/install_skill.py install --host codex   # 支持 claude / codex / cursor / antigravity / opencode / project
-python scripts/install_skill.py verify --host codex    # 核查已安装工位并通过全部自检
-python scripts/install_skill.py update --host codex --backup-existing  # 备份旧版后安全升级
-```
-
-或将 `.agents/skills/` 下的 5 个文件夹复制到你的论文项目 `.agents/skills/` 目录，Codex、Antigravity 等客户端会自动加载全部工位与脚本。
-
-</details>
-
-<details>
-<summary><strong>Codex：安装与调用</strong></summary>
+<summary><strong>Codex：远程一键安装与调用示例</strong></summary>
 
 ```text
 $skill-installer 请安装 https://github.com/huh7i5/AI-prompts-writing/tree/main/.agents/skills/ai-prompt-writing 中的技能。
@@ -1705,9 +1720,7 @@ $ai-prompt-writing 我刚整理好实验记录和草稿片段，请判断现在�
 
 </details>
 
-真实联网检索依赖宿主网络，脚本依赖 Python 3；受限时会自动降级并标明边界。投稿前请核对所有事实及目标期刊的 AI 披露要求。
-
-</details>
+真实联网检索依赖宿主网络，脚本依赖 Python 3；受限时会自动降级并标明边界。投稿前请核对所有事实及目标期刊/院校的 AI 披露要求。
 
 <a id="quality"></a>
 

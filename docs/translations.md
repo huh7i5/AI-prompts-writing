@@ -18,7 +18,7 @@ The translations started from the task text in commit [`329f86e`](https://github
 
 The new translations were prepared and reviewed with model assistance. They have not been reviewed by native-speaking contributors or domain experts, and no behavioral trials have been run in Spanish, French, German, Portuguese, Japanese, Korean, or Russian. Five English tasks were tried on November 10, followed by task 6.5 on November 23. Each record gives the inputs and results for that language. [First English trials](validation/runs/2026-11-10-en/README.md) · [Task 6.5 trials](validation/runs/2026-11-23/README.md)
 
-The example image remains an English translation of a recorded Chinese run. Under `../.agents/skills/`, the Skills suite (`ai-prompt-writing` router plus four specialized station skills) uses shared Chinese instruction files and Python standard-library check scripts; the Chinese and English reference READMEs document the multi-station suite under `#skill`, while the other seven language READMEs retain the standalone Skill installation note until their next display sync. Supporting source notes and evaluation records keep the language named in their links.
+The example image remains an English translation of a recorded Chinese run. Under `../.agents/skills/`, the Skills suite (`ai-prompt-writing` router plus four specialized station skills) uses shared Chinese instruction files and Python standard-library check scripts; all nine language READMEs now include badges, Prompt Builder links, and aligned `#skill` setup summaries (`scripts/install_skill.py`), while detailed worked demos and template registries remain primarily in Chinese/English as noted in their links.
 
 ## Review in this update
 
@@ -34,13 +34,13 @@ On 2026-11-17, all 43 tasks in each language were arranged for a single message:
 
 When a task changes, compare its numbered block in every language. Preserve negation, uncertainty, units, study conditions, evidence limits, and the separation between completed work and planned work. Check that links, placeholders, command names, and code fences still work. Record behavioral testing separately from translation review, and retain earlier input and output snapshots.
 
-On 2026-11-26, the top tagline across all 9 language READMEs (plus the Chinese and English hero comparison sections) was updated to highlight state-aware stage diagnosis, targeted writing advice, and dual Web/Agent Skills support, without changing the 43 task prompt blocks.
+On 2026-11-26 (aligned with `v1.0.0`), the top tagline, header badges, Prompt Builder navigation, and `#skill` `1+4` suite & `install_skill.py` instructions were synchronized across all 9 language READMEs (plus scannable examples & preset/LaTeX tables in the Chinese and English READMEs), without modifying the 43 translated task prompt blocks.
 
 ## 语言版本说明
 
 每种语言均包含十阶段、43 个单项任务和总写作要求，直接复制与 Skill 安装分开。翻译以 `329f86e` 的任务文本为基础，后续同步修改记录如下，保留相同编号、锚点、链接及占位符含义。
 
-新增译文由模型辅助整理和复核，尚无母语贡献者或领域专家审校，也没有做这些语言的行为测试。既有中英文用例不作为其他语言的效果证据。首页图片仍是中文改稿记录的英文翻译；独立 Skill 继续共用中文指令文件。
+新增译文由模型辅助整理和复核，尚无母语贡献者或领域专家审校，也没有做这些语言的行为测试。既有中英文用例不作为其他语言的效果证据。首页图片仍是中文改稿记录的英文翻译；1+4 工位 Skill 继续共用中文指令文件。
 
 本次审查核对了任务编号、占位符、链接、代码围栏、任务内数字及事实边界，并检查否定、条件、研究计划与已完成工作的区分。另一个模型代理复核了法、德、葡、俄、日语任务文本，并对西语作重点语义检查。已纠正准确率与精确率混用、限定语译法，以及“未告知便替换已发表结果”的条件遗漏；也澄清了结果出现前的计划与事后探索的区别。这些属于翻译审查，不能算作提示词行为测试。
 
@@ -50,4 +50,4 @@ On 2026-11-26, the top tagline across all 9 language READMEs (plus the Chinese a
 
 2026-11-17，各语言的 43 个任务统一按一次发送安排：先写任务说明，再填语言、篇幅等要求，最后粘贴材料。每个任务增加简短写作要求，较完整的总要求改为可选补充，可放在任务前一起发送。保留原有任务规则、占位符含义，以及区分来源和版本的标签；有现成文章或笔记时可以直接粘贴，不必先逐项整理。本次检查内容保留、输入顺序、链接和页面显示，未新增行为试跑；旧输出仍对应当时的提示词版本。
 
-2026-11-26，统一更新 9 个语言版本首页的顶部一句话定位（并在中英参考版首屏新增与普通 AI 写作的差异对照表），突出“自动判断写作状态、给出写作建议与辅助写作”以及 Web + Agent Skills 双端用法，未改动 43 项具体任务提示词正文。
+2026-11-26（对齐 `v1.0.0`），统一更新 9 个语言版本首页的顶部定位、徽章、在线拼接器导航及 `#skill` 的 `1+4` 工位与 `install_skill.py` 安装说明，并在中英参考版整理差异化实跑示例表与预设/权威 LaTeX 模板对照；各语言 43 项具体任务提示词正文与编号锚点保持不变。

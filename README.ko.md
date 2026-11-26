@@ -9,14 +9,20 @@
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub 스타 수"></a>
   <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub 포크 수"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0"><img src="https://img.shields.io/github/v/release/huh7i5/AI-prompts-writing?style=flat-square&color=1f6feb" alt="Release v1.0.0"></a>
+  <a href="#catalog"><img src="https://img.shields.io/badge/prompts-43_tasks-475569?style=flat-square" alt="43 Prompts"></a>
+  <a href="#skill"><img src="https://img.shields.io/badge/agent_skills-1+4_pipeline-475569?style=flat-square" alt="Agent Skills Suite"></a>
 </p>
 
 <p>
-  <a href="#start">처음 사용하는 분께</a> ·
-  <a href="#catalog">필요한 작업 고르기</a> ·
-  <a href="#lifecycle">글쓰기 과정 보기</a> ·
-  <a href="#showcase">수정 예시 보기</a> ·
-  <a href="docs/examples/reading-room-paper.en.md">논문 예시(영어)</a>
+  <a href="#start">처음 사용 안내</a> ·
+  <a href="#catalog">43개 작업</a> ·
+  <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">웹 조합기</a> ·
+  <a href="#lifecycle">작성 흐름</a> ·
+  <a href="#showcase">수정 예시</a> ·
+  <a href="#skill">Agent Skills</a> ·
+  <a href="docs/examples/capital-bikeshare/paper.md">실증 연구 예시</a> ·
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0">v1.0.0</a>
 </p>
 
 </div>
@@ -1625,25 +1631,37 @@ ChatGPT, Claude, DeepSeek처럼 평소 사용하는 AI 채팅 도구에서 새 �
 
 <a id="skill"></a>
 
-## Codex나 WorkBuddy를 자주 사용하시나요?
+## AI 에이전트에서 사용하기 (1+4 Agent Skills 세트)
 
-이 글쓰기 지침을 도구에 설치해 두면 다음에도 편하게 사용할 수 있습니다.
+`SKILL.md`를 지원하는 클라이언트(Claude Code, Codex, Cursor, Antigravity, OpenCode, WorkBuddy)에 설치한 뒤 메모, PDF, CSV 표, 초안 단락을 `ai-prompt-writing`에 바로 전달하세요:
+
+1. **작성 상태 자동 진단**: 현재 단계(1–10)를 판별하고 연구 계획(`PRE_STUDY`)과 확보된 결과(`POST_RESULTS`)를 구분합니다.
+2. **구체적인 수정 조언 먼저 제시**: 본문을 고치기 전에 부족한 근거, 수치 충돌, 논리적 비약을 짚어 줍니다.
+3. **외부 패키지 없는 전 과정 지원**: 참고문헌 검증, PDF 페이지 앵커링, 통계/SVG 차트 생성 및 `.docx`/`.tex` 내보내기를 연계합니다([유형별 프리셋 웹 조합기](https://huh7i5.github.io/AI-prompts-writing/builder/)도 참고하세요).
+
+```bash
+python scripts/install_skill.py install --host codex   # claude / codex / cursor / antigravity / opencode / project 지원
+python scripts/install_skill.py verify --host codex    # 설치 상태와 자체 점검(selftest) 일괄 확인
+python scripts/install_skill.py update --host codex --backup-existing  # 기존 사본 백업 후 안전 업데이트
+```
+
+| 모듈 | 역할 및 내장 스크립트 |
+| :--- | :--- |
+| <nobr>[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)</nobr> | **라우터**: 상태 진단, 작성·심사 교차 검증 루프, `pipeline_doctor.py` |
+| <nobr>[paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md)</nobr> | **스테이션 01**: OpenAlex/CrossRef/arXiv 검증, PDF 페이지 앵커 `fulltext_indexer.py` |
+| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **스테이션 02**: 프리셋(`--preset`), 논증 점검, `stats_and_plot.py` (CSV/SVG) |
+| <nobr>[paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md)</nobr> | **스테이션 03**: AI 투 제거 초안·수정 및 수치 보전 게이트 `style_and_draft_gate.py` |
+| <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **스테이션 04**: 수치 충돌 점검(`check_numbers.py`) 및 `.docx`/`.tex` 내보내기(`export_manuscript.py`) |
+
+- **프리셋·검증된 LaTeX·사용자 템플릿(BYO) 지원**: `init_workspace.py --preset general|journal_en|journal_zh|thesis_zh|review` 및 `export_manuscript.py --tex-template` (`ctexart`, `ctexbook`, `IEEEtran`, `elsarticle`, `sn-jnl`, `thuthesis`, `pkuthss`, `sjtuthesis`, `ustcthesis`)을 지원하며, `--inspect-tex` / `--template-tex`로 학교·학술지 자체 `.tex` 양식을 훼손 없이 연동할 수 있습니다(저작권 제한 `.cls` 파일은 동봉하지 않음. [출처 목록](.agents/skills/paper-audit-submission/references/verified-latex-templates.md)).
+- **실전 예제**: [공유자전거 실증 논문](docs/examples/capital-bikeshare/paper.md) · [자동 상태 진단 데모](docs/examples/state-diagnosis-demo.md) · [학위논문 장 간 수치 동기화](docs/examples/thesis-chapter-revision.md) · [질적·문헌고찰 페이지 앵커링](docs/examples/qualitative-review-anchoring.md).
 
 <details>
-<summary><strong>설치 방법 보기(선택)</strong></summary>
-
-에이전트에서 논문을 자주 수정한다면 [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)을 설치하세요. 이 스킬은 글쓰기 기본 지침과 단계별 작업을 독립적으로 사용할 수 있는 지침으로 묶었습니다. 다른 스킬이나 저장소 전체가 필요하지 않습니다. 프롬프트를 직접 복사해 사용한다면 이 부분은 건너뛰어도 됩니다.
-
-<details>
-<summary><strong>Codex에서 설치하고 호출하기</strong></summary>
-
-저장소에 있는 기존 스킬을 설치하려면 아래 내용을 Codex에 보내세요.
+<summary><strong>Codex에서 원격 설치 및 호출하기</strong></summary>
 
 ```text
 $skill-installer https://github.com/huh7i5/AI-prompts-writing/tree/main/.agents/skills/ai-prompt-writing 경로의 스킬을 설치해 주세요.
 ```
-
-설치 후에는 다음과 같이 사용하세요.
 
 ```text
 $ai-prompt-writing 이 서론을 수정해 주세요. 연구 질문과 기여를 명확히 하고,
@@ -1653,26 +1671,18 @@ $ai-prompt-writing 이 서론을 수정해 주세요. 연구 질문과 기여를
 [원문 붙여넣기]
 ```
 
-Codex에서는 `$skill-name`으로 스킬을 호출할 수 있습니다. CLI와 IDE 확장에는 `/skills`도 있습니다. 설치한 스킬이 보이지 않으면 클라이언트를 다시 열어 시도하세요. [Codex 스킬 문서](https://learn.chatgpt.com/docs/build-skills).
-
-이 저장소를 프로젝트로 열면 Codex가 `.agents/skills` 디렉터리의 스킬을 찾을 수도 있습니다. 실제 동작은 현재 클라이언트 버전에 따라 달라집니다.
+Codex에서는 `$skill-name` 또는 `/skills`로 호출할 수 있으며, 이 저장소를 프로젝트로 열면 `.agents/skills/`를 자동으로 인식합니다. [Codex 스킬 문서](https://learn.chatgpt.com/docs/build-skills).
 
 </details>
 
 <details>
-<summary><strong>WorkBuddy로 가져와 사용하기</strong></summary>
+<summary><strong>WorkBuddy로 ZIP 가져오기</strong></summary>
 
-이 저장소를 내려받고 `.agents/skills/ai-prompt-writing` 폴더를 압축하세요. WorkBuddy의 스킬 영역에서 압축 파일을 업로드해 스킬을 추가하세요. 활성화되었는지 확인한 뒤 원고 작업에 `ai-prompt-writing`을 사용하도록 요청하세요.
-
-현재 WorkBuddy의 대화형 설치는 스킬 마켓을 대상으로 합니다. 사용자 정의 패키지는 업로드해야 하므로, Codex의 설치 명령을 WorkBuddy 명령처럼 사용하지 마세요. [WorkBuddy 스킬 문서](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
+이 저장소를 내려받아 `.agents/skills/ai-prompt-writing`(및 필요한 `paper-*` 폴더)을 압축한 뒤 WorkBuddy의 Skills → Add Skill에서 업로드하세요. [WorkBuddy 스킬 문서](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
 
 </details>
 
-`SKILL.md`를 지원하는 다른 도구는 각자의 가져오기 절차를 사용할 수 있습니다. 그렇지 않다면 프롬프트를 직접 복사하세요. `/ai-prompt-writing`은 모든 도구에 통용되는 명령이 아닙니다.
-
-설치 진입점은 공식 문서를 기준으로 확인했지만, 모든 클라이언트에서 설치와 동작을 시험한 것은 아닙니다. 자료를 업로드해도 되는지 확인하세요. 로컬 에이전트도 원격 모델을 사용할 수 있습니다. 투고 전에는 목표 학술지의 AI 사용·공개 요건을 확인하세요.
-
-</details>
+실시간 문헌 대조에는 네트워크 연결이 필요하며 로컬 검증 스크립트는 Python 3을 사용합니다. 투고 전에는 목표 학술지의 AI 활용 및 공개 규정을 확인하세요.
 
 <a id="quality"></a>
 

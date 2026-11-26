@@ -9,14 +9,20 @@
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="Звёзды на GitHub"></a>
   <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square" alt="Форки на GitHub"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0"><img src="https://img.shields.io/github/v/release/huh7i5/AI-prompts-writing?style=flat-square&color=1f6feb" alt="Релиз v1.0.0"></a>
+  <a href="#catalog"><img src="https://img.shields.io/badge/prompts-43_tasks-475569?style=flat-square" alt="43 промпта"></a>
+  <a href="#skill"><img src="https://img.shields.io/badge/agent_skills-1+4_pipeline-475569?style=flat-square" alt="Набор Agent Skills"></a>
 </p>
 
 <p>
   <a href="#start">Начать здесь</a> ·
-  <a href="#catalog">Выбрать задачу</a> ·
-  <a href="#lifecycle">Посмотреть этапы работы</a> ·
-  <a href="#showcase">Посмотреть пример правки</a> ·
-  <a href="docs/examples/reading-room-paper.en.md">Образец статьи (на английском)</a>
+  <a href="#catalog">43 задачи</a> ·
+  <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">Веб-конструктор</a> ·
+  <a href="#lifecycle">Этапы</a> ·
+  <a href="#showcase">Пример правки</a> ·
+  <a href="#skill">Agent Skills</a> ·
+  <a href="docs/examples/capital-bikeshare/paper.md">Эмпирический пример</a> ·
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0">v1.0.0</a>
 </p>
 
 </div>
@@ -1625,25 +1631,37 @@
 
 <a id="skill"></a>
 
-## Часто пользуетесь Codex или WorkBuddy?
+## Использование в ИИ-агентах (набор 1+4 Agent Skills)
 
-Требования к тексту можно установить в своём инструменте, чтобы использовать их в дальнейшем.
+Установите набор в любой клиент с поддержкой `SKILL.md` (Claude Code, Codex, Cursor, Antigravity, OpenCode или WorkBuddy) и передайте заметки, PDF, таблицы CSV или черновик в `ai-prompt-writing`:
+
+1. **Автодиагностика этапа**: определяет текущую стадию (1–10) и разделяет планы исследования (`PRE_STUDY`) и уже полученные результаты (`POST_RESULTS`).
+2. **Конкретные советы перед правкой**: указывает недостающие доказательства, числовые нестыковки и слабые связки до переписывания текста.
+3. **Полный цикл без сторонних зависимостей**: проверяет ссылки, привязывает фрагменты PDF к страницам, строит статистику/SVG и экспортирует в `.docx` и `.tex` (см. также [веб-конструктор с пресетами](https://huh7i5.github.io/AI-prompts-writing/builder/)).
+
+```bash
+python scripts/install_skill.py install --host codex   # claude / codex / cursor / antigravity / opencode / project
+python scripts/install_skill.py verify --host codex    # проверка установки и запуск selftest
+python scripts/install_skill.py update --host codex --backup-existing  # обновление с резервной копией
+```
+
+| Модуль | Назначение и встроенные скрипты |
+| :--- | :--- |
+| <nobr>[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)</nobr> | **Маршрутизатор**: диагностика этапа, цикл автор/рецензент, `pipeline_doctor.py` |
+| <nobr>[paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md)</nobr> | **Станция 01**: проверка OpenAlex/CrossRef/arXiv, привязка PDF `fulltext_indexer.py` |
+| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **Станция 02**: пресеты (`--preset`), проверка выводов, `stats_and_plot.py` (CSV/SVG) |
+| <nobr>[paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md)</nobr> | **Станция 03**: текст без ИИ-штампов и контроль чисел `style_and_draft_gate.py` |
+| <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **Станция 04**: поиск расхождений чисел (`check_numbers.py`) и экспорт `.docx`/`.tex` (`export_manuscript.py`) |
+
+- **Пресеты, проверенные профили LaTeX и собственные шаблоны (BYO)**: поддерживаются `init_workspace.py --preset general|journal_en|journal_zh|thesis_zh|review` и `export_manuscript.py --tex-template` (`ctexart`, `ctexbook`, `IEEEtran`, `elsarticle`, `sn-jnl`, `thuthesis`, `pkuthss`, `sjtuthesis`, `ustcthesis`), а также `--inspect-tex` / `--template-tex` для безопасной вставки текста в локальный шаблон вуза/журнала без копирования проприетарных `.cls` ([реестр источников](.agents/skills/paper-audit-submission/references/verified-latex-templates.md)).
+- **Рабочие примеры**: [Эмпирическое исследование](docs/examples/capital-bikeshare/paper.md) · [Автодиагностика этапа](docs/examples/state-diagnosis-demo.md) · [Межглавная сверка диссертации](docs/examples/thesis-chapter-revision.md) · [Качественный/обзорный анкоринг](docs/examples/qualitative-review-anchoring.md).
 
 <details>
-<summary><strong>Показать инструкции по установке (необязательно)</strong></summary>
-
-Если вы часто редактируете научные работы с помощью агента, установите [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md). Эта Skill объединяет требования к письму и задания по этапам в самостоятельные инструкции. Другие навыки или весь репозиторий не нужны. При прямом копировании промптов этот раздел можно пропустить.
-
-<details>
-<summary><strong>Установка и вызов в Codex</strong></summary>
-
-Отправьте это в Codex, чтобы установить существующую Skill из репозитория.
+<summary><strong>Codex: удалённая установка и вызов</strong></summary>
 
 ```text
 $skill-installer Установите навык по адресу https://github.com/huh7i5/AI-prompts-writing/tree/main/.agents/skills/ai-prompt-writing.
 ```
-
-Затем используйте его так.
 
 ```text
 $ai-prompt-writing Отредактируйте введение. Уточните исследовательский вопрос и
@@ -1653,26 +1671,18 @@ $ai-prompt-writing Отредактируйте введение. Уточнит
 [Вставьте исходный текст]
 ```
 
-Codex поддерживает вызов навыка через `$skill-name`. В CLI и расширении для IDE также есть `/skills`. Если установленный навык не найден, откройте клиент заново и повторите попытку. [Документация по навыкам Codex](https://learn.chatgpt.com/docs/build-skills).
-
-При открытии этого репозитория как проекта Codex также может обнаружить Skill в каталоге `.agents/skills`. Поведение зависит от текущей версии клиента.
+В Codex навык вызывается через `$skill-name` или `/skills`; при открытии репозитория как проекта клиент также находит `.agents/skills/`. [Документация по навыкам Codex](https://learn.chatgpt.com/docs/build-skills).
 
 </details>
 
 <details>
-<summary><strong>Импорт и использование в WorkBuddy</strong></summary>
+<summary><strong>WorkBuddy: импорт через ZIP-архив</strong></summary>
 
-Скачайте репозиторий и упакуйте папку `.agents/skills/ai-prompt-writing` в архив. В разделе навыков WorkBuddy добавьте навык, загрузив архив. Убедившись, что он включён, попросите использовать `ai-prompt-writing` для вашей рукописи.
-
-Установка через диалог в WorkBuddy сейчас предназначена для его каталога навыков. Пользовательские пакеты требуют загрузки, поэтому не используйте команду установки Codex как команду WorkBuddy. [Документация по навыкам WorkBuddy](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
+Скачайте репозиторий, упакуйте `.agents/skills/ai-prompt-writing` (и нужные папки `paper-*`) в ZIP и загрузите через Skills → Add Skill в WorkBuddy. [Документация по навыкам WorkBuddy](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
 
 </details>
 
-Другие инструменты с поддержкой `SKILL.md` могут иметь собственный порядок импорта. В остальных случаях копируйте промпты напрямую. `/ai-prompt-writing` не является универсальной командой.
-
-Способы установки сверены с официальной документацией, но установка и поведение не проверялись во всех клиентах. Убедитесь, что ваши материалы разрешено загружать. Локальный агент тоже может использовать удалённую модель. Перед подачей проверьте требования целевого журнала к использованию ИИ и его раскрытию.
-
-</details>
+Онлайн-проверка источников требует доступа к сети, а скрипты контроля — Python 3. Перед отправкой статьи проверьте правила целевого журнала о раскрытии использования ИИ.
 
 <a id="quality"></a>
 

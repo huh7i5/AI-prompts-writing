@@ -11,27 +11,29 @@
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Stars"></a>
   <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Forks"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0"><img src="https://img.shields.io/github/v/release/huh7i5/AI-prompts-writing?style=flat-square&color=1f6feb" alt="Release v1.0.0"></a>
   <a href="#catalog"><img src="https://img.shields.io/badge/prompts-43_tasks-475569?style=flat-square" alt="43 Prompts"></a>
   <a href="#skill"><img src="https://img.shields.io/badge/agent_skills-1+4_pipeline-475569?style=flat-square" alt="Agent Skills Suite"></a>
 </p>
 
 <p>
   <a href="#why">Why This</a> ·
-  <a href="#start">Quick start</a> ·
-  <a href="#catalog">Tasks</a> ·
+  <a href="#start">Quick Start</a> ·
+  <a href="#examples">Examples</a> ·
+  <a href="#catalog">43 Tasks</a> ·
   <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">Prompt Builder</a> ·
-  <a href="#showcase">Example</a> ·
+  <a href="#templates">Presets &amp; Templates</a> ·
   <a href="#skill">Agent Skills</a> ·
-  <a href="docs/examples/reading-room-paper.en.md">Sample paper</a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0">v1.0.0 Release</a>
 </p>
 
 </div>
 
 > **Turn ad-hoc AI writing into a state-aware, verifiable workflow.** Drop in a rough idea, PDFs, CSV tables, draft paragraphs, or reviewer comments—**automatically diagnose what stage you are in, get specific writing advice on missing evidence or weak logic, and draft or revise cleanly** without inventing data or references (if helpful, consider leaving a ⭐ Star).
 
-- **Copy & paste on the web**: No setup or coding needed—open any task in the [directory below](#catalog) or use the [interactive prompt builder](https://huh7i5.github.io/AI-prompts-writing/builder/) with ChatGPT, Claude, or DeepSeek.
-- **Run inside an AI Agent**: Compatible with Claude Code, Codex, Cursor, Antigravity, and WorkBuddy—share your materials to auto-diagnose stage, get targeted advice, verify citations, anchor PDF pages, compute stats/SVG plots, revise prose, and export `.docx`/`.tex` ([see setup](#skill)).
-- **Worked examples**: [Real-data bikeshare paper](docs/examples/capital-bikeshare/paper.md) · [Library short demo](docs/examples/reading-room-paper.en.md) · [Auto state-diagnosis demo](docs/examples/state-diagnosis-demo.md) · [Chinese thesis cross-chapter revision (GB/T 7713.1)](docs/examples/thesis-chapter-revision.md) · [Qualitative/review page anchoring](docs/examples/qualitative-review-anchoring.md).
+- **Copy & paste on the web**: Zero setup—pick any task in the [directory below](#catalog) or open the [interactive Prompt Builder](https://huh7i5.github.io/AI-prompts-writing/builder/) with paper-type presets ([Journal Paper](https://huh7i5.github.io/AI-prompts-writing/builder/?preset=journal) · [Thesis / Dissertation](https://huh7i5.github.io/AI-prompts-writing/builder/?preset=thesis) · [Literature Review](https://huh7i5.github.io/AI-prompts-writing/builder/?preset=review)) for ChatGPT, Claude, DeepSeek, or Kimi.
+- **Run inside an AI Agent**: Compatible with Claude Code, Codex, Cursor, Antigravity, OpenCode, and WorkBuddy via a one-line installer—automatically diagnoses stage, advises on missing evidence, verifies citations, anchors PDF pages, computes CSV stats/SVG plots, and exports `.docx`/`.tex` ([see setup & templates](#skill)).
+- **Inspect real-run outputs first**: See the [worked examples table](#examples) below for empirical CSV recomputation, auto state diagnosis, Chinese thesis cross-chapter conflict sync, and qualitative/review page anchoring.
 
 <a id="why"></a>
 
@@ -50,6 +52,18 @@
 1. **Pick a task**: Open the step you need below and copy the box (or try [library attendance](docs/examples/reading-room.en.md) / [ferry diary](docs/examples/text-reading.en.md)).
 2. **Add materials**: Put language/length rules first and paste drafts, notes, or data at the end (replace `{{…}}` as needed; delete unused labels).
 3. **Verify outputs**: Send in one message; check every number and citation yourself, and remove private details before uploading.
+
+<a id="examples"></a>
+
+## Worked Examples Across Research Genres
+
+| Scenario / Manuscript Type | What It Demonstrates | Key Artifacts |
+| :--- | :--- | :--- |
+| **Full Empirical Study** (Quantitative) | End-to-end 1+4 pipeline with CSV verification, SVG plots & 3 audited tables | [Final Paper](docs/examples/capital-bikeshare/paper.md) · [Recomputation Log](docs/examples/capital-bikeshare/README.md) |
+| **Rough Draft (No Task ID Given)** | Auto stage diagnosis → 3 concrete edits → anti-AI-slop rewrite preserving numbers | [Auto State-Diagnosis Demo (ZH)](docs/examples/state-diagnosis-demo.md) |
+| **Multi-Chapter Thesis** (`GB/T 7713.1`) | `thesis_zh` preset + `check_numbers.py` catching `N=320` vs `n=288` chapter conflict | [Thesis Revision Demo (ZH)](docs/examples/thesis-chapter-revision.md) |
+| **Qualitative / Focused Review** (No CSV) | `review` preset + `fulltext_indexer.py` `[file, p.X, para.Y]` page anchoring & gate check | [Review Anchoring Demo (ZH)](docs/examples/qualitative-review-anchoring.md) |
+| **Short Zero-Setup Tryouts** | Quick web prompt test cases & line-by-line before/after editing comparison | [Library Sample Paper](docs/examples/reading-room-paper.en.md) · [Before/After Showcase](#showcase) |
 
 <a id="control"></a>
 
@@ -1640,8 +1654,6 @@ Install the Skills Suite into any host supporting `SKILL.md`, then drop in your 
 1. **Auto-diagnose writing state**: Detects where you sit across stages 1–10 and distinguishes `PRE_STUDY` (plans/outlines only) from `POST_RESULTS` (empirical findings).
 2. **Deliver actionable writing advice**: Flags missing evidence, numeric conflicts, or weak transitions, and recommends concrete next steps first.
 3. **Execute end-to-end writing assistance**: Routes across Stations 01–04 for real citation verification, PDF page anchoring, CSV stats & SVG plotting, anti-slop drafting, audit gates, and `.docx`/`.tex` export.
-   - **Cross-host one-line installer**: `python scripts/install_skill.py install --host <claude|codex|cursor|antigravity|opencode|project>` (with `update --backup-existing` and `verify`).
-   - **Built-in paper presets & verified LaTeX adapters**: `init_workspace.py --preset general|journal_en|journal_zh|thesis_zh|review`, plus `export_manuscript.py --tex-template` for `ctexart`, `ctexbook`, `IEEEtran`, `elsarticle`, `sn-jnl`, `thuthesis`, `pkuthss`, `sjtuthesis`, and `ustcthesis`, or BYO school templates via `--inspect-tex` and `--template-tex` ([verified sources & license boundaries](.agents/skills/paper-audit-submission/references/verified-latex-templates.md)).
 
 ```mermaid
 flowchart LR
@@ -1649,31 +1661,42 @@ flowchart LR
     Router --> S1["1 Topic & Full-Text"]
     Router --> S2["2 Stats, SVG & Ledger"]
     Router --> S3["3 Draft & Anti-Slop"]
-    Router --> S4["4 Audit & Export .docx"]
+    Router --> S4["4 Audit & Export .docx/.tex"]
 ```
 
-<details>
-<summary><strong>Show station skills, built-in scripts, and installation</strong></summary>
+### One-Command Cross-Host Installer (1 Router + 4 Stations)
 
-Under `.agents/skills/`, the suite provides **1 smart router + 4 specialized station skills** (zero-dependency Python stdlib scripts; `ai-prompt-writing` also runs standalone):
+Clone this repository and run the zero-dependency Python stdlib installer (automatically copies all 5 skills and runs `pipeline_doctor.py selftest`):
+
+```bash
+python scripts/install_skill.py install --host codex   # supports claude / codex / cursor / antigravity / opencode / project
+python scripts/install_skill.py verify --host codex    # verify installed skills and run full selftests
+python scripts/install_skill.py update --host codex --backup-existing  # backup existing copies before updating
+```
+
+Or copy the 5 folders under `.agents/skills/` directly into your project's `.agents/skills/` directory for automatic discovery in Codex and Antigravity (`ai-prompt-writing` also runs standalone).
 
 | Skill | Role & Built-in Scripts |
 | :--- | :--- |
 | <nobr>[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)</nobr> | **Router**: stage diagnosis, Writer-vs-Reviewer loop, `pipeline_doctor.py` |
 | <nobr>[paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md)</nobr> | **Station 01**: OpenAlex/CrossRef/arXiv checks, `fulltext_indexer.py` PDF page anchoring |
-| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **Station 02**: outlines, proof checks, `stats_and_plot.py` CSV stats & SVG plots |
+| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **Station 02**: outlines, proof checks, `init_workspace.py --preset`, `stats_and_plot.py` CSV/SVG |
 | <nobr>[paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md)</nobr> | **Station 03**: drafting, anti-slop & anti-defensive edits, `style_and_draft_gate.py` |
 | <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **Station 04**: number scans, review sync, proofs, `export_manuscript.py` (`.docx`/`.tex`) |
 
+<a id="templates"></a>
+
+### Built-in Paper Presets, Word Export & Verified LaTeX Adapters
+
+- **5 Workspace Presets** (`init_workspace.py --preset`): `general`, `journal_en`, `journal_zh`, `thesis_zh` (**GB/T 7713.1** Chinese Master/PhD thesis with cross-chapter closure checks), and `review` (defaults to `FOCUSED_REVIEW` with inclusion/exclusion matrix).
+- **Stdlib Word `.docx` Export**: embeds PNG/JPEG plots (`<w:drawing>`), three-line academic tables, centered page footers, and thesis chapter page breaks—zero external Python packages required.
+- **10 Verified Upstream `.tex` Profiles & BYO Template Adaptation** (`export_manuscript.py`; **never copies restricted third-party `.cls` files or university trademark logos**):
+  - **Standalone journals & GB/T thesis**: `ctexart`, `article`, `ctexbook` + `gbt7714`, `ieee` (`IEEEtran`), `elsarticle`, `sn-jnl` (Springer Nature).
+  - **Chinese university thesis adapters**: Tsinghua `thuthesis` (`data/chap*.tex` + `ref/refs.bib`), Peking University `pkuthss` (`chap/chap*.tex` + `\parencite`), Shanghai Jiao Tong `sjtuthesis` (`contents/*.tex`), and USTC `ustcthesis` (`chapters/*.tex` + `\declarationofaiusage`).
+  - **Bring-Your-Own school/journal template (BYO)**: `--inspect-tex` detects documentclass, chapter vs section depth, and citation macros (`\cite`/`\parencite`/`\supercite`); `--template-tex` safely injects drafted chapters without altering frontmatter or cover styles ([verified sources & license boundaries](.agents/skills/paper-audit-submission/references/verified-latex-templates.md) · [template usage guide](.agents/skills/paper-audit-submission/references/04-latex-and-thesis-templates.md)).
+
 <details>
-<summary><strong>Workspace auto-discovery (loads all 1+4 stations)</strong></summary>
-
-Clone this repository or copy the 5 folders inside `.agents/skills/` into your project's `.agents/skills/` directory. Clients like Codex and Antigravity discover all stations and scripts automatically.
-
-</details>
-
-<details>
-<summary><strong>Codex installation and invocation</strong></summary>
+<summary><strong>Codex: remote install & invocation example</strong></summary>
 
 ```text
 $skill-installer Please install the skill at https://github.com/huh7i5/AI-prompts-writing/tree/main/.agents/skills/ai-prompt-writing.
@@ -1691,15 +1714,13 @@ See [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills).
 </details>
 
 <details>
-<summary><strong>Import and use in WorkBuddy</strong></summary>
+<summary><strong>WorkBuddy: import & use via ZIP upload</strong></summary>
 
 Compress `.agents/skills/ai-prompt-writing` (and any `paper-*` folders needed) and upload via Skills → Add Skill. See [WorkBuddy skills documentation](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
 
 </details>
 
-Live citation checks require network access, and local gate scripts require Python 3; otherwise skills degrade cleanly and state their scope. Check target journal AI-disclosure rules before submission.
-
-</details>
+Live citation checks require network access, and local gate scripts require Python 3; otherwise skills degrade cleanly and state their scope. Check target journal and university AI-disclosure rules before submission.
 
 <a id="quality"></a>
 

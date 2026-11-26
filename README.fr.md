@@ -9,14 +9,20 @@
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Stars"></a>
   <a href="https://github.com/huh7i5/AI-prompts-writing/forks"><img src="https://img.shields.io/github/forks/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Forks"></a>
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0"><img src="https://img.shields.io/github/v/release/huh7i5/AI-prompts-writing?style=flat-square&color=1f6feb" alt="Version v1.0.0"></a>
+  <a href="#catalog"><img src="https://img.shields.io/badge/prompts-43_tasks-475569?style=flat-square" alt="43 Prompts"></a>
+  <a href="#skill"><img src="https://img.shields.io/badge/agent_skills-1+4_pipeline-475569?style=flat-square" alt="Agent Skills Suite"></a>
 </p>
 
 <p>
-  <a href="#start">Commencer ici</a> ·
-  <a href="#catalog">Choisir une tâche</a> ·
-  <a href="#lifecycle">Voir les étapes de rédaction</a> ·
-  <a href="#showcase">Voir un exemple de révision</a> ·
-  <a href="docs/examples/reading-room-paper.en.md">Exemple d’article (anglais)</a>
+  <a href="#start">Commencer</a> ·
+  <a href="#catalog">43 tâches</a> ·
+  <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">Générateur web</a> ·
+  <a href="#lifecycle">Étapes</a> ·
+  <a href="#showcase">Exemple de révision</a> ·
+  <a href="#skill">Agent Skills</a> ·
+  <a href="docs/examples/capital-bikeshare/paper.md">Étude empirique</a> ·
+  <a href="https://github.com/huh7i5/AI-prompts-writing/releases/tag/v1.0.0">v1.0.0</a>
 </p>
 
 </div>
@@ -1625,25 +1631,37 @@ Informations correctes confirmées et inconnues restantes :
 
 <a id="skill"></a>
 
-## Vous utilisez souvent Codex ou WorkBuddy ?
+## Utilisation avec des agents IA (Suite 1+4 Agent Skills)
 
-Vous pouvez installer ces consignes de rédaction dans votre outil pour les réutiliser.
+Installez la suite dans tout client compatible `SKILL.md` (Claude Code, Codex, Cursor, Antigravity, OpenCode ou WorkBuddy), puis transmettez vos notes, PDF, fichiers CSV ou brouillons à `ai-prompt-writing` :
+
+1. **Diagnostic automatique de l’étape** : identifie votre progression (étapes 1–10) et distingue les plans (`PRE_STUDY`) des résultats établis (`POST_RESULTS`).
+2. **Conseils ciblés avant réécriture** : signale les preuves manquantes, conflits chiffrés et limites de portée.
+3. **Accompagnement complet sans dépendance tierce** : vérifie les citations, ancre les pages PDF, génère statistiques/SVG et exporte en `.docx` et `.tex` (voir aussi le [générateur web avec préréglages](https://huh7i5.github.io/AI-prompts-writing/builder/)).
+
+```bash
+python scripts/install_skill.py install --host codex   # claude / codex / cursor / antigravity / opencode / project
+python scripts/install_skill.py verify --host codex    # vérifie les modules et lance les autotests
+python scripts/install_skill.py update --host codex --backup-existing  # mise à jour avec sauvegarde
+```
+
+| Module | Rôle et scripts intégrés |
+| :--- | :--- |
+| <nobr>[ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md)</nobr> | **Routeur** : diagnostic d’étape, boucle auteur/évaluateur et `pipeline_doctor.py` |
+| <nobr>[paper-topic-literature](.agents/skills/paper-topic-literature/SKILL.md)</nobr> | **Poste 01** : vérification OpenAlex/CrossRef/arXiv et ancrage PDF `fulltext_indexer.py` |
+| <nobr>[paper-design-evidence](.agents/skills/paper-design-evidence/SKILL.md)</nobr> | **Poste 02** : préréglages (`--preset`), preuves et `stats_and_plot.py` (CSV/SVG) |
+| <nobr>[paper-draft-polish](.agents/skills/paper-draft-polish/SKILL.md)</nobr> | **Poste 03** : rédaction sans clichés d’IA et contrôle `style_and_draft_gate.py` |
+| <nobr>[paper-audit-submission](.agents/skills/paper-audit-submission/SKILL.md)</nobr> | **Poste 04** : audit chiffré (`check_numbers.py`) et export `.docx`/`.tex` (`export_manuscript.py`) |
+
+- **Préréglages, LaTeX vérifié et modèles locaux (BYO)** : `init_workspace.py --preset general|journal_en|journal_zh|thesis_zh|review` et `export_manuscript.py --tex-template` (`ctexart`, `ctexbook`, `IEEEtran`, `elsarticle`, `sn-jnl`, `thuthesis`, `pkuthss`, `sjtuthesis`, `ustcthesis`) ou `--inspect-tex` / `--template-tex` pour adapter vos propres modèles `.tex` sans copier de `.cls` soumis à licence ([sources vérifiées](.agents/skills/paper-audit-submission/references/verified-latex-templates.md)).
+- **Exemples détaillés** : [Étude empirique](docs/examples/capital-bikeshare/paper.md) · [Diagnostic automatique](docs/examples/state-diagnosis-demo.md) · [Révision de thèse](docs/examples/thesis-chapter-revision.md) · [Ancrage qualitatif/revue](docs/examples/qualitative-review-anchoring.md).
 
 <details>
-<summary><strong>Voir les instructions d’installation (facultatif)</strong></summary>
-
-Si vous modifiez souvent des articles dans un agent, installez [ai-prompt-writing](.agents/skills/ai-prompt-writing/SKILL.md). Il regroupe ces préférences de rédaction et ces tâches spécifiques à l'étape sous forme d'instructions autonomes. Il ne nécessite pas d'autres compétences ni le référentiel complet. Vous pouvez ignorer cette section lors de la copie directe des prompts.
-
-<details>
-<summary><strong>Installation et utilisation dans Codex</strong></summary>
-
-Envoyez cette demande à Codex pour installer le Skill existant depuis le dépôt.
+<summary><strong>Codex : installation à distance et utilisation</strong></summary>
 
 ```text
 $skill-installer Installez le Skill disponible à https://github.com/huh7i5/AI-prompts-writing/tree/main/.agents/skills/ai-prompt-writing.
 ```
-
-Utilisez-le ensuite ainsi.
 
 ```text
 $ai-prompt-writing Révisez cette introduction. Clarifiez la question de recherche et la
@@ -1653,26 +1671,18 @@ excessives ou les métaphores forcées. Donnez le texte révisé et les principa
 [Collez le texte original]
 ```
 
-Codex permet d’invoquer un Skill avec `$skill-name`. Le CLI et l’extension pour IDE proposent également `/skills`. Si le Skill installé est introuvable, rouvrez le client et réessayez. [Documentation des Skills Codex](https://learn.chatgpt.com/docs/build-skills).
-
-Lorsque ce référentiel est ouvert en tant que projet, Codex peut également découvrir le Skill dans son répertoire `.agents/skills`. Le comportement dépend de la version actuelle du client.
+Codex permet d’invoquer un Skill avec `$skill-name` ou `/skills` et détecte aussi `.agents/skills/` à l’ouverture du dépôt comme projet. [Documentation des Skills Codex](https://learn.chatgpt.com/docs/build-skills).
 
 </details>
 
 <details>
-<summary><strong>Importation et utilisation dans WorkBuddy</strong></summary>
+<summary><strong>WorkBuddy : import par archive ZIP</strong></summary>
 
-Téléchargez ce dépôt et compressez le dossier `.agents/skills/ai-prompt-writing`. Dans l’espace des Skills de WorkBuddy, ajoutez un Skill en important cette archive. Vérifiez qu’il est activé, puis demandez à WorkBuddy d’utiliser `ai-prompt-writing` pour votre manuscrit.
-
-L’installation conversationnelle de WorkBuddy vise actuellement sa place de marché de Skills. Les paquets personnalisés doivent être importés ; ne réutilisez donc pas la commande d’installation de Codex comme si elle était une commande WorkBuddy. [Documentation des Skills WorkBuddy](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
+Téléchargez ce dépôt, compressez `.agents/skills/ai-prompt-writing` (et les dossiers `paper-*` souhaités), puis importez l’archive via Skills → Add Skill dans WorkBuddy. [Documentation des Skills WorkBuddy](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market).
 
 </details>
 
-Les autres outils compatibles avec `SKILL.md` peuvent avoir leur propre procédure d’importation. Sinon, copiez directement les prompts. `/ai-prompt-writing` n’est pas une commande universelle.
-
-Les modes d’installation ont été confrontés à la documentation officielle, mais l’installation et le comportement n’ont pas été testés dans tous les clients. Vérifiez que vos documents peuvent être transmis. Un agent local peut tout de même utiliser un modèle distant. Consultez les exigences de la revue concernant l’usage de l’IA et sa déclaration avant la soumission.
-
-</details>
+La vérification de citations en ligne nécessite un accès réseau et les scripts locaux requièrent Python 3 ; vérifiez les règles de déclaration d’IA de la revue visée avant soumission.
 
 <a id="quality"></a>
 
