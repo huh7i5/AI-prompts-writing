@@ -291,6 +291,250 @@ class Station04SkillTests(unittest.TestCase):
             except ImportError:
                 pass
 
+    def test_06_docx_embedded_image_three_line_table_and_footer(self) -> None:
+        import json
+        import struct
+        import subprocess
+        import sys
+        import tempfile
+        import zipfile
+        import zlib
+        from pathlib import Path
+
+        def make_tiny_png(w: int = 4, h: int = 4) -> bytes:
+            raw_rows = b"".join(b"\x00" + b"\x1f\x4e\x78" * w for _ in range(h))
+
+            def chunk(tag: bytes, payload: bytes) -> bytes:
+                return struct.pack(">I", len(payload)) + tag + payload + struct.pack(">I", zlib.crc32(tag + payload) & 0xFFFFFFFF)
+
+            ihdr = struct.pack(">IIBBBBB", w, h, 8, 2, 0, 0, 0)
+            return b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", ihdr) + chunk(b"IDAT", zlib.compress(raw_rows)) + chunk(b"IEND", b"")
+
+        exp_script = SKILL_DIR / "scripts" / "export_manuscript.py"
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "ws"
+            (ws / "01_literature").mkdir(parents=True)
+            (ws / "02_evidence").mkdir(parents=True)
+            (ws / "04_drafts").mkdir(parents=True)
+            (ws / "06_submission").mkdir(parents=True)
+
+            (ws / "00_project_spec.json").write_text(
+                json.dumps({"title_working": "三线表与插图导出测试", "paper_preset": "thesis_zh"}, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            (ws / "02_evidence" / "fig1.png").write_bytes(make_tiny_png())
+            (ws / "01_literature" / "02_literature_ledger.json").write_text(
+                json.dumps(
+                    {
+                        "entries": [
+                            {
+                                "ref_id": "Wang2024",
+                                "authors": ["Wang, L."],
+                                "year": 2024,
+                                "title": "Structured Scholarly Formatting",
+                                "venue": "J. Doc.",
+                                "verification_status": "VERIFIED",
+                            }
+                        ]
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            (ws / "04_drafts" / "01_ch1.md").write_text(
+                "# 第 1 章 绪论\n\n前期研究表明排版一致性很重要 [@Wang2024]。\n\n![实验结果图](fig1.png)\n",
+                encoding="utf-8",
+            )
+            (ws / "04_drafts" / "02_ch2.md").write_text(
+                "# 第 2 章 对比实验\n\n| 模型 | 样本量 | 准确率 (%) |\n| --- | --- | --- |\n| 基线 | 120 | 78.4 |\n| 本文 | 120 | 84.2 |\n",
+                encoding="utf-8",
+            )
+
+            docx_path = ws / "06_submission" / "thesis.docx"
+            tex_path = ws / "06_submission" / "main.tex"
+            res = subprocess.run(
+                [
+                    sys.executable,
+                    "-B",
+                    str(exp_script),
+                    "--workspace",
+                    str(ws),
+                    "--out-docx",
+                    str(docx_path),
+                    "--out-tex",
+                    str(tex_path),
+                ],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res.returncode, 0, msg=res.stdout + res.stderr)
+            summary = json.loads(res.stdout)
+            self.assertEqual(summary["status"], "PASS")
+            self.assertEqual(summary["resolved_citations_count"], 1)
+            self.assertEqual(summary["docx_embedded_images"], ["fig1.png"])
+
+            with zipfile.ZipFile(docx_path, "r") as zf:
+                names = set(zf.namelist())
+                self.assertIn("word/media/image1.png", names)
+                self.assertIn("word/footer1.xml", names)
+                doc_xml = zf.read("word/document.xml").decode("utf-8")
+                self.assertIn("<w:drawing>", doc_xml)
+                self.assertIn('w:sz="12"', doc_xml)
+                self.assertIn("<w:pageBreakBefore/>", doc_xml)
+
+            try:
+                import docx  # type: ignore
+
+                d = docx.Document(str(docx_path))
+                self.assertGreaterEqual(len(d.tables), 1)
+                self.assertGreaterEqual(len(d.inline_shapes), 1)
+            except ImportError:
+                pass
+
+    def test_07_latex_registry_multifile_and_byo_template(self) -> None:
+        import json
+        import subprocess
+        import sys
+        import tempfile
+        from pathlib import Path
+
+        exp_script = SKILL_DIR / "scripts" / "export_manuscript.py"
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "ws"
+            (ws / "01_literature").mkdir(parents=True)
+            (ws / "04_drafts").mkdir(parents=True)
+            (ws / "01_literature" / "02_literature_ledger.json").write_text(
+                json.dumps(
+                    {
+                        "entries": [
+                            {
+                                "ref_id": "Smith2023",
+                                "authors": ["Smith, A."],
+                                "year": 2023,
+                                "title": "Verified Benchmark Evaluation",
+                                "venue": "IEEE Trans.",
+                                "doi": "10.1109/test.2023.1",
+                                "verification_status": "VERIFIED",
+                            }
+                        ]
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            (ws / "04_drafts" / "01_intro.md").write_text(
+                "# Introduction\n\nPrior benchmarks remain fragmented [@Smith2023].\n",
+                encoding="utf-8",
+            )
+            (ws / "04_drafts" / "02_method.md").write_text(
+                "# Methodology\n\nWe evaluate unified pipelines.\n",
+                encoding="utf-8",
+            )
+
+            # 1) Verified registry adapter: ieee
+            ieee_dir = Path(tmp) / "out_ieee"
+            res_ieee = subprocess.run(
+                [
+                    sys.executable,
+                    "-B",
+                    str(exp_script),
+                    "--workspace",
+                    str(ws),
+                    "--tex-template",
+                    "ieee",
+                    "--out-tex",
+                    str(ieee_dir / "paper.tex"),
+                ],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res_ieee.returncode, 0, msg=res_ieee.stdout + res_ieee.stderr)
+            ieee_tex = (ieee_dir / "paper.tex").read_text(encoding="utf-8")
+            self.assertIn(r"\documentclass[conference]{IEEEtran}", ieee_tex)
+            self.assertIn(r"\cite{Smith2023}", ieee_tex)
+            self.assertTrue((ieee_dir / "refs.bib").exists())
+
+            # 2) Verified university adapter: thuthesis multi-chapter layout
+            thu_dir = Path(tmp) / "out_thu"
+            res_thu = subprocess.run(
+                [
+                    sys.executable,
+                    "-B",
+                    str(exp_script),
+                    "--workspace",
+                    str(ws),
+                    "--tex-template",
+                    "thuthesis",
+                    "--out-tex",
+                    str(thu_dir / "thuthesis_main.tex"),
+                ],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res_thu.returncode, 0, msg=res_thu.stdout + res_thu.stderr)
+            thu_main = (thu_dir / "thuthesis_main.tex").read_text(encoding="utf-8")
+            self.assertIn(r"\documentclass[degree=master]{thuthesis}", thu_main)
+            self.assertTrue((thu_dir / "data" / "chap01.tex").exists())
+            self.assertTrue((thu_dir / "ref" / "refs.bib").exists())
+            self.assertIn(r"\chapter{", (thu_dir / "data" / "chap01.tex").read_text(encoding="utf-8"))
+
+            # 3) BYO inspect-tex + safe marker-block injection
+            byo_tpl = Path(tmp) / "my_school_tpl.tex"
+            original_tpl = (
+                "\\documentclass{pkuthss}\n"
+                "\\begin{document}\n"
+                "% AI_PROMPTS_BODY_START\n"
+                "OLD_PLACEHOLDER\n"
+                "% AI_PROMPTS_BODY_END\n"
+                "\\end{document}\n"
+            )
+            byo_tpl.write_text(original_tpl, encoding="utf-8")
+
+            res_insp = subprocess.run(
+                [sys.executable, "-B", str(exp_script), "--inspect-tex", str(byo_tpl)],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res_insp.returncode, 0, msg=res_insp.stdout + res_insp.stderr)
+            insp_info = json.loads(res_insp.stdout)
+            self.assertEqual(insp_info["documentclass"], "pkuthss")
+            self.assertEqual(insp_info["top_section_cmd"], "chapter")
+            self.assertTrue(insp_info["has_body_markers"])
+
+            byo_out = Path(tmp) / "out_byo" / "adapted.tex"
+            res_byo = subprocess.run(
+                [
+                    sys.executable,
+                    "-B",
+                    str(exp_script),
+                    "--workspace",
+                    str(ws),
+                    "--template-tex",
+                    str(byo_tpl),
+                    "--out-tex",
+                    str(byo_out),
+                ],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res_byo.returncode, 0, msg=res_byo.stdout + res_byo.stderr)
+            byo_summary = json.loads(res_byo.stdout)
+            self.assertEqual(byo_summary["tex_details"]["injection_mode"], "marker-block")
+            adapted_txt = byo_out.read_text(encoding="utf-8")
+            self.assertIn(r"\chapter{Introduction}", adapted_txt)
+            self.assertNotIn("OLD_PLACEHOLDER", adapted_txt)
+            self.assertEqual(byo_tpl.read_text(encoding="utf-8"), original_tpl)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

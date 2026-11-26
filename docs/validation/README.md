@@ -116,6 +116,15 @@
 - Skill 通过格式检查、内容与 README 对齐；尚未在各宿主完成安装、触发和长任务行为测试。
 - 完整论文需要作者、导师和领域审稿者核对；本轮小案例无法估计真实论文上的错误率。
 
+## 差异化真实样例与脚本回归（2026-11-26 增补）
+
+以下示例聚焦多文体、非仅单篇实证的真实场景，且均附带仓库内置脚本的实跑输出（不虚构联网检索或整篇人工评审结论）：
+
+- [写作状态自动诊断与预设建议示例](../examples/state-diagnosis-demo.md)：展示无前置人工翻表情况下，`pipeline_doctor.py diagnose` 与 `init_workspace.py --preset` 如何判定所处阶段（含 `PRE_STUDY` 锁与预设规范）。
+- [中文学位论文（GB/T 7713.1）跨章修改与数字同步示例](../examples/thesis-chapter-revision.md)：演示 `thesis_zh` 预设、`check_numbers.py` 跨章样本量冲突捕获（`288` vs `320`），以及 `export_manuscript.py` 多章 `.tex`/高校模板骨架导出。
+- [质性与文献综述证据锚定及口径核查示例](../examples/qualitative-review-anchoring.md)：演示 `fulltext_indexer.py` 逐段页码锚定（`[file, p.X, para.Y]`）与 `lit_gate_check.py --mode related-work` 对 `reading_depth` 的核查。
+- 跨宿主部署与本地脚本自检：可通过 `python scripts/install_skill.py install --host <claude|codex|cursor|antigravity|opencode|project>` 挂载并在目标目录运行 `pipeline_doctor.py selftest`（当前自动化回归验证本地脚本逻辑与导出结构，仍不替代目标模型的端到端长文行为评估）。
+
 ## 怎样重跑或报告问题
 
 核心提示词仍在 [README](../../README.md)，这些验证材料只用于维护，不需要安装运行框架。

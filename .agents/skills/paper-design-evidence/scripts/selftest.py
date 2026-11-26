@@ -404,6 +404,82 @@ class Station02SkillTests(unittest.TestCase):
             updated_ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
             self.assertEqual(updated_ledger["evidence_items"][0]["recomputation_status"], "RECOMPUTED_LOCAL")
 
+    def test_07_paper_presets_thesis_and_review(self) -> None:
+        import json
+        import subprocess
+        import sys
+        import tempfile
+        from pathlib import Path
+
+        doctor_script = Path(__file__).resolve().parents[2] / "ai-prompt-writing" / "scripts" / "pipeline_doctor.py"
+        with tempfile.TemporaryDirectory() as tmp:
+            ws_thesis = Path(tmp) / "thesis_ws"
+            res_t = subprocess.run(
+                [
+                    sys.executable,
+                    "-B",
+                    str(INIT_SCRIPT),
+                    "init",
+                    "--workspace",
+                    str(ws_thesis),
+                    "--preset",
+                    "thesis_zh",
+                    "--discipline",
+                    "计算机科学与技术",
+                    "--title",
+                    "基于可验证工作流的学术写作系统研究",
+                ],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res_t.returncode, 0, msg=res_t.stdout + res_t.stderr)
+            out_t = json.loads(res_t.stdout)
+            self.assertEqual(out_t["paper_preset"], "thesis_zh")
+            self.assertTrue(out_t["outline_scaffolded"])
+            self.assertEqual(out_t["recommended_tex_template"], "ctexbook")
+
+            outline_text = (ws_thesis / "03_backbone" / "04_outline.md").read_text(encoding="utf-8")
+            self.assertIn("GB/T 7713.1", outline_text)
+            self.assertIn("第 1 章 绪论", outline_text)
+            self.assertIn("thuthesis|pkuthss|sjtuthesis|ustcthesis", outline_text)
+
+            diag_t = subprocess.run(
+                [sys.executable, "-B", str(doctor_script), "diagnose", "--workspace", str(ws_thesis)],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(diag_t.returncode, 0, msg=diag_t.stdout + diag_t.stderr)
+            diag_data = json.loads(diag_t.stdout)
+            self.assertEqual(diag_data["paper_preset"], "thesis_zh")
+            self.assertIn("GB/T 7713.1", diag_data["reason"])
+
+            ws_rev = Path(tmp) / "review_ws"
+            res_r = subprocess.run(
+                [
+                    sys.executable,
+                    "-B",
+                    str(INIT_SCRIPT),
+                    "init",
+                    "--workspace",
+                    str(ws_rev),
+                    "--preset",
+                    "review",
+                ],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertEqual(res_r.returncode, 0, msg=res_r.stdout + res_r.stderr)
+            out_r = json.loads(res_r.stdout)
+            self.assertEqual(out_r["paper_preset"], "review")
+            self.assertEqual(out_r["paradigm"], "FOCUSED_REVIEW")
+            self.assertTrue(out_r["outline_scaffolded"])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

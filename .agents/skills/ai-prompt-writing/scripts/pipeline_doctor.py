@@ -107,6 +107,7 @@ def cmd_diagnose(workspace: Path) -> int:
     spec_path = ws / "00_project_spec.json"
     spec = json.loads(spec_path.read_text(encoding="utf-8")) if spec_path.exists() else {}
     time_state = (spec.get("study_time_state") or "UNKNOWN").upper()
+    paper_preset = spec.get("paper_preset") or "general"
 
     topic_yaml = (ws / "01_literature" / "01_topic_spec.yaml").exists() or (ws / "01_topic_spec.yaml").exists()
     lit_json_path = ws / "01_literature" / "02_literature_ledger.json"
@@ -138,6 +139,15 @@ def cmd_diagnose(workspace: Path) -> int:
         next_station = "paper-audit-submission"
         reason = "Draft sections exist; run check_numbers.py and pre-submission / peer-review audit gates."
 
+    preset_hints = {
+        "thesis_zh": " [thesis_zh: enforce GB/T 7713.1 ch1->final closure & cross-chapter number sync]",
+        "journal_en": " [journal_en: keep compact single-contribution scope & matched baseline comparisons]",
+        "journal_zh": " [journal_zh: enforce GB/T 7714 sequential refs & bilingual abstract parity]",
+        "review": " [review: state search databases/date window & inclusion/exclusion without claiming unrun PRISMA]",
+    }
+    if paper_preset in preset_hints:
+        reason += preset_hints[paper_preset]
+
     print(
         json.dumps(
             {
@@ -145,6 +155,7 @@ def cmd_diagnose(workspace: Path) -> int:
                 "installed_stations": installed_stations,
                 "workspace_exists": True,
                 "workspace": str(ws),
+                "paper_preset": paper_preset,
                 "study_time_state": time_state,
                 "state_summary": {
                     "topic_spec_found": topic_yaml,

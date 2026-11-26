@@ -38,6 +38,7 @@ description: >-
 | **8.4 整理作者贡献、伦理、利益冲突、数据与 AI 使用声明** | [02-submission-and-declarations.md](./references/02-submission-and-declarations.md) | 严格基于已确认事实的各项声明草稿 + 必须由全体作者确认的开放事项清单 |
 | **9.1 拆解反馈排改稿顺序 / 9.2 按意见联动改正文 / 9.3 逐条回复审稿人** | [03-peer-review-and-proofs.md](./references/03-peer-review-and-proofs.md) | 优先级修改方案（`9.1`）/ 修订正文 + 跨章同步对照表（`9.2`）/ 区分“已完成/计划补做/不采纳/待核实”的回复信（`9.3`） |
 | **10.1 比较接收稿与校样 / 10.2 材料归档说明 / 10.3 发表后错误评估与沟通** | [03-peer-review-and-proofs.md](./references/03-peer-review-and-proofs.md) | 排版错误 vs 实质数字变化分离表（`10.1`）/ 分级共享归档说明（`10.2`）/ 错误影响范围与致编辑沟通草稿（`10.3`） |
+| **导出 Word (`.docx`) / LaTeX 多模板与高校自带模板适配** | [04-latex-and-thesis-templates.md](./references/04-latex-and-thesis-templates.md) · [verified-latex-templates.md](./references/verified-latex-templates.md) | 含真实 PNG/JPG 插图与三线表 `.docx` / 多章 `.tex` 骨架（`ctexbook`/`ieee`/`elsarticle`/`thuthesis`/`pkuthss`/`sjtuthesis`/`ustcthesis`）/ 自带 `.tex` 探测适配 |
 
 ---
 
@@ -77,7 +78,7 @@ description: >-
      [--modified-claims C01]
    ```
    若返回 `"status": "BLOCKED"`（退出码 `2`），必须立即删除越界完成声明、全文已核验夸大语或伪造编号后再交付。
-3. **一键将分章草稿与已核验文献编译导出为 Word (`.docx`) 与 LaTeX (`.tex`) 成品**：
+3. **一键将分章草稿与已核验文献编译导出为 Word (`.docx`) 与 LaTeX (`.tex`) 成品（支持 `--tex-template` / `--inspect-tex` / `--template-tex`）**：
    ```bash
-   python scripts/export_manuscript.py --workspace ./paper_workspace --title "Manuscript Title" --authors "Author List"
+   python scripts/export_manuscript.py --workspace ./paper_workspace --title "Manuscript Title" --authors "Author List" [--tex-template ctexbook]
    ```

@@ -31,6 +31,7 @@
 
 - **Copy & paste on the web**: No setup or coding needed—open any task in the [directory below](#catalog) or use the [interactive prompt builder](https://huh7i5.github.io/AI-prompts-writing/builder/) with ChatGPT, Claude, or DeepSeek.
 - **Run inside an AI Agent**: Compatible with Claude Code, Codex, Cursor, Antigravity, and WorkBuddy—share your materials to auto-diagnose stage, get targeted advice, verify citations, anchor PDF pages, compute stats/SVG plots, revise prose, and export `.docx`/`.tex` ([see setup](#skill)).
+- **Worked examples**: [Real-data bikeshare paper](docs/examples/capital-bikeshare/paper.md) · [Library short demo](docs/examples/reading-room-paper.en.md) · [Auto state-diagnosis demo](docs/examples/state-diagnosis-demo.md) · [Chinese thesis cross-chapter revision (GB/T 7713.1)](docs/examples/thesis-chapter-revision.md) · [Qualitative/review page anchoring](docs/examples/qualitative-review-anchoring.md).
 
 <a id="why"></a>
 
@@ -1639,6 +1640,8 @@ Install the Skills Suite into any host supporting `SKILL.md`, then drop in your 
 1. **Auto-diagnose writing state**: Detects where you sit across stages 1–10 and distinguishes `PRE_STUDY` (plans/outlines only) from `POST_RESULTS` (empirical findings).
 2. **Deliver actionable writing advice**: Flags missing evidence, numeric conflicts, or weak transitions, and recommends concrete next steps first.
 3. **Execute end-to-end writing assistance**: Routes across Stations 01–04 for real citation verification, PDF page anchoring, CSV stats & SVG plotting, anti-slop drafting, audit gates, and `.docx`/`.tex` export.
+   - **Cross-host one-line installer**: `python scripts/install_skill.py install --host <claude|codex|cursor|antigravity|opencode|project>` (with `update --backup-existing` and `verify`).
+   - **Built-in paper presets & verified LaTeX adapters**: `init_workspace.py --preset general|journal_en|journal_zh|thesis_zh|review`, plus `export_manuscript.py --tex-template` for `ctexart`, `ctexbook`, `IEEEtran`, `elsarticle`, `sn-jnl`, `thuthesis`, `pkuthss`, `sjtuthesis`, and `ustcthesis`, or BYO school templates via `--inspect-tex` and `--template-tex` ([verified sources & license boundaries](.agents/skills/paper-audit-submission/references/verified-latex-templates.md)).
 
 ```mermaid
 flowchart LR
@@ -1711,6 +1714,8 @@ This library supports common research preparation, academic writing, and revisio
 
 - [Sources and task coverage (Chinese)](docs/coverage.md) maps workflow stages, supporting sources, tasks, and remaining boundaries.
 - [Evaluation methods and records (Chinese)](docs/validation/README.md) contains fixed inputs, criteria, raw outputs, and the distinction between static review and behavior trials.
+- [Differentiated worked demos](docs/examples/state-diagnosis-demo.md): [Auto state diagnosis](docs/examples/state-diagnosis-demo.md), [Thesis chapter sync](docs/examples/thesis-chapter-revision.md), and [Qualitative/review page anchoring](docs/examples/qualitative-review-anchoring.md).
+- [Verified LaTeX & thesis template registry](.agents/skills/paper-audit-submission/references/verified-latex-templates.md): upstream repositories, licenses, and verified macro conventions.
 - [English behavior trials](docs/validation/runs/2026-11-10-en/README.md) records six fixed cases, one targeted retry, and a Chinese synchronization check, including the initial partial result.
 - [Language versions](docs/translations.md) lists the supported languages, synchronization policy, and translation-evaluation limits.
 - [Lifecycle illustration and generation prompt (Chinese)](assets/research-writing-lifecycle-prompt.md) records the figure's purpose and production.

@@ -688,6 +688,23 @@
       flex-shrink: 0;
     }
 
+    .preset-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      padding-top: 8px;
+      margin-top: 2px;
+      border-top: 1px dashed var(--hairline);
+    }
+
+    .preset-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      margin-right: 2px;
+    }
+
     .fields-grid {
       display: flex;
       flex-direction: column;
@@ -1080,6 +1097,9 @@
             <input type="checkbox" id="rawPasteModeChk" />
             <span id="rawPasteLabel">我有完整草稿或笔记，直接整段粘贴（跳过逐项分栏）</span>
           </label>
+          <div class="preset-row" id="presetBar" role="group" aria-label="论文类型预设">
+            <span class="preset-label" id="presetLabel">论文类型：</span>
+          </div>
         </div>
 
         <div id="fieldsContainer" class="fields-grid"></div>
@@ -1340,6 +1360,8 @@
         resetText: "清空填写",
         extraChk: "前置附带 14 条“补充写作要求”（更严格去 AI 腔与防幻觉）",
         rawMode: "我有完整草稿或笔记，直接整段粘贴（跳过逐项分栏）",
+        presetLabel: "论文类型：",
+        presetAria: "按论文类型附加文体要求",
         rawLabel: "我的完整材料 / 草稿：",
         rawPh: "直接粘贴你的文章段落、笔记、表格或审稿意见（建议保留各自名称与版本号）…",
         previewLabel: "完整提示词手稿（实时同步）",
@@ -1379,6 +1401,8 @@
         resetText: "Clear Fields",
         extraChk: "Prepend 14 extra writing constraints (stricter anti-hallucination & anti-slop)",
         rawMode: "I have a complete draft or notes — paste all at once",
+        presetLabel: "Paper type:",
+        presetAria: "Attach paper-type boundary constraint",
         rawLabel: "My complete materials / draft:",
         rawPh: "Paste manuscript text, notes, tables, or reviewer comments directly (keep version labels)…",
         previewLabel: "Assembled Prompt Manuscript (Live)",
@@ -1396,6 +1420,21 @@
       }
     };
 
+    const PAPER_PRESETS = {
+      zh: [
+        { id: "general", label: "通用", prefix: "" },
+        { id: "journal", label: "期刊小论文", prefix: "【文体与格式约束（期刊/会议小论文）：聚焦核心实证或方法贡献，确保基线对比、样本与实验条件可比，语言紧凑克制，不引入与当前单篇目标无关的扩展章节。】" },
+        { id: "thesis", label: "硕博大论文", prefix: "【文体与格式约束（中文硕博学位大论文 / GB/T 7713.1）：注意章号结构与前后章衔接，开篇预告的问题与创新点须在对应实证章与末章闭合，保持跨章样本量、符号与 GB/T 7714 引文口径完全一致。】" },
+        { id: "review", label: "文献综述", prefix: "【文体与格式约束（文献综述）：明确检索数据库、时间窗与纳入排除标准，按研究脉络和争议焦点综合对比；仅限已提供材料讨论，不把叙事性综述夸大为已完成的系统综述。】" }
+      ],
+      en: [
+        { id: "general", label: "General", prefix: "" },
+        { id: "journal", label: "Journal / Conf.", prefix: "[Paper-type constraint (Journal / Conference article): Keep the focus tight around 1-2 evidence-backed contributions with matched baseline conditions and compact scope.]" },
+        { id: "thesis", label: "Thesis / Diss.", prefix: "[Paper-type constraint (Thesis / Dissertation): Maintain explicit chapter-to-chapter cross-references, align Chapter 1 promised questions/contributions with empirical chapters and the final conclusion, and synchronize sample sizes and symbols across chapters.]" },
+        { id: "review", label: "Lit Review", prefix: "[Paper-type constraint (Literature Review): Declare databases, search window, and inclusion/exclusion criteria explicitly; synthesize around methodological debates and never claim a systematic review without completed screening records.]" }
+      ]
+    };
+
     const el = (id) => document.getElementById(id);
 
     function parseInitialState() {
@@ -1407,12 +1446,15 @@
       const validTask = qTask && tasks.some((t) => t.id === qTask) ? qTask : tasks[0].id;
       const qDiag = params.get("state");
       const validDiag = qDiag && DIAGNOSTIC_DATA[lang].some((d) => d.id === qDiag) ? qDiag : null;
+      const qPreset = params.get("preset");
+      const validPreset = qPreset && PAPER_PRESETS[lang].some((p) => p.id === qPreset) ? qPreset : "general";
       return {
         lang,
         stageFilter: "ALL",
         search: "",
         selectedId: validTask,
         activeDiagId: validDiag,
+        preset: validPreset,
         includeExtra: false,
         rawPasteMode: false,
         rawPasteText: "",
@@ -1429,6 +1471,8 @@
         url.searchParams.set("task", state.selectedId);
         if (state.activeDiagId) url.searchParams.set("state", state.activeDiagId);
         else url.searchParams.delete("state");
+        if (state.preset && state.preset !== "general") url.searchParams.set("preset", state.preset);
+        else url.searchParams.delete("preset");
         window.history.replaceState(null, "", url.toString());
       } catch (e) {}
     }
@@ -1504,6 +1548,8 @@
       el("resetText").textContent = u.resetText;
       el("extraChkLabel").textContent = u.extraChk;
       el("rawPasteLabel").textContent = u.rawMode;
+      el("presetLabel").textContent = u.presetLabel;
+      el("presetBar").setAttribute("aria-label", u.presetAria);
       el("previewLabel").textContent = u.previewLabel;
       el("copyBtnText").textContent = u.copy;
       el("mobileCopyText").textContent = u.copy;
@@ -1769,7 +1815,12 @@
         body = updatedLines.join("\n");
       }
 
-      const finalOut = state.includeExtra ? ds.extra + "\n\n---\n\n" + body : body;
+      const presetObj = PAPER_PRESETS[state.lang].find((p) => p.id === state.preset);
+      const parts = [];
+      if (state.includeExtra) parts.push(ds.extra);
+      if (presetObj && presetObj.prefix) parts.push(presetObj.prefix);
+      parts.push(body);
+      const finalOut = parts.join("\n\n---\n\n");
       el("previewOutput").value = finalOut;
 
       const metricsEl = el("previewMetrics");
@@ -1818,6 +1869,27 @@
       }, 1800);
     }
 
+    function renderPresetBar() {
+      const bar = el("presetBar");
+      const lbl = el("presetLabel");
+      bar.innerHTML = "";
+      bar.appendChild(lbl);
+      PAPER_PRESETS[state.lang].forEach((p) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "chip" + (state.preset === p.id ? " active" : "");
+        b.setAttribute("aria-pressed", String(state.preset === p.id));
+        b.textContent = p.label;
+        b.onclick = () => {
+          state.preset = p.id;
+          syncUrl();
+          renderPresetBar();
+          updatePreview();
+        };
+        bar.appendChild(b);
+      });
+    }
+
     el("themeBtn").onclick = () => applyTheme(currentTheme() === "dark" ? "light" : "dark");
     el("langBtn").onclick = () => {
       state.lang = state.lang === "zh" ? "en" : "zh";
@@ -1826,6 +1898,7 @@
       syncUrl();
       renderChrome();
       renderDiagnosticBar();
+      renderPresetBar();
       renderStageChips();
       renderTaskList();
       renderWorkspace();
@@ -1873,6 +1946,7 @@
     applyTheme(currentTheme());
     renderChrome();
     renderDiagnosticBar();
+    renderPresetBar();
     renderStageChips();
     renderTaskList();
     renderWorkspace();

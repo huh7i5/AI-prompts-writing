@@ -1,5 +1,11 @@
 # 论文分章大纲模板（Station 02 -> Station 03 交接工件）
 
+> **内置文体预设说明**：运行 `python scripts/init_workspace.py init --workspace <dir> --preset <type>` 可直接生成对应大纲骨架：
+> - `journal_en`：英文期刊/会议小论文（IEEEtran / elsarticle 单篇紧凑结构）
+> - `journal_zh`：中文核心期刊小论文（中英文摘要 + 引言 + 材料与方法 + 结果 + 讨论结论）
+> - `thesis_zh`：中文硕博学位大论文（依据 **GB/T 7713.1**《学位论文编写规则》组织前置→多章主体→GB/T 7714 参考文献→附录→致谢成果，并附跨章创新点与数字闭环自查）
+> - `review`：文献综述（检索数据库/时间窗、纳入排除标准、主题对比矩阵）
+
 - **核心研究问题**：`{{来自 01_topic_spec 或 3.1}}`
 - **研究方式与当前状态**：`{{QUANTITATIVE / QUALITATIVE / ARCHIVAL_TEXTUAL / THEORETICAL / FOCUSED_REVIEW}}` · `{{PRE_STUDY / IN_PROGRESS / POST_RESULTS}}`
 - **一句话论文主线**：`{{来自 3.4：在什么边界下用什么证据回答什么问题}}`

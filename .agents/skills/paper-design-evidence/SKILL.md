@@ -67,9 +67,9 @@ description: >-
 
 路径均相对于本 Skill 根目录（`.agents/skills/paper-design-evidence`）：
 
-1. **初始化或检查端到端论文工厂标准工作区（`--paradigm` 与 `--time-state` 大小写及连字符自动兼容）**：
+1. **初始化或检查端到端论文工厂标准工作区（支持 `--preset general|journal_en|journal_zh|thesis_zh|review` 按小论文/大论文/综述自动生成 `04_outline.md` 骨架）**：
    ```bash
-   python scripts/init_workspace.py init --workspace ./paper_workspace --paradigm THEORETICAL --time-state POST_RESULTS
+   python scripts/init_workspace.py init --workspace ./paper_workspace --preset thesis_zh --time-state PRE_STUDY
    python scripts/init_workspace.py status --workspace ./paper_workspace
    ```
 2. **运行 2 号工位出厂门禁（`--task` 支持逗号分隔组合如 `3.4,4.3`，同步校验账本与文稿边界）**：
