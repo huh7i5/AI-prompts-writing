@@ -2,14 +2,88 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="AI-prompts-writing：智能判断写作状态、给出写作建议与全流程辅助写作的 AI 写作工具。提供 43 项学术论文提示词在线拼接台与 1+4 Agent Skills。" />
   <meta name="keywords" content="AI写作,论文写作,辅助写作,写作建议,学术写作提示词,Agent Skills,SKILL.md,AI writing assistant" />
   <meta http-equiv="refresh" content="0; url=./builder/" />
   <title>AI-prompts-writing · 智能 AI 写作提示词拼接台 | 论文辅助写作助手</title>
-  <script>window.location.replace("./builder/");</script>
+  <script>
+    (function () {
+      var target = "./builder/" + window.location.search + window.location.hash;
+      window.location.replace(target);
+    })();
+  </script>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #FCFCFA;
+      color: #111827;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0E1116; color: #E8ECF2; }
+      .card { background: #151A22 !important; border-color: #262E3B !important; }
+      .muted { color: #9AA4B2 !important; }
+      .btn-sec { background: #1B222D !important; border-color: #262E3B !important; color: #CBD2DC !important; }
+    }
+    .card {
+      max-width: 480px;
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid #E2E6EC;
+      border-radius: 12px;
+      padding: 26px 28px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      font-family: Georgia, "Noto Serif SC", serif;
+    }
+    .muted {
+      margin: 0 0 20px;
+      font-size: 0.9rem;
+      color: #525C6B;
+      line-height: 1.5;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    a {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 7px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .btn-pri {
+      background: #14533C;
+      color: #FFFFFF;
+    }
+    .btn-sec {
+      background: #F3F5F7;
+      border: 1px solid #E2E6EC;
+      color: #374151;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; padding: 2rem; color: #0f172a;">
-  <p>正在跳转到交互式提示词拼接台 / Redirecting to <a href="./builder/">AI-prompts-writing Prompt Builder</a>…</p>
-  <p><a href="https://github.com/huh7i5/AI-prompts-writing">返回 GitHub 仓库 / Back to GitHub Repository</a></p>
+<body>
+  <main class="card">
+    <h1>AI-prompts-writing</h1>
+    <p class="muted">正在进入智能写作状态诊断与 43 项提示词工作台…<br />Redirecting to the Interactive Prompt Workbench…</p>
+    <div class="actions">
+      <a class="btn-pri" href="./builder/">进入在线工作台 / Open Builder</a>
+      <a class="btn-sec" href="https://github.com/huh7i5/AI-prompts-writing">GitHub 仓库</a>
+    </div>
+  </main>
 </body>
 </html>
