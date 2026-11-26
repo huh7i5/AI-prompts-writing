@@ -1,15 +1,15 @@
 ---
 name: ai-prompt-writing
 description: >-
-  Smart state-aware academic paper router and end-to-end writing workflow coordinator. Automatically diagnoses what materials the user currently has (vague idea, reading notes, raw data/proofs, rough draft, or reviewer comments) and either orchestrates the 4 specialized station skills (topic & verified literature -> study design & claim ledger -> section drafting & anti-slop polishing -> numeric audit, declarations, peer-review sync & proofs) or executes standalone when installed alone.
-  用于学术论文全流程智能诊断与推进：根据手头现状自动规划选题检索、研究与大纲设计、分章写作、去 AI 腔润色修改、数字引用核查与审稿回复。
+  Smart state-aware AI writing & academic paper assistant: automatically diagnoses what writing stage and evidence state the user currently has (vague idea, reading notes/PDFs, raw CSV data/proofs, rough draft, or reviewer comments), gives targeted writing advice on missing evidence or revisions, and assists execution across the 4 specialized station skills (topic & verified literature -> study design, SVG stats & claim ledger -> section drafting & anti-AI-slop polishing -> numeric audit, peer-review sync & .docx/.tex export) or standalone when installed alone.
+  智能 AI 写作助手与学术论文辅助写作总控：自动判断当前写作状态与研究阶段，先给出针对性写作建议与缺口诊断，再辅助完成选题查文献、研究大纲与图表、分章写作、去 AI 味润色、数字引用核查及审稿回复。
 ---
 
-# AI Prompt Writing · 智能现状诊断与论文流水线总控
+# AI Prompt Writing · 智能写作状态诊断与辅助写作总控
 
 把研究写清楚，不写成宣传稿，也不把正常的学术表达改成模板化的“AI 腔”。
 
-本 Skill 扮演**智能现状诊断与全流程总调度员**：用户无需事先背熟任务编号，只需把当前手头有的东西（一个模糊想法、几篇摘要、一张实验表、一段初稿或一封审稿意见）发出来，Agent 会自动判断当前所处阶段，精准调用对应工位完成单步任务，或按工作区串联推进端到端论文流水线。
+本 Skill 扮演**智能写作状态判断、顾问与全流程总调度员**：用户无需背熟任务编号，只需发来手头现有材料（模糊念头、几篇 PDF、一张数据表、半截初稿或审稿意见），Agent 会先**自动判断所处写作状态与证据缺口**，再**给出可执行写作建议**，并精准调度对应工位辅助写稿、改稿或跑完端到端论文流水线。
 
 ---
 
@@ -57,7 +57,7 @@ description: >-
 
 ## 默认交付结构
 
-除非具体子任务另有约定（如纯语法检查或固定审计分栏）：
-1. **直接可用的正文 / 修订稿 / 方案 / 审计表**；
-2. **关键判断或修改理由**（收窄结论时单独说明属于论证边界调整）；
-3. **实际核查范围、待作者确认项与下一步建议**。
+除非具体子任务另有约定（如纯语法检查或固定审计分栏），每次辅助写作默认按以下顺序清晰交付：
+1. **写作状态判定与写作建议**（2–3 句简明交代：当前所处阶段/`PRE_STUDY` 或 `POST_RESULTS` 现状、关键缺失证据或问题、最优先修改建议）；
+2. **直接可用的辅助写作成果**（正文 / 修订稿 / 方案大纲 / 核查表，缺项保留 `[待补]`）；
+3. **关键修改依据、实际核查范围与待作者确认项**（收窄结论时标明属于论证边界调整）。

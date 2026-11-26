@@ -2,7 +2,9 @@
 
 <h1>🎓 AI-prompts-writing</h1>
 
-<p>Zero-barrier academic writing prompts &amp; state-aware Agent Skills</p>
+<p><strong>State-Aware AI &amp; Academic Writing Assistant · Agent Skills &amp; 43 Structured Prompts</strong></p>
+
+<p><sub>Auto-diagnose your draft stage · Give actionable writing advice · Keep numbers &amp; citations grounded · Export <code>.docx</code> &amp; <code>.tex</code><br>Copy-paste on Web (ChatGPT / Claude / DeepSeek / Kimi) · Native Agent Skills (Claude Code / Codex / Cursor / Antigravity / WorkBuddy)</sub></p>
 
 <p><a href="README.md">简体中文</a> · <strong>English</strong> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
@@ -14,6 +16,7 @@
 </p>
 
 <p>
+  <a href="#why">Why This</a> ·
   <a href="#start">Quick start</a> ·
   <a href="#catalog">Tasks</a> ·
   <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">Prompt Builder</a> ·
@@ -24,8 +27,20 @@
 
 </div>
 
-- **Copy & paste on the web**: No setup or coding needed—open any task in the [directory below](#catalog) (or use the [interactive prompt builder](https://huh7i5.github.io/AI-prompts-writing/builder/)) and paste into ChatGPT, Claude, or DeepSeek.
-- **Run inside an AI Agent**: Compatible with Codex, Claude Code, Antigravity, and WorkBuddy—share your current materials to run citation checks, PDF page anchoring, CSV stats & SVG plots, drafting, and `.docx`/`.tex` export ([see setup](#skill)).
+> **Turn ad-hoc AI writing into a state-aware, verifiable workflow.** Drop in a rough idea, PDFs, CSV tables, draft paragraphs, or reviewer comments—the assistant **automatically diagnoses what stage you are in, gives specific writing advice on missing evidence or weak logic, and assists drafting and revision** without inventing data or references (if helpful, consider leaving a ⭐ Star).
+
+- **Copy & paste on the web**: No setup or coding needed—open any task in the [directory below](#catalog) or use the [interactive prompt builder](https://huh7i5.github.io/AI-prompts-writing/builder/) with ChatGPT, Claude, or DeepSeek.
+- **Run inside an AI Agent**: Compatible with Claude Code, Codex, Cursor, Antigravity, and WorkBuddy—share your materials to auto-diagnose stage, get targeted advice, verify citations, anchor PDF pages, compute stats/SVG plots, revise prose, and export `.docx`/`.tex` ([see setup](#skill)).
+
+<a id="why"></a>
+
+## How This Differs from Static Prompt Lists & Generic AI Writers
+
+| Dimension | Static Prompt Lists / Unconstrained AI Chat | AI-prompts-writing |
+| :--- | :--- | :--- |
+| <nobr>**Where to start**</nobr> | Dig through long prompt catalogs to guess which template fits | **Auto-diagnoses your writing state**: identifies which of the 10 stages and evidence level (`PRE_STUDY` vs `POST_RESULTS`) you are in |
+| <nobr>**How it assists**</nobr> | Rewrites blindly, drops qualifiers, mutates numbers, or fabricates DOIs | **Advises first, then assists writing**: highlights missing evidence, keeps numbers/scope intact, and removes AI clichés without fluff |
+| <nobr>**End-to-end scope**</nobr> | Disconnected chat outputs only | **Web + Agent dual pipeline**: 43 prompts & [Prompt Builder](https://huh7i5.github.io/AI-prompts-writing/builder/) on Web, plus 1+4 Agent Skills with Python stdlib verification & `.docx`/`.tex` export |
 
 <a id="start"></a>
 
@@ -1617,13 +1632,17 @@ Confirmed correct information and remaining unknowns:
 
 <a id="skill"></a>
 
-## Use with AI Agents (End-to-End Pipeline)
+## Use with AI Agents (Auto-Diagnose State · Advise · Assist Writing)
 
-Install the built-in Skills Suite into an Agent that supports `SKILL.md`, then drop in your current materials (ideas, PDFs, CSV data, drafts, or reviews) to diagnose your stage and advance automatically.
+Install the Skills Suite into any host supporting `SKILL.md`, then drop in your raw materials (idea, PDFs, CSV data, rough draft, or reviewer comments) to `ai-prompt-writing`—no manual stage lookup required:
+
+1. **Auto-diagnose writing state**: Detects where you sit across stages 1–10 and distinguishes `PRE_STUDY` (plans/outlines only) from `POST_RESULTS` (empirical findings).
+2. **Deliver actionable writing advice**: Flags missing evidence, numeric conflicts, or weak transitions, and recommends concrete next steps first.
+3. **Execute end-to-end writing assistance**: Routes across Stations 01–04 for real citation verification, PDF page anchoring, CSV stats & SVG plotting, anti-slop drafting, audit gates, and `.docx`/`.tex` export.
 
 ```mermaid
 flowchart LR
-    Raw["Current Materials<br>Idea/PDF/CSV/Draft"] --> Router["ai-prompt-writing<br>Router & Review Loop"]
+    Raw["Any Raw Material<br>Idea / PDF / CSV / Draft / Review"] --> Router["ai-prompt-writing Router<br>1.Diagnose State · 2.Advise · 3.Route"]
     Router --> S1["1 Topic & Full-Text"]
     Router --> S2["2 Stats, SVG & Ledger"]
     Router --> S3["3 Draft & Anti-Slop"]

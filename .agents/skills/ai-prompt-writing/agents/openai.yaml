@@ -1,6 +1,6 @@
 interface:
-  display_name: "论文智能全流程总控 · AI Academic Writing Suite"
-  short_description: "自动识别手头材料与研究阶段，智能调度选题查文献、方案大纲、起草去AI腔改稿与数字审稿核查"
-  default_prompt: "请用 $ai-prompt-writing 根据我手头现有的材料判断当前阶段，帮我扎实推进下一步，保留证据边界并核查数字与引用一致性。"
+  display_name: "AI 写作状态诊断与论文助手 · AI Writing Suite"
+  short_description: "AI 写作与论文辅助总控：自动判断手头材料写作状态，给出缺口诊断与写作建议，串联真文献核验、统计制图、去AI味改稿与审稿回复"
+  default_prompt: "请用 $ai-prompt-writing 先判断我当前材料的写作状态与阶段，给出具体的缺口建议与下一步写法，再帮我扎实推进辅助写作，保留证据边界并核查数字与引用。"
 policy:
   allow_implicit_invocation: true

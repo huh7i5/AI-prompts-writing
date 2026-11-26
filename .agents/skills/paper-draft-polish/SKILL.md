@@ -2,7 +2,7 @@
 name: paper-draft-polish
 description: >-
   Station 03 academic writing and revision skill for drafting manuscript sections from verified materials/outlines (5.1-5.8) and revising existing prose for structure, clarity, de-templating (anti-AI-slop), grammar-only checking, anti-defensive writing, faithful translation, and multi-chapter revision tracking (6.1-6.7).
-  Use when the user asks to draft an Introduction, Methods, Results, Discussion, Conclusion, Abstract, or Title from existing notes/data, or asks to restructure a draft, polish sentences, remove AI boilerplate, strip defensive apologies/exaggerations, check grammar only, or translate academic prose.
+  Use when the user asks to draft an Introduction, Methods, Results, Discussion, Conclusion, Abstract, or Title from existing notes/data, or asks to restructure a draft, polish sentences, remove AI boilerplate, strip defensive apologies/exaggerations, check grammar only, or translate academic prose.（中文适用：AI 辅助论文分章起草、结构诊断与改稿建议、去 AI 味润色、去除多余自谦、纯语法检查与忠实学术翻译）
   Do NOT use for external literature search (use paper-topic-literature), pre-writing study feasibility/counterexample proof audits (use paper-design-evidence), or pre-submission cross-file numeric audits, journal declarations, reviewer response letters, and page proof comparisons (use paper-audit-submission).
 ---
 

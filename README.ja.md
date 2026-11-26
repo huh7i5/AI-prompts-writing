@@ -4,7 +4,7 @@
 
 <p><a href="README.md">简体中文</a> · <a href="README.en.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <strong>日本語</strong> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
-<p><strong>初めて論文を書く方にも研究者にも使える、学術執筆用プロンプト集</strong></p>
+<p><strong>執筆状況を自動判定し、改善提案と構成・執筆支援を行う AI ライティング支援（43プロンプト＆Agent Skills）</strong></p>
 
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub Stars"></a>

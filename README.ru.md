@@ -4,7 +4,7 @@
 
 <p><a href="README.md">简体中文</a> · <a href="README.en.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <strong>Русский</strong></p>
 
-<p><strong>Готовая к использованию библиотека промптов для научного письма — для начинающих и исследователей</strong></p>
+<p><strong>ИИ-помощник для письма: автоматическая диагностика этапа, рекомендации по доработке и 43 промпта (Web и Agent Skills)</strong></p>
 
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="Звёзды на GitHub"></a>

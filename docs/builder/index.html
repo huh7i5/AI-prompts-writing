@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI-prompts-writing · 论文提示词一键拼接台</title>
+  <meta name="description" content="AI-prompts-writing 在线提示词拼接台：覆盖 AI 写作、论文辅助写作、写作状态诊断与去 AI 腔修改的 43 项全流程结构化提示词。" />
+  <meta name="keywords" content="AI写作,论文写作,辅助写作,写作建议,去AI味,学术提示词,Prompt Builder,AI writing assistant" />
+  <title>AI-prompts-writing · 智能 AI 写作 &amp; 论文提示词一键拼接台</title>
   <style>
     :root {
       --bg: #f8fafc;
@@ -244,7 +246,7 @@
   <header>
     <div class="brand">
       <span>🎓 AI-prompts-writing</span>
-      <small id="subtitleText">论文提示词一键拼接台（43 项全流程任务）</small>
+      <small id="subtitleText">智能 AI 写作 &amp; 论文辅助写作拼接台（43 项全流程任务）</small>
     </div>
     <div class="hdr-actions">
       <button class="btn" id="langBtn" type="button">🌐 Switch to English</button>
@@ -254,7 +256,7 @@
 
   <main class="layout">
     <aside class="panel">
-      <input id="searchInput" class="search-box" type="search" placeholder="搜索任务关键词（如：选题、文献、润色、审稿）" />
+      <input id="searchInput" class="search-box" type="search" placeholder="搜索任务关键词（如：AI写作、选题、文献、建议、润色、审稿）" />
       <div id="stageChips" class="stage-chips"></div>
       <div id="taskList" class="task-list"></div>
     </aside>
@@ -297,11 +299,11 @@
 
     const UI_TEXT = {
       zh: {
-        subtitle: "论文提示词一键拼接台（43 项全流程任务）",
+        subtitle: "智能 AI 写作 & 论文辅助写作拼接台（43 项全流程任务）",
         langBtn: "🌐 Switch to English",
         backLink: "https://github.com/huh7i5/AI-prompts-writing#readme",
         backText: "← 返回仓库 README",
-        searchPh: "搜索任务关键词（如：选题、文献、润色、审稿）",
+        searchPh: "搜索任务关键词（如：AI写作、选题、文献、建议、润色、审稿）",
         allStages: "全部",
         reset: "↺ 清空当前填写",
         extraChk: "前置附带 14 条“补充写作要求”（更严格去 AI 腔与防幻觉）",
@@ -315,7 +317,7 @@
         privacy: "安全提醒：上传前请删除不需要的姓名、学号等个人信息；AI 输出的数字与参考文献请对照原文核实。",
       },
       en: {
-        subtitle: "Interactive Academic Prompt Builder (43 Tasks)",
+        subtitle: "State-Aware AI & Academic Prompt Builder (43 Tasks)",
         langBtn: "🌐 切换为简体中文",
         backLink: "https://github.com/huh7i5/AI-prompts-writing/blob/main/README.en.md",
         backText: "← Back to README",

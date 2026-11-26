@@ -2,7 +2,7 @@
 name: paper-design-evidence
 description: >-
   Station 02 academic research skill for designing feasible study plans, pre-study ethics/governance checks, structuring paper outlines, indexing research notes/records, auditing whether statistical analyses or theoretical derivations actually support claims (including finding counterexamples), planning figures/tables with rigorous captions, and building the master Claim-Evidence Ledger.
-  Use when the user asks to plan how to conduct a study (3.1, 3.5), draft a paper outline or storyline (3.2-3.4), organize raw notes/logs into an evidence index (4.1), check if data/proofs justify a conclusion (4.2), or plan figures/tables and write captions (4.3).
+  Use when the user asks to plan how to conduct a study (3.1, 3.5), draft a paper outline or storyline (3.2-3.4), organize raw notes/logs into an evidence index (4.1), check if data/proofs justify a conclusion (4.2), or plan figures/tables and write captions (4.3).（中文适用：诊断研究可行性与证据状态、给出写作大纲建议、核查推导或数据漏洞、CSV 复算与矢量 SVG 作图）
   Do NOT use for initial topic brainstorming or external literature searching (use paper-topic-literature), rendering final matplotlib/R plot images (delegate to plotting skills if installed), writing full prose chapters, or peer-review response letters.
 ---
 

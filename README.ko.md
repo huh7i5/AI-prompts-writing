@@ -4,7 +4,7 @@
 
 <p><a href="README.md">简体中文</a> · <a href="README.en.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <strong>한국어</strong> · <a href="README.ru.md">Русский</a></p>
 
-<p><strong>입문자와 연구자가 바로 활용할 수 있는 학술 글쓰기 프롬프트 모음</strong></p>
+<p><strong>작성 상태를 자동 진단하고 맞춤형 글쓰기 조언과 전 과정 작성을 지원하는 AI 글쓰기 도우미 (43개 프롬프트 &amp; Agent Skills)</strong></p>
 
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="GitHub 스타 수"></a>

@@ -2,7 +2,9 @@
 
 <h1>🎓 AI-prompts-writing</h1>
 
-<p>零门槛学术论文提示词库 · 智能全流程 Agent Skills</p>
+<p><strong>智能判断写作状态的 AI 写作助手 · 论文辅助写作与全流程提示词库</strong></p>
+
+<p><sub>自动识别手头材料阶段 · 给出针对性写作建议 · 去 AI 腔保真辅助写作 · 本地脚本查文献/出图/导出 <code>.docx</code> &amp; <code>.tex</code><br>网页直用适配 <b>DeepSeek / ChatGPT / Claude / Kimi / 豆包</b> · Agent 兼容 <b>Claude Code / Codex / Cursor / Antigravity / WorkBuddy</b></sub></p>
 
 <p><strong>简体中文</strong> · <a href="README.en.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
@@ -14,6 +16,7 @@
 </p>
 
 <p>
+  <a href="#why">核心差异</a> ·
   <a href="#start">快速上手</a> ·
   <a href="#catalog">任务目录</a> ·
   <a href="https://huh7i5.github.io/AI-prompts-writing/builder/">在线拼接器</a> ·
@@ -24,9 +27,21 @@
 
 </div>
 
-- **网页直接用**：不用下载或写代码，在[下方目录](#catalog)点开任务复制，发给豆包、ChatGPT 或 DeepSeek（也可用[在线拼接网页](https://huh7i5.github.io/AI-prompts-writing/builder/)填表一键生成）。
-- **装入 Agent 用**：支持 Codex、Claude Code、Antigravity、WorkBuddy 等，发给它现有材料即可自动识别阶段，串联真文献核验、PDF 锚定、统计制图、写稿改稿与文档导出（[查看安装](#skill)）。
+> **把“瞎聊式 AI 写作”变成先判断状态、再给建议、最后有据落笔的可核查流程。** 直接发来几句想法、PDF 文献、CSV 数据、半成品草稿或审稿意见，系统即可**自动识别写作阶段、诊断证据缺口并给出可落地写作建议**，再按需辅助完成写作、改稿与核验（觉得有帮助欢迎右上角点亮 ⭐ Star）。
+
+- **网页直接用**：不用下载或写代码，在[下方目录](#catalog)选任务复制，或打开[在线拼接网页](https://huh7i5.github.io/AI-prompts-writing/builder/)填表生成后发给 DeepSeek / ChatGPT / Claude / 豆包。
+- **装入 Agent 自动做**：支持 Claude Code、Codex、Cursor、Antigravity、WorkBuddy 等，扔进现有材料即可**自动判断写作状态与阶段**，主动给写作建议并联动 1+4 工位跑通文献核验、PDF 锚定、统计制图、改稿与导出（[查看安装](#skill)）。
 - **真实数据样稿**：四工位实跑产出的[共享单车实证研究](docs/examples/capital-bikeshare/paper.md)（[复算三张表](docs/examples/capital-bikeshare/README.md) · [短篇图书馆示例](docs/examples/reading-room-paper.md)）。
+
+<a id="why"></a>
+
+## 为什么选这个，而不是普通 AI 写作 / 静态提示词库？
+
+| 对比维度 | 普通 AI 写作工具 / 静态 Prompt 合集 | AI-prompts-writing（本仓库） |
+| :--- | :--- | :--- |
+| <nobr>**怎么开始**</nobr> | 要自己从几十页里翻找该用哪一条提示词 | **自动判断写作状态**：发来想法、草稿、PDF 或数据，先识别处于 1–10 哪个阶段、是否已出结果 |
+| <nobr>**怎么辅助写**</nobr> | 无约束直接生成，易编造文献、改数字、堆砌 AI 套话 | **先给建议、再辅助写**：指出缺什么证据与冲突之处，去 AI 腔同时保留原始数值与限定条件 |
+| <nobr>**能做到哪一步**</nobr> | 仅在聊天窗口输出零散文字 | **Web + Agent 双闭环**：网页提供 43 项规范提示词与拼接器；Agent 端可本地核查真文献、算统计出图并导出 `.docx/.tex` |
 
 <a id="start"></a>
 
@@ -1618,13 +1633,17 @@ AI 工具的实际用途和核查记录：
 
 <a id="skill"></a>
 
-## 装进 AI Agent（端到端智能流水线）
+## 装进 AI Agent（自动诊断状态 · 给出写作建议 · 全流程辅助）
 
-装入支持 `SKILL.md` 的 Agent 后，直接发给它现有原料（想法、PDF 文献、CSV 数据、初稿或审稿意见），即可自动诊断阶段并完成从查证出图到编译导出的全流程。
+装入支持 `SKILL.md` 的 Agent 后，**不用自己判断阶段或记命令**——直接把现有原料（模糊想法、PDF 文献、CSV 数据、初稿段落或审稿意见）丢给总控 `ai-prompt-writing`，它会自动完成：
+
+1. **自动判断写作状态**：识别处于 1–10 哪个环节、区分“未出结果（`PRE_STUDY`）”与“已有实证结果（`POST_RESULTS`）”。
+2. **先给写作建议与缺口提示**：点明当前还缺什么证据、有哪些数字/文献冲突、这一步该怎么改最有效。
+3. **协同四工位脚本辅助写作**：按需联动文献查证、PDF 页码锚定、CSV 统计与 SVG 制图、去 AI 腔写稿，以及冲突审计与 `.docx/.tex` 导出。
 
 ```mermaid
 flowchart LR
-    Raw["现有材料<br>想法/PDF/CSV/草稿"] --> Router["ai-prompt-writing<br>诊断与对抗调度"]
+    Raw["任意手头材料<br>想法 / PDF / CSV / 初稿 / 审稿意见"] --> Router["ai-prompt-writing 智能总控<br>1.判断写作状态 · 2.给建议 · 3.调度执行"]
     Router --> S1["1 选题与全文核验"]
     Router --> S2["2 统计制图与账本"]
     Router --> S3["3 起草与去AI腔"]

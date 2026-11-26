@@ -34,6 +34,8 @@ On 2026-11-17, all 43 tasks in each language were arranged for a single message:
 
 When a task changes, compare its numbered block in every language. Preserve negation, uncertainty, units, study conditions, evidence limits, and the separation between completed work and planned work. Check that links, placeholders, command names, and code fences still work. Record behavioral testing separately from translation review, and retain earlier input and output snapshots.
 
+On 2026-11-26, the top tagline across all 9 language READMEs (plus the Chinese and English hero comparison sections) was updated to highlight state-aware stage diagnosis, targeted writing advice, and dual Web/Agent Skills support, without changing the 43 task prompt blocks.
+
 ## 语言版本说明
 
 每种语言均包含十阶段、43 个单项任务和总写作要求，直接复制与 Skill 安装分开。翻译以 `329f86e` 的任务文本为基础，后续同步修改记录如下，保留相同编号、锚点、链接及占位符含义。
@@ -47,3 +49,5 @@ When a task changes, compare its numbered block in every language. Preserve nega
 2026-11-15，首页介绍、导航、任务名称和阶段说明改为面向初次使用者的表达，补齐展开、复制、填写、发送的步骤。目录写清每类任务能帮助得到什么，写作生命周期图与修改前后对照图直接展示，页首增加写作流程入口。提示词详情、安装方法和验证说明放入折叠区。各语言原有的提示词和安装示例代码块保持原文，本次调整不增加行为测试结果。
 
 2026-11-17，各语言的 43 个任务统一按一次发送安排：先写任务说明，再填语言、篇幅等要求，最后粘贴材料。每个任务增加简短写作要求，较完整的总要求改为可选补充，可放在任务前一起发送。保留原有任务规则、占位符含义，以及区分来源和版本的标签；有现成文章或笔记时可以直接粘贴，不必先逐项整理。本次检查内容保留、输入顺序、链接和页面显示，未新增行为试跑；旧输出仍对应当时的提示词版本。
+
+2026-11-26，统一更新 9 个语言版本首页的顶部一句话定位（并在中英参考版首屏新增与普通 AI 写作的差异对照表），突出“自动判断写作状态、给出写作建议与辅助写作”以及 Web + Agent Skills 双端用法，未改动 43 项具体任务提示词正文。

@@ -2,7 +2,7 @@
 name: paper-topic-literature
 description: >-
   Station 01 academic research skill for topic exploration, narrowing research questions, building search strategies, searching/verifying real academic literature (OpenAlex/CrossRef/arXiv), constructing evidence comparison matrices, and drafting source-grounded Related Work sections.
-  Use when the user asks to find or refine a thesis/paper topic (1.1-1.2), design literature search queries, fetch or verify real citations/DOIs, compare papers for research gaps, or write Related Work / literature review paragraphs (2.1-2.3).
+  Use when the user asks to find or refine a thesis/paper topic (1.1-1.2), design literature search queries, fetch or verify real citations/DOIs, compare papers for research gaps, or write Related Work / literature review paragraphs (2.1-2.3).（中文适用：AI 辅助找论文选题、制定正反检索式、PDF 全文页码定位、真实文献核验及文献综述写作建议）
   Do NOT use for writing Methods/Results/Discussion of completed experiments, generating statistical plots, responding to peer-review letters, checking page proofs, or general software engineering tasks.
 ---
 

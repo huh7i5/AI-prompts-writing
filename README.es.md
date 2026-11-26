@@ -4,7 +4,7 @@
 
 <p><a href="README.md">简体中文</a> · <a href="README.en.md">English</a> · <strong>Español</strong> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt.md">Português</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a></p>
 
-<p><strong>Una biblioteca de instrucciones de escritura académica lista para usar, dirigida a principiantes e investigadores</strong></p>
+<p><strong>Asistente de escritura con IA que diagnostica tu fase actual, sugiere mejoras y apoya todo el flujo académico (43 prompts + Agent Skills)</strong></p>
 
 <p>
   <a href="https://github.com/huh7i5/AI-prompts-writing/stargazers"><img src="https://img.shields.io/github/stars/huh7i5/AI-prompts-writing?style=flat-square" alt="Estrellas de GitHub"></a>

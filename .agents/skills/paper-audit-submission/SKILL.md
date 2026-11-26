@@ -2,7 +2,7 @@
 name: paper-audit-submission
 description: >-
   Station 04 academic quality-assurance, journal submission, peer-review revision, and post-acceptance skill. Covers cross-section fact/number consistency checks, reviewer-perspective critique, citation support verification, reporting guideline checks (7.1-7.5), reference formatting, cover letters, journal readiness, CRediT/ethics/AI declarations (8.1-8.4), reviewer comment triage, cross-chapter synced revisions, point-by-point response letters (9.1-9.3), and page proof comparison, data archiving, or post-publication corrections (10.1-10.3).
-  Use when the user wants to audit a draft against raw tables/sources before submission, prepare submission declarations or cover letters, revise a paper and respond to advisor/reviewer comments, or check page proofs and archiving notes.
+  Use when the user wants to audit a draft against raw tables/sources before submission, prepare submission declarations or cover letters, revise a paper and respond to advisor/reviewer comments, or check page proofs and archiving notes.（中文适用：交稿前数字引用一致性核查、投稿信与伦理声明写作、审稿意见联动改稿与回复建议、校样核对及 .docx/.tex 导出）
   Do NOT use for initial topic brainstorming or external literature discovery (use paper-topic-literature), pre-study research design (use paper-design-evidence), or first-pass prose drafting from outlines (use paper-draft-polish).
 ---
 
